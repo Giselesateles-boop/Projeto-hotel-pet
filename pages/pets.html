@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Pets</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hotel Pet</h1>
+
+        <p>Área do Gerente</p>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Início
+            </a>
+
+            |
+
+            <a href="reservas.html">
+                Reservas
+            </a>
+
+            |
+
+            <a href="pets.html">
+                Pets
+            </a>
+
+            |
+
+            <a href="usuarios.html">
+                Usuários
+            </a>
+
+            |
+
+            <a href="configuracoes.html">
+                Configurações
+            </a>
+
+            |
+
+            <a href="perfil.html">
+                Meu Perfil
+            </a>
+
+            |
+
+            <a href="../index.html">
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Pets</h2>
+
+
+        <section>
+
+            <h3>Pesquisar Pet</h3>
+
+
+            <form>
+
+                <div>
+
+                    <label for="nome">
+                        Nome do Pet:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome do pet"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="proprietario">
+                        Proprietário:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="proprietario"
+                        name="proprietario"
+                        placeholder="Digite o nome do proprietário"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="tipo">
+                        Tipo:
+                    </label>
+
+                    <select id="tipo" name="tipo">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="cachorro">
+                            Cachorro
+                        </option>
+
+                        <option value="gato">
+                            Gato
+                        </option>
+
+                        <option value="outro">
+                            Outro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <br>
+
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+
+
+                <button type="reset">
+                    Limpar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <br>
+
+
+        <section>
+
+            <h3>Lista de Pets</h3>
+
+
+            <p>
+
+                <a href="cadastrar-pet.html">
+                    Cadastrar novo Pet
+                </a>
+
+            </p>
+
+
+            <table border="1">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Código</th>
+
+                        <th>Nome</th>
+
+                        <th>Tipo</th>
+
+                        <th>Raça</th>
+
+                        <th>Tamanho</th>
+
+                        <th>Proprietário</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>001</td>
+
+                        <td>Thor</td>
+
+                        <td>Cachorro</td>
+
+                        <td>Golden Retriever</td>
+
+                        <td>Grande</td>
+
+                        <td>Maria Silva</td>
+
+                        <td>
+
+                            <a href="visualizar-pet.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-pet.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>002</td>
+
+                        <td>Luna</td>
+
+                        <td>Gato</td>
+
+                        <td>Siamês</td>
+
+                        <td>Médio</td>
+
+                        <td>João Santos</td>
+
+                        <td>
+
+                            <a href="visualizar-pet.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-pet.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>003</td>
+
+                        <td>Mel</td>
+
+                        <td>Cachorro</td>
+
+                        <td>Shih-tzu</td>
+
+                        <td>Pequeno</td>
+
+                        <td>Ana Oliveira</td>
+
+                        <td>
+
+                            <a href="visualizar-pet.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-pet.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>004</td>
+
+                        <td>Bob</td>
+
+                        <td>Cachorro</td>
+
+                        <td>Beagle</td>
+
+                        <td>Médio</td>
+
+                        <td>Carlos Souza</td>
+
+                        <td>
+
+                            <a href="visualizar-pet.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-pet.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Hotel Pet
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
