@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Reservas</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hotel Pet</h1>
+
+        <p>Área do Gerente</p>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Início
+            </a>
+
+            |
+
+            <a href="reservas.html">
+                Reservas
+            </a>
+
+            |
+
+            <a href="pets.html">
+                Pets
+            </a>
+
+            |
+
+            <a href="usuarios.html">
+                Usuários
+            </a>
+
+            |
+
+            <a href="configuracoes.html">
+                Configurações
+            </a>
+
+            |
+
+            <a href="perfil.html">
+                Meu Perfil
+            </a>
+
+            |
+
+            <a href="../index.html">
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Reservas</h2>
+
+
+        <section>
+
+            <h3>Pesquisar Reserva</h3>
+
+            <form>
+
+                <div>
+
+                    <label for="pet">
+                        Nome do Pet:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pet"
+                        name="pet"
+                        placeholder="Digite o nome do pet"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="proprietario">
+                        Proprietário:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="proprietario"
+                        name="proprietario"
+                        placeholder="Digite o nome do proprietário"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="status">
+                        Status:
+                    </label>
+
+                    <select id="status" name="status">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="agendada">
+                            Agendada
+                        </option>
+
+                        <option value="confirmada">
+                            Confirmada
+                        </option>
+
+                        <option value="andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="finalizada">
+                            Finalizada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <br>
+
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+
+                <button type="reset">
+                    Limpar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <br>
+
+
+        <section>
+
+            <h3>Lista de Reservas</h3>
+
+
+            <table border="1">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Código</th>
+
+                        <th>Pet</th>
+
+                        <th>Proprietário</th>
+
+                        <th>Entrada</th>
+
+                        <th>Saída</th>
+
+                        <th>Status</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>001</td>
+
+                        <td>Thor</td>
+
+                        <td>Maria Silva</td>
+
+                        <td>20/08/2026</td>
+
+                        <td>25/08/2026</td>
+
+                        <td>Confirmada</td>
+
+                        <td>
+
+                            <a href="visualizar-reserva.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-reserva.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>002</td>
+
+                        <td>Luna</td>
+
+                        <td>João Santos</td>
+
+                        <td>21/08/2026</td>
+
+                        <td>24/08/2026</td>
+
+                        <td>Em andamento</td>
+
+                        <td>
+
+                            <a href="visualizar-reserva.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-reserva.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>003</td>
+
+                        <td>Mel</td>
+
+                        <td>Ana Oliveira</td>
+
+                        <td>15/08/2026</td>
+
+                        <td>18/08/2026</td>
+
+                        <td>Finalizada</td>
+
+                        <td>
+
+                            <a href="visualizar-reserva.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-reserva.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>004</td>
+
+                        <td>Bob</td>
+
+                        <td>Carlos Souza</td>
+
+                        <td>25/08/2026</td>
+
+                        <td>30/08/2026</td>
+
+                        <td>Agendada</td>
+
+                        <td>
+
+                            <a href="visualizar-reserva.html">
+                                Visualizar
+                            </a>
+
+                            |
+
+                            <a href="editar-reserva.html">
+                                Editar
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Hotel Pet
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

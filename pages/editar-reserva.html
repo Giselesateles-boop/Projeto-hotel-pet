@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Editar Reserva</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hotel Pet</h1>
+
+        <p>Área do Gerente</p>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Início
+            </a>
+
+            |
+
+            <a href="reservas.html">
+                Reservas
+            </a>
+
+            |
+
+            <a href="pets.html">
+                Pets
+            </a>
+
+            |
+
+            <a href="usuarios.html">
+                Usuários
+            </a>
+
+            |
+
+            <a href="configuracoes.html">
+                Configurações
+            </a>
+
+            |
+
+            <a href="perfil.html">
+                Meu Perfil
+            </a>
+
+            |
+
+            <a href="../index.html">
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Editar Reserva</h2>
+
+
+        <form>
+
+
+            <section>
+
+                <h3>Dados da Reserva</h3>
+
+
+                <div>
+
+                    <label for="codigo">
+                        Código da Reserva:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        name="codigo"
+                        value="001"
+                        readonly
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="pet">
+                        Pet:
+                    </label>
+
+                    <select id="pet" name="pet">
+
+                        <option value="thor" selected>
+                            Thor
+                        </option>
+
+                        <option value="luna">
+                            Luna
+                        </option>
+
+                        <option value="mel">
+                            Mel
+                        </option>
+
+                        <option value="bob">
+                            Bob
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="entrada">
+                        Data de Entrada:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="entrada"
+                        name="entrada"
+                        value="2026-08-20"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="saida">
+                        Data de Saída:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="saida"
+                        name="saida"
+                        value="2026-08-25"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Status da Reserva</h3>
+
+
+                <div>
+
+                    <label for="status">
+                        Status:
+                    </label>
+
+                    <select id="status" name="status">
+
+                        <option value="agendada">
+                            Agendada
+                        </option>
+
+                        <option value="confirmada" selected>
+                            Confirmada
+                        </option>
+
+                        <option value="andamento">
+                            Em andamento
+                        </option>
+
+                        <option value="finalizada">
+                            Finalizada
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Informações do Pet</h3>
+
+
+                <div>
+
+                    <label for="tipo">
+                        Tipo de Animal:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tipo"
+                        name="tipo"
+                        value="Cachorro"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="raca">
+                        Raça:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="raca"
+                        name="raca"
+                        value="Golden Retriever"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="tamanho">
+                        Tamanho:
+                    </label>
+
+                    <select id="tamanho" name="tamanho">
+
+                        <option value="pequeno">
+                            Pequeno
+                        </option>
+
+                        <option value="medio">
+                            Médio
+                        </option>
+
+                        <option value="grande" selected>
+                            Grande
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Anotações da Estadia</h3>
+
+
+                <div>
+
+                    <label for="anotacoes">
+                        Anotações:
+                    </label>
+
+                    <br>
+
+                    <textarea
+                        id="anotacoes"
+                        name="anotacoes"
+                        rows="6"
+                        cols="50"
+                    >Thor está se alimentando normalmente e apresentou comportamento tranquilo durante a estadia.</textarea>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Imagens da Estadia</h3>
+
+
+                <div>
+
+                    <label for="imagem">
+                        Adicionar imagem:
+                    </label>
+
+                    <input
+                        type="file"
+                        id="imagem"
+                        name="imagem"
+                        accept="image/*"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Recibo da Estadia</h3>
+
+
+                <div>
+
+                    <label for="recibo">
+                        Adicionar recibo:
+                    </label>
+
+                    <input
+                        type="file"
+                        id="recibo"
+                        name="recibo"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Valor da Reserva</h3>
+
+
+                <p>
+                    Valor da diária: R$ 80,00
+                </p>
+
+                <p>
+                    Quantidade de diárias: 5
+                </p>
+
+                <p>
+                    Valor total: R$ 400,00
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <button type="submit">
+                    Salvar Alterações
+                </button>
+
+
+                <button type="reset">
+                    Restaurar
+                </button>
+
+
+                <br><br>
+
+
+                <a href="reservas.html">
+                    Cancelar
+                </a>
+
+            </section>
+
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Hotel Pet
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
