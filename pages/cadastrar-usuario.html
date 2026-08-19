@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Cadastrar Usuário</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hotel Pet</h1>
+
+        <p>Área do Gerente</p>
+
+        <nav>
+
+            <a href="dashboard.html">Início</a>
+            |
+            <a href="reservas.html">Reservas</a>
+            |
+            <a href="pets.html">Pets</a>
+            |
+            <a href="usuarios.html">Usuários</a>
+            |
+            <a href="configuracoes.html">Configurações</a>
+            |
+            <a href="perfil.html">Meu Perfil</a>
+            |
+            <a href="../index.html">Sair</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Cadastrar Novo Usuário</h2>
+
+
+        <form>
+
+            <section>
+
+                <h3>Dados Pessoais</h3>
+
+
+                <div>
+
+                    <label for="nome">
+                        Nome completo:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome completo"
+                        required
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="cpf">
+                        CPF:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        required
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="nascimento">
+                        Data de nascimento:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="telefone">
+                        Telefone:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Endereço</h3>
+
+
+                <div>
+
+                    <label for="cep">
+                        CEP:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="00000-000"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="endereco">
+                        Endereço:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        placeholder="Rua, Avenida..."
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="numero">
+                        Número:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numero"
+                        name="numero"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="cidade">
+                        Cidade:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="estado">
+                        Estado:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="estado"
+                        name="estado"
+                        placeholder="BA"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Dados de Acesso</h3>
+
+
+                <div>
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="usuario@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="senha">
+                        Senha:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        required
+                    >
+
+                </div>
+
+
+                <br>
+
+
+                <div>
+
+                    <label for="confirmar-senha">
+                        Confirmar senha:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmar-senha"
+                        name="confirmar-senha"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Tipo de Usuário</h3>
+
+
+                <div>
+
+                    <label for="tipo">
+                        Perfil:
+                    </label>
+
+                    <select
+                        id="tipo"
+                        name="tipo"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione o perfil
+                        </option>
+
+                        <option value="cliente">
+                            Cliente
+                        </option>
+
+                        <option value="funcionario">
+                            Funcionário
+                        </option>
+
+                        <option value="gerente">
+                            Gerente
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h3>Status</h3>
+
+
+                <div>
+
+                    <label for="status">
+                        Situação:
+                    </label>
+
+                    <select
+                        id="status"
+                        name="status"
+                    >
+
+                        <option value="ativo" selected>
+                            Ativo
+                        </option>
+
+                        <option value="inativo">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <br>
+
+                <button type="submit">
+                    Cadastrar Usuário
+                </button>
+
+
+                <button type="reset">
+                    Limpar
+                </button>
+
+
+                <br><br>
+
+
+                <a href="usuarios.html">
+                    Cancelar
+                </a>
+
+            </section>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Hotel Pet
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
