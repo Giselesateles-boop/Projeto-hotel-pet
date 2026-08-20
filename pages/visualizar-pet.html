@@ -9,246 +9,475 @@
 
     <title>Hotel Pet - Visualizar Pet</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 
 <body>
 
-    <header>
 
-        <h1>Hotel Pet</h1>
+    <div class="layout">
 
-        <p>Área do Gerente</p>
 
-        <nav>
+        <!-- MENU LATERAL -->
 
-            <a href="dashboard.html">
-                Início
-            </a>
+        <aside class="menu-lateral">
 
-            |
 
-            <a href="reservas.html">
-                Reservas
-            </a>
+            <h1>Hotel Pet</h1>
 
-            |
 
-            <a href="pets.html">
-                Pets
-            </a>
+            <nav>
 
-            |
 
-            <a href="usuarios.html">
-                Usuários
-            </a>
+                <a href="pets.html" class="menu-ativo">
+                    🐾 Pet
+                </a>
 
-            |
 
-            <a href="configuracoes.html">
-                Configurações
-            </a>
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
 
-            |
 
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
-            |
 
-            <a href="../index.html">
-                Sair
-            </a>
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-        </nav>
 
-    </header>
+            </nav>
 
 
-    <main>
+        </aside>
 
-        <h2>Informações do Pet</h2>
 
 
-        <section>
+        <!-- ÁREA PRINCIPAL -->
 
-            <h3>Dados do Pet</h3>
+        <div class="conteudo">
 
-            <p>
-                <strong>Código:</strong>
-                001
-            </p>
 
-            <p>
-                <strong>Nome:</strong>
-                Thor
-            </p>
+            <!-- TOPO -->
 
-            <p>
-                <strong>Tipo:</strong>
-                Cachorro
-            </p>
+            <header class="topo">
 
-            <p>
-                <strong>Raça:</strong>
-                Golden Retriever
-            </p>
 
-            <p>
-                <strong>Idade:</strong>
-                4 anos
-            </p>
+                <div></div>
 
-            <p>
-                <strong>Tamanho:</strong>
-                Grande
-            </p>
 
-            <p>
-                <strong>Sexo:</strong>
-                Macho
-            </p>
+                <div class="perfil-topo">
 
-        </section>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
+                    <span>
+                        João da Silva
+                    </span>
 
-        <section>
+                </div>
 
-            <h3>Proprietário</h3>
 
-            <p>
-                <strong>Nome:</strong>
-                Maria Silva
-            </p>
+            </header>
 
-            <p>
-                <strong>E-mail:</strong>
-                maria@email.com
-            </p>
 
-            <p>
-                <strong>Telefone:</strong>
-                (77) 99999-9999
-            </p>
 
-        </section>
+            <!-- CONTEÚDO -->
 
+            <main>
 
-        <section>
 
-            <h3>Cuidados</h3>
+                <p class="breadcrumb">
+                    Home / Pets / Visualizar Pet
+                </p>
 
-            <p>
-                <strong>Alimentação:</strong>
-            </p>
 
-            <p>
-                Ração duas vezes ao dia, pela manhã e à noite.
-            </p>
 
-            <p>
-                <strong>Observações:</strong>
-            </p>
+                <section class="card formulario-card">
 
-            <p>
-                Thor é tranquilo, gosta de brincar e não apresenta
-                restrições para atividades.
-            </p>
 
-        </section>
+                    <h2>
+                        Visualizar Pet
+                    </h2>
 
 
-        <section>
 
-            <h3>Foto do Pet</h3>
+                    <!-- DADOS DO PET -->
 
-            <p>
-                Foto cadastrada do pet:
-            </p>
+                    <div class="grupo-formulario">
 
-            <p>
-                [ Foto de Thor ]
-            </p>
 
-        </section>
+                        <h3>
+                            Dados do Pet
+                        </h3>
 
 
-        <section>
 
-            <h3>Histórico de Hospedagens</h3>
+                        <div class="linha-formulario">
 
-            <table border="1">
 
-                <thead>
+                            <div class="campo-formulario">
 
-                    <tr>
 
-                        <th>Entrada</th>
+                                <label>
+                                    Nome do pet
+                                </label>
 
-                        <th>Saída</th>
 
-                        <th>Status</th>
+                                <input
+                                    type="text"
+                                    value="Thor"
+                                    readonly>
 
-                    </tr>
 
-                </thead>
+                            </div>
 
-                <tbody>
 
-                    <tr>
 
-                        <td>20/08/2026</td>
+                            <div class="campo-formulario">
 
-                        <td>25/08/2026</td>
 
-                        <td>Confirmada</td>
+                                <label>
+                                    Tipo
+                                </label>
 
-                    </tr>
 
-                    <tr>
+                                <input
+                                    type="text"
+                                    value="Cachorro"
+                                    readonly>
 
-                        <td>10/07/2026</td>
 
-                        <td>15/07/2026</td>
+                            </div>
 
-                        <td>Finalizada</td>
 
-                    </tr>
+                        </div>
 
-                </tbody>
 
-            </table>
 
-        </section>
+                        <div class="linha-formulario">
 
 
-        <section>
+                            <div class="campo-formulario">
 
-            <br>
 
-            <a href="editar-pet.html">
-                Editar Pet
-            </a>
+                                <label>
+                                    Raça
+                                </label>
 
-            <br><br>
 
-            <a href="pets.html">
-                Voltar para Pets
-            </a>
+                                <input
+                                    type="text"
+                                    value="Golden Retriever"
+                                    readonly>
 
-        </section>
 
-    </main>
+                            </div>
 
 
-    <footer>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                            <div class="campo-formulario">
 
-    </footer>
+
+                                <label>
+                                    Porte
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    value="Grande"
+                                    readonly>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="linha-formulario">
+
+
+                            <div class="campo-formulario">
+
+
+                                <label>
+                                    Idade
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    value="3 anos"
+                                    readonly>
+
+
+                            </div>
+
+
+
+                            <div class="campo-formulario">
+
+
+                                <label>
+                                    Peso
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    value="28 kg"
+                                    readonly>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PROPRIETÁRIO -->
+
+                    <div class="grupo-formulario">
+
+
+                        <h3>
+                            Proprietário
+                        </h3>
+
+
+
+                        <div class="linha-formulario">
+
+
+                            <div class="campo-formulario">
+
+
+                                <label>
+                                    Nome do proprietário
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    value="Maria Silva"
+                                    readonly>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- CUIDADOS E OBSERVAÇÕES -->
+
+                    <div class="grupo-formulario">
+
+
+                        <h3>
+                            Cuidados e Observações
+                        </h3>
+
+
+
+                        <div class="campo-formulario campo-largo">
+
+
+                            <label>
+                                Alimentação
+                            </label>
+
+
+                            <textarea readonly>Ração duas vezes ao dia, pela manhã e à noite.</textarea>
+
+
+                        </div>
+
+
+
+                        <div class="campo-formulario campo-largo">
+
+
+                            <label>
+                                Observações
+                            </label>
+
+
+                            <textarea readonly>Pet dócil. Gosta de brincar e precisa de passeios durante a hospedagem.</textarea>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- FOTO DO PET -->
+
+                    <div class="grupo-formulario">
+
+
+                        <h3>
+                            Foto do Pet
+                        </h3>
+
+
+
+                        <div class="foto-pet">
+
+
+                            <div class="foto-placeholder">
+                                🐶
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- HISTÓRICO DE HOSPEDAGEM -->
+
+                    <div class="grupo-formulario">
+
+
+                        <h3>
+                            Histórico de Hospedagem
+                        </h3>
+
+
+
+                        <table class="tabela-historico">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Entrada
+                                    </th>
+
+                                    <th>
+                                        Saída
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        20/08/2026
+                                    </td>
+
+                                    <td>
+                                        25/08/2026
+                                    </td>
+
+                                    <td>
+                                        Confirmada
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        10/07/2026
+                                    </td>
+
+                                    <td>
+                                        15/07/2026
+                                    </td>
+
+                                    <td>
+                                        Finalizada
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+
+                    <!-- BOTÕES -->
+
+                    <div class="botoes-formulario">
+
+
+                        <a
+                            href="editar-pet.html"
+                            class="botao botao-salvar">
+
+                            ✎ Editar
+
+                        </a>
+
+
+
+                        <a
+                            href="pets.html"
+                            class="botao">
+
+                            ← Voltar
+
+                        </a>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+    </div>
+
 
 </body>
 

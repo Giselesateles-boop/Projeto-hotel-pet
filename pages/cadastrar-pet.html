@@ -2,416 +2,363 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Cadastrar Pet</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
+            <nav>
 
-        <nav>
-
-            <a href="dashboard.html">
-                Início
-            </a>
-
-            |
-
-            <a href="reservas.html">
-                Reservas
-            </a>
-
-            |
-
-            <a href="pets.html">
-                Pets
-            </a>
-
-            |
-
-            <a href="usuarios.html">
-                Usuários
-            </a>
-
-            |
-
-            <a href="configuracoes.html">
-                Configurações
-            </a>
-
-            |
-
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
-
-            |
-
-            <a href="../index.html">
-                Sair
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <h2>Cadastrar Novo Pet</h2>
-
-
-        <form>
-
-
-            <section>
-
-                <h3>Informações do Pet</h3>
-
-
-                <div>
-
-                    <label for="nome">
-                        Nome do Pet:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite o nome do pet"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="tipo">
-                        Tipo de Animal:
-                    </label>
-
-                    <select
-                        id="tipo"
-                        name="tipo"
-                        required
-                    >
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="cachorro">
-                            Cachorro
-                        </option>
-
-                        <option value="gato">
-                            Gato
-                        </option>
-
-                        <option value="outro">
-                            Outro
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="raca">
-                        Raça:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="raca"
-                        name="raca"
-                        placeholder="Digite a raça"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="idade">
-                        Idade:
-                    </label>
-
-                    <input
-                        type="number"
-                        id="idade"
-                        name="idade"
-                        min="0"
-                        max="30"
-                        placeholder="Digite a idade"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="tamanho">
-                        Tamanho:
-                    </label>
-
-                    <select
-                        id="tamanho"
-                        name="tamanho"
-                        required
-                    >
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="pequeno">
-                            Pequeno
-                        </option>
-
-                        <option value="medio">
-                            Médio
-                        </option>
-
-                        <option value="grande">
-                            Grande
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="sexo">
-                        Sexo:
-                    </label>
-
-                    <select
-                        id="sexo"
-                        name="sexo"
-                        required
-                    >
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="macho">
-                            Macho
-                        </option>
-
-                        <option value="femea">
-                            Fêmea
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Informações do Proprietário</h3>
-
-
-                <div>
-
-                    <label for="proprietario">
-                        Proprietário:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="proprietario"
-                        name="proprietario"
-                        placeholder="Digite o nome do proprietário"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="email">
-                        E-mail:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite o e-mail"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="telefone">
-                        Telefone:
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="telefone"
-                        name="telefone"
-                        placeholder="(00) 00000-0000"
-                        required
-                    >
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Cuidados e Observações</h3>
-
-
-                <div>
-
-                    <label for="alimentacao">
-                        Alimentação:
-                    </label>
-
-                    <textarea
-                        id="alimentacao"
-                        name="alimentacao"
-                        rows="4"
-                        cols="50"
-                        placeholder="Informe os cuidados com a alimentação"
-                    ></textarea>
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="observacoes">
-                        Observações:
-                    </label>
-
-                    <textarea
-                        id="observacoes"
-                        name="observacoes"
-                        rows="5"
-                        cols="50"
-                        placeholder="Digite informações importantes sobre o pet"
-                    ></textarea>
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Foto do Pet</h3>
-
-
-                <div>
-
-                    <label for="foto">
-                        Selecionar foto:
-                    </label>
-
-                    <input
-                        type="file"
-                        id="foto"
-                        name="foto"
-                        accept="image/*"
-                    >
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <br>
-
-                <button type="submit">
-                    Cadastrar Pet
-                </button>
-
-
-                <button type="reset">
-                    Limpar
-                </button>
-
-
-                <br><br>
-
-
-                <a href="pets.html">
-                    Cancelar
+                <a href="pets.html" class="menu-ativo">
+                    🐾 Pet
                 </a>
 
-            </section>
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
+
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
+
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
+
+            </nav>
+
+        </aside>
 
 
-        </form>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-    </main>
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div></div>
+
+                <div class="perfil-topo">
+
+                    <span class="icone-usuario">◯</span>
+
+                    <span>João da Silva</span>
+
+                </div>
+
+            </header>
 
 
-    <footer>
+            <!-- CONTEÚDO -->
+            <main>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                <p class="breadcrumb">
+                    Home / Pets / Cadastrar Pet
+                </p>
 
-    </footer>
+
+                <section class="card formulario-card">
+
+                    <h2>Cadastrar Pet</h2>
+
+
+                    <form>
+
+
+                        <!-- DADOS DO PET -->
+                        <div class="grupo-formulario">
+
+                            <h3>Dados do Pet</h3>
+
+
+                            <div class="linha-formulario">
+
+                                <div class="campo-formulario">
+
+                                    <label for="nome">
+                                        Nome do pet *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Digite o nome do pet"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="tipo">
+                                        Tipo *
+                                    </label>
+
+                                    <select
+                                        id="tipo"
+                                        name="tipo"
+                                        required>
+
+                                        <option value="">
+                                            Selecione
+                                        </option>
+
+                                        <option value="cachorro">
+                                            Cachorro
+                                        </option>
+
+                                        <option value="gato">
+                                            Gato
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="linha-formulario">
+
+                                <div class="campo-formulario">
+
+                                    <label for="raca">
+                                        Raça
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="raca"
+                                        name="raca"
+                                        placeholder="Digite a raça">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="porte">
+                                        Porte *
+                                    </label>
+
+                                    <select
+                                        id="porte"
+                                        name="porte"
+                                        required>
+
+                                        <option value="">
+                                            Selecione
+                                        </option>
+
+                                        <option value="pequeno">
+                                            Pequeno
+                                        </option>
+
+                                        <option value="medio">
+                                            Médio
+                                        </option>
+
+                                        <option value="grande">
+                                            Grande
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="linha-formulario">
+
+                                <div class="campo-formulario">
+
+                                    <label for="idade">
+                                        Idade
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="idade"
+                                        name="idade"
+                                        min="0"
+                                        placeholder="Idade em anos">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="peso">
+                                        Peso
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="peso"
+                                        name="peso"
+                                        placeholder="Ex.: 12 kg">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PROPRIETÁRIO -->
+                        <div class="grupo-formulario">
+
+                            <h3>Proprietário</h3>
+
+
+                            <div class="linha-formulario">
+
+                                <div class="campo-formulario">
+
+                                    <label for="proprietario">
+                                        Proprietário *
+                                    </label>
+
+                                    <select
+                                        id="proprietario"
+                                        name="proprietario"
+                                        required>
+
+                                        <option value="">
+                                            Selecione o proprietário
+                                        </option>
+
+                                        <option value="maria">
+                                            Maria Silva
+                                        </option>
+
+                                        <option value="joao">
+                                            João Santos
+                                        </option>
+
+                                        <option value="ana">
+                                            Ana Oliveira
+                                        </option>
+
+                                        <option value="carlos">
+                                            Carlos Souza
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CUIDADOS -->
+                        <div class="grupo-formulario">
+
+                            <h3>Cuidados e Observações</h3>
+
+
+                            <div class="campo-formulario campo-largo">
+
+                                <label for="alimentacao">
+                                    Alimentação
+                                </label>
+
+                                <textarea
+                                    id="alimentacao"
+                                    name="alimentacao"
+                                    placeholder="Informe os cuidados com a alimentação do pet"></textarea>
+
+                            </div>
+
+
+                            <div class="campo-formulario campo-largo">
+
+                                <label for="observacoes">
+                                    Observações
+                                </label>
+
+                                <textarea
+                                    id="observacoes"
+                                    name="observacoes"
+                                    placeholder="Informe outras observações importantes"></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FOTO -->
+                        <div class="grupo-formulario">
+
+                            <h3>Foto do Pet</h3>
+
+                            <div class="campo-formulario">
+
+                                <label for="foto">
+                                    Foto
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    accept="image/*">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
+
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+                                💾 Salvar
+                            </button>
+
+
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+                                ↻ Limpar
+                            </button>
+
+
+                            <a
+                                href="pets.html"
+                                class="botao">
+                                ← Cancelar
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

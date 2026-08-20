@@ -2,350 +2,347 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Pets</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
+            <nav>
 
-        <nav>
-
-            <a href="dashboard.html">
-                Início
-            </a>
-
-            |
-
-            <a href="reservas.html">
-                Reservas
-            </a>
-
-            |
-
-            <a href="pets.html">
-                Pets
-            </a>
-
-            |
-
-            <a href="usuarios.html">
-                Usuários
-            </a>
-
-            |
-
-            <a href="configuracoes.html">
-                Configurações
-            </a>
-
-            |
-
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
-
-            |
-
-            <a href="../index.html">
-                Sair
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <h2>Pets</h2>
-
-
-        <section>
-
-            <h3>Pesquisar Pet</h3>
-
-
-            <form>
-
-                <div>
-
-                    <label for="nome">
-                        Nome do Pet:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite o nome do pet"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="proprietario">
-                        Proprietário:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="proprietario"
-                        name="proprietario"
-                        placeholder="Digite o nome do proprietário"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="tipo">
-                        Tipo:
-                    </label>
-
-                    <select id="tipo" name="tipo">
-
-                        <option value="">
-                            Todos
-                        </option>
-
-                        <option value="cachorro">
-                            Cachorro
-                        </option>
-
-                        <option value="gato">
-                            Gato
-                        </option>
-
-                        <option value="outro">
-                            Outro
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <br>
-
-
-                <button type="submit">
-                    Pesquisar
-                </button>
-
-
-                <button type="reset">
-                    Limpar
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <br>
-
-
-        <section>
-
-            <h3>Lista de Pets</h3>
-
-
-            <p>
-
-                <a href="cadastrar-pet.html">
-                    Cadastrar novo Pet
+                <a href="pets.html" class="menu-ativo">
+                    🐾 Pet
                 </a>
 
-            </p>
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
 
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
-            <table border="1">
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-                <thead>
+            </nav>
 
-                    <tr>
+        </aside>
 
-                        <th>Código</th>
 
-                        <th>Nome</th>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-                        <th>Tipo</th>
+            <!-- TOPO -->
+            <header class="topo">
 
-                        <th>Raça</th>
+                <div></div>
 
-                        <th>Tamanho</th>
+                <div class="perfil-topo">
 
-                        <th>Proprietário</th>
+                    <span class="icone-usuario">◯</span>
 
-                        <th>Ações</th>
+                    <span>João da Silva</span>
 
-                    </tr>
+                </div>
 
-                </thead>
+            </header>
 
 
-                <tbody>
+            <!-- CONTEÚDO -->
+            <main>
 
-                    <tr>
+                <p class="breadcrumb">
+                    Home / Pets
+                </p>
 
-                        <td>001</td>
 
-                        <td>Thor</td>
+                <section class="card pets-card">
 
-                        <td>Cachorro</td>
+                    <div class="cabecalho-pagina">
 
-                        <td>Golden Retriever</td>
+                        <h2>Pets</h2>
 
-                        <td>Grande</td>
+                        <a
+                            href="cadastrar-pet.html"
+                            class="botao botao-salvar">
+                            + Novo pet
+                        </a>
 
-                        <td>Maria Silva</td>
+                    </div>
 
-                        <td>
 
-                            <a href="visualizar-pet.html">
-                                Visualizar
-                            </a>
+                    <!-- FILTROS -->
+                    <div class="filtros-pets">
 
-                            |
+                        <div class="campo-filtro">
 
-                            <a href="editar-pet.html">
-                                Editar
-                            </a>
+                            <label for="nome-pet">
+                                Nome do pet
+                            </label>
 
-                        </td>
+                            <input
+                                type="text"
+                                id="nome-pet"
+                                name="nome-pet"
+                                placeholder="Nome do pet">
 
-                    </tr>
+                        </div>
 
 
-                    <tr>
+                        <div class="campo-filtro">
 
-                        <td>002</td>
+                            <label for="proprietario-pet">
+                                Proprietário
+                            </label>
 
-                        <td>Luna</td>
+                            <input
+                                type="text"
+                                id="proprietario-pet"
+                                name="proprietario-pet"
+                                placeholder="Nome do proprietário">
 
-                        <td>Gato</td>
+                        </div>
 
-                        <td>Siamês</td>
 
-                        <td>Médio</td>
+                        <div class="campo-filtro">
 
-                        <td>João Santos</td>
+                            <label for="tipo-pet">
+                                Tipo
+                            </label>
 
-                        <td>
+                            <select id="tipo-pet" name="tipo-pet">
 
-                            <a href="visualizar-pet.html">
-                                Visualizar
-                            </a>
+                                <option value="">
+                                    Todos
+                                </option>
 
-                            |
+                                <option value="cachorro">
+                                    Cachorro
+                                </option>
 
-                            <a href="editar-pet.html">
-                                Editar
-                            </a>
+                                <option value="gato">
+                                    Gato
+                                </option>
 
-                        </td>
+                            </select>
 
-                    </tr>
+                        </div>
 
 
-                    <tr>
+                        <button
+                            type="button"
+                            class="botao botao-pesquisar">
+                            🔍 Pesquisar
+                        </button>
 
-                        <td>003</td>
+                    </div>
 
-                        <td>Mel</td>
 
-                        <td>Cachorro</td>
+                    <!-- TABELA -->
+                    <div class="tabela-container">
 
-                        <td>Shih-tzu</td>
+                        <table class="tabela-pets">
 
-                        <td>Pequeno</td>
+                            <thead>
 
-                        <td>Ana Oliveira</td>
+                                <tr>
 
-                        <td>
+                                    <th>ID</th>
 
-                            <a href="visualizar-pet.html">
-                                Visualizar
-                            </a>
+                                    <th>Pet</th>
 
-                            |
+                                    <th>Tipo</th>
 
-                            <a href="editar-pet.html">
-                                Editar
-                            </a>
+                                    <th>Raça</th>
 
-                        </td>
+                                    <th>Porte</th>
 
-                    </tr>
+                                    <th>Proprietário</th>
 
+                                    <th>Status</th>
 
-                    <tr>
+                                    <th>Ações</th>
 
-                        <td>004</td>
+                                </tr>
 
-                        <td>Bob</td>
+                            </thead>
 
-                        <td>Cachorro</td>
 
-                        <td>Beagle</td>
+                            <tbody>
 
-                        <td>Médio</td>
+                                <!-- PET 001 -->
 
-                        <td>Carlos Souza</td>
+                                <tr>
 
-                        <td>
+                                    <td>001</td>
 
-                            <a href="visualizar-pet.html">
-                                Visualizar
-                            </a>
+                                    <td>Thor</td>
 
-                            |
+                                    <td>Cachorro</td>
 
-                            <a href="editar-pet.html">
-                                Editar
-                            </a>
+                                    <td>Golden Retriever</td>
 
-                        </td>
+                                    <td>Grande</td>
 
-                    </tr>
+                                    <td>Maria Silva</td>
 
-                </tbody>
+                                    <td>
+                                        <span class="status status-confirmada">
+                                            Hospedado
+                                        </span>
+                                    </td>
 
-            </table>
+                                    <td>
 
-        </section>
+                                        <a href="visualizar-pet.html">
+                                            Visualizar
+                                        </a>
 
-    </main>
+                                        <a href="editar-pet.html">
+                                            Editar
+                                        </a>
 
+                                    </td>
 
-    <footer>
+                                </tr>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
 
-    </footer>
+                                <!-- PET 002 -->
+
+                                <tr>
+
+                                    <td>002</td>
+
+                                    <td>Luna</td>
+
+                                    <td>Cachorro</td>
+
+                                    <td>Shih-tzu</td>
+
+                                    <td>Pequeno</td>
+
+                                    <td>João Santos</td>
+
+                                    <td>
+                                        <span class="status status-agendada">
+                                            Hospedado
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-pet.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-pet.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- PET 003 -->
+
+                                <tr>
+
+                                    <td>003</td>
+
+                                    <td>Mel</td>
+
+                                    <td>Gato</td>
+
+                                    <td>Siamês</td>
+
+                                    <td>Pequeno</td>
+
+                                    <td>Ana Oliveira</td>
+
+                                    <td>
+                                        <span class="status status-andamento">
+                                            Hospedado
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-pet.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-pet.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- PET 004 -->
+
+                                <tr>
+
+                                    <td>004</td>
+
+                                    <td>Bob</td>
+
+                                    <td>Cachorro</td>
+
+                                    <td>Beagle</td>
+
+                                    <td>Médio</td>
+
+                                    <td>Carlos Souza</td>
+
+                                    <td>
+                                        <span class="status status-finalizada">
+                                            Fora do hotel
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-pet.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-pet.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 
