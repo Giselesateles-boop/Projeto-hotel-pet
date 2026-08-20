@@ -52,9 +52,13 @@
 
                 <div class="perfil-topo">
 
-                    <span class="icone-usuario">◯</span>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-                    <span>João da Silva</span>
+                    <span>
+                        João da Silva
+                    </span>
 
                 </div>
 
@@ -69,32 +73,35 @@
                 </p>
 
 
-                <section class="card formulario-card">
+                <section class="card">
 
-                    <h2>Cadastrar Pet</h2>
+                    <h2>
+                        Cadastrar Pet
+                    </h2>
 
 
                     <form>
 
-
                         <!-- DADOS DO PET -->
-                        <div class="grupo-formulario">
+                        <section class="secao-formulario">
 
-                            <h3>Dados do Pet</h3>
+                            <h3>
+                                Dados do Pet
+                            </h3>
 
 
-                            <div class="linha-formulario">
+                            <div class="formulario-duas-colunas">
 
                                 <div class="campo-formulario">
 
-                                    <label for="nome">
+                                    <label for="nome-pet">
                                         Nome do pet *
                                     </label>
 
                                     <input
                                         type="text"
-                                        id="nome"
-                                        name="nome"
+                                        id="nome-pet"
+                                        name="nome-pet"
                                         placeholder="Digite o nome do pet"
                                         required>
 
@@ -124,14 +131,14 @@
                                             Gato
                                         </option>
 
+                                        <option value="outro">
+                                            Outro
+                                        </option>
+
                                     </select>
 
                                 </div>
 
-                            </div>
-
-
-                            <div class="linha-formulario">
 
                                 <div class="campo-formulario">
 
@@ -179,10 +186,6 @@
 
                                 </div>
 
-                            </div>
-
-
-                            <div class="linha-formulario">
 
                                 <div class="campo-formulario">
 
@@ -194,8 +197,8 @@
                                         type="number"
                                         id="idade"
                                         name="idade"
-                                        min="0"
-                                        placeholder="Idade em anos">
+                                        placeholder="Idade em anos"
+                                        min="0">
 
                                 </div>
 
@@ -216,16 +219,18 @@
 
                             </div>
 
-                        </div>
+                        </section>
 
 
                         <!-- PROPRIETÁRIO -->
-                        <div class="grupo-formulario">
+                        <section class="secao-formulario">
 
-                            <h3>Proprietário</h3>
+                            <h3>
+                                Proprietário
+                            </h3>
 
 
-                            <div class="linha-formulario">
+                            <div class="formulario-duas-colunas">
 
                                 <div class="campo-formulario">
 
@@ -239,7 +244,7 @@
                                         required>
 
                                         <option value="">
-                                            Selecione o proprietário
+                                            Selecione
                                         </option>
 
                                         <option value="maria">
@@ -264,49 +269,60 @@
 
                             </div>
 
-                        </div>
+                        </section>
 
 
                         <!-- CUIDADOS -->
-                        <div class="grupo-formulario">
+                        <section class="secao-formulario">
 
-                            <h3>Cuidados e Observações</h3>
+                            <h3>
+                                Cuidados
+                            </h3>
 
 
-                            <div class="campo-formulario campo-largo">
+                            <div class="formulario-duas-colunas">
 
-                                <label for="alimentacao">
-                                    Alimentação
-                                </label>
+                                <div class="campo-formulario campo-completo">
 
-                                <textarea
-                                    id="alimentacao"
-                                    name="alimentacao"
-                                    placeholder="Informe os cuidados com a alimentação do pet"></textarea>
+                                    <label for="alimentacao">
+                                        Alimentação
+                                    </label>
+
+                                    <textarea
+                                        id="alimentacao"
+                                        name="alimentacao"
+                                        rows="4"
+                                        placeholder="Informe os cuidados com a alimentação"></textarea>
+
+                                </div>
+
+
+                                <div class="campo-formulario campo-completo">
+
+                                    <label for="observacoes">
+                                        Observações
+                                    </label>
+
+                                    <textarea
+                                        id="observacoes"
+                                        name="observacoes"
+                                        rows="4"
+                                        placeholder="Informe outras observações importantes"></textarea>
+
+                                </div>
 
                             </div>
 
-
-                            <div class="campo-formulario campo-largo">
-
-                                <label for="observacoes">
-                                    Observações
-                                </label>
-
-                                <textarea
-                                    id="observacoes"
-                                    name="observacoes"
-                                    placeholder="Informe outras observações importantes"></textarea>
-
-                            </div>
-
-                        </div>
+                        </section>
 
 
                         <!-- FOTO -->
-                        <div class="grupo-formulario">
+                        <section class="secao-formulario">
 
-                            <h3>Foto do Pet</h3>
+                            <h3>
+                                Foto do Pet
+                            </h3>
+
 
                             <div class="campo-formulario">
 
@@ -322,7 +338,7 @@
 
                             </div>
 
-                        </div>
+                        </section>
 
 
                         <!-- BOTÕES -->
@@ -344,7 +360,7 @@
 
                             <a
                                 href="pets.html"
-                                class="botao">
+                                class="botao botao-cancelar">
                                 ← Cancelar
                             </a>
 

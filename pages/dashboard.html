@@ -2,239 +2,307 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Dashboard</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
-
-        <nav>
-
-            <a href="dashboard.html">
-                Início
-            </a>
-
-            |
-
-            <a href="reservas.html">
-                Reservas
-            </a>
-
-            |
-
-            <a href="pets.html">
-                Pets
-            </a>
-
-            |
-
-            <a href="usuarios.html">
-                Usuários
-            </a>
-
-            |
-
-            <a href="configuracoes.html">
-                Configurações
-            </a>
-
-            |
-
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
-
-            |
-
-            <a href="../index.html">
-                Sair
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <section>
-
-            <h2>Olá, Gerente!</h2>
-
-            <p>
-                Bem-vindo ao sistema de gerenciamento do Hotel Pet.
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <h2>Resumo do Hotel</h2>
-
-
-            <article>
-
-                <h3>Reservas</h3>
-
-                <p>
-                    12 reservas cadastradas.
-                </p>
-
-                <a href="reservas.html">
-                    Ver reservas
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>Pets hospedados</h3>
-
-                <p>
-                    8 pets hospedados atualmente.
-                </p>
+            <nav>
 
                 <a href="pets.html">
-                    Ver pets
+                    🐾 Pet
                 </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>Usuários</h3>
-
-                <p>
-                    25 usuários cadastrados.
-                </p>
 
                 <a href="usuarios.html">
-                    Ver usuários
+                    ♙ Usuário
                 </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>Vagas disponíveis</h3>
-
-                <p>
-                    7 vagas disponíveis.
-                </p>
 
                 <a href="configuracoes.html">
-                    Configurações
+                    ⚙ Configurações
                 </a>
 
-            </article>
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-        </section>
+            </nav>
 
-
-        <section>
-
-            <h2>Próximas Reservas</h2>
-
-
-            <table border="1">
-
-                <thead>
-
-                    <tr>
-
-                        <th>Pet</th>
-
-                        <th>Proprietário</th>
-
-                        <th>Entrada</th>
-
-                        <th>Saída</th>
-
-                        <th>Status</th>
-
-                    </tr>
-
-                </thead>
+        </aside>
 
 
-                <tbody>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-                    <tr>
+            <!-- TOPO -->
+            <header class="topo">
 
-                        <td>Thor</td>
+                <div></div>
 
-                        <td>Maria Silva</td>
+                <div class="perfil-topo">
 
-                        <td>20/08/2026</td>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-                        <td>25/08/2026</td>
+                    <span>
+                        João da Silva
+                    </span>
 
-                        <td>Confirmada</td>
+                </div>
 
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Luna</td>
-
-                        <td>João Santos</td>
-
-                        <td>21/08/2026</td>
-
-                        <td>24/08/2026</td>
-
-                        <td>Em andamento</td>
-
-                    </tr>
+            </header>
 
 
-                    <tr>
+            <!-- CONTEÚDO -->
+            <main>
 
-                        <td>Mel</td>
-
-                        <td>Ana Oliveira</td>
-
-                        <td>22/08/2026</td>
-
-                        <td>27/08/2026</td>
-
-                        <td>Agendada</td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-    </main>
+                <p class="breadcrumb">
+                    Home
+                </p>
 
 
-    <footer>
+                <section class="card">
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                    <h2>
+                        Dashboard
+                    </h2>
 
-    </footer>
+
+                    <section class="boas-vindas">
+
+                        <h3>
+                            Olá, João da Silva!
+                        </h3>
+
+                        <p>
+                            Bem-vindo ao sistema de gerenciamento do Hotel Pet.
+                        </p>
+
+                    </section>
+
+
+                    <!-- RESUMO -->
+                    <section class="resumo">
+
+                        <h3>
+                            Resumo
+                        </h3>
+
+
+                        <div class="cards-resumo">
+
+                            <article class="card-resumo">
+
+                                <h4>
+                                    Reservas
+                                </h4>
+
+                                <p>
+                                    12 reservas cadastradas.
+                                </p>
+
+                                <a href="reservas.html">
+                                    Ver reservas
+                                </a>
+
+                            </article>
+
+
+                            <article class="card-resumo">
+
+                                <h4>
+                                    Pets hospedados
+                                </h4>
+
+                                <p>
+                                    8 pets hospedados atualmente.
+                                </p>
+
+                                <a href="pets.html">
+                                    Ver pets
+                                </a>
+
+                            </article>
+
+
+                            <article class="card-resumo">
+
+                                <h4>
+                                    Usuários
+                                </h4>
+
+                                <p>
+                                    25 usuários cadastrados.
+                                </p>
+
+                                <a href="usuarios.html">
+                                    Ver usuários
+                                </a>
+
+                            </article>
+
+
+                            <article class="card-resumo">
+
+                                <h4>
+                                    Vagas disponíveis
+                                </h4>
+
+                                <p>
+                                    7 vagas disponíveis.
+                                </p>
+
+                                <a href="configuracoes.html">
+                                    Configurações
+                                </a>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PRÓXIMAS RESERVAS -->
+                    <section class="proximas-reservas">
+
+                        <h3>
+                            Próximas reservas
+                        </h3>
+
+
+                        <table class="tabela">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Pet
+                                    </th>
+
+                                    <th>
+                                        Proprietário
+                                    </th>
+
+                                    <th>
+                                        Entrada
+                                    </th>
+
+                                    <th>
+                                        Saída
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Thor
+                                    </td>
+
+                                    <td>
+                                        Maria Silva
+                                    </td>
+
+                                    <td>
+                                        20/08/2026
+                                    </td>
+
+                                    <td>
+                                        25/08/2026
+                                    </td>
+
+                                    <td>
+                                        Confirmada
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Luna
+                                    </td>
+
+                                    <td>
+                                        João Santos
+                                    </td>
+
+                                    <td>
+                                        21/08/2026
+                                    </td>
+
+                                    <td>
+                                        24/08/2026
+                                    </td>
+
+                                    <td>
+                                        Em andamento
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Mel
+                                    </td>
+
+                                    <td>
+                                        Ana Oliveira
+                                    </td>
+
+                                    <td>
+                                        22/08/2026
+                                    </td>
+
+                                    <td>
+                                        27/08/2026
+                                    </td>
+
+                                    <td>
+                                        Agendada
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

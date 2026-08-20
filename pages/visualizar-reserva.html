@@ -2,237 +2,412 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Reserva</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
+            <nav>
 
-        <nav>
+                <a href="pets.html">
+                    🐾 Pet
+                </a>
 
-            <a href="dashboard.html">
-                Início
-            </a>
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
 
-            |
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
-            <a href="reservas.html">
-                Reservas
-            </a>
+                <a href="reservas.html" class="menu-ativo">
+                    ▣ Reservas
+                </a>
 
-            |
+            </nav>
 
-            <a href="pets.html">
-                Pets
-            </a>
+        </aside>
 
-            |
 
-            <a href="usuarios.html">
-                Usuários
-            </a>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-            |
+            <!-- TOPO -->
+            <header class="topo">
 
-            <a href="configuracoes.html">
-                Configurações
-            </a>
+                <div></div>
 
-            |
+                <div class="perfil-topo">
 
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-            |
+                    <span>
+                        João da Silva
+                    </span>
 
-            <a href="../index.html">
-                Sair
-            </a>
+                </div>
 
-        </nav>
+            </header>
 
-    </header>
 
+            <!-- CONTEÚDO -->
+            <main>
 
-    <main>
+                <p class="breadcrumb">
+                    Home / Reservas / Visualizar Reserva
+                </p>
 
-        <h2>Visualizar Reserva</h2>
 
+                <section class="card">
 
-        <section>
+                    <h2>
+                        Visualizar Reserva
+                    </h2>
 
-            <h3>Informações da Reserva</h3>
 
-            <p>
-                <strong>Código da Reserva:</strong>
-                001
-            </p>
+                    <!-- DADOS DA RESERVA -->
+                    <section class="secao-formulario">
 
-            <p>
-                <strong>Status:</strong>
-                Confirmada
-            </p>
+                        <h3>
+                            Dados da Reserva
+                        </h3>
 
-            <p>
-                <strong>Data de Entrada:</strong>
-                20/08/2026
-            </p>
 
-            <p>
-                <strong>Data de Saída:</strong>
-                25/08/2026
-            </p>
+                        <div class="formulario-duas-colunas">
 
-            <p>
-                <strong>Quantidade de Diárias:</strong>
-                5 diárias
-            </p>
+                            <div class="campo-formulario">
 
-            <p>
-                <strong>Valor da Diária:</strong>
-                R$ 80,00
-            </p>
+                                <label>
+                                    ID da reserva
+                                </label>
 
-            <p>
-                <strong>Valor Total:</strong>
-                R$ 400,00
-            </p>
+                                <input
+                                    type="text"
+                                    value="001"
+                                    readonly>
 
-        </section>
+                            </div>
 
 
-        <section>
+                            <div class="campo-formulario">
 
-            <h3>Informações do Pet</h3>
+                                <label>
+                                    Status
+                                </label>
 
-            <p>
-                <strong>Nome:</strong>
-                Thor
-            </p>
+                                <input
+                                    type="text"
+                                    value="Confirmada"
+                                    readonly>
 
-            <p>
-                <strong>Tipo:</strong>
-                Cachorro
-            </p>
+                            </div>
 
-            <p>
-                <strong>Raça:</strong>
-                Golden Retriever
-            </p>
 
-            <p>
-                <strong>Tamanho:</strong>
-                Grande
-            </p>
+                            <div class="campo-formulario">
 
-        </section>
+                                <label>
+                                    Data de entrada
+                                </label>
 
+                                <input
+                                    type="text"
+                                    value="20/08/2026"
+                                    readonly>
 
-        <section>
+                            </div>
 
-            <h3>Informações do Proprietário</h3>
 
-            <p>
-                <strong>Nome:</strong>
-                Maria Silva
-            </p>
+                            <div class="campo-formulario">
 
-            <p>
-                <strong>E-mail:</strong>
-                maria@email.com
-            </p>
+                                <label>
+                                    Data de saída
+                                </label>
 
-            <p>
-                <strong>Telefone:</strong>
-                (77) 99999-9999
-            </p>
+                                <input
+                                    type="text"
+                                    value="25/08/2026"
+                                    readonly>
 
-        </section>
+                            </div>
 
 
-        <section>
+                            <div class="campo-formulario">
 
-            <h3>Anotações da Estadia</h3>
+                                <label>
+                                    Quantidade de diárias
+                                </label>
 
-            <p>
-                Thor está se alimentando normalmente e apresentou
-                comportamento tranquilo durante a estadia.
-            </p>
+                                <input
+                                    type="text"
+                                    value="5 diárias"
+                                    readonly>
 
-        </section>
+                            </div>
 
 
-        <section>
+                            <div class="campo-formulario">
 
-            <h3>Imagens da Estadia</h3>
+                                <label>
+                                    Valor da diária
+                                </label>
 
-            <p>
-                Imagens registradas pelos funcionários durante a hospedagem.
-            </p>
+                                <input
+                                    type="text"
+                                    value="R$ 80,00"
+                                    readonly>
 
-            <p>
-                [ Imagem do Pet ]
-            </p>
+                            </div>
 
-            <p>
-                [ Imagem durante a alimentação ]
-            </p>
 
-        </section>
+                            <div class="campo-formulario">
 
+                                <label>
+                                    Valor total
+                                </label>
 
-        <section>
+                                <input
+                                    type="text"
+                                    value="R$ 400,00"
+                                    readonly>
 
-            <h3>Recibo da Estadia</h3>
+                            </div>
 
-            <p>
-                Reserva ainda não finalizada.
-            </p>
+                        </div>
 
-            <p>
-                O recibo será disponibilizado quando a reserva for finalizada.
-            </p>
+                    </section>
 
-        </section>
 
+                    <!-- DADOS DO PET -->
+                    <section class="secao-formulario">
 
-        <section>
+                        <h3>
+                            Dados do Pet
+                        </h3>
 
-            <a href="editar-reserva.html">
-                Editar Reserva
-            </a>
 
-            <br><br>
+                        <div class="formulario-duas-colunas">
 
-            <a href="reservas.html">
-                Voltar para Reservas
-            </a>
+                            <div class="campo-formulario">
 
-        </section>
+                                <label>
+                                    Nome do pet
+                                </label>
 
-    </main>
+                                <input
+                                    type="text"
+                                    value="Thor"
+                                    readonly>
 
+                            </div>
 
-    <footer>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                            <div class="campo-formulario">
 
-    </footer>
+                                <label>
+                                    Tipo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Cachorro"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Raça
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Golden Retriever"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Porte
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Grande"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROPRIETÁRIO -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Proprietário
+                        </h3>
+
+
+                        <div class="formulario-duas-colunas">
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Nome do proprietário
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Maria Silva"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    value="maria@email.com"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="(77) 99999-9999"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- OBSERVAÇÕES -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Observações
+                        </h3>
+
+
+                        <div class="campo-formulario campo-completo">
+
+                            <label>
+                                Observações da reserva
+                            </label>
+
+                            <textarea
+                                rows="4"
+                                readonly>Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.</textarea>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- FOTO DO PET -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Foto do Pet
+                        </h3>
+
+
+                        <div class="foto-pet">
+
+                            <div class="foto-placeholder">
+                                🐶
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- COMPROVANTE -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Comprovante
+                        </h3>
+
+
+                        <div class="arquivo-comprovante">
+
+                            <p>
+                                📄 comprovante-reserva-001.pdf
+                            </p>
+
+                            <a href="#">
+                                Visualizar comprovante
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- BOTÕES -->
+                    <div class="botoes-formulario">
+
+                        <a
+                            href="editar-reserva.html"
+                            class="botao botao-salvar">
+                            ✎ Editar
+                        </a>
+
+
+                        <a
+                            href="reservas.html"
+                            class="botao botao-cancelar">
+                            ← Voltar
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

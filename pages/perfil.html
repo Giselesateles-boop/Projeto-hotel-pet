@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Editar Perfil</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
+
+            <h1>Hotel Pet</h1>
+
+            <nav>
+
+                <a href="pets.html">
+                    🐾 Pet
+                </a>
+
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
+
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
+
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
+
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div></div>
+
+                <div class="perfil-topo">
+
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
+
+                    <span>
+                        João da Silva
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <main>
+
+                <p class="breadcrumb">
+                    Home / Editar Perfil
+                </p>
+
+
+                <section class="card">
+
+                    <h2>
+                        Editar Perfil
+                    </h2>
+
+
+                    <form>
+
+                        <!-- DADOS DO PERFIL -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Dados pessoais
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="email">
+                                        E-mail *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value="joaodasilva@pet.com"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="nome">
+                                        Nome *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        value="João"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="sobrenome">
+                                        Sobrenome
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="sobrenome"
+                                        name="sobrenome"
+                                        value="da Silva">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="telefone">
+                                        Telefone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        value="+55 (73) 99876-8943">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="funcao">
+                                        Função
+                                    </label>
+
+                                    <select
+                                        id="funcao"
+                                        name="funcao">
+
+                                        <option value="cliente">
+                                            Cliente
+                                        </option>
+
+                                        <option value="funcionario" selected>
+                                            Funcionário
+                                        </option>
+
+                                        <option value="gerente">
+                                            Gerente
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- FOTO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Foto do Perfil
+                            </h3>
+
+
+                            <div class="foto-perfil">
+
+                                <div class="foto-placeholder">
+                                    👤
+                                </div>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label for="foto">
+                                    Alterar foto
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    accept="image/*">
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
+
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+                                💾 Salvar
+                            </button>
+
+
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+                                ↻ Limpar
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

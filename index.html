@@ -2,95 +2,100 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Login</title>
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="pagina-login">
 
-        <h1>Hotel Pet</h1>
+        <header class="cabecalho-login">
 
-        <p>Hotel e cuidado para o seu melhor amigo</p>
-
-    </header>
-
-
-    <main>
-
-        <section>
-
-            <h2>Login</h2>
-
-            <form action="pages/dashboard.html">
-
-                <div>
-
-                    <label for="email">E-mail:</label>
-
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="senha">Senha:</label>
-
-                    <input 
-                        type="password" 
-                        id="senha" 
-                        name="senha" 
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <button type="submit">
-                    Entrar
-                </button>
-
-            </form>
-
+            <h1>Hotel Pet</h1>
 
             <p>
-
-                <a href="pages/dashboard.html">
-                    Acessar como Gerente
-                </a>
-
+                Hotel e cuidado para o seu melhor amigo
             </p>
 
-        </section>
-
-    </main>
+        </header>
 
 
-    <footer>
+        <main class="conteudo-login">
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+            <section class="card-login">
 
-    </footer>
+                <h2>Login</h2>
+
+                <form action="pages/dashboard.html">
+
+                    <div class="campo-formulario">
+
+                        <label for="email">
+                            E-mail *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="senha">
+                            Senha *
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao botao-salvar">
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <p class="acesso-gerente">
+
+                    <a href="pages/dashboard.html">
+                        Acessar como Gerente
+                    </a>
+
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <footer class="rodape-login">
+
+            <p>
+                &copy; 2026 Hotel Pet
+            </p>
+
+        </footer>
+
+    </div>
 
 </body>
 

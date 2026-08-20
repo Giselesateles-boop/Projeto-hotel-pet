@@ -52,9 +52,13 @@
 
                 <div class="perfil-topo">
 
-                    <span class="icone-usuario">◯</span>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-                    <span>João da Silva</span>
+                    <span>
+                        João da Silva
+                    </span>
 
                 </div>
 
@@ -69,279 +73,302 @@
                 </p>
 
 
-                <section class="card formulario-card">
+                <section class="card">
 
-                    <h2>Editar Pet</h2>
+                    <h2>
+                        Editar Pet
+                    </h2>
 
 
-                    <!-- DADOS DO PET -->
-                    <div class="grupo-formulario">
+                    <form>
 
-                        <h3>Dados do Pet</h3>
+                        <!-- DADOS DO PET -->
+                        <section class="secao-formulario">
 
-                        <div class="linha-formulario">
+                            <h3>
+                                Dados do Pet
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="id-pet">
+                                        ID
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="id-pet"
+                                        name="id-pet"
+                                        value="001"
+                                        readonly>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="nome-pet">
+                                        Nome do pet *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nome-pet"
+                                        name="nome-pet"
+                                        value="Thor"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="tipo">
+                                        Tipo *
+                                    </label>
+
+                                    <select
+                                        id="tipo"
+                                        name="tipo"
+                                        required>
+
+                                        <option value="cachorro" selected>
+                                            Cachorro
+                                        </option>
+
+                                        <option value="gato">
+                                            Gato
+                                        </option>
+
+                                        <option value="outro">
+                                            Outro
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="raca">
+                                        Raça
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="raca"
+                                        name="raca"
+                                        value="Golden Retriever">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="porte">
+                                        Porte *
+                                    </label>
+
+                                    <select
+                                        id="porte"
+                                        name="porte"
+                                        required>
+
+                                        <option value="pequeno">
+                                            Pequeno
+                                        </option>
+
+                                        <option value="medio">
+                                            Médio
+                                        </option>
+
+                                        <option value="grande" selected>
+                                            Grande
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="idade">
+                                        Idade
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="idade"
+                                        name="idade"
+                                        value="3"
+                                        min="0">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="peso">
+                                        Peso
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="peso"
+                                        name="peso"
+                                        value="28 kg">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- PROPRIETÁRIO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Proprietário
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="proprietario">
+                                        Proprietário *
+                                    </label>
+
+                                    <select
+                                        id="proprietario"
+                                        name="proprietario"
+                                        required>
+
+                                        <option value="maria" selected>
+                                            Maria Silva
+                                        </option>
+
+                                        <option value="joao">
+                                            João Santos
+                                        </option>
+
+                                        <option value="ana">
+                                            Ana Oliveira
+                                        </option>
+
+                                        <option value="carlos">
+                                            Carlos Souza
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- CUIDADOS -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Cuidados e Observações
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario campo-completo">
+
+                                    <label for="alimentacao">
+                                        Alimentação
+                                    </label>
+
+                                    <textarea
+                                        id="alimentacao"
+                                        name="alimentacao"
+                                        rows="4">Ração duas vezes ao dia, pela manhã e à noite.</textarea>
+
+                                </div>
+
+
+                                <div class="campo-formulario campo-completo">
+
+                                    <label for="observacoes">
+                                        Observações
+                                    </label>
+
+                                    <textarea
+                                        id="observacoes"
+                                        name="observacoes"
+                                        rows="4">Pet dócil. Gosta de brincar e precisa de passeios durante a hospedagem.</textarea>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- FOTO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Foto do Pet
+                            </h3>
+
 
                             <div class="campo-formulario">
 
-                                <label for="nome">
-                                    Nome do pet *
+                                <label for="foto">
+                                    Alterar foto
                                 </label>
 
                                 <input
-                                    type="text"
-                                    id="nome"
-                                    name="nome"
-                                    value="Thor"
-                                    required>
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    accept="image/*">
 
                             </div>
 
-
-                            <div class="campo-formulario">
-
-                                <label for="tipo">
-                                    Tipo *
-                                </label>
-
-                                <select
-                                    id="tipo"
-                                    name="tipo"
-                                    required>
-
-                                    <option value="cachorro" selected>
-                                        Cachorro
-                                    </option>
-
-                                    <option value="gato">
-                                        Gato
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
+                        </section>
 
 
-                        <div class="linha-formulario">
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
 
-                            <div class="campo-formulario">
-
-                                <label for="raca">
-                                    Raça
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="raca"
-                                    name="raca"
-                                    value="Golden Retriever">
-
-                            </div>
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+                                💾 Salvar
+                            </button>
 
 
-                            <div class="campo-formulario">
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+                                ↻ Limpar
+                            </button>
 
-                                <label for="porte">
-                                    Porte *
-                                </label>
 
-                                <select
-                                    id="porte"
-                                    name="porte"
-                                    required>
-
-                                    <option value="pequeno">
-                                        Pequeno
-                                    </option>
-
-                                    <option value="medio">
-                                        Médio
-                                    </option>
-
-                                    <option value="grande" selected>
-                                        Grande
-                                    </option>
-
-                                </select>
-
-                            </div>
+                            <a
+                                href="pets.html"
+                                class="botao botao-cancelar">
+                                ← Cancelar
+                            </a>
 
                         </div>
 
-
-                        <div class="linha-formulario">
-
-                            <div class="campo-formulario">
-
-                                <label for="idade">
-                                    Idade
-                                </label>
-
-                                <input
-                                    type="number"
-                                    id="idade"
-                                    name="idade"
-                                    value="3"
-                                    min="0">
-
-                            </div>
-
-
-                            <div class="campo-formulario">
-
-                                <label for="peso">
-                                    Peso
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="peso"
-                                    name="peso"
-                                    value="28 kg">
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- PROPRIETÁRIO -->
-                    <div class="grupo-formulario">
-
-                        <h3>Proprietário</h3>
-
-                        <div class="linha-formulario">
-
-                            <div class="campo-formulario">
-
-                                <label for="proprietario">
-                                    Proprietário *
-                                </label>
-
-                                <select
-                                    id="proprietario"
-                                    name="proprietario"
-                                    required>
-
-                                    <option value="maria" selected>
-                                        Maria Silva
-                                    </option>
-
-                                    <option value="joao">
-                                        João Santos
-                                    </option>
-
-                                    <option value="ana">
-                                        Ana Oliveira
-                                    </option>
-
-                                    <option value="carlos">
-                                        Carlos Souza
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-                            <div></div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CUIDADOS E OBSERVAÇÕES -->
-                    <div class="grupo-formulario">
-
-                        <h3>Cuidados e Observações</h3>
-
-
-                        <div class="campo-formulario campo-largo">
-
-                            <label for="alimentacao">
-                                Alimentação
-                            </label>
-
-                            <textarea
-                                id="alimentacao"
-                                name="alimentacao">Ração duas vezes ao dia, pela manhã e à noite.</textarea>
-
-                        </div>
-
-
-                        <div class="campo-formulario campo-largo">
-
-                            <label for="observacoes">
-                                Observações
-                            </label>
-
-                            <textarea
-                                id="observacoes"
-                                name="observacoes">Pet dócil. Gosta de brincar e precisa de passeios durante a hospedagem.</textarea>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- FOTO DO PET -->
-                    <div class="grupo-formulario">
-
-                        <h3>Foto do Pet</h3>
-
-
-                        <div class="foto-pet">
-
-                            <div class="foto-placeholder">
-                                🐶
-                            </div>
-
-                        </div>
-
-
-                        <div class="campo-formulario">
-
-                            <label for="foto">
-                                Alterar foto
-                            </label>
-
-                            <input
-                                type="file"
-                                id="foto"
-                                name="foto"
-                                accept="image/*">
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- BOTÕES -->
-                    <div class="botoes-formulario">
-
-                        <button
-                            type="submit"
-                            class="botao botao-salvar">
-                            💾 Salvar alterações
-                        </button>
-
-
-                        <button
-                            type="reset"
-                            class="botao botao-limpar">
-                            ↻ Limpar
-                        </button>
-
-
-                        <a
-                            href="visualizar-pet.html"
-                            class="botao">
-                            ← Cancelar
-                        </a>
-
-                    </div>
+                    </form>
 
                 </section>
 

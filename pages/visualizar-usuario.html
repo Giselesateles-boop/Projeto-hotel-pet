@@ -2,234 +2,407 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Usuário</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
-        <nav>
+            <nav>
 
-            <a href="dashboard.html">Início</a>
-            |
-            <a href="reservas.html">Reservas</a>
-            |
-            <a href="pets.html">Pets</a>
-            |
-            <a href="usuarios.html">Usuários</a>
-            |
-            <a href="configuracoes.html">Configurações</a>
-            |
-            <a href="perfil.html">Meu Perfil</a>
-            |
-            <a href="../index.html">Sair</a>
+                <a href="pets.html">
+                    🐾 Pet
+                </a>
 
-        </nav>
+                <a href="usuarios.html" class="menu-ativo">
+                    ♙ Usuário
+                </a>
 
-    </header>
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-    <main>
+            </nav>
 
-        <h2>Visualizar Usuário</h2>
+        </aside>
 
 
-        <section>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-            <h3>Dados Pessoais</h3>
+            <!-- TOPO -->
+            <header class="topo">
 
-            <p>
-                <strong>Código:</strong>
-                001
-            </p>
+                <div></div>
 
-            <p>
-                <strong>Nome completo:</strong>
-                Maria Silva
-            </p>
+                <div class="perfil-topo">
 
-            <p>
-                <strong>CPF:</strong>
-                123.456.789-00
-            </p>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-            <p>
-                <strong>Data de nascimento:</strong>
-                15/03/1990
-            </p>
+                    <span>
+                        João da Silva
+                    </span>
 
-            <p>
-                <strong>Telefone:</strong>
-                (77) 99999-9999
-            </p>
+                </div>
 
-        </section>
+            </header>
 
 
-        <section>
+            <!-- CONTEÚDO -->
+            <main>
 
-            <h3>Endereço</h3>
+                <p class="breadcrumb">
+                    Home / Usuários / Visualizar Usuário
+                </p>
 
-            <p>
-                <strong>CEP:</strong>
-                47500-000
-            </p>
 
-            <p>
-                <strong>Endereço:</strong>
-                Rua das Flores
-            </p>
+                <section class="card">
 
-            <p>
-                <strong>Número:</strong>
-                120
-            </p>
+                    <h2>
+                        Visualizar Usuário
+                    </h2>
 
-            <p>
-                <strong>Cidade:</strong>
-                Paratinga
-            </p>
 
-            <p>
-                <strong>Estado:</strong>
-                BA
-            </p>
+                    <!-- DADOS PESSOAIS -->
+                    <section class="secao-formulario">
 
-        </section>
+                        <h3>
+                            Dados do Usuário
+                        </h3>
 
 
-        <section>
+                        <div class="formulario-duas-colunas">
 
-            <h3>Dados de Acesso</h3>
+                            <div class="campo-formulario">
 
-            <p>
-                <strong>E-mail:</strong>
-                maria@email.com
-            </p>
+                                <label>
+                                    ID
+                                </label>
 
-            <p>
-                <strong>Senha:</strong>
-                ********
-            </p>
+                                <input
+                                    type="text"
+                                    value="001"
+                                    readonly>
 
-        </section>
+                            </div>
 
 
-        <section>
+                            <div class="campo-formulario">
 
-            <h3>Perfil de Acesso</h3>
+                                <label>
+                                    Nome
+                                </label>
 
-            <p>
-                <strong>Tipo de Usuário:</strong>
-                Cliente
-            </p>
+                                <input
+                                    type="text"
+                                    value="Maria"
+                                    readonly>
 
-            <p>
-                <strong>Status:</strong>
-                Ativo
-            </p>
+                            </div>
 
-        </section>
 
+                            <div class="campo-formulario">
 
-        <section>
+                                <label>
+                                    Sobrenome
+                                </label>
 
-            <h3>Histórico de Reservas</h3>
+                                <input
+                                    type="text"
+                                    value="Silva"
+                                    readonly>
 
-            <table border="1">
+                            </div>
 
-                <thead>
 
-                    <tr>
+                            <div class="campo-formulario">
 
-                        <th>Código</th>
+                                <label>
+                                    E-mail
+                                </label>
 
-                        <th>Pet</th>
+                                <input
+                                    type="email"
+                                    value="maria@email.com"
+                                    readonly>
 
-                        <th>Entrada</th>
+                            </div>
 
-                        <th>Saída</th>
 
-                        <th>Status</th>
+                            <div class="campo-formulario">
 
-                    </tr>
+                                <label>
+                                    Telefone
+                                </label>
 
-                </thead>
+                                <input
+                                    type="text"
+                                    value="(77) 99999-9999"
+                                    readonly>
 
-                <tbody>
+                            </div>
 
-                    <tr>
 
-                        <td>001</td>
+                            <div class="campo-formulario">
 
-                        <td>Thor</td>
+                                <label>
+                                    Função
+                                </label>
 
-                        <td>20/08/2026</td>
+                                <input
+                                    type="text"
+                                    value="Cliente"
+                                    readonly>
 
-                        <td>25/08/2026</td>
+                            </div>
 
-                        <td>Confirmada</td>
 
-                    </tr>
+                            <div class="campo-formulario">
 
-                    <tr>
+                                <label>
+                                    Status
+                                </label>
 
-                        <td>005</td>
+                                <input
+                                    type="text"
+                                    value="Ativo"
+                                    readonly>
 
-                        <td>Thor</td>
+                            </div>
 
-                        <td>10/07/2026</td>
+                        </div>
 
-                        <td>15/07/2026</td>
+                    </section>
 
-                        <td>Finalizada</td>
 
-                    </tr>
+                    <!-- ENDEREÇO -->
+                    <section class="secao-formulario">
 
-                </tbody>
+                        <h3>
+                            Endereço
+                        </h3>
 
-            </table>
 
-        </section>
+                        <div class="formulario-duas-colunas">
 
+                            <div class="campo-formulario">
 
-        <section>
+                                <label>
+                                    CEP
+                                </label>
 
-            <br>
+                                <input
+                                    type="text"
+                                    value="47500-000"
+                                    readonly>
 
-            <a href="editar-usuario.html">
-                Editar Usuário
-            </a>
+                            </div>
 
-            <br><br>
 
-            <a href="usuarios.html">
-                Voltar para Usuários
-            </a>
+                            <div class="campo-formulario">
 
-        </section>
+                                <label>
+                                    Cidade
+                                </label>
 
-    </main>
+                                <input
+                                    type="text"
+                                    value="Paratinga"
+                                    readonly>
 
+                            </div>
 
-    <footer>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                            <div class="campo-formulario">
 
-    </footer>
+                                <label>
+                                    Endereço
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Rua Principal"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Número
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="100"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- FOTO -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Foto do Usuário
+                        </h3>
+
+
+                        <div class="foto-pet">
+
+                            <div class="foto-placeholder">
+                                👤
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- HISTÓRICO DE RESERVAS -->
+                    <section class="secao-formulario">
+
+                        <h3>
+                            Histórico de Reservas
+                        </h3>
+
+
+                        <table class="tabela">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Reserva
+                                    </th>
+
+                                    <th>
+                                        Pet
+                                    </th>
+
+                                    <th>
+                                        Entrada
+                                    </th>
+
+                                    <th>
+                                        Saída
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        001
+                                    </td>
+
+                                    <td>
+                                        Thor
+                                    </td>
+
+                                    <td>
+                                        20/08/2026
+                                    </td>
+
+                                    <td>
+                                        25/08/2026
+                                    </td>
+
+                                    <td>
+                                        Confirmada
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        005
+                                    </td>
+
+                                    <td>
+                                        Thor
+                                    </td>
+
+                                    <td>
+                                        10/07/2026
+                                    </td>
+
+                                    <td>
+                                        15/07/2026
+                                    </td>
+
+                                    <td>
+                                        Finalizada
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+
+                    <!-- BOTÕES -->
+                    <div class="botoes-formulario">
+
+                        <a
+                            href="editar-usuario.html"
+                            class="botao botao-salvar">
+                            ✎ Editar
+                        </a>
+
+
+                        <a
+                            href="usuarios.html"
+                            class="botao botao-cancelar">
+                            ← Voltar
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

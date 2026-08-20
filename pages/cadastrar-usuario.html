@@ -2,399 +2,397 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Cadastrar Usuário</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
-        <nav>
+            <nav>
 
-            <a href="dashboard.html">Início</a>
-            |
-            <a href="reservas.html">Reservas</a>
-            |
-            <a href="pets.html">Pets</a>
-            |
-            <a href="usuarios.html">Usuários</a>
-            |
-            <a href="configuracoes.html">Configurações</a>
-            |
-            <a href="perfil.html">Meu Perfil</a>
-            |
-            <a href="../index.html">Sair</a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <h2>Cadastrar Novo Usuário</h2>
-
-
-        <form>
-
-            <section>
-
-                <h3>Dados Pessoais</h3>
-
-
-                <div>
-
-                    <label for="nome">
-                        Nome completo:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite o nome completo"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="cpf">
-                        CPF:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="cpf"
-                        name="cpf"
-                        placeholder="000.000.000-00"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="nascimento">
-                        Data de nascimento:
-                    </label>
-
-                    <input
-                        type="date"
-                        id="nascimento"
-                        name="nascimento"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="telefone">
-                        Telefone:
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="telefone"
-                        name="telefone"
-                        placeholder="(00) 00000-0000"
-                        required
-                    >
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Endereço</h3>
-
-
-                <div>
-
-                    <label for="cep">
-                        CEP:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="cep"
-                        name="cep"
-                        placeholder="00000-000"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="endereco">
-                        Endereço:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="endereco"
-                        name="endereco"
-                        placeholder="Rua, Avenida..."
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="numero">
-                        Número:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="numero"
-                        name="numero"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="cidade">
-                        Cidade:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="cidade"
-                        name="cidade"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="estado">
-                        Estado:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="estado"
-                        name="estado"
-                        placeholder="BA"
-                    >
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Dados de Acesso</h3>
-
-
-                <div>
-
-                    <label for="email">
-                        E-mail:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="usuario@email.com"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="senha">
-                        Senha:
-                    </label>
-
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        required
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="confirmar-senha">
-                        Confirmar senha:
-                    </label>
-
-                    <input
-                        type="password"
-                        id="confirmar-senha"
-                        name="confirmar-senha"
-                        required
-                    >
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Tipo de Usuário</h3>
-
-
-                <div>
-
-                    <label for="tipo">
-                        Perfil:
-                    </label>
-
-                    <select
-                        id="tipo"
-                        name="tipo"
-                        required
-                    >
-
-                        <option value="">
-                            Selecione o perfil
-                        </option>
-
-                        <option value="cliente">
-                            Cliente
-                        </option>
-
-                        <option value="funcionario">
-                            Funcionário
-                        </option>
-
-                        <option value="gerente">
-                            Gerente
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <h3>Status</h3>
-
-
-                <div>
-
-                    <label for="status">
-                        Situação:
-                    </label>
-
-                    <select
-                        id="status"
-                        name="status"
-                    >
-
-                        <option value="ativo" selected>
-                            Ativo
-                        </option>
-
-                        <option value="inativo">
-                            Inativo
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </section>
-
-
-            <section>
-
-                <br>
-
-                <button type="submit">
-                    Cadastrar Usuário
-                </button>
-
-
-                <button type="reset">
-                    Limpar
-                </button>
-
-
-                <br><br>
-
-
-                <a href="usuarios.html">
-                    Cancelar
+                <a href="pets.html">
+                    🐾 Pet
                 </a>
 
-            </section>
+                <a href="usuarios.html" class="menu-ativo">
+                    ♙ Usuário
+                </a>
 
-        </form>
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
-    </main>
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
+
+            </nav>
+
+        </aside>
 
 
-    <footer>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+            <!-- TOPO -->
+            <header class="topo">
 
-    </footer>
+                <div></div>
+
+                <div class="perfil-topo">
+
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
+
+                    <span>
+                        João da Silva
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <main>
+
+                <p class="breadcrumb">
+                    Home / Usuários / Cadastrar Usuário
+                </p>
+
+
+                <section class="card">
+
+                    <h2>
+                        Cadastrar Usuário
+                    </h2>
+
+
+                    <form>
+
+                        <!-- DADOS DO USUÁRIO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Dados do Usuário
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="nome">
+                                        Nome *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Digite o nome"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="sobrenome">
+                                        Sobrenome
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="sobrenome"
+                                        name="sobrenome"
+                                        placeholder="Digite o sobrenome">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="email">
+                                        E-mail *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Digite o e-mail"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="telefone">
+                                        Telefone *
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="+55 (00) 00000-0000"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ENDEREÇO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Endereço
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="cep">
+                                        CEP
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cep"
+                                        name="cep"
+                                        placeholder="00000-000">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="cidade">
+                                        Cidade
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cidade"
+                                        name="cidade"
+                                        placeholder="Digite a cidade">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="endereco">
+                                        Endereço
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="endereco"
+                                        name="endereco"
+                                        placeholder="Digite o endereço">
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="numero">
+                                        Número
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="numero"
+                                        name="numero"
+                                        placeholder="Número">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ACESSO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Acesso
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <div class="campo-formulario">
+
+                                    <label for="senha">
+                                        Senha *
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="senha"
+                                        name="senha"
+                                        placeholder="Digite a senha"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="confirmar-senha">
+                                        Confirmar senha *
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="confirmar-senha"
+                                        name="confirmar-senha"
+                                        placeholder="Confirme a senha"
+                                        required>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="funcao">
+                                        Função *
+                                    </label>
+
+                                    <select
+                                        id="funcao"
+                                        name="funcao"
+                                        required>
+
+                                        <option value="">
+                                            Selecione
+                                        </option>
+
+                                        <option value="cliente">
+                                            Cliente
+                                        </option>
+
+                                        <option value="funcionario">
+                                            Funcionário
+                                        </option>
+
+                                        <option value="gerente">
+                                            Gerente
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="campo-formulario">
+
+                                    <label for="status">
+                                        Status
+                                    </label>
+
+                                    <select
+                                        id="status"
+                                        name="status">
+
+                                        <option value="ativo">
+                                            Ativo
+                                        </option>
+
+                                        <option value="inativo">
+                                            Inativo
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- FOTO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Foto do Usuário
+                            </h3>
+
+
+                            <div class="campo-formulario">
+
+                                <label for="foto">
+                                    Foto
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    accept="image/*">
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
+
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+                                💾 Salvar
+                            </button>
+
+
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+                                ↻ Limpar
+                            </button>
+
+
+                            <a
+                                href="usuarios.html"
+                                class="botao botao-cancelar">
+                                ← Cancelar
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

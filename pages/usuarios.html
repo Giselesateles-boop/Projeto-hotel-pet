@@ -2,352 +2,455 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Usuários</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
+            <nav>
 
-        <nav>
-
-            <a href="dashboard.html">
-                Início
-            </a>
-
-            |
-
-            <a href="reservas.html">
-                Reservas
-            </a>
-
-            |
-
-            <a href="pets.html">
-                Pets
-            </a>
-
-            |
-
-            <a href="usuarios.html">
-                Usuários
-            </a>
-
-            |
-
-            <a href="configuracoes.html">
-                Configurações
-            </a>
-
-            |
-
-            <a href="perfil.html">
-                Meu Perfil
-            </a>
-
-            |
-
-            <a href="../index.html">
-                Sair
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <h2>Usuários</h2>
-
-
-        <section>
-
-            <h3>Pesquisar Usuário</h3>
-
-
-            <form>
-
-                <div>
-
-                    <label for="nome">
-                        Nome:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite o nome"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="email">
-                        E-mail:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite o e-mail"
-                    >
-
-                </div>
-
-
-                <br>
-
-
-                <div>
-
-                    <label for="tipo">
-                        Tipo de Usuário:
-                    </label>
-
-                    <select id="tipo" name="tipo">
-
-                        <option value="">
-                            Todos
-                        </option>
-
-                        <option value="cliente">
-                            Cliente
-                        </option>
-
-                        <option value="funcionario">
-                            Funcionário
-                        </option>
-
-                        <option value="gerente">
-                            Gerente
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <br>
-
-
-                <button type="submit">
-                    Pesquisar
-                </button>
-
-
-                <button type="reset">
-                    Limpar
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <br>
-
-
-        <section>
-
-            <h3>Lista de Usuários</h3>
-
-
-            <p>
-
-                <a href="cadastrar-usuario.html">
-                    Cadastrar novo usuário
+                <a href="pets.html">
+                    🐾 Pet
                 </a>
 
-            </p>
+                <a href="usuarios.html" class="menu-ativo">
+                    ♙ Usuário
+                </a>
 
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
 
-            <table border="1">
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-                <thead>
+            </nav>
 
-                    <tr>
+        </aside>
 
-                        <th>Código</th>
 
-                        <th>Nome</th>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-                        <th>E-mail</th>
+            <!-- TOPO -->
+            <header class="topo">
 
-                        <th>Telefone</th>
+                <div></div>
 
-                        <th>Tipo</th>
+                <div class="perfil-topo">
 
-                        <th>Status</th>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-                        <th>Ações</th>
+                    <span>
+                        João da Silva
+                    </span>
 
-                    </tr>
+                </div>
 
-                </thead>
+            </header>
 
 
-                <tbody>
+            <!-- CONTEÚDO -->
+            <main>
 
+                <p class="breadcrumb">
+                    Home / Usuários
+                </p>
 
-                    <tr>
 
-                        <td>001</td>
+                <section class="card">
 
-                        <td>Maria Silva</td>
+                    <div class="cabecalho-pagina">
 
-                        <td>maria@email.com</td>
+                        <h2>
+                            Usuários
+                        </h2>
 
-                        <td>(77) 99999-9999</td>
+                        <a
+                            href="cadastrar-usuario.html"
+                            class="botao botao-salvar">
+                            + Novo usuário
+                        </a>
 
-                        <td>Cliente</td>
+                    </div>
 
-                        <td>Ativo</td>
 
-                        <td>
+                    <!-- AÇÕES -->
+                    <section class="acoes-usuarios">
 
-                            <a href="visualizar-usuario.html">
-                                Visualizar
-                            </a>
+                        <button
+                            type="button"
+                            class="botao botao-remover">
+                            Remover
+                        </button>
 
-                            |
 
-                            <a href="editar-usuario.html">
-                                Editar
-                            </a>
+                        <button
+                            type="button"
+                            class="botao botao-status">
+                            ✓ Mudar status
+                        </button>
 
-                        </td>
+                    </section>
 
-                    </tr>
 
+                    <!-- VISUALIZAÇÃO -->
+                    <section class="visualizacao-usuarios">
 
-                    <tr>
+                        <h3>
+                            Visualizar por:
+                        </h3>
 
-                        <td>002</td>
 
-                        <td>João Santos</td>
+                        <div class="botoes-visualizacao">
 
-                        <td>joao@email.com</td>
+                            <button
+                                type="button"
+                                class="botao botao-visualizacao-ativo">
+                                Usuários
+                            </button>
 
-                        <td>(77) 98888-8888</td>
 
-                        <td>Cliente</td>
+                            <button
+                                type="button"
+                                class="botao">
+                                Função
+                            </button>
 
-                        <td>Ativo</td>
+                        </div>
 
-                        <td>
+                    </section>
 
-                            <a href="visualizar-usuario.html">
-                                Visualizar
-                            </a>
 
-                            |
+                    <!-- FILTROS -->
+                    <section class="filtros">
 
-                            <a href="editar-usuario.html">
-                                Editar
-                            </a>
+                        <h3>
+                            Pesquisar
+                        </h3>
 
-                        </td>
 
-                    </tr>
+                        <form class="formulario-pesquisa">
 
+                            <div class="campo-formulario">
 
-                    <tr>
+                                <label for="id">
+                                    ID
+                                </label>
 
-                        <td>003</td>
+                                <input
+                                    type="text"
+                                    id="id"
+                                    name="id"
+                                    placeholder="ID">
 
-                        <td>Ana Oliveira</td>
+                            </div>
 
-                        <td>ana@email.com</td>
 
-                        <td>(77) 97777-7777</td>
+                            <div class="campo-formulario">
 
-                        <td>Funcionário</td>
+                                <label for="criado-inicio">
+                                    Criado em
+                                </label>
 
-                        <td>Ativo</td>
+                                <input
+                                    type="date"
+                                    id="criado-inicio"
+                                    name="criado-inicio">
 
-                        <td>
+                            </div>
 
-                            <a href="visualizar-usuario.html">
-                                Visualizar
-                            </a>
 
-                            |
+                            <div class="campo-formulario">
 
-                            <a href="editar-usuario.html">
-                                Editar
-                            </a>
+                                <label for="criado-fim">
+                                    Até
+                                </label>
 
-                        </td>
+                                <input
+                                    type="date"
+                                    id="criado-fim"
+                                    name="criado-fim">
 
-                    </tr>
+                            </div>
 
 
-                    <tr>
+                            <div class="campo-formulario">
 
-                        <td>004</td>
+                                <label for="email">
+                                    E-mail
+                                </label>
 
-                        <td>Carlos Souza</td>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="E-mail">
 
-                        <td>carlos@email.com</td>
+                            </div>
 
-                        <td>(77) 96666-6666</td>
 
-                        <td>Gerente</td>
+                            <div class="campo-formulario">
 
-                        <td>Ativo</td>
+                                <label for="nome">
+                                    Nome
+                                </label>
 
-                        <td>
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Nome">
 
-                            <a href="visualizar-usuario.html">
-                                Visualizar
-                            </a>
+                            </div>
 
-                            |
 
-                            <a href="editar-usuario.html">
-                                Editar
-                            </a>
+                            <button
+                                type="submit"
+                                class="botao botao-pesquisar">
+                                🔍 Pesquisar
+                            </button>
 
-                        </td>
+                        </form>
 
-                    </tr>
+                    </section>
 
 
-                </tbody>
+                    <!-- TABELA -->
+                    <section class="tabela-container">
 
-            </table>
+                        <table class="tabela">
 
-        </section>
+                            <thead>
 
-    </main>
+                                <tr>
 
+                                    <th>
+                                        ID
+                                    </th>
 
-    <footer>
+                                    <th>
+                                        Nome
+                                    </th>
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                                    <th>
+                                        E-mail
+                                    </th>
 
-    </footer>
+                                    <th>
+                                        Telefone
+                                    </th>
+
+                                    <th>
+                                        Função
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Ações
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        001
+                                    </td>
+
+                                    <td>
+                                        Maria Silva
+                                    </td>
+
+                                    <td>
+                                        maria@email.com
+                                    </td>
+
+                                    <td>
+                                        (77) 99999-9999
+                                    </td>
+
+                                    <td>
+                                        Cliente
+                                    </td>
+
+                                    <td>
+                                        Ativo
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-usuario.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-usuario.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        002
+                                    </td>
+
+                                    <td>
+                                        João Santos
+                                    </td>
+
+                                    <td>
+                                        joao@email.com
+                                    </td>
+
+                                    <td>
+                                        (77) 98888-8888
+                                    </td>
+
+                                    <td>
+                                        Cliente
+                                    </td>
+
+                                    <td>
+                                        Ativo
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-usuario.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-usuario.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        003
+                                    </td>
+
+                                    <td>
+                                        Ana Oliveira
+                                    </td>
+
+                                    <td>
+                                        ana@email.com
+                                    </td>
+
+                                    <td>
+                                        (77) 97777-7777
+                                    </td>
+
+                                    <td>
+                                        Funcionário
+                                    </td>
+
+                                    <td>
+                                        Ativo
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-usuario.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-usuario.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        004
+                                    </td>
+
+                                    <td>
+                                        Carlos Souza
+                                    </td>
+
+                                    <td>
+                                        carlos@email.com
+                                    </td>
+
+                                    <td>
+                                        (77) 96666-6666
+                                    </td>
+
+                                    <td>
+                                        Gerente
+                                    </td>
+
+                                    <td>
+                                        Ativo
+                                    </td>
+
+                                    <td>
+
+                                        <a href="visualizar-usuario.html">
+                                            Visualizar
+                                        </a>
+
+                                        <a href="editar-usuario.html">
+                                            Editar
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 

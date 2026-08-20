@@ -2,196 +2,162 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Configurações</title>
 
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <div class="layout">
 
-        <h1>Hotel Pet</h1>
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
 
-        <p>Área do Gerente</p>
+            <h1>Hotel Pet</h1>
 
-        <nav>
+            <nav>
 
-            <a href="dashboard.html">Início</a>
-            |
-            <a href="reservas.html">Reservas</a>
-            |
-            <a href="pets.html">Pets</a>
-            |
-            <a href="usuarios.html">Usuários</a>
-            |
-            <a href="configuracoes.html">Configurações</a>
-            |
-            <a href="perfil.html">Meu Perfil</a>
-            |
-            <a href="../index.html">Sair</a>
+                <a href="pets.html">
+                    🐾 Pet
+                </a>
 
-        </nav>
+                <a href="usuarios.html">
+                    ♙ Usuário
+                </a>
 
-    </header>
+                <a href="configuracoes.html" class="menu-ativo">
+                    ⚙ Configurações
+                </a>
 
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
 
-    <main>
+            </nav>
 
-        <h2>Configurações do Hotel</h2>
+        </aside>
 
 
-        <section>
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
 
-            <h3>Configurações de Hospedagem</h3>
+            <!-- TOPO -->
+            <header class="topo">
 
-            <p>
-                Nesta área o gerente pode alterar os valores
-                utilizados nas reservas do Hotel Pet.
-            </p>
+                <div></div>
 
+                <div class="perfil-topo">
 
-            <form>
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
 
-                <div>
-
-                    <label for="diaria">
-                        Valor da diária:
-                    </label>
-
-                    <input
-                        type="number"
-                        id="diaria"
-                        name="diaria"
-                        value="80.00"
-                        min="0"
-                        step="0.01"
-                        required
-                    >
-
-                    <span>R$</span>
+                    <span>
+                        João da Silva
+                    </span>
 
                 </div>
 
-
-                <br>
-
-
-                <div>
-
-                    <label for="vagas">
-                        Quantidade de vagas disponíveis:
-                    </label>
-
-                    <input
-                        type="number"
-                        id="vagas"
-                        name="vagas"
-                        value="15"
-                        min="0"
-                        required
-                    >
-
-                    <span>vagas</span>
-
-                </div>
+            </header>
 
 
-                <br>
+            <!-- CONTEÚDO -->
+            <main>
+
+                <p class="breadcrumb">
+                    Home / Configurações
+                </p>
 
 
-                <button type="submit">
-                    Salvar Configurações
-                </button>
+                <section class="card">
+
+                    <h2>
+                        Configurações
+                    </h2>
 
 
-                <button type="reset">
-                    Restaurar
-                </button>
+                    <form>
 
-            </form>
+                        <!-- CONFIGURAÇÕES DO HOTEL -->
+                        <section class="secao-formulario">
 
-        </section>
-
-
-        <section>
-
-            <h3>Informações Atuais</h3>
-
-            <table border="1">
-
-                <thead>
-
-                    <tr>
-
-                        <th>Configuração</th>
-
-                        <th>Valor Atual</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-
-                        <td>Valor da diária</td>
-
-                        <td>R$ 80,00</td>
-
-                    </tr>
+                            <h3>
+                                Configurações do Hotel
+                            </h3>
 
 
-                    <tr>
+                            <div class="formulario-duas-colunas">
 
-                        <td>Vagas disponíveis</td>
+                                <div class="campo-formulario">
 
-                        <td>15</td>
+                                    <label for="valor-diaria">
+                                        Valor da diária *
+                                    </label>
 
-                    </tr>
+                                    <input
+                                        type="number"
+                                        id="valor-diaria"
+                                        name="valor-diaria"
+                                        value="80.00"
+                                        min="0"
+                                        step="0.01"
+                                        required>
 
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <section>
-
-            <h3>Observação</h3>
-
-            <p>
-                As alterações realizadas nesta página serão
-                utilizadas como referência para as novas reservas.
-            </p>
-
-        </section>
+                                </div>
 
 
-        <p>
+                                <div class="campo-formulario">
 
-            <a href="dashboard.html">
-                Voltar para o Dashboard
-            </a>
+                                    <label for="vagas">
+                                        Vagas disponíveis *
+                                    </label>
 
-        </p>
+                                    <input
+                                        type="number"
+                                        id="vagas"
+                                        name="vagas"
+                                        value="3"
+                                        min="0"
+                                        required>
 
-    </main>
+                                </div>
+
+                            </div>
+
+                        </section>
 
 
-    <footer>
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
 
-        <p>
-            &copy; 2026 Hotel Pet
-        </p>
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+                                💾 Salvar
+                            </button>
 
-    </footer>
+
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+                                ↻ Limpar
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
 </body>
 
