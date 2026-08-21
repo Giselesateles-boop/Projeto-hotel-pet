@@ -5,313 +5,181 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Pets</title>
 
-    <link rel="stylesheet"
-        href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
-
 <body>
-
 
     <div class="layout">
 
-
-        <!-- ================================= -->
         <!-- MENU LATERAL -->
-        <!-- ================================= -->
-
         <aside class="menu-lateral">
 
-
-            <h1>
-                Hotel Pet
-            </h1>
-
+            <h1>Hotel Pet</h1>
 
             <nav>
 
-
-                <a href="pets.html"
-                    class="menu-ativo">
-
-                    🐾 Pet
-
+                <a href="pets.html" class="menu-ativo">
+                    Pet
                 </a>
-
 
                 <a href="usuarios.html">
-
-                    ♙ Usuário
-
+                    Usuário
                 </a>
-
 
                 <a href="configuracoes.html">
-
-                    ⚙ Configurações
-
+                    Configurações
                 </a>
-
 
                 <a href="reservas.html">
-
-                    ▣ Reservas
-
+                    Reservas
                 </a>
 
-
             </nav>
-
 
         </aside>
 
 
-
-        <!-- ================================= -->
-        <!-- CONTEÚDO -->
-        <!-- ================================= -->
-
+        <!-- CONTEÚDO PRINCIPAL -->
         <div class="conteudo">
 
-
-            <!-- ================================= -->
             <!-- TOPO -->
-            <!-- ================================= -->
-
             <header class="topo">
-
 
                 <div></div>
 
-
-                <a href="perfil.html"
-                    class="perfil-topo">
-
+                <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
-
-                        ◯
-
+                        O
                     </span>
-
 
                     <span>
-
                         Gisele Teles
-
                     </span>
 
-
                 </a>
-
 
             </header>
 
 
-
-            <!-- ================================= -->
-            <!-- CONTEÚDO PRINCIPAL -->
-            <!-- ================================= -->
-
             <main>
 
-
                 <!-- BREADCRUMB -->
-
                 <p class="breadcrumb">
 
-
                     <a href="dashboard.html">
-
                         Home
-
                     </a>
 
-
                     / Pets
-
 
                 </p>
 
 
-
-                <!-- ================================= -->
                 <!-- CABEÇALHO -->
-                <!-- ================================= -->
-
                 <div class="cabecalho-pagina">
 
-
                     <h2>
-
                         Pets
-
                     </h2>
 
-
-                    <a
-                        href="cadastrar-pet.html"
-                        class="botao botao-salvar">
-
+                    <a href="cadastrar-pet.html" class="botao botao-salvar">
                         + Novo pet
-
                     </a>
-
 
                 </div>
 
 
-
-                <!-- ================================= -->
                 <!-- PESQUISA -->
-                <!-- ================================= -->
-
                 <section class="card">
 
-
                     <h3>
-
                         Pesquisar
-
                     </h3>
 
+                    <form class="formulario-pesquisa" action="pets.html" method="get">
 
-                    <form
-                        class="formulario-pesquisa"
-                        id="formulario-pesquisa">
-
-
-                        <!-- NOME -->
-
-                        <div
-                            class="campo-formulario">
-
+                        <div class="campo-formulario">
 
                             <label for="pesquisa-nome">
-
                                 Nome do pet
-
                             </label>
-
 
                             <input
                                 type="text"
                                 id="pesquisa-nome"
-                                placeholder="Nome do pet">
-
+                                name="nome"
+                                placeholder="Nome do pet"
+                            >
 
                         </div>
 
 
-
-                        <!-- PROPRIETÁRIO -->
-
-                        <div
-                            class="campo-formulario">
-
+                        <div class="campo-formulario">
 
                             <label for="pesquisa-proprietario">
-
                                 Proprietário
-
                             </label>
-
 
                             <input
                                 type="text"
                                 id="pesquisa-proprietario"
-                                placeholder="Nome do proprietário">
-
+                                name="proprietario"
+                                placeholder="Nome do proprietário"
+                            >
 
                         </div>
 
 
-
-                        <!-- TIPO -->
-
-                        <div
-                            class="campo-formulario">
-
+                        <div class="campo-formulario">
 
                             <label for="pesquisa-tipo">
-
                                 Tipo
-
                             </label>
 
-
-                            <select
-                                id="pesquisa-tipo">
-
+                            <select id="pesquisa-tipo" name="tipo">
 
                                 <option value="">
-
                                     Todos
-
                                 </option>
-
 
                                 <option value="cachorro">
-
                                     Cachorro
-
                                 </option>
-
 
                                 <option value="gato">
-
                                     Gato
-
                                 </option>
-
 
                             </select>
 
-
                         </div>
 
 
-
-                        <!-- BOTÃO -->
-
                         <button
                             type="submit"
-                            class="botao botao-pesquisar">
-
-
-                            🔍 Pesquisar
-
-
+                            class="botao botao-pesquisar"
+                        >
+                            Pesquisar
                         </button>
 
-
                     </form>
-
 
                 </section>
 
 
-
-                <!-- ================================= -->
                 <!-- TABELA -->
-                <!-- ================================= -->
+                <section class="tabela-container">
 
-                <section
-                    class="tabela-container">
-
-
-                    <table
-                        class="tabela">
-
+                    <table class="tabela">
 
                         <thead>
-
 
                             <tr>
 
@@ -349,15 +217,13 @@
 
                             </tr>
 
-
                         </thead>
 
 
-                        <tbody id="tabela-pets">
+                        <tbody>
 
 
                             <!-- THOR -->
-
                             <tr>
 
                                 <td>
@@ -390,34 +256,22 @@
 
                                 <td>
 
-
-                                    <a
-                                        href="visualizar-pet.html?pet=thor">
-
+                                    <a href="visualizar-pet.html?pet=thor">
                                         Visualizar
-
                                     </a>
-
 
                                     &nbsp;
 
-
-                                    <a
-                                        href="editar-pet.html?pet=thor">
-
+                                    <a href="editar-pet.html?pet=thor">
                                         Editar
-
                                     </a>
-
 
                                 </td>
 
                             </tr>
 
 
-
                             <!-- LUNA -->
-
                             <tr>
 
                                 <td>
@@ -450,34 +304,22 @@
 
                                 <td>
 
-
-                                    <a
-                                        href="visualizar-pet.html?pet=luna">
-
+                                    <a href="visualizar-pet.html?pet=luna">
                                         Visualizar
-
                                     </a>
-
 
                                     &nbsp;
 
-
-                                    <a
-                                        href="editar-pet.html?pet=luna">
-
+                                    <a href="editar-pet.html?pet=luna">
                                         Editar
-
                                     </a>
-
 
                                 </td>
 
                             </tr>
 
 
-
                             <!-- MEL -->
-
                             <tr>
 
                                 <td>
@@ -510,34 +352,22 @@
 
                                 <td>
 
-
-                                    <a
-                                        href="visualizar-pet.html?pet=mel">
-
+                                    <a href="visualizar-pet.html?pet=mel">
                                         Visualizar
-
                                     </a>
-
 
                                     &nbsp;
 
-
-                                    <a
-                                        href="editar-pet.html?pet=mel">
-
+                                    <a href="editar-pet.html?pet=mel">
                                         Editar
-
                                     </a>
-
 
                                 </td>
 
                             </tr>
 
 
-
                             <!-- BOB -->
-
                             <tr>
 
                                 <td>
@@ -570,25 +400,15 @@
 
                                 <td>
 
-
-                                    <a
-                                        href="visualizar-pet.html?pet=bob">
-
+                                    <a href="visualizar-pet.html?pet=bob">
                                         Visualizar
-
                                     </a>
-
 
                                     &nbsp;
 
-
-                                    <a
-                                        href="editar-pet.html?pet=bob">
-
+                                    <a href="editar-pet.html?pet=bob">
                                         Editar
-
                                     </a>
-
 
                                 </td>
 
@@ -597,132 +417,15 @@
 
                         </tbody>
 
-
                     </table>
-
 
                 </section>
 
-
             </main>
-
 
         </div>
 
-
     </div>
-
-
-
-    <!-- ================================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ================================= -->
-
-    <script>
-
-
-        const formulario =
-            document.getElementById(
-                "formulario-pesquisa"
-            );
-
-
-        formulario.addEventListener(
-            "submit",
-            function (evento) {
-
-
-                evento.preventDefault();
-
-
-                const nome =
-                    document.getElementById(
-                        "pesquisa-nome"
-                    ).value
-                    .toLowerCase();
-
-
-                const proprietario =
-                    document.getElementById(
-                        "pesquisa-proprietario"
-                    ).value
-                    .toLowerCase();
-
-
-                const tipo =
-                    document.getElementById(
-                        "pesquisa-tipo"
-                    ).value
-                    .toLowerCase();
-
-
-                const linhas =
-                    document.querySelectorAll(
-                        "#tabela-pets tr"
-                    );
-
-
-                linhas.forEach(
-                    function (linha) {
-
-
-                        const texto =
-                            linha.textContent
-                            .toLowerCase();
-
-
-                        let mostrar =
-                            true;
-
-
-                        if (
-                            nome &&
-                            !texto.includes(nome)
-                        ) {
-
-                            mostrar = false;
-
-                        }
-
-
-                        if (
-                            proprietario &&
-                            !texto.includes(
-                                proprietario
-                            )
-                        ) {
-
-                            mostrar = false;
-
-                        }
-
-
-                        if (
-                            tipo &&
-                            !texto.includes(tipo)
-                        ) {
-
-                            mostrar = false;
-
-                        }
-
-
-                        linha.style.display =
-                            mostrar
-                                ? ""
-                                : "none";
-
-
-                    }
-                );
-
-
-            }
-        );
-
-
-    </script>
-
 
 </body>
 

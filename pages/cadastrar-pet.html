@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Cadastrar Pet</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -22,19 +25,19 @@
             <nav>
 
                 <a href="pets.html" class="menu-ativo">
-                    🐾 Pet
+                    Pet
                 </a>
 
                 <a href="usuarios.html">
-                    ♙ Usuário
+                    Usuário
                 </a>
 
                 <a href="configuracoes.html">
-                    ⚙ Configurações
+                    Configurações
                 </a>
 
                 <a href="reservas.html">
-                    ▣ Reservas
+                    Reservas
                 </a>
 
             </nav>
@@ -53,7 +56,7 @@
                 <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
-                        ◯
+                        O
                     </span>
 
                     <span>
@@ -68,6 +71,7 @@
             <!-- CONTEÚDO -->
             <main>
 
+                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
 
                     <a href="dashboard.html">
@@ -85,6 +89,7 @@
                 </p>
 
 
+                <!-- CARD -->
                 <section class="card">
 
                     <h2>
@@ -92,8 +97,10 @@
                     </h2>
 
 
-                    <form id="formulario-cadastro-pet">
-
+                    <form
+                        action="pets.html"
+                        method="get"
+                    >
 
                         <!-- DADOS DO PET -->
                         <section class="secao-formulario">
@@ -105,9 +112,7 @@
 
                             <div class="formulario-duas-colunas">
 
-
                                 <!-- NOME -->
-
                                 <div class="campo-formulario">
 
                                     <label for="nome-pet">
@@ -119,13 +124,13 @@
                                         id="nome-pet"
                                         name="nome-pet"
                                         placeholder="Digite o nome do pet"
-                                        required>
+                                        required
+                                    >
 
                                 </div>
 
 
                                 <!-- TIPO -->
-
                                 <div class="campo-formulario">
 
                                     <label for="tipo">
@@ -135,7 +140,8 @@
                                     <select
                                         id="tipo"
                                         name="tipo"
-                                        required>
+                                        required
+                                    >
 
                                         <option value="">
                                             Selecione
@@ -159,7 +165,6 @@
 
 
                                 <!-- RAÇA -->
-
                                 <div class="campo-formulario">
 
                                     <label for="raca">
@@ -170,13 +175,13 @@
                                         type="text"
                                         id="raca"
                                         name="raca"
-                                        placeholder="Digite a raça">
+                                        placeholder="Digite a raça"
+                                    >
 
                                 </div>
 
 
                                 <!-- PORTE -->
-
                                 <div class="campo-formulario">
 
                                     <label for="porte">
@@ -186,7 +191,8 @@
                                     <select
                                         id="porte"
                                         name="porte"
-                                        required>
+                                        required
+                                    >
 
                                         <option value="">
                                             Selecione
@@ -210,7 +216,6 @@
 
 
                                 <!-- IDADE -->
-
                                 <div class="campo-formulario">
 
                                     <label for="idade">
@@ -222,13 +227,13 @@
                                         id="idade"
                                         name="idade"
                                         placeholder="Idade em anos"
-                                        min="0">
+                                        min="0"
+                                    >
 
                                 </div>
 
 
                                 <!-- PESO -->
-
                                 <div class="campo-formulario">
 
                                     <label for="peso">
@@ -239,10 +244,10 @@
                                         type="text"
                                         id="peso"
                                         name="peso"
-                                        placeholder="Ex.: 12 kg">
+                                        placeholder="Ex.: 12 kg"
+                                    >
 
                                 </div>
-
 
                             </div>
 
@@ -250,7 +255,6 @@
 
 
                         <!-- PROPRIETÁRIO -->
-
                         <section class="secao-formulario">
 
                             <h3>
@@ -269,7 +273,8 @@
                                     <select
                                         id="proprietario"
                                         name="proprietario"
-                                        required>
+                                        required
+                                    >
 
                                         <option value="">
                                             Selecione
@@ -301,7 +306,6 @@
 
 
                         <!-- CUIDADOS -->
-
                         <section class="secao-formulario">
 
                             <h3>
@@ -311,7 +315,7 @@
 
                             <div class="formulario-duas-colunas">
 
-
+                                <!-- ALIMENTAÇÃO -->
                                 <div class="campo-formulario campo-completo">
 
                                     <label for="alimentacao">
@@ -322,11 +326,13 @@
                                         id="alimentacao"
                                         name="alimentacao"
                                         rows="4"
-                                        placeholder="Informe os cuidados com a alimentação"></textarea>
+                                        placeholder="Informe os cuidados com a alimentação"
+                                    ></textarea>
 
                                 </div>
 
 
+                                <!-- OBSERVAÇÕES -->
                                 <div class="campo-formulario campo-completo">
 
                                     <label for="observacoes">
@@ -337,10 +343,10 @@
                                         id="observacoes"
                                         name="observacoes"
                                         rows="4"
-                                        placeholder="Informe outras observações importantes"></textarea>
+                                        placeholder="Informe outras observações importantes"
+                                    ></textarea>
 
                                 </div>
-
 
                             </div>
 
@@ -348,7 +354,6 @@
 
 
                         <!-- FOTO -->
-
                         <section class="secao-formulario">
 
                             <h3>
@@ -366,31 +371,8 @@
                                     type="file"
                                     id="foto"
                                     name="foto"
-                                    accept="image/*">
-
-                            </div>
-
-
-                            <!-- PRÉ-VISUALIZAÇÃO -->
-
-                            <div
-                                id="preview-container"
-                                style="display: none; margin-top: 15px;">
-
-                                <p>
-                                    Pré-visualização:
-                                </p>
-
-                                <img
-                                    id="preview-foto"
-                                    src=""
-                                    alt="Pré-visualização da foto"
-                                    style="
-                                        width: 150px;
-                                        height: 150px;
-                                        object-fit: cover;
-                                        border-radius: 10px;
-                                    ">
+                                    accept="image/*"
+                                >
 
                             </div>
 
@@ -398,37 +380,32 @@
 
 
                         <!-- BOTÕES -->
-
                         <div class="botoes-formulario">
 
                             <button
                                 type="submit"
-                                class="botao botao-salvar">
-
-                                💾 Salvar
-
+                                class="botao botao-salvar"
+                            >
+                                Salvar
                             </button>
 
 
                             <button
                                 type="reset"
-                                class="botao botao-limpar">
-
-                                ↻ Limpar
-
+                                class="botao botao-limpar"
+                            >
+                                Limpar
                             </button>
 
 
                             <a
                                 href="pets.html"
-                                class="botao botao-cancelar">
-
-                                ← Cancelar
-
+                                class="botao botao-cancelar"
+                            >
+                                Cancelar
                             </a>
 
                         </div>
-
 
                     </form>
 
@@ -439,125 +416,6 @@
         </div>
 
     </div>
-
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        const formulario =
-            document.getElementById(
-                "formulario-cadastro-pet"
-            );
-
-
-        const campoFoto =
-            document.getElementById(
-                "foto"
-            );
-
-
-        const previewContainer =
-            document.getElementById(
-                "preview-container"
-            );
-
-
-        const previewFoto =
-            document.getElementById(
-                "preview-foto"
-            );
-
-
-        /* PRÉ-VISUALIZAÇÃO DA FOTO */
-
-        campoFoto.addEventListener(
-            "change",
-            function () {
-
-                const arquivo =
-                    this.files[0];
-
-
-                if (!arquivo) {
-
-                    previewContainer.style.display =
-                        "none";
-
-                    previewFoto.src =
-                        "";
-
-                    return;
-
-                }
-
-
-                const leitor =
-                    new FileReader();
-
-
-                leitor.onload =
-                    function (evento) {
-
-                        previewFoto.src =
-                            evento.target.result;
-
-                        previewContainer.style.display =
-                            "block";
-
-                    };
-
-
-                leitor.readAsDataURL(
-                    arquivo
-                );
-
-            }
-        );
-
-
-        /* SALVAR */
-
-        formulario.addEventListener(
-            "submit",
-            function (evento) {
-
-                evento.preventDefault();
-
-                alert(
-                    "Pet cadastrado com sucesso!"
-                );
-
-                window.location.href =
-                    "pets.html";
-
-            }
-        );
-
-
-        /* LIMPAR */
-
-        formulario.addEventListener(
-            "reset",
-            function () {
-
-                setTimeout(
-                    function () {
-
-                        previewContainer.style.display =
-                            "none";
-
-                        previewFoto.src =
-                            "";
-
-                    },
-                    0
-                );
-
-            }
-        );
-
-    </script>
 
 </body>
 

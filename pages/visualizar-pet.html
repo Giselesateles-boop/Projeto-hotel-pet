@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Pet</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -22,19 +25,19 @@
             <nav>
 
                 <a href="pets.html" class="menu-ativo">
-                    🐾 Pet
+                    Pet
                 </a>
 
                 <a href="usuarios.html">
-                    ♙ Usuário
+                    Usuário
                 </a>
 
                 <a href="configuracoes.html">
-                    ⚙ Configurações
+                    Configurações
                 </a>
 
                 <a href="reservas.html">
-                    ▣ Reservas
+                    Reservas
                 </a>
 
             </nav>
@@ -53,7 +56,7 @@
                 <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
-                        ◯
+                        O
                     </span>
 
                     <span>
@@ -68,6 +71,7 @@
             <!-- CONTEÚDO PRINCIPAL -->
             <main>
 
+                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
 
                     <a href="dashboard.html">
@@ -85,6 +89,7 @@
                 </p>
 
 
+                <!-- CABEÇALHO -->
                 <div class="cabecalho-pagina">
 
                     <h2>
@@ -97,8 +102,8 @@
                 <!-- CARD -->
                 <section class="card">
 
-                    <h3 id="titulo-pet">
-                        Dados do Pet
+                    <h3>
+                        Dados do Pet - Thor
                     </h3>
 
 
@@ -114,9 +119,8 @@
                             <div class="foto-pet">
 
                                 <img
-                                    id="foto-pet"
                                     src="../img/Thor.png"
-                                    alt="Foto do pet"
+                                    alt="Foto de Thor"
                                     style="
                                         width: 180px;
                                         height: 180px;
@@ -139,7 +143,7 @@
 
                             <input
                                 type="text"
-                                id="nome"
+                                value="Thor"
                                 readonly
                             >
 
@@ -155,7 +159,7 @@
 
                             <input
                                 type="text"
-                                id="tipo"
+                                value="Cachorro"
                                 readonly
                             >
 
@@ -171,7 +175,7 @@
 
                             <input
                                 type="text"
-                                id="raca"
+                                value="Golden Retriever"
                                 readonly
                             >
 
@@ -187,7 +191,7 @@
 
                             <input
                                 type="text"
-                                id="porte"
+                                value="Grande"
                                 readonly
                             >
 
@@ -203,7 +207,7 @@
 
                             <input
                                 type="text"
-                                id="proprietario"
+                                value="Maria Silva"
                                 readonly
                             >
 
@@ -219,7 +223,7 @@
 
                             <input
                                 type="text"
-                                id="idade"
+                                value="3 anos"
                                 readonly
                             >
 
@@ -235,7 +239,7 @@
 
                             <input
                                 type="text"
-                                id="peso"
+                                value="30 kg"
                                 readonly
                             >
 
@@ -250,10 +254,9 @@
                             </label>
 
                             <textarea
-                                id="alimentacao"
                                 rows="3"
                                 readonly
-                            ></textarea>
+                            >Ração duas vezes ao dia.</textarea>
 
                         </div>
 
@@ -266,10 +269,9 @@
                             </label>
 
                             <textarea
-                                id="observacoes"
                                 rows="4"
                                 readonly
-                            ></textarea>
+                            >Gosta de brincar e passear.</textarea>
 
                         </div>
 
@@ -280,12 +282,12 @@
                     <div class="acoes-formulario">
 
                         <a
-                            id="botao-editar"
-                            href="editar-pet.html?pet=thor"
+                            href="editar-pet.html"
                             class="botao botao-salvar"
                         >
-                            ✏️ Editar
+                            Editar
                         </a>
+
 
                         <a
                             href="pets.html"
@@ -303,123 +305,6 @@
         </div>
 
     </div>
-
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        const pets = {
-
-            thor: {
-                nome: "Thor",
-                tipo: "Cachorro",
-                raca: "Golden Retriever",
-                porte: "Grande",
-                proprietario: "Maria Silva",
-                idade: "3 anos",
-                peso: "30 kg",
-                alimentacao: "Ração duas vezes ao dia.",
-                observacoes: "Gosta de brincar e passear.",
-                foto: "../img/Thor.png"
-            },
-
-            luna: {
-                nome: "Luna",
-                tipo: "Cachorro",
-                raca: "Shih-tzu",
-                porte: "Pequeno",
-                proprietario: "João Santos",
-                idade: "2 anos",
-                peso: "6 kg",
-                alimentacao: "Ração duas vezes ao dia.",
-                observacoes: "Pet tranquila e dócil.",
-                foto: "../img/Luna.png"
-            },
-
-            mel: {
-                nome: "Mel",
-                tipo: "Gato",
-                raca: "Siamês",
-                porte: "Pequeno",
-                proprietario: "Ana Oliveira",
-                idade: "2 anos",
-                peso: "4 kg",
-                alimentacao: "Ração para gatos duas vezes ao dia.",
-                observacoes: "Gosta de ambientes tranquilos.",
-                foto: "../img/Mel.png"
-            },
-
-            bob: {
-                nome: "Bob",
-                tipo: "Cachorro",
-                raca: "Beagle",
-                porte: "Médio",
-                proprietario: "Gisele Teles",
-                idade: "4 anos",
-                peso: "12 kg",
-                alimentacao: "Ração duas vezes ao dia.",
-                observacoes: "Pet ativo e brincalhão.",
-                foto: "../img/Bob.png"
-            }
-
-        };
-
-
-        const parametros =
-            new URLSearchParams(
-                window.location.search
-            );
-
-
-        const petSelecionado =
-            parametros.get("pet") || "thor";
-
-
-        const pet =
-            pets[petSelecionado] || pets.thor;
-
-
-        document.getElementById("nome").value =
-            pet.nome;
-
-        document.getElementById("tipo").value =
-            pet.tipo;
-
-        document.getElementById("raca").value =
-            pet.raca;
-
-        document.getElementById("porte").value =
-            pet.porte;
-
-        document.getElementById("proprietario").value =
-            pet.proprietario;
-
-        document.getElementById("idade").value =
-            pet.idade;
-
-        document.getElementById("peso").value =
-            pet.peso;
-
-        document.getElementById("alimentacao").value =
-            pet.alimentacao;
-
-        document.getElementById("observacoes").value =
-            pet.observacoes;
-
-        document.getElementById("foto-pet").src =
-            pet.foto;
-
-        document.getElementById("foto-pet").alt =
-            "Foto de " + pet.nome;
-
-        document.getElementById("titulo-pet").textContent =
-            "Dados do Pet - " + pet.nome;
-
-        document.getElementById("botao-editar").href =
-            "editar-pet.html?pet=" + petSelecionado;
-
-    </script>
 
 </body>
 

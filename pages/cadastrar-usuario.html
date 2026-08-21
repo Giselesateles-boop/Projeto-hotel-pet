@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Cadastrar Usuário</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -17,24 +20,26 @@
         <!-- MENU LATERAL -->
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+            <h1>
+                Hotel Pet
+            </h1>
 
             <nav>
 
                 <a href="pets.html">
-                    🐾 Pet
+                    Pet
                 </a>
 
                 <a href="usuarios.html" class="menu-ativo">
-                    ♙ Usuário
+                    Usuário
                 </a>
 
                 <a href="configuracoes.html">
-                    ⚙ Configurações
+                    Configurações
                 </a>
 
                 <a href="reservas.html">
-                    ▣ Reservas
+                    Reservas
                 </a>
 
             </nav>
@@ -50,17 +55,17 @@
 
                 <div></div>
 
-                <div class="perfil-topo">
+                <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
-                        ◯
+                        O
                     </span>
 
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
@@ -68,11 +73,27 @@
             <!-- CONTEÚDO -->
             <main>
 
+                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-                    Home / Usuários / Cadastrar Usuário
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="usuarios.html">
+                        Usuários
+                    </a>
+
+                    /
+
+                    Cadastrar Usuário
+
                 </p>
 
 
+                <!-- CARD -->
                 <section class="card">
 
                     <h2>
@@ -80,7 +101,10 @@
                     </h2>
 
 
-                    <form>
+                    <form
+                        action="usuarios.html"
+                        method="get"
+                    >
 
                         <!-- DADOS DO USUÁRIO -->
                         <section class="secao-formulario">
@@ -103,7 +127,8 @@
                                         id="nome"
                                         name="nome"
                                         placeholder="Digite o nome"
-                                        required>
+                                        required
+                                    >
 
                                 </div>
 
@@ -118,7 +143,8 @@
                                         type="text"
                                         id="sobrenome"
                                         name="sobrenome"
-                                        placeholder="Digite o sobrenome">
+                                        placeholder="Digite o sobrenome"
+                                    >
 
                                 </div>
 
@@ -134,7 +160,8 @@
                                         id="email"
                                         name="email"
                                         placeholder="Digite o e-mail"
-                                        required>
+                                        required
+                                    >
 
                                 </div>
 
@@ -149,8 +176,9 @@
                                         type="tel"
                                         id="telefone"
                                         name="telefone"
-                                        placeholder="+55 (00) 00000-0000"
-                                        required>
+                                        placeholder="(00) 00000-0000"
+                                        required
+                                    >
 
                                 </div>
 
@@ -179,7 +207,8 @@
                                         type="text"
                                         id="cep"
                                         name="cep"
-                                        placeholder="00000-000">
+                                        placeholder="00000-000"
+                                    >
 
                                 </div>
 
@@ -194,7 +223,8 @@
                                         type="text"
                                         id="cidade"
                                         name="cidade"
-                                        placeholder="Digite a cidade">
+                                        placeholder="Digite a cidade"
+                                    >
 
                                 </div>
 
@@ -209,7 +239,8 @@
                                         type="text"
                                         id="endereco"
                                         name="endereco"
-                                        placeholder="Digite o endereço">
+                                        placeholder="Digite o endereço"
+                                    >
 
                                 </div>
 
@@ -224,7 +255,8 @@
                                         type="text"
                                         id="numero"
                                         name="numero"
-                                        placeholder="Número">
+                                        placeholder="Número"
+                                    >
 
                                 </div>
 
@@ -254,7 +286,8 @@
                                         id="senha"
                                         name="senha"
                                         placeholder="Digite a senha"
-                                        required>
+                                        required
+                                    >
 
                                 </div>
 
@@ -270,7 +303,8 @@
                                         id="confirmar-senha"
                                         name="confirmar-senha"
                                         placeholder="Confirme a senha"
-                                        required>
+                                        required
+                                    >
 
                                 </div>
 
@@ -284,7 +318,8 @@
                                     <select
                                         id="funcao"
                                         name="funcao"
-                                        required>
+                                        required
+                                    >
 
                                         <option value="">
                                             Selecione
@@ -315,9 +350,10 @@
 
                                     <select
                                         id="status"
-                                        name="status">
+                                        name="status"
+                                    >
 
-                                        <option value="ativo">
+                                        <option value="ativo" selected>
                                             Ativo
                                         </option>
 
@@ -352,7 +388,8 @@
                                     type="file"
                                     id="foto"
                                     name="foto"
-                                    accept="image/*">
+                                    accept="image/*"
+                                >
 
                             </div>
 
@@ -364,22 +401,25 @@
 
                             <button
                                 type="submit"
-                                class="botao botao-salvar">
-                                💾 Salvar
+                                class="botao botao-salvar"
+                            >
+                                Salvar
                             </button>
 
 
                             <button
                                 type="reset"
-                                class="botao botao-limpar">
-                                ↻ Limpar
+                                class="botao botao-limpar"
+                            >
+                                Limpar
                             </button>
 
 
                             <a
                                 href="usuarios.html"
-                                class="botao botao-cancelar">
-                                ← Cancelar
+                                class="botao botao-cancelar"
+                            >
+                                Cancelar
                             </a>
 
                         </div>

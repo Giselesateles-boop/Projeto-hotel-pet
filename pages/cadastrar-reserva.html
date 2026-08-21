@@ -2,855 +2,379 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Cadastrar Reserva</title>
 
-    <link rel="stylesheet"
-        href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 
 <body>
 
-
     <div class="layout">
-
-
-        <!-- ================================= -->
-        <!-- MENU LATERAL -->
-        <!-- ================================= -->
 
         <aside class="menu-lateral">
 
-
-            <h1>
-                Hotel Pet
-            </h1>
-
+            <h1>Hotel Pet</h1>
 
             <nav>
 
-
                 <a href="pets.html">
-                    🐾 Pet
+                    Pet
                 </a>
-
 
                 <a href="usuarios.html">
-                    ♙ Usuário
+                    Usuário
                 </a>
-
 
                 <a href="configuracoes.html">
-                    ⚙ Configurações
+                    Configurações
                 </a>
 
-
-                <a href="reservas.html"
-                    class="menu-ativo">
-
-                    ▣ Reservas
-
+                <a href="reservas.html" class="menu-ativo">
+                    Reservas
                 </a>
-
 
             </nav>
-
 
         </aside>
 
 
-
-        <!-- ================================= -->
-        <!-- CONTEÚDO -->
-        <!-- ================================= -->
-
-        <main class="conteudo">
-
-
-            <!-- ================================= -->
-            <!-- TOPO -->
-            <!-- ================================= -->
+        <div class="conteudo">
 
             <header class="topo">
 
-
                 <div></div>
 
-
-                <a href="perfil.html"
-                    class="perfil-topo">
-
+                <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
-                        ◯
+                        O
                     </span>
-
 
                     <span>
                         Gisele Teles
                     </span>
 
-
                 </a>
-
 
             </header>
 
 
-
-            <!-- ================================= -->
-            <!-- ÁREA PRINCIPAL -->
-            <!-- ================================= -->
-
-            <section class="area-conteudo">
-
-
-                <!-- BREADCRUMB -->
+            <main>
 
                 <p class="breadcrumb">
-
 
                     <a href="dashboard.html">
                         Home
                     </a>
 
-
                     /
-
 
                     <a href="reservas.html">
                         Reservas
                     </a>
 
+                    /
 
-                    / Cadastrar Reserva
-
+                    Cadastrar Reserva
 
                 </p>
 
 
-
-                <!-- CABEÇALHO -->
-
                 <div class="cabecalho-pagina">
-
 
                     <h2>
                         Cadastrar Reserva
                     </h2>
 
-
                 </div>
 
 
-
-                <!-- CARD -->
-
-                <div class="card">
-
+                <section class="card">
 
                     <form
-                        id="formulario-reserva"
-                        class="formulario-duas-colunas">
-
-
-
-                        <!-- ================================= -->
-                        <!-- PET -->
-                        <!-- ================================= -->
+                        action="reservas.html"
+                        method="get"
+                        class="formulario-duas-colunas"
+                    >
 
                         <div class="campo-formulario">
-
 
                             <label for="pet">
                                 Pet *
                             </label>
 
-
                             <select
                                 id="pet"
                                 name="pet"
-                                required>
-
+                                required
+                            >
 
                                 <option value="">
                                     Selecione o pet
                                 </option>
 
-
                                 <option value="thor">
                                     Thor
                                 </option>
-
 
                                 <option value="luna">
                                     Luna
                                 </option>
 
-
                                 <option value="mel">
                                     Mel
                                 </option>
-
 
                                 <option value="bob">
                                     Bob
                                 </option>
 
-
                             </select>
-
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- TUTOR -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
-
 
                             <label for="tutor">
                                 Tutor *
                             </label>
 
-
                             <select
                                 id="tutor"
                                 name="tutor"
-                                required>
-
+                                required
+                            >
 
                                 <option value="">
                                     Selecione o tutor
                                 </option>
 
-
                                 <option value="maria">
                                     Maria Silva
                                 </option>
-
 
                                 <option value="joao">
                                     João Santos
                                 </option>
 
-
                                 <option value="ana">
                                     Ana Oliveira
                                 </option>
-
 
                                 <option value="gisele">
                                     Gisele Teles
                                 </option>
 
-
                             </select>
-
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- DATA DE ENTRADA -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="entrada">
-
                                 Data de entrada *
-
                             </label>
-
 
                             <input
                                 type="date"
                                 id="entrada"
                                 name="entrada"
-                                required>
-
+                                required
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- DATA DE SAÍDA -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="saida">
-
                                 Data de saída *
-
                             </label>
-
 
                             <input
                                 type="date"
                                 id="saida"
                                 name="saida"
-                                required>
-
+                                required
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- STATUS -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="status">
-
                                 Status *
-
                             </label>
-
 
                             <select
                                 id="status"
                                 name="status"
-                                required>
-
+                                required
+                            >
 
                                 <option value="">
                                     Selecione o status
                                 </option>
 
-
                                 <option value="agendada">
                                     Agendada
                                 </option>
-
 
                                 <option value="confirmada">
                                     Confirmada
                                 </option>
 
-
                                 <option value="andamento">
                                     Em andamento
                                 </option>
 
-
                             </select>
-
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- QUANTIDADE DE DIÁRIAS -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="diarias">
-
                                 Quantidade de diárias
-
                             </label>
-
 
                             <input
                                 type="number"
                                 id="diarias"
                                 name="diarias"
-                                readonly>
-
+                                min="1"
+                                placeholder="Informe a quantidade"
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- VALOR DA DIÁRIA -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="diaria">
-
                                 Valor da diária
-
                             </label>
-
 
                             <input
                                 type="text"
                                 id="diaria"
                                 name="diaria"
                                 value="R$ 80,00"
-                                readonly>
-
+                                readonly
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- VALOR TOTAL -->
-                        <!-- ================================= -->
-
                         <div class="campo-formulario">
 
-
                             <label for="total">
-
                                 Valor total
-
                             </label>
-
 
                             <input
                                 type="text"
                                 id="total"
                                 name="total"
                                 value="R$ 0,00"
-                                readonly>
-
+                                readonly
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- OBSERVAÇÕES -->
-                        <!-- ================================= -->
-
-                        <div
-                            class="campo-formulario campo-completo">
-
+                        <div class="campo-formulario campo-completo">
 
                             <label for="observacoes">
-
                                 Observações
-
                             </label>
-
 
                             <textarea
                                 id="observacoes"
                                 name="observacoes"
                                 rows="5"
-                                placeholder="Digite alguma observação sobre a reserva...">
-                            </textarea>
-
+                                placeholder="Digite alguma observação sobre a reserva..."
+                            ></textarea>
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- FOTO DO PET -->
-                        <!-- ================================= -->
-
-                        <div
-                            class="campo-formulario campo-completo">
-
+                        <div class="campo-formulario campo-completo">
 
                             <label for="foto">
-
                                 Foto do Pet
-
                             </label>
-
 
                             <input
                                 type="file"
                                 id="foto"
                                 name="foto"
-                                accept="image/*">
-
+                                accept="image/*"
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- COMPROVANTE -->
-                        <!-- ================================= -->
-
-                        <div
-                            class="campo-formulario campo-completo">
-
+                        <div class="campo-formulario campo-completo">
 
                             <label for="comprovante">
-
                                 Comprovante
-
                             </label>
-
 
                             <input
                                 type="file"
                                 id="comprovante"
                                 name="comprovante"
-                                accept=".pdf,.jpg,.jpeg,.png">
-
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
 
                         </div>
 
 
-
-                        <!-- ================================= -->
-                        <!-- BOTÕES -->
-                        <!-- ================================= -->
-
-                        <div
-                            class="acoes-formulario campo-completo">
-
+                        <div class="acoes-formulario campo-completo">
 
                             <button
                                 type="submit"
-                                class="botao botao-salvar">
-
-
-                                💾 Salvar
-
-
+                                class="botao botao-salvar"
+                            >
+                                Salvar
                             </button>
-
 
 
                             <button
                                 type="reset"
-                                class="botao botao-limpar">
-
-
-                                ↻ Limpar
-
-
+                                class="botao botao-limpar"
+                            >
+                                Limpar
                             </button>
-
 
 
                             <a
                                 href="reservas.html"
-                                class="botao botao-cancelar">
-
-
-                                ← Cancelar
-
-
+                                class="botao botao-cancelar"
+                            >
+                                Cancelar
                             </a>
-
 
                         </div>
 
-
                     </form>
 
+                </section>
 
-                </div>
+            </main>
 
-
-            </section>
-
-
-        </main>
-
+        </div>
 
     </div>
 
-
-
-    <!-- ================================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ================================= -->
-
-    <script>
-
-
-        // ==========================================
-        // VALOR DA DIÁRIA
-        // ==========================================
-
-        const valorDiaria = 80;
-
-
-
-        // ==========================================
-        // ELEMENTOS
-        // ==========================================
-
-        const entrada =
-            document.getElementById(
-                "entrada"
-            );
-
-
-        const saida =
-            document.getElementById(
-                "saida"
-            );
-
-
-        const diarias =
-            document.getElementById(
-                "diarias"
-            );
-
-
-        const diaria =
-            document.getElementById(
-                "diaria"
-            );
-
-
-        const total =
-            document.getElementById(
-                "total"
-            );
-
-
-
-        // ==========================================
-        // CALCULAR DIÁRIAS
-        // ==========================================
-
-        function calcularReserva() {
-
-
-            if (
-                !entrada.value ||
-                !saida.value
-            ) {
-
-
-                diarias.value =
-                    "";
-
-
-                total.value =
-                    "R$ 0,00";
-
-
-                return;
-
-
-            }
-
-
-
-            const dataEntrada =
-                new Date(
-                    entrada.value
-                );
-
-
-            const dataSaida =
-                new Date(
-                    saida.value
-                );
-
-
-
-            const diferenca =
-                dataSaida -
-                dataEntrada;
-
-
-
-            const quantidade =
-                Math.ceil(
-                    diferenca /
-                    (1000 * 60 * 60 * 24)
-                );
-
-
-
-            if (quantidade <= 0) {
-
-
-                diarias.value =
-                    "";
-
-
-                total.value =
-                    "R$ 0,00";
-
-
-                alert(
-                    "A data de saída deve ser posterior à data de entrada."
-                );
-
-
-                return;
-
-
-            }
-
-
-
-            diarias.value =
-                quantidade;
-
-
-
-            const valorTotal =
-                quantidade *
-                valorDiaria;
-
-
-
-            total.value =
-                "R$ " +
-                valorTotal
-                    .toFixed(2)
-                    .replace(".", ",");
-
-
-        }
-
-
-
-        // ==========================================
-        // EVENTOS DAS DATAS
-        // ==========================================
-
-        entrada.addEventListener(
-            "change",
-            calcularReserva
-        );
-
-
-        saida.addEventListener(
-            "change",
-            calcularReserva
-        );
-
-
-
-        // ==========================================
-        // LIMPAR
-        // ==========================================
-
-        document.getElementById(
-            "formulario-reserva"
-        ).addEventListener(
-            "reset",
-            function () {
-
-
-                setTimeout(
-                    function () {
-
-
-                        diarias.value =
-                            "";
-
-
-                        total.value =
-                            "R$ 0,00";
-
-
-                    },
-                    0
-                );
-
-
-            }
-        );
-
-
-
-        // ==========================================
-        // SALVAR
-        // ==========================================
-
-        document.getElementById(
-            "formulario-reserva"
-        ).addEventListener(
-            "submit",
-            function (evento) {
-
-
-                evento.preventDefault();
-
-
-
-                const pet =
-                    document.getElementById(
-                        "pet"
-                    ).value;
-
-
-
-                const tutor =
-                    document.getElementById(
-                        "tutor"
-                    ).value;
-
-
-
-                const status =
-                    document.getElementById(
-                        "status"
-                    ).value;
-
-
-
-                if (
-                    !pet ||
-                    !tutor ||
-                    !status ||
-                    !entrada.value ||
-                    !saida.value
-                ) {
-
-
-                    alert(
-                        "Preencha todos os campos obrigatórios."
-                    );
-
-
-                    return;
-
-
-                }
-
-
-
-                alert(
-                    "Reserva cadastrada com sucesso!"
-                );
-
-
-
-                window.location.href =
-                    "reservas.html";
-
-
-            }
-        );
-
-
-    </script>
-
-
 </body>
 
-</html> 
+</html>
