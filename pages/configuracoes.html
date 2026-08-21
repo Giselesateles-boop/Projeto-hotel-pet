@@ -2,101 +2,175 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Configurações</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
 
 <body>
 
+
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
+
 
                 <a href="pets.html">
                     🐾 Pet
                 </a>
 
+
                 <a href="usuarios.html">
                     ♙ Usuário
                 </a>
 
-                <a href="configuracoes.html" class="menu-ativo">
+
+                <a href="configuracoes.html"
+                    class="menu-ativo">
+
                     ⚙ Configurações
+
                 </a>
+
 
                 <a href="reservas.html">
                     ▣ Reservas
                 </a>
 
+
             </nav>
+
 
         </aside>
 
 
+
+        <!-- ================================= -->
         <!-- ÁREA PRINCIPAL -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
+
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
+
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
+
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+
+                </a>
+
 
             </header>
 
 
+
+            <!-- ================================= -->
             <!-- CONTEÚDO -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Configurações
+
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+
+                    / Configurações
+
+
                 </p>
 
 
+
+                <!-- CARD -->
+
                 <section class="card">
+
 
                     <h2>
                         Configurações
                     </h2>
 
 
-                    <form>
 
+                    <form id="formulario-configuracoes">
+
+
+                        <!-- ================================= -->
                         <!-- CONFIGURAÇÕES DO HOTEL -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
+
 
                             <h3>
                                 Configurações do Hotel
                             </h3>
 
 
-                            <div class="formulario-duas-colunas">
 
-                                <div class="campo-formulario">
+                            <div
+                                class="formulario-duas-colunas">
+
+
+                                <!-- VALOR DA DIÁRIA -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="valor-diaria">
+
                                         Valor da diária *
+
                                     </label>
+
 
                                     <input
                                         type="number"
@@ -107,14 +181,23 @@
                                         step="0.01"
                                         required>
 
+
                                 </div>
 
 
-                                <div class="campo-formulario">
+
+                                <!-- VAGAS -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="vagas">
+
                                         Vagas disponíveis *
+
                                     </label>
+
 
                                     <input
                                         type="number"
@@ -124,40 +207,160 @@
                                         min="0"
                                         required>
 
+
                                 </div>
 
+
                             </div>
+
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- BOTÕES -->
-                        <div class="botoes-formulario">
+                        <!-- ================================= -->
+
+                        <div
+                            class="botoes-formulario">
+
 
                             <button
                                 type="submit"
                                 class="botao botao-salvar">
+
                                 💾 Salvar
+
                             </button>
+
 
 
                             <button
                                 type="reset"
                                 class="botao botao-limpar">
+
                                 ↻ Limpar
+
                             </button>
+
 
                         </div>
 
+
                     </form>
+
 
                 </section>
 
+
             </main>
+
 
         </div>
 
+
     </div>
+
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script>
+
+
+        // ==========================================
+        // PEGAR FORMULÁRIO
+        // ==========================================
+
+        const formulario =
+            document.getElementById(
+                "formulario-configuracoes"
+            );
+
+
+        const valorDiaria =
+            document.getElementById(
+                "valor-diaria"
+            );
+
+
+        const vagas =
+            document.getElementById(
+                "vagas"
+            );
+
+
+
+        // ==========================================
+        // VALORES PADRÃO
+        // ==========================================
+
+        const valorPadrao =
+            "80.00";
+
+
+        const vagasPadrao =
+            "3";
+
+
+
+        // ==========================================
+        // SALVAR
+        // ==========================================
+
+        formulario.addEventListener(
+            "submit",
+            function (evento) {
+
+
+                evento.preventDefault();
+
+
+                alert(
+                    "Configurações salvas com sucesso!"
+                );
+
+
+            }
+        );
+
+
+
+        // ==========================================
+        // LIMPAR
+        // ==========================================
+
+        formulario.addEventListener(
+            "reset",
+            function () {
+
+
+                setTimeout(
+                    function () {
+
+
+                        valorDiaria.value =
+                            valorPadrao;
+
+
+                        vagas.value =
+                            vagasPadrao;
+
+
+                    },
+                    0
+                );
+
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
 

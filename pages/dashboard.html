@@ -2,39 +2,62 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Dashboard</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
 
 <body>
 
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
                 <a href="pets.html">
+
                     🐾 Pet
+
                 </a>
+
 
                 <a href="usuarios.html">
+
                     ♙ Usuário
+
                 </a>
+
 
                 <a href="configuracoes.html">
+
                     ⚙ Configurações
+
                 </a>
 
+
                 <a href="reservas.html">
+
                     ▣ Reservas
+
                 </a>
 
             </nav>
@@ -42,267 +65,469 @@
         </aside>
 
 
+
+        <!-- ================================= -->
         <!-- ÁREA PRINCIPAL -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
+
                         ◯
+
                     </span>
+
 
                     <span>
-                        João da Silva
+
+                        Gisele Teles
+
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
 
+
+            <!-- ================================= -->
             <!-- CONTEÚDO -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home
+
+                    <a href="dashboard.html">
+
+                        Home
+
+                    </a>
+
                 </p>
 
 
+
+                <!-- ================================= -->
+                <!-- CARD PRINCIPAL -->
+                <!-- ================================= -->
+
                 <section class="card">
 
+
                     <h2>
+
                         Dashboard
+
                     </h2>
 
 
+
+                    <!-- ================================= -->
+                    <!-- BOAS-VINDAS -->
+                    <!-- ================================= -->
+
                     <section class="boas-vindas">
 
+
                         <h3>
-                            Olá, João da Silva!
+
+                            Olá, Gisele Teles!
+
                         </h3>
 
+
                         <p>
-                            Bem-vindo ao sistema de gerenciamento do Hotel Pet.
+
+                            Bem-vinda ao sistema de
+                            gerenciamento do Hotel Pet.
+
                         </p>
+
 
                     </section>
 
 
+
+                    <!-- ================================= -->
                     <!-- RESUMO -->
+                    <!-- ================================= -->
+
                     <section class="resumo">
 
+
                         <h3>
+
                             Resumo
+
                         </h3>
+
 
 
                         <div class="cards-resumo">
 
+
+                            <!-- RESERVAS -->
+
                             <article class="card-resumo">
 
+
                                 <h4>
+
                                     Reservas
+
                                 </h4>
 
+
                                 <p>
-                                    12 reservas cadastradas.
+
+                                    4 reservas cadastradas.
+
                                 </p>
+
 
                                 <a href="reservas.html">
+
                                     Ver reservas
+
                                 </a>
+
 
                             </article>
 
 
+
+                            <!-- PETS -->
+
                             <article class="card-resumo">
 
+
                                 <h4>
+
                                     Pets hospedados
+
                                 </h4>
 
+
                                 <p>
-                                    8 pets hospedados atualmente.
+
+                                    2 pets hospedados
+                                    atualmente.
+
                                 </p>
+
 
                                 <a href="pets.html">
+
                                     Ver pets
+
                                 </a>
+
 
                             </article>
 
 
+
+                            <!-- USUÁRIOS -->
+
                             <article class="card-resumo">
 
+
                                 <h4>
+
                                     Usuários
+
                                 </h4>
 
+
                                 <p>
-                                    25 usuários cadastrados.
+
+                                    4 usuários cadastrados.
+
                                 </p>
+
 
                                 <a href="usuarios.html">
+
                                     Ver usuários
+
                                 </a>
+
 
                             </article>
 
+
+
+                            <!-- VAGAS -->
 
                             <article class="card-resumo">
 
+
                                 <h4>
+
                                     Vagas disponíveis
+
                                 </h4>
 
+
                                 <p>
-                                    7 vagas disponíveis.
+
+                                    3 vagas disponíveis.
+
                                 </p>
 
+
                                 <a href="configuracoes.html">
+
                                     Configurações
+
                                 </a>
 
+
                             </article>
+
 
                         </div>
 
                     </section>
 
 
+
+                    <!-- ================================= -->
                     <!-- PRÓXIMAS RESERVAS -->
+                    <!-- ================================= -->
+
                     <section class="proximas-reservas">
 
+
                         <h3>
+
                             Próximas reservas
+
                         </h3>
 
 
+
                         <table class="tabela">
+
 
                             <thead>
 
                                 <tr>
 
+
                                     <th>
+
                                         Pet
+
                                     </th>
 
+
                                     <th>
+
                                         Proprietário
+
                                     </th>
 
+
                                     <th>
+
                                         Entrada
+
                                     </th>
 
+
                                     <th>
+
                                         Saída
+
                                     </th>
 
+
                                     <th>
+
                                         Status
+
                                     </th>
+
 
                                 </tr>
 
                             </thead>
 
 
+
                             <tbody>
 
+
+                                <!-- THOR -->
+
                                 <tr>
 
+
                                     <td>
+
                                         Thor
+
                                     </td>
 
+
                                     <td>
+
                                         Maria Silva
+
                                     </td>
 
+
                                     <td>
+
                                         20/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         25/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Confirmada
+
                                     </td>
+
 
                                 </tr>
 
 
+
+                                <!-- LUNA -->
+
                                 <tr>
 
+
                                     <td>
+
                                         Luna
+
                                     </td>
 
+
                                     <td>
+
                                         João Santos
+
                                     </td>
 
+
                                     <td>
+
                                         21/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         24/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Em andamento
+
                                     </td>
+
 
                                 </tr>
 
+
+
+                                <!-- BOB -->
 
                                 <tr>
 
-                                    <td>
-                                        Mel
-                                    </td>
 
                                     <td>
-                                        Ana Oliveira
+
+                                        Bob
+
                                     </td>
 
-                                    <td>
-                                        22/08/2026
-                                    </td>
 
                                     <td>
-                                        27/08/2026
+
+                                        Gisele Teles
+
                                     </td>
 
+
                                     <td>
+
+                                        25/08/2026
+
+                                    </td>
+
+
+                                    <td>
+
+                                        30/08/2026
+
+                                    </td>
+
+
+                                    <td>
+
                                         Agendada
+
                                     </td>
+
 
                                 </tr>
+
 
                             </tbody>
 
+
                         </table>
+
 
                     </section>
 
+
                 </section>
+
 
             </main>
 
+
         </div>
 
+
     </div>
+
 
 </body>
 

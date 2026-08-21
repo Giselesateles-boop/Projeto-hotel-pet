@@ -377,4 +377,773 @@
 
 </body>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Pet - Editar Usuário</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
+
+            <h1>Hotel Pet</h1>
+
+            <nav>
+
+                <a href="pets.html">
+                    🐾 Pet
+                </a>
+
+                <a href="usuarios.html"
+                    class="menu-ativo">
+                    ♙ Usuário
+                </a>
+
+                <a href="configuracoes.html">
+                    ⚙ Configurações
+                </a>
+
+                <a href="reservas.html">
+                    ▣ Reservas
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <div class="conteudo">
+
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div></div>
+
+                <a href="perfil.html"
+                    class="perfil-topo">
+
+                    <span class="icone-usuario">
+                        ◯
+                    </span>
+
+                    <span>
+                        Gisele Teles
+                    </span>
+
+                </a>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <main>
+
+                <p class="breadcrumb">
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="usuarios.html">
+                        Usuários
+                    </a>
+
+                    /
+
+                    Editar Usuário
+
+                </p>
+
+
+                <section class="card">
+
+                    <h2>
+                        Editar Usuário
+                    </h2>
+
+
+                    <form id="formulario-usuario">
+
+                        <!-- DADOS DO USUÁRIO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Dados do Usuário
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <!-- ID -->
+                                <div class="campo-formulario">
+
+                                    <label for="id">
+                                        ID
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="id"
+                                        name="id"
+                                        readonly>
+
+                                </div>
+
+
+                                <!-- NOME -->
+                                <div class="campo-formulario">
+
+                                    <label for="nome">
+                                        Nome *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        required>
+
+                                </div>
+
+
+                                <!-- SOBRENOME -->
+                                <div class="campo-formulario">
+
+                                    <label for="sobrenome">
+                                        Sobrenome
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="sobrenome"
+                                        name="sobrenome">
+
+                                </div>
+
+
+                                <!-- E-MAIL -->
+                                <div class="campo-formulario">
+
+                                    <label for="email">
+                                        E-mail *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required>
+
+                                </div>
+
+
+                                <!-- TELEFONE -->
+                                <div class="campo-formulario">
+
+                                    <label for="telefone">
+                                        Telefone *
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ENDEREÇO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Endereço
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <!-- CEP -->
+                                <div class="campo-formulario">
+
+                                    <label for="cep">
+                                        CEP
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cep"
+                                        name="cep">
+
+                                </div>
+
+
+                                <!-- CIDADE -->
+                                <div class="campo-formulario">
+
+                                    <label for="cidade">
+                                        Cidade
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cidade"
+                                        name="cidade">
+
+                                </div>
+
+
+                                <!-- ENDEREÇO -->
+                                <div class="campo-formulario">
+
+                                    <label for="endereco">
+                                        Endereço
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="endereco"
+                                        name="endereco">
+
+                                </div>
+
+
+                                <!-- NÚMERO -->
+                                <div class="campo-formulario">
+
+                                    <label for="numero">
+                                        Número
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="numero"
+                                        name="numero">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ACESSO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Acesso
+                            </h3>
+
+
+                            <div class="formulario-duas-colunas">
+
+                                <!-- FUNÇÃO -->
+                                <div class="campo-formulario">
+
+                                    <label for="funcao">
+                                        Função *
+                                    </label>
+
+                                    <select
+                                        id="funcao"
+                                        name="funcao"
+                                        required>
+
+                                        <option value="cliente">
+                                            Cliente
+                                        </option>
+
+                                        <option value="funcionario">
+                                            Funcionário
+                                        </option>
+
+                                        <option value="gerente">
+                                            Gerente
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- STATUS -->
+                                <div class="campo-formulario">
+
+                                    <label for="status">
+                                        Status *
+                                    </label>
+
+                                    <select
+                                        id="status"
+                                        name="status"
+                                        required>
+
+                                        <option value="ativo">
+                                            Ativo
+                                        </option>
+
+                                        <option value="inativo">
+                                            Inativo
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- FOTO -->
+                        <section class="secao-formulario">
+
+                            <h3>
+                                Foto do Usuário
+                            </h3>
+
+
+                            <div class="campo-formulario">
+
+                                <label>
+                                    Foto atual
+                                </label>
+
+
+                                <img
+                                    id="foto-atual"
+                                    src=""
+                                    alt="Foto atual do usuário"
+                                    style="
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                        display: block;
+                                        margin-bottom: 15px;
+                                    ">
+
+
+                                <label for="foto">
+                                    Alterar foto
+                                </label>
+
+
+                                <input
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    accept="image/*">
+
+
+                                <img
+                                    id="preview-foto"
+                                    src=""
+                                    alt="Prévia da nova foto"
+                                    style="
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                        display: none;
+                                        margin-top: 15px;
+                                    ">
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- BOTÕES -->
+                        <div class="botoes-formulario">
+
+                            <button
+                                type="submit"
+                                class="botao botao-salvar">
+
+                                💾 Salvar
+
+                            </button>
+
+
+                            <button
+                                type="reset"
+                                class="botao botao-limpar">
+
+                                ↻ Limpar
+
+                            </button>
+
+
+                            <a
+                                href="usuarios.html"
+                                class="botao botao-cancelar">
+
+                                ← Cancelar
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCRIPT -->
+    <script>
+
+        const usuarios = {
+
+            maria: {
+
+                id: "001",
+
+                nome: "Maria",
+
+                sobrenome: "Silva",
+
+                email: "maria@email.com",
+
+                telefone: "(77) 99999-9999",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua Principal",
+
+                numero: "100",
+
+                funcao: "cliente",
+
+                status: "ativo",
+
+                foto: "../img/Maria.png"
+
+            },
+
+
+            joao: {
+
+                id: "002",
+
+                nome: "João",
+
+                sobrenome: "Santos",
+
+                email: "joao@email.com",
+
+                telefone: "(77) 98888-8888",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua das Flores",
+
+                numero: "200",
+
+                funcao: "cliente",
+
+                status: "ativo",
+
+                foto: "../img/joao.png"
+
+            },
+
+
+            ana: {
+
+                id: "003",
+
+                nome: "Ana",
+
+                sobrenome: "Oliveira",
+
+                email: "ana@email.com",
+
+                telefone: "(77) 97777-7777",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua da Paz",
+
+                numero: "300",
+
+                funcao: "funcionario",
+
+                status: "ativo",
+
+                foto: "../img/Ana.png"
+
+            },
+
+
+            gisele: {
+
+                id: "004",
+
+                nome: "Gisele",
+
+                sobrenome: "Teles",
+
+                email: "gisele@email.com",
+
+                telefone: "(77) 96666-6666",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua Central",
+
+                numero: "400",
+
+                funcao: "gerente",
+
+                status: "ativo",
+
+                foto: "../img/Gisele.png"
+
+            }
+
+        };
+
+
+        // PEGAR USUÁRIO DA URL
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const usuarioSelecionado =
+            parametros.get("usuario") || "maria";
+
+
+        // LOCALIZAR USUÁRIO
+
+        const usuario =
+            usuarios[usuarioSelecionado]
+            || usuarios.maria;
+
+
+        // PREENCHER CAMPOS
+
+        document.getElementById("id").value =
+            usuario.id;
+
+        document.getElementById("nome").value =
+            usuario.nome;
+
+        document.getElementById("sobrenome").value =
+            usuario.sobrenome;
+
+        document.getElementById("email").value =
+            usuario.email;
+
+        document.getElementById("telefone").value =
+            usuario.telefone;
+
+        document.getElementById("cep").value =
+            usuario.cep;
+
+        document.getElementById("cidade").value =
+            usuario.cidade;
+
+        document.getElementById("endereco").value =
+            usuario.endereco;
+
+        document.getElementById("numero").value =
+            usuario.numero;
+
+        document.getElementById("funcao").value =
+            usuario.funcao;
+
+        document.getElementById("status").value =
+            usuario.status;
+
+
+        // FOTO ATUAL
+
+        const fotoAtual =
+            document.getElementById("foto-atual");
+
+
+        fotoAtual.src =
+            usuario.foto;
+
+
+        fotoAtual.alt =
+            "Foto de " +
+            usuario.nome +
+            " " +
+            usuario.sobrenome;
+
+
+        // PRÉVIA DA NOVA FOTO
+
+        const campoFoto =
+            document.getElementById("foto");
+
+
+        const preview =
+            document.getElementById("preview-foto");
+
+
+        campoFoto.addEventListener(
+            "change",
+            function() {
+
+                const arquivo =
+                    campoFoto.files[0];
+
+
+                if (arquivo) {
+
+                    const leitor =
+                        new FileReader();
+
+
+                    leitor.onload =
+                        function(evento) {
+
+                            preview.src =
+                                evento.target.result;
+
+                            preview.style.display =
+                                "block";
+
+                        };
+
+
+                    leitor.readAsDataURL(arquivo);
+
+                } else {
+
+                    preview.src = "";
+
+                    preview.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        // SALVAR
+
+        document.getElementById(
+            "formulario-usuario"
+        ).addEventListener(
+            "submit",
+            function(evento) {
+
+                evento.preventDefault();
+
+
+                alert(
+                    "Usuário atualizado com sucesso!"
+                );
+
+
+                window.location.href =
+                    "usuarios.html";
+
+            }
+        );
+
+
+        // LIMPAR
+
+        document.getElementById(
+            "formulario-usuario"
+        ).addEventListener(
+            "reset",
+            function() {
+
+                setTimeout(
+                    function() {
+
+                        document.getElementById("id").value =
+                            usuario.id;
+
+                        document.getElementById("nome").value =
+                            usuario.nome;
+
+                        document.getElementById("sobrenome").value =
+                            usuario.sobrenome;
+
+                        document.getElementById("email").value =
+                            usuario.email;
+
+                        document.getElementById("telefone").value =
+                            usuario.telefone;
+
+                        document.getElementById("cep").value =
+                            usuario.cep;
+
+                        document.getElementById("cidade").value =
+                            usuario.cidade;
+
+                        document.getElementById("endereco").value =
+                            usuario.endereco;
+
+                        document.getElementById("numero").value =
+                            usuario.numero;
+
+                        document.getElementById("funcao").value =
+                            usuario.funcao;
+
+                        document.getElementById("status").value =
+                            usuario.status;
+
+                        preview.src = "";
+
+                        preview.style.display =
+                            "none";
+
+                    },
+                    0
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
 </html>

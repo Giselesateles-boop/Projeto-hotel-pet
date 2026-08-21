@@ -2,22 +2,34 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Editar Reserva</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
 
 <body>
 
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
@@ -25,15 +37,19 @@
                     🐾 Pet
                 </a>
 
+
                 <a href="usuarios.html">
                     ♙ Usuário
                 </a>
+
 
                 <a href="configuracoes.html">
                     ⚙ Configurações
                 </a>
 
-                <a href="reservas.html" class="menu-ativo">
+
+                <a href="reservas.html"
+                    class="menu-ativo">
                     ▣ Reservas
                 </a>
 
@@ -42,47 +58,90 @@
         </aside>
 
 
+
+        <!-- ================================= -->
         <!-- ÁREA PRINCIPAL -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
+
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
 
+
+            <!-- ================================= -->
             <!-- CONTEÚDO -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Reservas / Editar Reserva
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="reservas.html">
+                        Reservas
+                    </a>
+
+                    /
+
+                    Editar Reserva
+
                 </p>
 
 
+
+                <!-- ================================= -->
+                <!-- CARD -->
+                <!-- ================================= -->
+
                 <section class="card">
+
 
                     <h2>
                         Editar Reserva
                     </h2>
 
 
-                    <form>
 
+                    <form id="formulario-reserva">
+
+
+                        <!-- ================================= -->
                         <!-- DADOS DA RESERVA -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -92,27 +151,38 @@
 
                             <div class="formulario-duas-colunas">
 
+
+                                <!-- ID -->
+
                                 <div class="campo-formulario">
 
                                     <label for="id-reserva">
+
                                         ID da reserva
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="id-reserva"
                                         name="id-reserva"
-                                        value="001"
                                         readonly>
 
                                 </div>
 
 
+
+                                <!-- STATUS -->
+
                                 <div class="campo-formulario">
 
                                     <label for="status">
+
                                         Status *
+
                                     </label>
+
 
                                     <select
                                         id="status"
@@ -123,7 +193,7 @@
                                             Agendada
                                         </option>
 
-                                        <option value="confirmada" selected>
+                                        <option value="confirmada">
                                             Confirmada
                                         </option>
 
@@ -140,92 +210,122 @@
                                 </div>
 
 
+
+                                <!-- ENTRADA -->
+
                                 <div class="campo-formulario">
 
                                     <label for="entrada">
+
                                         Data de entrada *
+
                                     </label>
+
 
                                     <input
                                         type="date"
                                         id="entrada"
                                         name="entrada"
-                                        value="2026-08-20"
                                         required>
 
                                 </div>
 
 
+
+                                <!-- SAÍDA -->
+
                                 <div class="campo-formulario">
 
                                     <label for="saida">
+
                                         Data de saída *
+
                                     </label>
+
 
                                     <input
                                         type="date"
                                         id="saida"
                                         name="saida"
-                                        value="2026-08-25"
                                         required>
 
                                 </div>
 
 
+
+                                <!-- DIÁRIAS -->
+
                                 <div class="campo-formulario">
 
                                     <label for="diarias">
+
                                         Quantidade de diárias
+
                                     </label>
+
 
                                     <input
                                         type="number"
                                         id="diarias"
                                         name="diarias"
-                                        value="5"
                                         min="1"
                                         readonly>
 
                                 </div>
 
 
+
+                                <!-- VALOR DIÁRIA -->
+
                                 <div class="campo-formulario">
 
                                     <label for="valor-diaria">
+
                                         Valor da diária
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="valor-diaria"
                                         name="valor-diaria"
-                                        value="R$ 80,00"
                                         readonly>
 
                                 </div>
 
 
+
+                                <!-- VALOR TOTAL -->
+
                                 <div class="campo-formulario">
 
                                     <label for="valor-total">
+
                                         Valor total
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="valor-total"
                                         name="valor-total"
-                                        value="R$ 400,00"
                                         readonly>
 
                                 </div>
+
 
                             </div>
 
                         </section>
 
 
-                        <!-- PET -->
+
+                        <!-- ================================= -->
+                        <!-- DADOS DO PET -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -235,18 +335,24 @@
 
                             <div class="formulario-duas-colunas">
 
+
+                                <!-- PET -->
+
                                 <div class="campo-formulario">
 
                                     <label for="pet">
+
                                         Pet *
+
                                     </label>
+
 
                                     <select
                                         id="pet"
                                         name="pet"
                                         required>
 
-                                        <option value="thor" selected>
+                                        <option value="thor">
                                             Thor
                                         </option>
 
@@ -267,41 +373,59 @@
                                 </div>
 
 
+
+                                <!-- TIPO -->
+
                                 <div class="campo-formulario">
 
                                     <label for="tipo">
+
                                         Tipo
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="tipo"
                                         name="tipo"
-                                        value="Cachorro">
+                                        readonly>
 
                                 </div>
 
 
+
+                                <!-- RAÇA -->
+
                                 <div class="campo-formulario">
 
                                     <label for="raca">
+
                                         Raça
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="raca"
                                         name="raca"
-                                        value="Golden Retriever">
+                                        readonly>
 
                                 </div>
 
 
+
+                                <!-- PORTE -->
+
                                 <div class="campo-formulario">
 
                                     <label for="porte">
+
                                         Porte
+
                                     </label>
+
 
                                     <select
                                         id="porte"
@@ -315,7 +439,7 @@
                                             Médio
                                         </option>
 
-                                        <option value="grande" selected>
+                                        <option value="grande">
                                             Grande
                                         </option>
 
@@ -323,12 +447,17 @@
 
                                 </div>
 
+
                             </div>
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- PROPRIETÁRIO -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -338,18 +467,22 @@
 
                             <div class="formulario-duas-colunas">
 
+
                                 <div class="campo-formulario">
 
                                     <label for="proprietario">
+
                                         Proprietário *
+
                                     </label>
+
 
                                     <select
                                         id="proprietario"
                                         name="proprietario"
                                         required>
 
-                                        <option value="maria" selected>
+                                        <option value="maria">
                                             Maria Silva
                                         </option>
 
@@ -361,20 +494,25 @@
                                             Ana Oliveira
                                         </option>
 
-                                        <option value="carlos">
-                                            Carlos Souza
+                                        <option value="gisele">
+                                            Gisele Teles
                                         </option>
 
                                     </select>
 
                                 </div>
 
+
                             </div>
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- OBSERVAÇÕES -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -385,20 +523,28 @@
                             <div class="campo-formulario campo-completo">
 
                                 <label for="observacoes">
+
                                     Observações da reserva
+
                                 </label>
+
 
                                 <textarea
                                     id="observacoes"
                                     name="observacoes"
-                                    rows="4">Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.</textarea>
+                                    rows="4">
+                                </textarea>
 
                             </div>
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- FOTO -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -409,8 +555,11 @@
                             <div class="campo-formulario">
 
                                 <label for="foto">
+
                                     Alterar foto
+
                                 </label>
+
 
                                 <input
                                     type="file"
@@ -420,10 +569,34 @@
 
                             </div>
 
+
+                            <div
+                                id="preview-foto"
+                                style="
+                                    margin-top: 15px;
+                                ">
+
+                                <img
+                                    id="imagem-pet"
+                                    src=""
+                                    alt="Foto do pet"
+                                    style="
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 12px;
+                                    ">
+
+                            </div>
+
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- COMPROVANTE -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -434,8 +607,11 @@
                             <div class="campo-formulario">
 
                                 <label for="comprovante">
+
                                     Alterar comprovante
+
                                 </label>
+
 
                                 <input
                                     type="file"
@@ -446,14 +622,16 @@
                             </div>
 
 
-                            <div class="arquivo-comprovante">
+                            <div
+                                class="arquivo-comprovante">
 
                                 <p>
                                     Comprovante atual:
                                 </p>
 
-                                <p>
-                                    📄 comprovante-reserva-001.pdf
+
+                                <p id="nome-comprovante">
+
                                 </p>
 
                             </div>
@@ -461,32 +639,48 @@
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- BOTÕES -->
+                        <!-- ================================= -->
+
                         <div class="botoes-formulario">
+
 
                             <button
                                 type="submit"
                                 class="botao botao-salvar">
+
                                 💾 Salvar
+
                             </button>
+
 
 
                             <button
                                 type="reset"
                                 class="botao botao-limpar">
+
                                 ↻ Limpar
+
                             </button>
+
 
 
                             <a
                                 href="reservas.html"
                                 class="botao botao-cancelar">
+
                                 ← Cancelar
+
                             </a>
+
 
                         </div>
 
+
                     </form>
+
 
                 </section>
 
@@ -495,6 +689,592 @@
         </div>
 
     </div>
+
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script>
+
+
+        // ==========================================
+        // DADOS DOS PETS
+        // ==========================================
+
+        const pets = {
+
+            thor: {
+
+                nome: "Thor",
+
+                tipo: "Cachorro",
+
+                raca: "Golden Retriever",
+
+                porte: "grande",
+
+                foto: "../img/Thor.png"
+
+            },
+
+
+            luna: {
+
+                nome: "Luna",
+
+                tipo: "Cachorro",
+
+                raca: "Shih-tzu",
+
+                porte: "pequeno",
+
+                foto: "../img/Luna.png"
+
+            },
+
+
+            mel: {
+
+                nome: "Mel",
+
+                tipo: "Gato",
+
+                raca: "Siamês",
+
+                porte: "pequeno",
+
+                foto: "../img/Mel.png"
+
+            },
+
+
+            bob: {
+
+                nome: "Bob",
+
+                tipo: "Cachorro",
+
+                raca: "Beagle",
+
+                porte: "medio",
+
+                foto: "../img/Bob.png"
+
+            }
+
+        };
+
+
+
+        // ==========================================
+        // DADOS DAS RESERVAS
+        // ==========================================
+
+        const reservas = {
+
+
+            // RESERVA 001
+
+            "001": {
+
+                id: "001",
+
+                status: "confirmada",
+
+                entrada: "2026-08-20",
+
+                saida: "2026-08-25",
+
+                pet: "thor",
+
+                proprietario: "maria",
+
+                observacoes:
+                    "Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.",
+
+                comprovante:
+                    "📄 comprovante-reserva-001.pdf"
+
+            },
+
+
+            // RESERVA 002
+
+            "002": {
+
+                id: "002",
+
+                status: "andamento",
+
+                entrada: "2026-08-21",
+
+                saida: "2026-08-24",
+
+                pet: "luna",
+
+                proprietario: "joao",
+
+                observacoes:
+                    "Manter os cuidados habituais e oferecer alimentação conforme orientação do proprietário.",
+
+                comprovante:
+                    "📄 comprovante-reserva-002.pdf"
+
+            },
+
+
+            // RESERVA 003
+
+            "003": {
+
+                id: "003",
+
+                status: "finalizada",
+
+                entrada: "2026-08-15",
+
+                saida: "2026-08-18",
+
+                pet: "mel",
+
+                proprietario: "ana",
+
+                observacoes:
+                    "Gato deve permanecer em ambiente tranquilo durante a hospedagem.",
+
+                comprovante:
+                    "📄 comprovante-reserva-003.pdf"
+
+            },
+
+
+            // RESERVA 004
+
+            "004": {
+
+                id: "004",
+
+                status: "agendada",
+
+                entrada: "2026-08-25",
+
+                saida: "2026-08-30",
+
+                pet: "bob",
+
+                proprietario: "gisele",
+
+                observacoes:
+                    "Manter rotina de alimentação e passeios durante a hospedagem.",
+
+                comprovante:
+                    "📄 comprovante-reserva-004.pdf"
+
+            }
+
+        };
+
+
+
+        // ==========================================
+        // PEGAR ID DA URL
+        // ==========================================
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const reservaSelecionada =
+            parametros.get("reserva") || "001";
+
+
+        const reserva =
+            reservas[reservaSelecionada]
+            || reservas["001"];
+
+
+
+        // ==========================================
+        // VALOR DA DIÁRIA
+        // ==========================================
+
+        const valorDiaria = 80;
+
+
+
+        // ==========================================
+        // ELEMENTOS
+        // ==========================================
+
+        const idReserva =
+            document.getElementById(
+                "id-reserva"
+            );
+
+        const status =
+            document.getElementById(
+                "status"
+            );
+
+        const entrada =
+            document.getElementById(
+                "entrada"
+            );
+
+        const saida =
+            document.getElementById(
+                "saida"
+            );
+
+        const diarias =
+            document.getElementById(
+                "diarias"
+            );
+
+        const valorDiariaCampo =
+            document.getElementById(
+                "valor-diaria"
+            );
+
+        const valorTotal =
+            document.getElementById(
+                "valor-total"
+            );
+
+        const pet =
+            document.getElementById(
+                "pet"
+            );
+
+        const tipo =
+            document.getElementById(
+                "tipo"
+            );
+
+        const raca =
+            document.getElementById(
+                "raca"
+            );
+
+        const porte =
+            document.getElementById(
+                "porte"
+            );
+
+        const proprietario =
+            document.getElementById(
+                "proprietario"
+            );
+
+        const observacoes =
+            document.getElementById(
+                "observacoes"
+            );
+
+        const imagemPet =
+            document.getElementById(
+                "imagem-pet"
+            );
+
+        const nomeComprovante =
+            document.getElementById(
+                "nome-comprovante"
+            );
+
+
+
+        // ==========================================
+        // CARREGAR DADOS
+        // ==========================================
+
+        function carregarReserva() {
+
+
+            idReserva.value =
+                reserva.id;
+
+
+            status.value =
+                reserva.status;
+
+
+            entrada.value =
+                reserva.entrada;
+
+
+            saida.value =
+                reserva.saida;
+
+
+            pet.value =
+                reserva.pet;
+
+
+            proprietario.value =
+                reserva.proprietario;
+
+
+            observacoes.value =
+                reserva.observacoes;
+
+
+            nomeComprovante.textContent =
+                reserva.comprovante;
+
+
+            atualizarPet();
+
+
+            calcularDiarias();
+
+        }
+
+
+
+        // ==========================================
+        // ATUALIZAR DADOS DO PET
+        // ==========================================
+
+        function atualizarPet() {
+
+
+            const dadosPet =
+                pets[pet.value];
+
+
+            if (!dadosPet) {
+                return;
+            }
+
+
+            tipo.value =
+                dadosPet.tipo;
+
+
+            raca.value =
+                dadosPet.raca;
+
+
+            porte.value =
+                dadosPet.porte;
+
+
+            imagemPet.src =
+                dadosPet.foto;
+
+
+            imagemPet.alt =
+                "Foto de " +
+                dadosPet.nome;
+
+        }
+
+
+
+        // ==========================================
+        // CALCULAR DIÁRIAS
+        // ==========================================
+
+        function calcularDiarias() {
+
+
+            if (
+                !entrada.value ||
+                !saida.value
+            ) {
+
+                diarias.value = "";
+
+                valorTotal.value = "";
+
+                return;
+
+            }
+
+
+            const dataEntrada =
+                new Date(
+                    entrada.value
+                );
+
+
+            const dataSaida =
+                new Date(
+                    saida.value
+                );
+
+
+            const diferenca =
+                dataSaida -
+                dataEntrada;
+
+
+            const quantidade =
+                Math.ceil(
+                    diferenca /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            if (quantidade > 0) {
+
+                diarias.value =
+                    quantidade;
+
+
+                const total =
+                    quantidade *
+                    valorDiaria;
+
+
+                valorDiariaCampo.value =
+                    "R$ " +
+                    valorDiaria
+                        .toFixed(2)
+                        .replace(".", ",");
+
+
+                valorTotal.value =
+                    "R$ " +
+                    total
+                        .toFixed(2)
+                        .replace(".", ",");
+
+            }
+
+        }
+
+
+
+        // ==========================================
+        // EVENTOS
+        // ==========================================
+
+        pet.addEventListener(
+            "change",
+            atualizarPet
+        );
+
+
+        entrada.addEventListener(
+            "change",
+            calcularDiarias
+        );
+
+
+        saida.addEventListener(
+            "change",
+            calcularDiarias
+        );
+
+
+
+        // ==========================================
+        // PREVIEW DA NOVA FOTO
+        // ==========================================
+
+        document.getElementById(
+            "foto"
+        ).addEventListener(
+            "change",
+            function () {
+
+                const arquivo =
+                    this.files[0];
+
+
+                if (!arquivo) {
+                    return;
+                }
+
+
+                const leitor =
+                    new FileReader();
+
+
+                leitor.onload =
+                    function (evento) {
+
+                        imagemPet.src =
+                            evento.target.result;
+
+                    };
+
+
+                leitor.readAsDataURL(
+                    arquivo
+                );
+
+            }
+        );
+
+
+
+        // ==========================================
+        // LIMPAR
+        // ==========================================
+
+        document.getElementById(
+            "formulario-reserva"
+        ).addEventListener(
+            "reset",
+            function () {
+
+                setTimeout(
+                    function () {
+
+                        carregarReserva();
+
+                    },
+                    0
+                );
+
+            }
+        );
+
+
+
+        // ==========================================
+        // SALVAR
+        // ==========================================
+
+        document.getElementById(
+            "formulario-reserva"
+        ).addEventListener(
+            "submit",
+            function (evento) {
+
+                evento.preventDefault();
+
+
+                alert(
+                    "Reserva " +
+                    reserva.id +
+                    " atualizada com sucesso!"
+                );
+
+
+                window.location.href =
+                    "reservas.html";
+
+            }
+        );
+
+
+
+        // ==========================================
+        // INICIAR
+        // ==========================================
+
+        carregarReserva();
+
+
+    </script>
+
 
 </body>
 

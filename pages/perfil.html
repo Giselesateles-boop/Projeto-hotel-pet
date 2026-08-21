@@ -2,211 +2,382 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Editar Perfil</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
+
 
 <body>
 
+
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
+
                 <a href="pets.html">
+
                     🐾 Pet
+
                 </a>
+
 
                 <a href="usuarios.html">
+
                     ♙ Usuário
+
                 </a>
+
 
                 <a href="configuracoes.html">
+
                     ⚙ Configurações
+
                 </a>
+
 
                 <a href="reservas.html">
+
                     ▣ Reservas
+
                 </a>
 
+
             </nav>
+
 
         </aside>
 
 
+
+        <!-- ================================= -->
         <!-- ÁREA PRINCIPAL -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
+
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
+
 
                     <span class="icone-usuario">
+
                         ◯
+
                     </span>
+
 
                     <span>
-                        João da Silva
+
+                        Gisele Teles
+
                     </span>
 
-                </div>
+
+                </a>
+
 
             </header>
 
 
+
+            <!-- ================================= -->
             <!-- CONTEÚDO -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Editar Perfil
+
+
+                    <a href="dashboard.html">
+
+                        Home
+
+                    </a>
+
+
+                    / Editar Perfil
+
+
                 </p>
 
 
+
+                <!-- ================================= -->
+                <!-- CARD -->
+                <!-- ================================= -->
+
                 <section class="card">
 
+
                     <h2>
+
                         Editar Perfil
+
                     </h2>
 
 
-                    <form>
 
-                        <!-- DADOS DO PERFIL -->
+                    <form id="formulario-perfil">
+
+
+                        <!-- ================================= -->
+                        <!-- DADOS PESSOAIS -->
+                        <!-- ================================= -->
+
                         <section class="secao-formulario">
 
+
                             <h3>
+
                                 Dados pessoais
+
                             </h3>
 
 
-                            <div class="formulario-duas-colunas">
 
-                                <div class="campo-formulario">
+                            <div
+                                class="formulario-duas-colunas">
+
+
+
+                                <!-- E-MAIL -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="email">
+
                                         E-mail *
+
                                     </label>
+
 
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
-                                        value="joaodasilva@pet.com"
+                                        value="gisele@email.com"
                                         required>
+
 
                                 </div>
 
 
-                                <div class="campo-formulario">
+
+                                <!-- NOME -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="nome">
+
                                         Nome *
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="nome"
                                         name="nome"
-                                        value="João"
+                                        value="Gisele"
                                         required>
+
 
                                 </div>
 
 
-                                <div class="campo-formulario">
+
+                                <!-- SOBRENOME -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="sobrenome">
+
                                         Sobrenome
+
                                     </label>
+
 
                                     <input
                                         type="text"
                                         id="sobrenome"
                                         name="sobrenome"
-                                        value="da Silva">
+                                        value="Teles">
+
 
                                 </div>
 
 
-                                <div class="campo-formulario">
+
+                                <!-- TELEFONE -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="telefone">
+
                                         Telefone
+
                                     </label>
+
 
                                     <input
                                         type="tel"
                                         id="telefone"
                                         name="telefone"
-                                        value="+55 (73) 99876-8943">
+                                        value="(77) 96666-6666">
+
 
                                 </div>
 
 
-                                <div class="campo-formulario">
+
+                                <!-- FUNÇÃO -->
+
+                                <div
+                                    class="campo-formulario">
+
 
                                     <label for="funcao">
+
                                         Função
+
                                     </label>
+
 
                                     <select
                                         id="funcao"
                                         name="funcao">
 
-                                        <option value="cliente">
+
+                                        <option
+                                            value="cliente">
+
                                             Cliente
+
                                         </option>
 
-                                        <option value="funcionario" selected>
+
+                                        <option
+                                            value="funcionario">
+
                                             Funcionário
+
                                         </option>
 
-                                        <option value="gerente">
+
+                                        <option
+                                            value="gerente"
+                                            selected>
+
                                             Gerente
+
                                         </option>
+
 
                                     </select>
 
+
                                 </div>
 
+
                             </div>
+
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- FOTO -->
-                        <section class="secao-formulario">
+                        <!-- ================================= -->
+
+                        <section
+                            class="secao-formulario">
+
 
                             <h3>
+
                                 Foto do Perfil
+
                             </h3>
 
 
-                            <div class="foto-perfil">
 
-                                <div class="foto-placeholder">
-                                    👤
-                                </div>
+                            <div
+                                class="foto-perfil">
+
+
+                                <img
+                                    id="foto-perfil"
+                                    src="../img/Gisele.png"
+                                    alt="Foto de Gisele Teles"
+                                    style="
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                    ">
+
 
                             </div>
 
 
-                            <div class="campo-formulario">
+
+                            <div
+                                class="campo-formulario">
+
 
                                 <label for="foto">
+
                                     Alterar foto
+
                                 </label>
+
 
                                 <input
                                     type="file"
@@ -214,38 +385,224 @@
                                     name="foto"
                                     accept="image/*">
 
+
                             </div>
+
 
                         </section>
 
 
+
+                        <!-- ================================= -->
                         <!-- BOTÕES -->
-                        <div class="botoes-formulario">
+                        <!-- ================================= -->
+
+                        <div
+                            class="botoes-formulario">
+
 
                             <button
                                 type="submit"
                                 class="botao botao-salvar">
+
+
                                 💾 Salvar
+
+
                             </button>
+
 
 
                             <button
                                 type="reset"
                                 class="botao botao-limpar">
+
+
                                 ↻ Limpar
+
+
                             </button>
+
 
                         </div>
 
+
                     </form>
+
 
                 </section>
 
+
             </main>
+
 
         </div>
 
+
     </div>
+
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script>
+
+
+        // ==========================================
+        // FORMULÁRIO
+        // ==========================================
+
+        const formulario =
+            document.getElementById(
+                "formulario-perfil"
+            );
+
+
+
+        // ==========================================
+        // FOTO
+        // ==========================================
+
+        const campoFoto =
+            document.getElementById(
+                "foto"
+            );
+
+
+        const fotoPerfil =
+            document.getElementById(
+                "foto-perfil"
+            );
+
+
+
+        campoFoto.addEventListener(
+            "change",
+            function () {
+
+
+                const arquivo =
+                    this.files[0];
+
+
+                if (!arquivo) {
+
+                    return;
+
+                }
+
+
+                const leitor =
+                    new FileReader();
+
+
+                leitor.onload =
+                    function (evento) {
+
+
+                        fotoPerfil.src =
+                            evento.target.result;
+
+
+                    };
+
+
+                leitor.readAsDataURL(
+                    arquivo
+                );
+
+
+            }
+        );
+
+
+
+        // ==========================================
+        // SALVAR
+        // ==========================================
+
+        formulario.addEventListener(
+            "submit",
+            function (evento) {
+
+
+                evento.preventDefault();
+
+
+                alert(
+                    "Perfil atualizado com sucesso!"
+                );
+
+
+            }
+        );
+
+
+
+        // ==========================================
+        // LIMPAR
+        // ==========================================
+
+        formulario.addEventListener(
+            "reset",
+            function () {
+
+
+                setTimeout(
+                    function () {
+
+
+                        document.getElementById(
+                            "email"
+                        ).value =
+                            "gisele@email.com";
+
+
+                        document.getElementById(
+                            "nome"
+                        ).value =
+                            "Gisele";
+
+
+                        document.getElementById(
+                            "sobrenome"
+                        ).value =
+                            "Teles";
+
+
+                        document.getElementById(
+                            "telefone"
+                        ).value =
+                            "(77) 96666-6666";
+
+
+                        document.getElementById(
+                            "funcao"
+                        ).value =
+                            "gerente";
+
+
+                        fotoPerfil.src =
+                            "../img/Gisele.png";
+
+
+                        campoFoto.value =
+                            "";
+
+
+                    },
+                    0
+                );
+
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
 

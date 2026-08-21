@@ -2,412 +2,727 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Pets</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
+
 
 <body>
 
+
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
-                <a href="pets.html" class="menu-ativo">
+
+                <a href="pets.html"
+                    class="menu-ativo">
+
                     🐾 Pet
+
                 </a>
+
 
                 <a href="usuarios.html">
+
                     ♙ Usuário
+
                 </a>
+
 
                 <a href="configuracoes.html">
+
                     ⚙ Configurações
+
                 </a>
+
 
                 <a href="reservas.html">
+
                     ▣ Reservas
+
                 </a>
 
+
             </nav>
+
 
         </aside>
 
 
-        <!-- ÁREA PRINCIPAL -->
+
+        <!-- ================================= -->
+        <!-- CONTEÚDO -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
+
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
+
 
                     <span class="icone-usuario">
+
                         ◯
+
                     </span>
+
 
                     <span>
-                        João da Silva
+
+                        Gisele Teles
+
                     </span>
 
-                </div>
+
+                </a>
+
 
             </header>
 
 
-            <!-- CONTEÚDO -->
+
+            <!-- ================================= -->
+            <!-- CONTEÚDO PRINCIPAL -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Pets
+
+
+                    <a href="dashboard.html">
+
+                        Home
+
+                    </a>
+
+
+                    / Pets
+
+
                 </p>
 
 
+
+                <!-- ================================= -->
+                <!-- CABEÇALHO -->
+                <!-- ================================= -->
+
+                <div class="cabecalho-pagina">
+
+
+                    <h2>
+
+                        Pets
+
+                    </h2>
+
+
+                    <a
+                        href="cadastrar-pet.html"
+                        class="botao botao-salvar">
+
+                        + Novo pet
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- PESQUISA -->
+                <!-- ================================= -->
+
                 <section class="card">
 
-                    <div class="cabecalho-pagina">
 
-                        <h2>
-                            Pets
-                        </h2>
+                    <h3>
 
-                        <a
-                            href="cadastrar-pet.html"
-                            class="botao botao-salvar">
-                            + Novo pet
-                        </a>
+                        Pesquisar
 
-                    </div>
+                    </h3>
 
 
-                    <!-- FILTROS -->
-                    <section class="filtros">
+                    <form
+                        class="formulario-pesquisa"
+                        id="formulario-pesquisa">
 
-                        <h3>
-                            Pesquisar
-                        </h3>
 
+                        <!-- NOME -->
 
-                        <form class="formulario-pesquisa">
+                        <div
+                            class="campo-formulario">
 
-                            <div class="campo-formulario">
 
-                                <label for="nome-pet">
-                                    Nome do pet
-                                </label>
+                            <label for="pesquisa-nome">
 
-                                <input
-                                    type="text"
-                                    id="nome-pet"
-                                    name="nome-pet"
-                                    placeholder="Nome do pet">
+                                Nome do pet
 
-                            </div>
+                            </label>
 
 
-                            <div class="campo-formulario">
+                            <input
+                                type="text"
+                                id="pesquisa-nome"
+                                placeholder="Nome do pet">
 
-                                <label for="proprietario">
-                                    Proprietário
-                                </label>
 
-                                <input
-                                    type="text"
-                                    id="proprietario"
-                                    name="proprietario"
-                                    placeholder="Nome do proprietário">
+                        </div>
 
-                            </div>
 
 
-                            <div class="campo-formulario">
+                        <!-- PROPRIETÁRIO -->
 
-                                <label for="tipo">
-                                    Tipo
-                                </label>
+                        <div
+                            class="campo-formulario">
 
-                                <select
-                                    id="tipo"
-                                    name="tipo">
 
-                                    <option value="todos">
-                                        Todos
-                                    </option>
+                            <label for="pesquisa-proprietario">
 
-                                    <option value="cachorro">
-                                        Cachorro
-                                    </option>
+                                Proprietário
 
-                                    <option value="gato">
-                                        Gato
-                                    </option>
+                            </label>
 
-                                </select>
 
-                            </div>
+                            <input
+                                type="text"
+                                id="pesquisa-proprietario"
+                                placeholder="Nome do proprietário">
 
 
-                            <button
-                                type="submit"
-                                class="botao botao-pesquisar">
-                                🔍 Pesquisar
-                            </button>
+                        </div>
 
-                        </form>
 
-                    </section>
 
+                        <!-- TIPO -->
 
-                    <!-- TABELA -->
-                    <section class="tabela-container">
+                        <div
+                            class="campo-formulario">
 
-                        <table class="tabela">
 
-                            <thead>
+                            <label for="pesquisa-tipo">
 
-                                <tr>
+                                Tipo
 
-                                    <th>
-                                        ID
-                                    </th>
+                            </label>
 
-                                    <th>
-                                        Pet
-                                    </th>
 
-                                    <th>
-                                        Tipo
-                                    </th>
+                            <select
+                                id="pesquisa-tipo">
 
-                                    <th>
-                                        Raça
-                                    </th>
 
-                                    <th>
-                                        Porte
-                                    </th>
+                                <option value="">
 
-                                    <th>
-                                        Proprietário
-                                    </th>
+                                    Todos
 
-                                    <th>
-                                        Status
-                                    </th>
+                                </option>
 
-                                    <th>
-                                        Ações
-                                    </th>
 
-                                </tr>
+                                <option value="cachorro">
 
-                            </thead>
+                                    Cachorro
 
+                                </option>
 
-                            <tbody>
 
-                                <tr>
+                                <option value="gato">
 
-                                    <td>
-                                        001
-                                    </td>
+                                    Gato
 
-                                    <td>
-                                        Thor
-                                    </td>
+                                </option>
 
-                                    <td>
-                                        Cachorro
-                                    </td>
 
-                                    <td>
-                                        Golden Retriever
-                                    </td>
+                            </select>
 
-                                    <td>
-                                        Grande
-                                    </td>
 
-                                    <td>
-                                        Maria Silva
-                                    </td>
+                        </div>
 
-                                    <td>
-                                        Hospedado
-                                    </td>
 
-                                    <td>
 
-                                        <a href="visualizar-pet.html">
-                                            Visualizar
-                                        </a>
+                        <!-- BOTÃO -->
 
-                                        <a href="editar-pet.html">
-                                            Editar
-                                        </a>
+                        <button
+                            type="submit"
+                            class="botao botao-pesquisar">
 
-                                    </td>
 
-                                </tr>
+                            🔍 Pesquisar
 
 
-                                <tr>
+                        </button>
 
-                                    <td>
-                                        002
-                                    </td>
 
-                                    <td>
-                                        Luna
-                                    </td>
+                    </form>
 
-                                    <td>
-                                        Cachorro
-                                    </td>
-
-                                    <td>
-                                        Shih-tzu
-                                    </td>
-
-                                    <td>
-                                        Pequeno
-                                    </td>
-
-                                    <td>
-                                        João Santos
-                                    </td>
-
-                                    <td>
-                                        Hospedado
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-pet.html">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-pet.html">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        003
-                                    </td>
-
-                                    <td>
-                                        Mel
-                                    </td>
-
-                                    <td>
-                                        Gato
-                                    </td>
-
-                                    <td>
-                                        Siamês
-                                    </td>
-
-                                    <td>
-                                        Pequeno
-                                    </td>
-
-                                    <td>
-                                        Ana Oliveira
-                                    </td>
-
-                                    <td>
-                                        Hospedado
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-pet.html">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-pet.html">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        004
-                                    </td>
-
-                                    <td>
-                                        Bob
-                                    </td>
-
-                                    <td>
-                                        Cachorro
-                                    </td>
-
-                                    <td>
-                                        Beagle
-                                    </td>
-
-                                    <td>
-                                        Médio
-                                    </td>
-
-                                    <td>
-                                        Carlos Souza
-                                    </td>
-
-                                    <td>
-                                        Fora do hotel
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-pet.html">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-pet.html">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </section>
 
                 </section>
 
+
+
+                <!-- ================================= -->
+                <!-- TABELA -->
+                <!-- ================================= -->
+
+                <section
+                    class="tabela-container">
+
+
+                    <table
+                        class="tabela">
+
+
+                        <thead>
+
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Pet
+                                </th>
+
+                                <th>
+                                    Tipo
+                                </th>
+
+                                <th>
+                                    Raça
+                                </th>
+
+                                <th>
+                                    Porte
+                                </th>
+
+                                <th>
+                                    Proprietário
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ações
+                                </th>
+
+                            </tr>
+
+
+                        </thead>
+
+
+                        <tbody id="tabela-pets">
+
+
+                            <!-- THOR -->
+
+                            <tr>
+
+                                <td>
+                                    001
+                                </td>
+
+                                <td>
+                                    Thor
+                                </td>
+
+                                <td>
+                                    Cachorro
+                                </td>
+
+                                <td>
+                                    Golden Retriever
+                                </td>
+
+                                <td>
+                                    Grande
+                                </td>
+
+                                <td>
+                                    Maria Silva
+                                </td>
+
+                                <td>
+                                    Hospedado
+                                </td>
+
+                                <td>
+
+
+                                    <a
+                                        href="visualizar-pet.html?pet=thor">
+
+                                        Visualizar
+
+                                    </a>
+
+
+                                    &nbsp;
+
+
+                                    <a
+                                        href="editar-pet.html?pet=thor">
+
+                                        Editar
+
+                                    </a>
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- LUNA -->
+
+                            <tr>
+
+                                <td>
+                                    002
+                                </td>
+
+                                <td>
+                                    Luna
+                                </td>
+
+                                <td>
+                                    Cachorro
+                                </td>
+
+                                <td>
+                                    Shih-tzu
+                                </td>
+
+                                <td>
+                                    Pequeno
+                                </td>
+
+                                <td>
+                                    João Santos
+                                </td>
+
+                                <td>
+                                    Hospedado
+                                </td>
+
+                                <td>
+
+
+                                    <a
+                                        href="visualizar-pet.html?pet=luna">
+
+                                        Visualizar
+
+                                    </a>
+
+
+                                    &nbsp;
+
+
+                                    <a
+                                        href="editar-pet.html?pet=luna">
+
+                                        Editar
+
+                                    </a>
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- MEL -->
+
+                            <tr>
+
+                                <td>
+                                    003
+                                </td>
+
+                                <td>
+                                    Mel
+                                </td>
+
+                                <td>
+                                    Gato
+                                </td>
+
+                                <td>
+                                    Siamês
+                                </td>
+
+                                <td>
+                                    Pequeno
+                                </td>
+
+                                <td>
+                                    Ana Oliveira
+                                </td>
+
+                                <td>
+                                    Hospedado
+                                </td>
+
+                                <td>
+
+
+                                    <a
+                                        href="visualizar-pet.html?pet=mel">
+
+                                        Visualizar
+
+                                    </a>
+
+
+                                    &nbsp;
+
+
+                                    <a
+                                        href="editar-pet.html?pet=mel">
+
+                                        Editar
+
+                                    </a>
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- BOB -->
+
+                            <tr>
+
+                                <td>
+                                    004
+                                </td>
+
+                                <td>
+                                    Bob
+                                </td>
+
+                                <td>
+                                    Cachorro
+                                </td>
+
+                                <td>
+                                    Beagle
+                                </td>
+
+                                <td>
+                                    Médio
+                                </td>
+
+                                <td>
+                                    Gisele Teles
+                                </td>
+
+                                <td>
+                                    Fora do hotel
+                                </td>
+
+                                <td>
+
+
+                                    <a
+                                        href="visualizar-pet.html?pet=bob">
+
+                                        Visualizar
+
+                                    </a>
+
+
+                                    &nbsp;
+
+
+                                    <a
+                                        href="editar-pet.html?pet=bob">
+
+                                        Editar
+
+                                    </a>
+
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </section>
+
+
             </main>
+
 
         </div>
 
+
     </div>
+
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script>
+
+
+        const formulario =
+            document.getElementById(
+                "formulario-pesquisa"
+            );
+
+
+        formulario.addEventListener(
+            "submit",
+            function (evento) {
+
+
+                evento.preventDefault();
+
+
+                const nome =
+                    document.getElementById(
+                        "pesquisa-nome"
+                    ).value
+                    .toLowerCase();
+
+
+                const proprietario =
+                    document.getElementById(
+                        "pesquisa-proprietario"
+                    ).value
+                    .toLowerCase();
+
+
+                const tipo =
+                    document.getElementById(
+                        "pesquisa-tipo"
+                    ).value
+                    .toLowerCase();
+
+
+                const linhas =
+                    document.querySelectorAll(
+                        "#tabela-pets tr"
+                    );
+
+
+                linhas.forEach(
+                    function (linha) {
+
+
+                        const texto =
+                            linha.textContent
+                            .toLowerCase();
+
+
+                        let mostrar =
+                            true;
+
+
+                        if (
+                            nome &&
+                            !texto.includes(nome)
+                        ) {
+
+                            mostrar = false;
+
+                        }
+
+
+                        if (
+                            proprietario &&
+                            !texto.includes(
+                                proprietario
+                            )
+                        ) {
+
+                            mostrar = false;
+
+                        }
+
+
+                        if (
+                            tipo &&
+                            !texto.includes(tipo)
+                        ) {
+
+                            mostrar = false;
+
+                        }
+
+
+                        linha.style.display =
+                            mostrar
+                                ? ""
+                                : "none";
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
 

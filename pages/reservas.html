@@ -2,39 +2,63 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Reservas</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
 
 <body>
 
     <div class="layout">
 
+
+        <!-- ================================= -->
         <!-- MENU LATERAL -->
+        <!-- ================================= -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
                 <a href="pets.html">
+
                     🐾 Pet
+
                 </a>
+
 
                 <a href="usuarios.html">
+
                     ♙ Usuário
+
                 </a>
+
 
                 <a href="configuracoes.html">
+
                     ⚙ Configurações
+
                 </a>
 
-                <a href="reservas.html" class="menu-ativo">
+
+                <a href="reservas.html"
+                    class="menu-ativo">
+
                     ▣ Reservas
+
                 </a>
 
             </nav>
@@ -42,69 +66,131 @@
         </aside>
 
 
+
+        <!-- ================================= -->
         <!-- ÁREA PRINCIPAL -->
+        <!-- ================================= -->
+
         <div class="conteudo">
 
+
+            <!-- ================================= -->
             <!-- TOPO -->
+            <!-- ================================= -->
+
             <header class="topo">
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
+
                         ◯
+
                     </span>
+
 
                     <span>
-                        João da Silva
+
+                        Gisele Teles
+
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
 
+
+            <!-- ================================= -->
             <!-- CONTEÚDO -->
+            <!-- ================================= -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Reservas
+
+                    <a href="dashboard.html">
+
+                        Home
+
+                    </a>
+
+                    /
+
+                    Reservas
+
                 </p>
 
 
+
+                <!-- ================================= -->
+                <!-- CARD -->
+                <!-- ================================= -->
+
                 <section class="card">
+
+
+                    <!-- CABEÇALHO -->
 
                     <div class="cabecalho-pagina">
 
+
                         <h2>
+
                             Reservas
+
                         </h2>
 
+
                         <a
-                            href="editar-reserva.html"
+                            href="cadastrar-reserva.html"
                             class="botao botao-salvar">
+
                             + Nova reserva
+
                         </a>
+
 
                     </div>
 
 
+
+                    <!-- ================================= -->
                     <!-- FILTROS -->
+                    <!-- ================================= -->
+
                     <section class="filtros">
 
+
                         <h3>
+
                             Pesquisar
+
                         </h3>
 
 
-                        <form class="formulario-pesquisa">
+
+                        <form
+                            class="formulario-pesquisa">
+
+
+                            <!-- PET -->
 
                             <div class="campo-formulario">
 
                                 <label for="pet">
+
                                     Pet
+
                                 </label>
+
 
                                 <input
                                     type="text"
@@ -115,11 +201,17 @@
                             </div>
 
 
+
+                            <!-- PROPRIETÁRIO -->
+
                             <div class="campo-formulario">
 
                                 <label for="proprietario">
+
                                     Proprietário
+
                                 </label>
+
 
                                 <input
                                     type="text"
@@ -130,34 +222,54 @@
                             </div>
 
 
+
+                            <!-- STATUS -->
+
                             <div class="campo-formulario">
 
                                 <label for="status">
+
                                     Status
+
                                 </label>
+
 
                                 <select
                                     id="status"
                                     name="status">
 
                                     <option value="todos">
+
                                         Todos
+
                                     </option>
+
 
                                     <option value="agendada">
+
                                         Agendada
+
                                     </option>
+
 
                                     <option value="confirmada">
+
                                         Confirmada
+
                                     </option>
+
 
                                     <option value="andamento">
+
                                         Em andamento
+
                                     </option>
 
+
                                     <option value="finalizada">
+
                                         Finalizada
+
                                     </option>
 
                                 </select>
@@ -165,95 +277,161 @@
                             </div>
 
 
+
+                            <!-- PESQUISAR -->
+
                             <button
                                 type="submit"
                                 class="botao botao-pesquisar">
+
                                 🔍 Pesquisar
+
                             </button>
+
 
                         </form>
 
                     </section>
 
 
+
+                    <!-- ================================= -->
                     <!-- TABELA -->
+                    <!-- ================================= -->
+
                     <section class="tabela-container">
 
+
                         <table class="tabela">
+
 
                             <thead>
 
                                 <tr>
 
+
                                     <th>
+
                                         ID
+
                                     </th>
 
+
                                     <th>
+
                                         Pet
+
                                     </th>
 
+
                                     <th>
+
                                         Proprietário
+
                                     </th>
 
+
                                     <th>
+
                                         Entrada
+
                                     </th>
 
+
                                     <th>
+
                                         Saída
+
                                     </th>
 
+
                                     <th>
+
                                         Status
+
                                     </th>
 
+
                                     <th>
+
                                         Ações
+
                                     </th>
+
 
                                 </tr>
 
                             </thead>
 
 
+
                             <tbody>
 
+
+                                <!-- ================================= -->
+                                <!-- RESERVA 001 -->
+                                <!-- ================================= -->
+
                                 <tr>
 
+
                                     <td>
+
                                         001
+
                                     </td>
 
+
                                     <td>
+
                                         Thor
+
                                     </td>
 
+
                                     <td>
+
                                         Maria Silva
+
                                     </td>
 
+
                                     <td>
+
                                         20/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         25/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Confirmada
+
                                     </td>
+
 
                                     <td>
 
-                                        <a href="visualizar-reserva.html">
+                                        <a
+                                            href="visualizar-reserva.html?reserva=001">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-reserva.html">
+
+                                        <a
+                                            href="editar-reserva.html?reserva=001">
+
                                             Editar
+
                                         </a>
 
                                     </td>
@@ -261,40 +439,71 @@
                                 </tr>
 
 
+
+                                <!-- ================================= -->
+                                <!-- RESERVA 002 -->
+                                <!-- ================================= -->
+
                                 <tr>
 
+
                                     <td>
+
                                         002
+
                                     </td>
 
+
                                     <td>
+
                                         Luna
+
                                     </td>
 
+
                                     <td>
+
                                         João Santos
+
                                     </td>
 
+
                                     <td>
+
                                         21/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         24/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Em andamento
+
                                     </td>
+
 
                                     <td>
 
-                                        <a href="visualizar-reserva.html">
+                                        <a
+                                            href="visualizar-reserva.html?reserva=002">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-reserva.html">
+
+                                        <a
+                                            href="editar-reserva.html?reserva=002">
+
                                             Editar
+
                                         </a>
 
                                     </td>
@@ -302,100 +511,170 @@
                                 </tr>
 
 
+
+                                <!-- ================================= -->
+                                <!-- RESERVA 003 -->
+                                <!-- ================================= -->
+
                                 <tr>
 
+
                                     <td>
+
                                         003
+
                                     </td>
 
+
                                     <td>
+
                                         Mel
+
                                     </td>
 
+
                                     <td>
+
                                         Ana Oliveira
+
                                     </td>
 
+
                                     <td>
+
                                         15/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         18/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Finalizada
+
                                     </td>
+
 
                                     <td>
 
-                                        <a href="visualizar-reserva.html">
+                                        <a
+                                            href="visualizar-reserva.html?reserva=003">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-reserva.html">
+
+                                        <a
+                                            href="editar-reserva.html?reserva=003">
+
                                             Editar
+
                                         </a>
 
                                     </td>
 
                                 </tr>
 
+
+
+                                <!-- ================================= -->
+                                <!-- RESERVA 004 -->
+                                <!-- ================================= -->
 
                                 <tr>
 
+
                                     <td>
+
                                         004
+
                                     </td>
 
+
                                     <td>
+
                                         Bob
+
                                     </td>
 
-                                    <td>
-                                        Carlos Souza
-                                    </td>
 
                                     <td>
+
+                                        Gisele Teles
+
+                                    </td>
+
+
+                                    <td>
+
                                         25/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         30/08/2026
+
                                     </td>
 
+
                                     <td>
+
                                         Agendada
+
                                     </td>
+
 
                                     <td>
 
-                                        <a href="visualizar-reserva.html">
+                                        <a
+                                            href="visualizar-reserva.html?reserva=004">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-reserva.html">
+
+                                        <a
+                                            href="editar-reserva.html?reserva=004">
+
                                             Editar
+
                                         </a>
 
                                     </td>
 
                                 </tr>
+
 
                             </tbody>
 
+
                         </table>
+
 
                     </section>
 
+
                 </section>
+
 
             </main>
 
+
         </div>
 
+
     </div>
+
 
 </body>
 

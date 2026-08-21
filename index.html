@@ -1,102 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Login</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="pagina-login">
 
-    <div class="pagina-login">
+    <main class="login-container">
 
-        <header class="cabecalho-login">
+        <!-- Imagem do Hotel Pet -->
+        <div class="login-imagem">
+            <img src="img/hotel-pet.png" alt="Hotel Pet - animais">
+        </div>
 
-            <h1>Hotel Pet</h1>
+        <!-- Área do Login -->
+        <div class="login-formulario">
 
-            <p>
-                Hotel e cuidado para o seu melhor amigo
+            <div class="login-cabecalho">
+                <h1>Hotel Pet</h1>
+                <p>Sistema de gerenciamento de hospedagem para Pets</p>
+            </div>
+
+            <h2>Login</h2>
+
+            <form action="pages/dashboard.html">
+
+                <div class="campo-login">
+                    <label for="login">Login</label>
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                        placeholder="Digite seu login"
+                        required
+                    >
+                </div>
+
+                <div class="campo-login">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <div class="opcoes-login">
+
+                    <label class="lembrar-login">
+                        <input type="checkbox" name="lembrar">
+                        <span>Manter-me conectado</span>
+                    </label>
+
+                    <a href="#">Esqueci a senha</a>
+
+                </div>
+
+                <button type="submit" class="botao-entrar">
+                    Entrar
+                </button>
+
+            </form>
+
+            <div class="separador-login">
+                <span>ou</span>
+            </div>
+
+            <!-- Login com Google -->
+            <div class="login-google">
+                <button type="button">
+                    <span class="rede-google">G</span>
+                    Entrar com Google
+                </button>
+            </div>
+
+            <p class="criar-conta-login">
+                Ainda não possui uma conta?
+                <a href="pages/criar-conta.html">Criar uma conta</a>
             </p>
 
-        </header>
+            <a href="pages/dashboard.html" class="acesso-gerente">
+                Acessar como Gerente
+            </a>
 
+        </div>
 
-        <main class="conteudo-login">
-
-            <section class="card-login">
-
-                <h2>Login</h2>
-
-                <form action="pages/dashboard.html">
-
-                    <div class="campo-formulario">
-
-                        <label for="email">
-                            E-mail *
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Digite seu e-mail"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo-formulario">
-
-                        <label for="senha">
-                            Senha *
-                        </label>
-
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            placeholder="Digite sua senha"
-                            required>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="botao botao-salvar">
-                        Entrar
-                    </button>
-
-                </form>
-
-
-                <p class="acesso-gerente">
-
-                    <a href="pages/dashboard.html">
-                        Acessar como Gerente
-                    </a>
-
-                </p>
-
-            </section>
-
-        </main>
-
-
-        <footer class="rodape-login">
-
-            <p>
-                &copy; 2026 Hotel Pet
-            </p>
-
-        </footer>
-
-    </div>
+    </main>
 
 </body>
-
 </html>

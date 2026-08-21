@@ -2,17 +2,22 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Usuários</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
     <div class="layout">
+
 
         <!-- MENU LATERAL -->
         <aside class="menu-lateral">
@@ -25,7 +30,8 @@
                     🐾 Pet
                 </a>
 
-                <a href="usuarios.html" class="menu-ativo">
+                <a href="usuarios.html"
+                    class="menu-ativo">
                     ♙ Usuário
                 </a>
 
@@ -42,71 +48,99 @@
         </aside>
 
 
+
         <!-- ÁREA PRINCIPAL -->
         <div class="conteudo">
+
 
             <!-- TOPO -->
             <header class="topo">
 
                 <div></div>
 
-                <div class="perfil-topo">
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
+
 
 
             <!-- CONTEÚDO -->
             <main>
 
+
                 <p class="breadcrumb">
-                    Home / Usuários
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    Usuários
+
                 </p>
+
 
 
                 <section class="card">
 
+
+                    <!-- CABEÇALHO -->
                     <div class="cabecalho-pagina">
 
                         <h2>
                             Usuários
                         </h2>
 
+
                         <a
                             href="cadastrar-usuario.html"
                             class="botao botao-salvar">
+
                             + Novo usuário
+
                         </a>
 
                     </div>
 
 
+
                     <!-- AÇÕES -->
                     <section class="acoes-usuarios">
+
 
                         <button
                             type="button"
                             class="botao botao-remover">
+
                             Remover
+
                         </button>
+
 
 
                         <button
                             type="button"
                             class="botao botao-status">
+
                             ✓ Mudar status
+
                         </button>
 
+
                     </section>
+
 
 
                     <!-- VISUALIZAÇÃO -->
@@ -119,22 +153,29 @@
 
                         <div class="botoes-visualizacao">
 
+
                             <button
                                 type="button"
                                 class="botao botao-visualizacao-ativo">
+
                                 Usuários
+
                             </button>
 
 
                             <button
                                 type="button"
                                 class="botao">
+
                                 Função
+
                             </button>
+
 
                         </div>
 
                     </section>
+
 
 
                     <!-- FILTROS -->
@@ -145,8 +186,11 @@
                         </h3>
 
 
-                        <form class="formulario-pesquisa">
+                        <form
+                            class="formulario-pesquisa">
 
+
+                            <!-- ID -->
                             <div class="campo-formulario">
 
                                 <label for="id">
@@ -162,6 +206,8 @@
                             </div>
 
 
+
+                            <!-- DATA INICIAL -->
                             <div class="campo-formulario">
 
                                 <label for="criado-inicio">
@@ -176,6 +222,8 @@
                             </div>
 
 
+
+                            <!-- DATA FINAL -->
                             <div class="campo-formulario">
 
                                 <label for="criado-fim">
@@ -190,6 +238,8 @@
                             </div>
 
 
+
+                            <!-- EMAIL -->
                             <div class="campo-formulario">
 
                                 <label for="email">
@@ -205,6 +255,8 @@
                             </div>
 
 
+
+                            <!-- NOME -->
                             <div class="campo-formulario">
 
                                 <label for="nome">
@@ -220,21 +272,29 @@
                             </div>
 
 
+
+                            <!-- PESQUISAR -->
                             <button
                                 type="submit"
                                 class="botao botao-pesquisar">
+
                                 🔍 Pesquisar
+
                             </button>
+
 
                         </form>
 
                     </section>
 
 
+
                     <!-- TABELA -->
                     <section class="tabela-container">
 
+
                         <table class="tabela">
+
 
                             <thead>
 
@@ -273,8 +333,11 @@
                             </thead>
 
 
+
                             <tbody>
 
+
+                                <!-- MARIA -->
                                 <tr>
 
                                     <td>
@@ -303,12 +366,22 @@
 
                                     <td>
 
-                                        <a href="visualizar-usuario.html">
+                                        <a
+                                            href="visualizar-usuario.html?usuario=maria">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-usuario.html">
+
+                                        &nbsp;
+
+
+                                        <a
+                                            href="editar-usuario.html?usuario=maria">
+
                                             Editar
+
                                         </a>
 
                                     </td>
@@ -316,6 +389,8 @@
                                 </tr>
 
 
+
+                                <!-- JOÃO -->
                                 <tr>
 
                                     <td>
@@ -344,12 +419,22 @@
 
                                     <td>
 
-                                        <a href="visualizar-usuario.html">
+                                        <a
+                                            href="visualizar-usuario.html?usuario=joao">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-usuario.html">
+
+                                        &nbsp;
+
+
+                                        <a
+                                            href="editar-usuario.html?usuario=joao">
+
                                             Editar
+
                                         </a>
 
                                     </td>
@@ -357,6 +442,8 @@
                                 </tr>
 
 
+
+                                <!-- ANA -->
                                 <tr>
 
                                     <td>
@@ -385,12 +472,22 @@
 
                                     <td>
 
-                                        <a href="visualizar-usuario.html">
+                                        <a
+                                            href="visualizar-usuario.html?usuario=ana">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-usuario.html">
+
+                                        &nbsp;
+
+
+                                        <a
+                                            href="editar-usuario.html?usuario=ana">
+
                                             Editar
+
                                         </a>
 
                                     </td>
@@ -398,6 +495,8 @@
                                 </tr>
 
 
+
+                                <!-- GISELE -->
                                 <tr>
 
                                     <td>
@@ -405,11 +504,11 @@
                                     </td>
 
                                     <td>
-                                        Carlos Souza
+                                        Gisele Teles
                                     </td>
 
                                     <td>
-                                        carlos@email.com
+                                        gisele@email.com
                                     </td>
 
                                     <td>
@@ -426,27 +525,43 @@
 
                                     <td>
 
-                                        <a href="visualizar-usuario.html">
+                                        <a
+                                            href="visualizar-usuario.html?usuario=gisele">
+
                                             Visualizar
+
                                         </a>
 
-                                        <a href="editar-usuario.html">
+
+                                        &nbsp;
+
+
+                                        <a
+                                            href="editar-usuario.html?usuario=gisele">
+
                                             Editar
+
                                         </a>
 
                                     </td>
 
                                 </tr>
 
+
                             </tbody>
+
 
                         </table>
 
+
                     </section>
+
 
                 </section>
 
+
             </main>
+
 
         </div>
 

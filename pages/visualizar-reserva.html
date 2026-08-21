@@ -2,22 +2,32 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Reserva</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+        href="../css/style.css">
+
 </head>
 
 <body>
 
     <div class="layout">
 
+
         <!-- MENU LATERAL -->
+
         <aside class="menu-lateral">
 
-            <h1>Hotel Pet</h1>
+            <h1>
+                Hotel Pet
+            </h1>
+
 
             <nav>
 
@@ -25,15 +35,19 @@
                     🐾 Pet
                 </a>
 
+
                 <a href="usuarios.html">
                     ♙ Usuário
                 </a>
+
 
                 <a href="configuracoes.html">
                     ⚙ Configurações
                 </a>
 
-                <a href="reservas.html" class="menu-ativo">
+
+                <a href="reservas.html"
+                    class="menu-ativo">
                     ▣ Reservas
                 </a>
 
@@ -42,45 +56,75 @@
         </aside>
 
 
+
         <!-- ÁREA PRINCIPAL -->
+
         <div class="conteudo">
 
+
             <!-- TOPO -->
+
             <header class="topo">
 
                 <div></div>
 
-                <div class="perfil-topo">
+
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
+
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
 
+
             <!-- CONTEÚDO -->
+
             <main>
 
+
+                <!-- BREADCRUMB -->
+
                 <p class="breadcrumb">
-                    Home / Reservas / Visualizar Reserva
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="reservas.html">
+                        Reservas
+                    </a>
+
+                    /
+
+                    Visualizar Reserva
+
                 </p>
 
 
+
                 <section class="card">
+
 
                     <h2>
                         Visualizar Reserva
                     </h2>
 
 
+
                     <!-- DADOS DA RESERVA -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -90,6 +134,7 @@
 
                         <div class="formulario-duas-colunas">
 
+
                             <div class="campo-formulario">
 
                                 <label>
@@ -98,10 +143,11 @@
 
                                 <input
                                     type="text"
-                                    value="001"
+                                    id="id-reserva"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -112,10 +158,11 @@
 
                                 <input
                                     type="text"
-                                    value="Confirmada"
+                                    id="status-reserva"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -126,10 +173,11 @@
 
                                 <input
                                     type="text"
-                                    value="20/08/2026"
+                                    id="entrada-reserva"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -140,10 +188,11 @@
 
                                 <input
                                     type="text"
-                                    value="25/08/2026"
+                                    id="saida-reserva"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -154,10 +203,11 @@
 
                                 <input
                                     type="text"
-                                    value="5 diárias"
+                                    id="diarias-reserva"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -168,10 +218,11 @@
 
                                 <input
                                     type="text"
-                                    value="R$ 80,00"
+                                    id="valor-diaria"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -182,7 +233,7 @@
 
                                 <input
                                     type="text"
-                                    value="R$ 400,00"
+                                    id="valor-total"
                                     readonly>
 
                             </div>
@@ -192,7 +243,9 @@
                     </section>
 
 
+
                     <!-- DADOS DO PET -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -202,6 +255,7 @@
 
                         <div class="formulario-duas-colunas">
 
+
                             <div class="campo-formulario">
 
                                 <label>
@@ -210,10 +264,11 @@
 
                                 <input
                                     type="text"
-                                    value="Thor"
+                                    id="nome-pet"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -224,10 +279,11 @@
 
                                 <input
                                     type="text"
-                                    value="Cachorro"
+                                    id="tipo-pet"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -238,10 +294,11 @@
 
                                 <input
                                     type="text"
-                                    value="Golden Retriever"
+                                    id="raca-pet"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -252,7 +309,7 @@
 
                                 <input
                                     type="text"
-                                    value="Grande"
+                                    id="porte-pet"
                                     readonly>
 
                             </div>
@@ -262,7 +319,9 @@
                     </section>
 
 
+
                     <!-- PROPRIETÁRIO -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -272,6 +331,7 @@
 
                         <div class="formulario-duas-colunas">
 
+
                             <div class="campo-formulario">
 
                                 <label>
@@ -280,10 +340,11 @@
 
                                 <input
                                     type="text"
-                                    value="Maria Silva"
+                                    id="nome-proprietario"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -294,10 +355,11 @@
 
                                 <input
                                     type="email"
-                                    value="maria@email.com"
+                                    id="email-proprietario"
                                     readonly>
 
                             </div>
+
 
 
                             <div class="campo-formulario">
@@ -308,7 +370,7 @@
 
                                 <input
                                     type="text"
-                                    value="(77) 99999-9999"
+                                    id="telefone-proprietario"
                                     readonly>
 
                             </div>
@@ -318,7 +380,9 @@
                     </section>
 
 
+
                     <!-- OBSERVAÇÕES -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -332,16 +396,21 @@
                                 Observações da reserva
                             </label>
 
+
                             <textarea
+                                id="observacoes"
                                 rows="4"
-                                readonly>Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.</textarea>
+                                readonly>
+                            </textarea>
 
                         </div>
 
                     </section>
 
 
+
                     <!-- FOTO DO PET -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -351,16 +420,26 @@
 
                         <div class="foto-pet">
 
-                            <div class="foto-placeholder">
-                                🐶
-                            </div>
+                            <img
+                                id="foto-pet"
+                                src=""
+                                alt="Foto do pet"
+                                style="
+                                    width: 180px;
+                                    height: 180px;
+                                    object-fit: cover;
+                                    border-radius: 12px;
+                                    display: block;
+                                ">
 
                         </div>
 
                     </section>
 
 
+
                     <!-- COMPROVANTE -->
+
                     <section class="secao-formulario">
 
                         <h3>
@@ -370,12 +449,15 @@
 
                         <div class="arquivo-comprovante">
 
-                            <p>
-                                📄 comprovante-reserva-001.pdf
+                            <p id="comprovante">
                             </p>
 
-                            <a href="#">
+
+                            <a href="#"
+                                id="link-comprovante">
+
                                 Visualizar comprovante
+
                             </a>
 
                         </div>
@@ -383,23 +465,32 @@
                     </section>
 
 
+
                     <!-- BOTÕES -->
+
                     <div class="botoes-formulario">
 
+
                         <a
+                            id="botao-editar"
                             href="editar-reserva.html"
                             class="botao botao-salvar">
+
                             ✎ Editar
+
                         </a>
 
 
                         <a
                             href="reservas.html"
                             class="botao botao-cancelar">
+
                             ← Voltar
+
                         </a>
 
                     </div>
+
 
                 </section>
 
@@ -408,6 +499,429 @@
         </div>
 
     </div>
+
+
+
+    <!-- DADOS DAS RESERVAS -->
+
+    <script>
+
+        const reservas = {
+
+
+            // =====================================
+            // RESERVA 001
+            // =====================================
+
+            "001": {
+
+                id: "001",
+
+                status: "Confirmada",
+
+                entrada: "20/08/2026",
+
+                saida: "25/08/2026",
+
+                diarias: 5,
+
+                valorDiaria: 80,
+
+                valorTotal: 400,
+
+
+                pet: {
+
+                    nome: "Thor",
+
+                    tipo: "Cachorro",
+
+                    raca: "Golden Retriever",
+
+                    porte: "Grande",
+
+                    foto: "../img/Thor.png"
+
+                },
+
+
+                proprietario: {
+
+                    nome: "Maria Silva",
+
+                    email: "maria@email.com",
+
+                    telefone: "(77) 99999-9999"
+
+                },
+
+
+                observacoes:
+                    "Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.",
+
+
+                comprovante:
+                    "📄 comprovante-reserva-001.pdf"
+
+            },
+
+
+            // =====================================
+            // RESERVA 002
+            // =====================================
+
+            "002": {
+
+                id: "002",
+
+                status: "Em andamento",
+
+                entrada: "21/08/2026",
+
+                saida: "24/08/2026",
+
+                diarias: 3,
+
+                valorDiaria: 80,
+
+                valorTotal: 240,
+
+
+                pet: {
+
+                    nome: "Luna",
+
+                    tipo: "Cachorro",
+
+                    raca: "Shih-tzu",
+
+                    porte: "Pequeno",
+
+                    foto: "../img/Luna.png"
+
+                },
+
+
+                proprietario: {
+
+                    nome: "João Santos",
+
+                    email: "joao@email.com",
+
+                    telefone: "(77) 98888-8888"
+
+                },
+
+
+                observacoes:
+                    "Manter os cuidados habituais e oferecer alimentação conforme orientação do proprietário.",
+
+
+                comprovante:
+                    "📄 comprovante-reserva-002.pdf"
+
+            },
+
+
+            // =====================================
+            // RESERVA 003
+            // =====================================
+
+            "003": {
+
+                id: "003",
+
+                status: "Finalizada",
+
+                entrada: "15/08/2026",
+
+                saida: "18/08/2026",
+
+                diarias: 3,
+
+                valorDiaria: 80,
+
+                valorTotal: 240,
+
+
+                pet: {
+
+                    nome: "Mel",
+
+                    tipo: "Gato",
+
+                    raca: "Siamês",
+
+                    porte: "Pequeno",
+
+                    foto: "../img/Mel.png"
+
+                },
+
+
+                proprietario: {
+
+                    nome: "Ana Oliveira",
+
+                    email: "ana@email.com",
+
+                    telefone: "(77) 97777-7777"
+
+                },
+
+
+                observacoes:
+                    "Gato deve permanecer em ambiente tranquilo durante a hospedagem.",
+
+
+                comprovante:
+                    "📄 comprovante-reserva-003.pdf"
+
+            },
+
+
+            // =====================================
+            // RESERVA 004
+            // =====================================
+
+            "004": {
+
+                id: "004",
+
+                status: "Agendada",
+
+                entrada: "25/08/2026",
+
+                saida: "30/08/2026",
+
+                diarias: 5,
+
+                valorDiaria: 80,
+
+                valorTotal: 400,
+
+
+                pet: {
+
+                    nome: "Bob",
+
+                    tipo: "Cachorro",
+
+                    raca: "Beagle",
+
+                    porte: "Médio",
+
+                    foto: "../img/Bob.png"
+
+                },
+
+
+                proprietario: {
+
+                    nome: "Gisele Teles",
+
+                    email: "gisele@email.com",
+
+                    telefone: "(77) 96666-6666"
+
+                },
+
+
+                observacoes:
+                    "Manter rotina de alimentação e passeios durante a hospedagem.",
+
+
+                comprovante:
+                    "📄 comprovante-reserva-004.pdf"
+
+            }
+
+        };
+
+
+
+        // =====================================
+        // PEGAR RESERVA DA URL
+        // =====================================
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const reservaSelecionada =
+            parametros.get("reserva") || "001";
+
+
+
+        // =====================================
+        // LOCALIZAR RESERVA
+        // =====================================
+
+        const reserva =
+            reservas[reservaSelecionada]
+            || reservas["001"];
+
+
+
+        // =====================================
+        // DADOS DA RESERVA
+        // =====================================
+
+        document.getElementById(
+            "id-reserva"
+        ).value =
+            reserva.id;
+
+
+        document.getElementById(
+            "status-reserva"
+        ).value =
+            reserva.status;
+
+
+        document.getElementById(
+            "entrada-reserva"
+        ).value =
+            reserva.entrada;
+
+
+        document.getElementById(
+            "saida-reserva"
+        ).value =
+            reserva.saida;
+
+
+        document.getElementById(
+            "diarias-reserva"
+        ).value =
+            reserva.diarias + " diárias";
+
+
+        document.getElementById(
+            "valor-diaria"
+        ).value =
+            "R$ " +
+            reserva.valorDiaria.toFixed(2)
+                .replace(".", ",");
+
+
+        document.getElementById(
+            "valor-total"
+        ).value =
+            "R$ " +
+            reserva.valorTotal.toFixed(2)
+                .replace(".", ",");
+
+
+
+        // =====================================
+        // DADOS DO PET
+        // =====================================
+
+        document.getElementById(
+            "nome-pet"
+        ).value =
+            reserva.pet.nome;
+
+
+        document.getElementById(
+            "tipo-pet"
+        ).value =
+            reserva.pet.tipo;
+
+
+        document.getElementById(
+            "raca-pet"
+        ).value =
+            reserva.pet.raca;
+
+
+        document.getElementById(
+            "porte-pet"
+        ).value =
+            reserva.pet.porte;
+
+
+
+        // =====================================
+        // FOTO DO PET
+        // =====================================
+
+        const fotoPet =
+            document.getElementById(
+                "foto-pet"
+            );
+
+
+        fotoPet.src =
+            reserva.pet.foto;
+
+
+        fotoPet.alt =
+            "Foto de " +
+            reserva.pet.nome;
+
+
+
+        // =====================================
+        // PROPRIETÁRIO
+        // =====================================
+
+        document.getElementById(
+            "nome-proprietario"
+        ).value =
+            reserva.proprietario.nome;
+
+
+        document.getElementById(
+            "email-proprietario"
+        ).value =
+            reserva.proprietario.email;
+
+
+        document.getElementById(
+            "telefone-proprietario"
+        ).value =
+            reserva.proprietario.telefone;
+
+
+
+        // =====================================
+        // OBSERVAÇÕES
+        // =====================================
+
+        document.getElementById(
+            "observacoes"
+        ).value =
+            reserva.observacoes;
+
+
+
+        // =====================================
+        // COMPROVANTE
+        // =====================================
+
+        document.getElementById(
+            "comprovante"
+        ).textContent =
+            reserva.comprovante;
+
+
+
+        // =====================================
+        // BOTÃO EDITAR
+        // =====================================
+
+        document.getElementById(
+            "botao-editar"
+        ).href =
+            "editar-reserva.html?reserva="
+            + reservaSelecionada;
+
+    </script>
+
 
 </body>
 

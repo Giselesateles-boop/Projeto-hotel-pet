@@ -42,7 +42,7 @@
         </aside>
 
 
-        <!-- ÁREA PRINCIPAL -->
+        <!-- CONTEÚDO -->
         <div class="conteudo">
 
             <!-- TOPO -->
@@ -50,320 +50,314 @@
 
                 <div></div>
 
-                <div class="perfil-topo">
+                <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
 
-            <!-- CONTEÚDO -->
+            <!-- CONTEÚDO PRINCIPAL -->
             <main>
 
                 <p class="breadcrumb">
-                    Home / Pets / Editar Pet
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="pets.html">
+                        Pets
+                    </a>
+
+                    / Editar Pet
+
                 </p>
 
 
-                <section class="card">
+                <div class="cabecalho-pagina">
 
                     <h2>
                         Editar Pet
                     </h2>
 
-
-                    <form>
-
-                        <!-- DADOS DO PET -->
-                        <section class="secao-formulario">
-
-                            <h3>
-                                Dados do Pet
-                            </h3>
+                </div>
 
 
-                            <div class="formulario-duas-colunas">
+                <!-- CARD -->
+                <section class="card">
 
-                                <div class="campo-formulario">
+                    <form
+                        id="formulario-pet"
+                        class="formulario-duas-colunas"
+                    >
 
-                                    <label for="id-pet">
-                                        ID
-                                    </label>
+                        <!-- FOTO -->
+                        <div class="campo-formulario">
 
-                                    <input
-                                        type="text"
-                                        id="id-pet"
-                                        name="id-pet"
-                                        value="001"
-                                        readonly>
+                            <label>
+                                Foto atual
+                            </label>
 
-                                </div>
+                            <div class="foto-pet">
 
-
-                                <div class="campo-formulario">
-
-                                    <label for="nome-pet">
-                                        Nome do pet *
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="nome-pet"
-                                        name="nome-pet"
-                                        value="Thor"
-                                        required>
-
-                                </div>
-
-
-                                <div class="campo-formulario">
-
-                                    <label for="tipo">
-                                        Tipo *
-                                    </label>
-
-                                    <select
-                                        id="tipo"
-                                        name="tipo"
-                                        required>
-
-                                        <option value="cachorro" selected>
-                                            Cachorro
-                                        </option>
-
-                                        <option value="gato">
-                                            Gato
-                                        </option>
-
-                                        <option value="outro">
-                                            Outro
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <div class="campo-formulario">
-
-                                    <label for="raca">
-                                        Raça
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="raca"
-                                        name="raca"
-                                        value="Golden Retriever">
-
-                                </div>
-
-
-                                <div class="campo-formulario">
-
-                                    <label for="porte">
-                                        Porte *
-                                    </label>
-
-                                    <select
-                                        id="porte"
-                                        name="porte"
-                                        required>
-
-                                        <option value="pequeno">
-                                            Pequeno
-                                        </option>
-
-                                        <option value="medio">
-                                            Médio
-                                        </option>
-
-                                        <option value="grande" selected>
-                                            Grande
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <div class="campo-formulario">
-
-                                    <label for="idade">
-                                        Idade
-                                    </label>
-
-                                    <input
-                                        type="number"
-                                        id="idade"
-                                        name="idade"
-                                        value="3"
-                                        min="0">
-
-                                </div>
-
-
-                                <div class="campo-formulario">
-
-                                    <label for="peso">
-                                        Peso
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="peso"
-                                        name="peso"
-                                        value="28 kg">
-
-                                </div>
+                                <img
+                                    id="foto-atual"
+                                    src="../img/Thor.png"
+                                    alt="Foto do pet"
+                                    style="
+                                        width: 180px;
+                                        height: 180px;
+                                        object-fit: cover;
+                                        border-radius: 10px;
+                                    "
+                                >
 
                             </div>
 
-                        </section>
+                        </div>
+
+
+                        <!-- NOME -->
+                        <div class="campo-formulario">
+
+                            <label for="nome">
+                                Nome *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- TIPO -->
+                        <div class="campo-formulario">
+
+                            <label for="tipo">
+                                Tipo *
+                            </label>
+
+                            <select
+                                id="tipo"
+                                name="tipo"
+                                required
+                            >
+
+                                <option value="Cachorro">
+                                    Cachorro
+                                </option>
+
+                                <option value="Gato">
+                                    Gato
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- RAÇA -->
+                        <div class="campo-formulario">
+
+                            <label for="raca">
+                                Raça *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="raca"
+                                name="raca"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PORTE -->
+                        <div class="campo-formulario">
+
+                            <label for="porte">
+                                Porte *
+                            </label>
+
+                            <select
+                                id="porte"
+                                name="porte"
+                                required
+                            >
+
+                                <option value="Pequeno">
+                                    Pequeno
+                                </option>
+
+                                <option value="Médio">
+                                    Médio
+                                </option>
+
+                                <option value="Grande">
+                                    Grande
+                                </option>
+
+                            </select>
+
+                        </div>
 
 
                         <!-- PROPRIETÁRIO -->
-                        <section class="secao-formulario">
+                        <div class="campo-formulario">
 
-                            <h3>
-                                Proprietário
-                            </h3>
+                            <label for="proprietario">
+                                Proprietário *
+                            </label>
 
+                            <select
+                                id="proprietario"
+                                name="proprietario"
+                                required
+                            >
 
-                            <div class="formulario-duas-colunas">
+                                <option value="Maria Silva">
+                                    Maria Silva
+                                </option>
 
-                                <div class="campo-formulario">
+                                <option value="João Santos">
+                                    João Santos
+                                </option>
 
-                                    <label for="proprietario">
-                                        Proprietário *
-                                    </label>
+                                <option value="Ana Oliveira">
+                                    Ana Oliveira
+                                </option>
 
-                                    <select
-                                        id="proprietario"
-                                        name="proprietario"
-                                        required>
+                                <option value="Gisele Teles">
+                                    Gisele Teles
+                                </option>
 
-                                        <option value="maria" selected>
-                                            Maria Silva
-                                        </option>
+                            </select>
 
-                                        <option value="joao">
-                                            João Santos
-                                        </option>
-
-                                        <option value="ana">
-                                            Ana Oliveira
-                                        </option>
-
-                                        <option value="carlos">
-                                            Carlos Souza
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-                            </div>
-
-                        </section>
+                        </div>
 
 
-                        <!-- CUIDADOS -->
-                        <section class="secao-formulario">
+                        <!-- IDADE -->
+                        <div class="campo-formulario">
 
-                            <h3>
-                                Cuidados e Observações
-                            </h3>
+                            <label for="idade">
+                                Idade
+                            </label>
 
+                            <input
+                                type="text"
+                                id="idade"
+                                name="idade"
+                            >
 
-                            <div class="formulario-duas-colunas">
-
-                                <div class="campo-formulario campo-completo">
-
-                                    <label for="alimentacao">
-                                        Alimentação
-                                    </label>
-
-                                    <textarea
-                                        id="alimentacao"
-                                        name="alimentacao"
-                                        rows="4">Ração duas vezes ao dia, pela manhã e à noite.</textarea>
-
-                                </div>
+                        </div>
 
 
-                                <div class="campo-formulario campo-completo">
+                        <!-- PESO -->
+                        <div class="campo-formulario">
 
-                                    <label for="observacoes">
-                                        Observações
-                                    </label>
+                            <label for="peso">
+                                Peso
+                            </label>
 
-                                    <textarea
-                                        id="observacoes"
-                                        name="observacoes"
-                                        rows="4">Pet dócil. Gosta de brincar e precisa de passeios durante a hospedagem.</textarea>
+                            <input
+                                type="text"
+                                id="peso"
+                                name="peso"
+                            >
 
-                                </div>
-
-                            </div>
-
-                        </section>
+                        </div>
 
 
-                        <!-- FOTO -->
-                        <section class="secao-formulario">
+                        <!-- NOVA FOTO -->
+                        <div class="campo-formulario campo-completo">
 
-                            <h3>
-                                Foto do Pet
-                            </h3>
+                            <label for="foto">
+                                Alterar foto
+                            </label>
+
+                            <input
+                                type="file"
+                                id="foto"
+                                name="foto"
+                                accept="image/*"
+                            >
+
+                        </div>
 
 
-                            <div class="campo-formulario">
+                        <!-- ALIMENTAÇÃO -->
+                        <div class="campo-formulario campo-completo">
 
-                                <label for="foto">
-                                    Alterar foto
-                                </label>
+                            <label for="alimentacao">
+                                Alimentação
+                            </label>
 
-                                <input
-                                    type="file"
-                                    id="foto"
-                                    name="foto"
-                                    accept="image/*">
+                            <textarea
+                                id="alimentacao"
+                                name="alimentacao"
+                                rows="4"
+                            ></textarea>
 
-                            </div>
+                        </div>
 
-                        </section>
+
+                        <!-- OBSERVAÇÕES -->
+                        <div class="campo-formulario campo-completo">
+
+                            <label for="observacoes">
+                                Observações
+                            </label>
+
+                            <textarea
+                                id="observacoes"
+                                name="observacoes"
+                                rows="4"
+                            ></textarea>
+
+                        </div>
 
 
                         <!-- BOTÕES -->
-                        <div class="botoes-formulario">
+                        <div class="acoes-formulario campo-completo">
 
                             <button
                                 type="submit"
-                                class="botao botao-salvar">
+                                class="botao botao-salvar"
+                            >
                                 💾 Salvar
                             </button>
 
 
                             <button
                                 type="reset"
-                                class="botao botao-limpar">
+                                class="botao botao-limpar"
+                            >
                                 ↻ Limpar
                             </button>
 
 
                             <a
+                                id="botao-cancelar"
                                 href="pets.html"
-                                class="botao botao-cancelar">
-                                ← Cancelar
+                                class="botao botao-cancelar"
+                            >
+                                Cancelar
                             </a>
 
                         </div>
@@ -377,6 +371,247 @@
         </div>
 
     </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const pets = {
+
+            thor: {
+                nome: "Thor",
+                tipo: "Cachorro",
+                raca: "Golden Retriever",
+                porte: "Grande",
+                proprietario: "Maria Silva",
+                idade: "3 anos",
+                peso: "30 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "Gosta de brincar e passear.",
+                foto: "../img/Thor.png"
+            },
+
+            luna: {
+                nome: "Luna",
+                tipo: "Cachorro",
+                raca: "Shih-tzu",
+                porte: "Pequeno",
+                proprietario: "João Santos",
+                idade: "2 anos",
+                peso: "6 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "Pet tranquila e dócil.",
+                foto: "../img/Luna.png"
+            },
+
+            mel: {
+                nome: "Mel",
+                tipo: "Gato",
+                raca: "Siamês",
+                porte: "Pequeno",
+                proprietario: "Ana Oliveira",
+                idade: "2 anos",
+                peso: "4 kg",
+                alimentacao: "Ração para gatos duas vezes ao dia.",
+                observacoes: "Gosta de ambientes tranquilos.",
+                foto: "../img/Mel.png"
+            },
+
+            bob: {
+                nome: "Bob",
+                tipo: "Cachorro",
+                raca: "Beagle",
+                porte: "Médio",
+                proprietario: "Gisele Teles",
+                idade: "4 anos",
+                peso: "12 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "Pet ativo e brincalhão.",
+                foto: "../img/Bob.png"
+            }
+
+        };
+
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const petSelecionado =
+            parametros.get("pet") || "thor";
+
+
+        const pet =
+            pets[petSelecionado] || pets.thor;
+
+
+        // PREENCHER FORMULÁRIO
+
+        document.getElementById("nome").value =
+            pet.nome;
+
+        document.getElementById("tipo").value =
+            pet.tipo;
+
+        document.getElementById("raca").value =
+            pet.raca;
+
+        document.getElementById("porte").value =
+            pet.porte;
+
+        document.getElementById("proprietario").value =
+            pet.proprietario;
+
+        document.getElementById("idade").value =
+            pet.idade;
+
+        document.getElementById("peso").value =
+            pet.peso;
+
+        document.getElementById("alimentacao").value =
+            pet.alimentacao;
+
+        document.getElementById("observacoes").value =
+            pet.observacoes;
+
+        document.getElementById("foto-atual").src =
+            pet.foto;
+
+        document.getElementById("foto-atual").alt =
+            "Foto de " + pet.nome;
+
+
+        // CANCELAR
+
+        document.getElementById("botao-cancelar").href =
+            "visualizar-pet.html?pet=" + petSelecionado;
+
+
+        // PRÉ-VISUALIZAÇÃO DA NOVA FOTO
+
+        const campoFoto =
+            document.getElementById("foto");
+
+        const fotoAtual =
+            document.getElementById("foto-atual");
+
+
+        campoFoto.addEventListener(
+            "change",
+            function () {
+
+                const arquivo =
+                    this.files[0];
+
+                if (!arquivo) {
+                    return;
+                }
+
+                const leitor =
+                    new FileReader();
+
+                leitor.onload =
+                    function (evento) {
+
+                        fotoAtual.src =
+                            evento.target.result;
+
+                    };
+
+                leitor.readAsDataURL(
+                    arquivo
+                );
+
+            }
+        );
+
+
+        // SALVAR
+
+        document
+            .getElementById("formulario-pet")
+            .addEventListener(
+                "submit",
+                function (evento) {
+
+                    evento.preventDefault();
+
+                    alert(
+                        "Pet atualizado com sucesso!"
+                    );
+
+                }
+            );
+
+
+        // LIMPAR
+
+        document
+            .getElementById("formulario-pet")
+            .addEventListener(
+                "reset",
+                function () {
+
+                    setTimeout(
+                        function () {
+
+                            document.getElementById(
+                                "nome"
+                            ).value = pet.nome;
+
+                            document.getElementById(
+                                "tipo"
+                            ).value = pet.tipo;
+
+                            document.getElementById(
+                                "raca"
+                            ).value = pet.raca;
+
+                            document.getElementById(
+                                "porte"
+                            ).value = pet.porte;
+
+                            document.getElementById(
+                                "proprietario"
+                            ).value =
+                                pet.proprietario;
+
+                            document.getElementById(
+                                "idade"
+                            ).value = pet.idade;
+
+                            document.getElementById(
+                                "peso"
+                            ).value = pet.peso;
+
+                            document.getElementById(
+                                "alimentacao"
+                            ).value =
+                                pet.alimentacao;
+
+                            document.getElementById(
+                                "observacoes"
+                            ).value =
+                                pet.observacoes;
+
+                            document.getElementById(
+                                "foto-atual"
+                            ).src =
+                                pet.foto;
+
+                            campoFoto.value = "";
+
+                        },
+                        0
+                    );
+
+                }
+            );
+
+    </script>
 
 </body>
 

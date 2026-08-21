@@ -50,17 +50,17 @@
 
                 <div></div>
 
-                <div class="perfil-topo">
+                <a href="perfil.html" class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
@@ -69,7 +69,19 @@
             <main>
 
                 <p class="breadcrumb">
-                    Home / Pets / Cadastrar Pet
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="pets.html">
+                        Pets
+                    </a>
+
+                    / Cadastrar Pet
+
                 </p>
 
 
@@ -80,7 +92,8 @@
                     </h2>
 
 
-                    <form>
+                    <form id="formulario-cadastro-pet">
+
 
                         <!-- DADOS DO PET -->
                         <section class="secao-formulario">
@@ -91,6 +104,9 @@
 
 
                             <div class="formulario-duas-colunas">
+
+
+                                <!-- NOME -->
 
                                 <div class="campo-formulario">
 
@@ -107,6 +123,8 @@
 
                                 </div>
 
+
+                                <!-- TIPO -->
 
                                 <div class="campo-formulario">
 
@@ -140,6 +158,8 @@
                                 </div>
 
 
+                                <!-- RAÇA -->
+
                                 <div class="campo-formulario">
 
                                     <label for="raca">
@@ -154,6 +174,8 @@
 
                                 </div>
 
+
+                                <!-- PORTE -->
 
                                 <div class="campo-formulario">
 
@@ -187,6 +209,8 @@
                                 </div>
 
 
+                                <!-- IDADE -->
+
                                 <div class="campo-formulario">
 
                                     <label for="idade">
@@ -203,6 +227,8 @@
                                 </div>
 
 
+                                <!-- PESO -->
+
                                 <div class="campo-formulario">
 
                                     <label for="peso">
@@ -217,12 +243,14 @@
 
                                 </div>
 
+
                             </div>
 
                         </section>
 
 
                         <!-- PROPRIETÁRIO -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -259,8 +287,8 @@
                                             Ana Oliveira
                                         </option>
 
-                                        <option value="carlos">
-                                            Carlos Souza
+                                        <option value="gisele">
+                                            Gisele Teles
                                         </option>
 
                                     </select>
@@ -273,6 +301,7 @@
 
 
                         <!-- CUIDADOS -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -281,6 +310,7 @@
 
 
                             <div class="formulario-duas-colunas">
+
 
                                 <div class="campo-formulario campo-completo">
 
@@ -311,12 +341,14 @@
 
                                 </div>
 
+
                             </div>
 
                         </section>
 
 
                         <!-- FOTO -->
+
                         <section class="secao-formulario">
 
                             <h3>
@@ -338,33 +370,65 @@
 
                             </div>
 
+
+                            <!-- PRÉ-VISUALIZAÇÃO -->
+
+                            <div
+                                id="preview-container"
+                                style="display: none; margin-top: 15px;">
+
+                                <p>
+                                    Pré-visualização:
+                                </p>
+
+                                <img
+                                    id="preview-foto"
+                                    src=""
+                                    alt="Pré-visualização da foto"
+                                    style="
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 10px;
+                                    ">
+
+                            </div>
+
                         </section>
 
 
                         <!-- BOTÕES -->
+
                         <div class="botoes-formulario">
 
                             <button
                                 type="submit"
                                 class="botao botao-salvar">
+
                                 💾 Salvar
+
                             </button>
 
 
                             <button
                                 type="reset"
                                 class="botao botao-limpar">
+
                                 ↻ Limpar
+
                             </button>
 
 
                             <a
                                 href="pets.html"
                                 class="botao botao-cancelar">
+
                                 ← Cancelar
+
                             </a>
 
                         </div>
+
 
                     </form>
 
@@ -375,6 +439,125 @@
         </div>
 
     </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const formulario =
+            document.getElementById(
+                "formulario-cadastro-pet"
+            );
+
+
+        const campoFoto =
+            document.getElementById(
+                "foto"
+            );
+
+
+        const previewContainer =
+            document.getElementById(
+                "preview-container"
+            );
+
+
+        const previewFoto =
+            document.getElementById(
+                "preview-foto"
+            );
+
+
+        /* PRÉ-VISUALIZAÇÃO DA FOTO */
+
+        campoFoto.addEventListener(
+            "change",
+            function () {
+
+                const arquivo =
+                    this.files[0];
+
+
+                if (!arquivo) {
+
+                    previewContainer.style.display =
+                        "none";
+
+                    previewFoto.src =
+                        "";
+
+                    return;
+
+                }
+
+
+                const leitor =
+                    new FileReader();
+
+
+                leitor.onload =
+                    function (evento) {
+
+                        previewFoto.src =
+                            evento.target.result;
+
+                        previewContainer.style.display =
+                            "block";
+
+                    };
+
+
+                leitor.readAsDataURL(
+                    arquivo
+                );
+
+            }
+        );
+
+
+        /* SALVAR */
+
+        formulario.addEventListener(
+            "submit",
+            function (evento) {
+
+                evento.preventDefault();
+
+                alert(
+                    "Pet cadastrado com sucesso!"
+                );
+
+                window.location.href =
+                    "pets.html";
+
+            }
+        );
+
+
+        /* LIMPAR */
+
+        formulario.addEventListener(
+            "reset",
+            function () {
+
+                setTimeout(
+                    function () {
+
+                        previewContainer.style.display =
+                            "none";
+
+                        previewFoto.src =
+                            "";
+
+                    },
+                    0
+                );
+
+            }
+        );
+
+    </script>
 
 </body>
 

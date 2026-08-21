@@ -2,12 +2,16 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Usuário</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -25,7 +29,8 @@
                     🐾 Pet
                 </a>
 
-                <a href="usuarios.html" class="menu-ativo">
+                <a href="usuarios.html"
+                    class="menu-ativo">
                     ♙ Usuário
                 </a>
 
@@ -50,17 +55,18 @@
 
                 <div></div>
 
-                <div class="perfil-topo">
+                <a href="perfil.html"
+                    class="perfil-topo">
 
                     <span class="icone-usuario">
                         ◯
                     </span>
 
                     <span>
-                        João da Silva
+                        Gisele Teles
                     </span>
 
-                </div>
+                </a>
 
             </header>
 
@@ -69,7 +75,21 @@
             <main>
 
                 <p class="breadcrumb">
-                    Home / Usuários / Visualizar Usuário
+
+                    <a href="dashboard.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a href="usuarios.html">
+                        Usuários
+                    </a>
+
+                    /
+
+                    Visualizar Usuário
+
                 </p>
 
 
@@ -80,7 +100,7 @@
                     </h2>
 
 
-                    <!-- DADOS PESSOAIS -->
+                    <!-- DADOS DO USUÁRIO -->
                     <section class="secao-formulario">
 
                         <h3>
@@ -90,6 +110,7 @@
 
                         <div class="formulario-duas-colunas">
 
+                            <!-- ID -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -98,12 +119,13 @@
 
                                 <input
                                     type="text"
-                                    value="001"
+                                    id="id-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- NOME -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -112,12 +134,13 @@
 
                                 <input
                                     type="text"
-                                    value="Maria"
+                                    id="nome-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- SOBRENOME -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -126,12 +149,13 @@
 
                                 <input
                                     type="text"
-                                    value="Silva"
+                                    id="sobrenome-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- E-MAIL -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -140,12 +164,13 @@
 
                                 <input
                                     type="email"
-                                    value="maria@email.com"
+                                    id="email-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- TELEFONE -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -154,12 +179,13 @@
 
                                 <input
                                     type="text"
-                                    value="(77) 99999-9999"
+                                    id="telefone-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- FUNÇÃO -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -168,12 +194,13 @@
 
                                 <input
                                     type="text"
-                                    value="Cliente"
+                                    id="funcao-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- STATUS -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -182,7 +209,7 @@
 
                                 <input
                                     type="text"
-                                    value="Ativo"
+                                    id="status-usuario"
                                     readonly>
 
                             </div>
@@ -202,6 +229,7 @@
 
                         <div class="formulario-duas-colunas">
 
+                            <!-- CEP -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -210,12 +238,13 @@
 
                                 <input
                                     type="text"
-                                    value="47500-000"
+                                    id="cep-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- CIDADE -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -224,12 +253,13 @@
 
                                 <input
                                     type="text"
-                                    value="Paratinga"
+                                    id="cidade-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- ENDEREÇO -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -238,12 +268,13 @@
 
                                 <input
                                     type="text"
-                                    value="Rua Principal"
+                                    id="endereco-usuario"
                                     readonly>
 
                             </div>
 
 
+                            <!-- NÚMERO -->
                             <div class="campo-formulario">
 
                                 <label>
@@ -252,7 +283,7 @@
 
                                 <input
                                     type="text"
-                                    value="100"
+                                    id="numero-usuario"
                                     readonly>
 
                             </div>
@@ -272,16 +303,24 @@
 
                         <div class="foto-pet">
 
-                            <div class="foto-placeholder">
-                                👤
-                            </div>
+                            <img
+                                id="foto-usuario"
+                                src=""
+                                alt="Foto do usuário"
+                                style="
+                                    width: 180px;
+                                    height: 180px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    display: block;
+                                ">
 
                         </div>
 
                     </section>
 
 
-                    <!-- HISTÓRICO DE RESERVAS -->
+                    <!-- HISTÓRICO -->
                     <section class="secao-formulario">
 
                         <h3>
@@ -320,56 +359,7 @@
                             </thead>
 
 
-                            <tbody>
-
-                                <tr>
-
-                                    <td>
-                                        001
-                                    </td>
-
-                                    <td>
-                                        Thor
-                                    </td>
-
-                                    <td>
-                                        20/08/2026
-                                    </td>
-
-                                    <td>
-                                        25/08/2026
-                                    </td>
-
-                                    <td>
-                                        Confirmada
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        005
-                                    </td>
-
-                                    <td>
-                                        Thor
-                                    </td>
-
-                                    <td>
-                                        10/07/2026
-                                    </td>
-
-                                    <td>
-                                        15/07/2026
-                                    </td>
-
-                                    <td>
-                                        Finalizada
-                                    </td>
-
-                                </tr>
+                            <tbody id="historico-usuario">
 
                             </tbody>
 
@@ -382,16 +372,21 @@
                     <div class="botoes-formulario">
 
                         <a
+                            id="botao-editar"
                             href="editar-usuario.html"
                             class="botao botao-salvar">
+
                             ✎ Editar
+
                         </a>
 
 
                         <a
                             href="usuarios.html"
                             class="botao botao-cancelar">
+
                             ← Voltar
+
                         </a>
 
                     </div>
@@ -403,6 +398,315 @@
         </div>
 
     </div>
+
+
+    <!-- DADOS DOS USUÁRIOS -->
+    <script>
+
+        const usuarios = {
+
+            maria: {
+
+                id: "001",
+
+                nome: "Maria",
+
+                sobrenome: "Silva",
+
+                email: "maria@email.com",
+
+                telefone: "(77) 99999-9999",
+
+                funcao: "Cliente",
+
+                status: "Ativo",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua Principal",
+
+                numero: "100",
+
+                foto: "../img/Maria.png",
+
+                historico: [
+
+                    {
+                        reserva: "001",
+                        pet: "Thor",
+                        entrada: "20/08/2026",
+                        saida: "25/08/2026",
+                        status: "Confirmada"
+                    },
+
+                    {
+                        reserva: "005",
+                        pet: "Thor",
+                        entrada: "10/07/2026",
+                        saida: "15/07/2026",
+                        status: "Finalizada"
+                    }
+
+                ]
+
+            },
+
+
+            joao: {
+
+                id: "002",
+
+                nome: "João",
+
+                sobrenome: "Santos",
+
+                email: "joao@email.com",
+
+                telefone: "(77) 98888-8888",
+
+                funcao: "Cliente",
+
+                status: "Ativo",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua das Flores",
+
+                numero: "200",
+
+                foto: "../img/joao.png",
+
+                historico: [
+
+                    {
+                        reserva: "002",
+                        pet: "Luna",
+                        entrada: "21/08/2026",
+                        saida: "24/08/2026",
+                        status: "Em andamento"
+                    }
+
+                ]
+
+            },
+
+
+            ana: {
+
+                id: "003",
+
+                nome: "Ana",
+
+                sobrenome: "Oliveira",
+
+                email: "ana@email.com",
+
+                telefone: "(77) 97777-7777",
+
+                funcao: "Funcionário",
+
+                status: "Ativo",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua da Paz",
+
+                numero: "300",
+
+                foto: "../img/Ana.png",
+
+                historico: [
+
+                    {
+                        reserva: "003",
+                        pet: "Mel",
+                        entrada: "15/08/2026",
+                        saida: "18/08/2026",
+                        status: "Finalizada"
+                    }
+
+                ]
+
+            },
+
+
+            gisele: {
+
+                id: "004",
+
+                nome: "Gisele",
+
+                sobrenome: "Teles",
+
+                email: "gisele@email.com",
+
+                telefone: "(77) 96666-6666",
+
+                funcao: "Gerente",
+
+                status: "Ativo",
+
+                cep: "47500-000",
+
+                cidade: "Paratinga",
+
+                endereco: "Rua Central",
+
+                numero: "400",
+
+                foto: "../img/Gisele.png",
+
+                historico: [
+
+                    {
+                        reserva: "004",
+                        pet: "Bob",
+                        entrada: "25/08/2026",
+                        saida: "30/08/2026",
+                        status: "Agendada"
+                    }
+
+                ]
+
+            }
+
+        };
+
+
+        // PEGAR USUÁRIO DA URL
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const usuarioSelecionado =
+            parametros.get("usuario") || "maria";
+
+
+        // ENCONTRAR USUÁRIO
+
+        const usuario =
+            usuarios[usuarioSelecionado]
+            || usuarios.maria;
+
+
+        // PREENCHER DADOS
+
+        document.getElementById("id-usuario").value =
+            usuario.id;
+
+        document.getElementById("nome-usuario").value =
+            usuario.nome;
+
+        document.getElementById("sobrenome-usuario").value =
+            usuario.sobrenome;
+
+        document.getElementById("email-usuario").value =
+            usuario.email;
+
+        document.getElementById("telefone-usuario").value =
+            usuario.telefone;
+
+        document.getElementById("funcao-usuario").value =
+            usuario.funcao;
+
+        document.getElementById("status-usuario").value =
+            usuario.status;
+
+
+        // ENDEREÇO
+
+        document.getElementById("cep-usuario").value =
+            usuario.cep;
+
+        document.getElementById("cidade-usuario").value =
+            usuario.cidade;
+
+        document.getElementById("endereco-usuario").value =
+            usuario.endereco;
+
+        document.getElementById("numero-usuario").value =
+            usuario.numero;
+
+
+        // FOTO
+
+        const fotoUsuario =
+            document.getElementById("foto-usuario");
+
+        fotoUsuario.src =
+            usuario.foto;
+
+        fotoUsuario.alt =
+            "Foto de " +
+            usuario.nome +
+            " " +
+            usuario.sobrenome;
+
+
+        // HISTÓRICO
+
+        const historico =
+            document.getElementById(
+                "historico-usuario"
+            );
+
+
+        usuario.historico.forEach(
+            function(reserva) {
+
+                const linha =
+                    document.createElement("tr");
+
+
+                linha.innerHTML = `
+
+                    <td>
+                        ${reserva.reserva}
+                    </td>
+
+                    <td>
+                        ${reserva.pet}
+                    </td>
+
+                    <td>
+                        ${reserva.entrada}
+                    </td>
+
+                    <td>
+                        ${reserva.saida}
+                    </td>
+
+                    <td>
+                        ${reserva.status}
+                    </td>
+
+                `;
+
+
+                historico.appendChild(linha);
+
+            }
+        );
+
+
+        // BOTÃO EDITAR
+
+        document.getElementById(
+            "botao-editar"
+        ).href =
+            "editar-usuario.html?usuario="
+            + usuarioSelecionado;
+
+    </script>
 
 </body>
 
