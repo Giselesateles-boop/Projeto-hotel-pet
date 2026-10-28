@@ -426,7 +426,74 @@
         </div>
 
     </div>
-<script src="../js/script.js"></script>
+<script src="../js/navegacao.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector(".formulario-pesquisa");
+    const tabela = document.querySelector(".tabela tbody");
+
+    if (!formulario || !tabela) return;
+
+    const linhas = Array.from(tabela.querySelectorAll("tr"));
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const pet = document.getElementById("pet")
+            .value.trim().toLowerCase();
+
+        const proprietario = document.getElementById("proprietario")
+            .value.trim().toLowerCase();
+
+        const status = document.getElementById("status")
+            .value.trim().toLowerCase();
+
+        let encontrados = 0;
+
+        linhas.forEach(function (linha) {
+            const colunas = linha.cells;
+
+            const nomePet = colunas[1].textContent.trim().toLowerCase();
+            const nomeProprietario = colunas[2].textContent.trim().toLowerCase();
+            const statusReserva = colunas[5].textContent.trim().toLowerCase();
+
+            const correspondePet = nomePet.includes(pet);
+            const correspondeProprietario =
+                nomeProprietario.includes(proprietario);
+
+            const correspondeStatus =
+                status === "todos" || statusReserva ===
+                status.replace("andamento", "em andamento");
+
+            const mostrar =
+                correspondePet &&
+                correspondeProprietario &&
+                correspondeStatus;
+
+            linha.style.display = mostrar ? "" : "none";
+
+            if (mostrar) encontrados++;
+        });
+
+        let mensagem = document.getElementById("mensagem-busca-reservas");
+
+        if (!mensagem) {
+            mensagem = document.createElement("p");
+            mensagem.id = "mensagem-busca-reservas";
+            mensagem.setAttribute("role", "status");
+            tabela.closest(".tabela-container").appendChild(mensagem);
+        }
+
+        mensagem.textContent = encontrados === 0
+            ? "Nenhuma reserva encontrada."
+            : encontrados + (encontrados === 1
+                ? " reserva encontrada."
+                : " reservas encontradas.");
+    });
+});
+</script>
+
 </body>
 
 </html>

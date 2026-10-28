@@ -410,7 +410,120 @@
 
     </div>
     
-    <script src="../js/script.js"></script>
+  <script src="../js/navegacao.js"></script>
+  
+<script>
+    const usuariosPadrao = {
+        maria: {
+            id: "001", nome: "Maria", sobrenome: "Silva",
+            email: "maria@email.com", telefone: "(77) 99999-9999",
+            cep: "47500-000", cidade: "Paratinga",
+            endereco: "Rua Principal", numero: "100",
+            funcao: "Cliente", status: "Ativo"
+        },
+        joao: {
+            id: "002", nome: "João", sobrenome: "Santos",
+            email: "joao@email.com", telefone: "(77) 98888-8888",
+            cep: "", cidade: "", endereco: "", numero: "",
+            funcao: "Cliente", status: "Ativo"
+        },
+        ana: {
+            id: "003", nome: "Ana", sobrenome: "Oliveira",
+            email: "ana@email.com", telefone: "(77) 97777-7777",
+            cep: "", cidade: "", endereco: "", numero: "",
+            funcao: "Funcionário", status: "Ativo"
+        },
+        gisele: {
+            id: "004", nome: "Gisele", sobrenome: "Teles",
+            email: "gisele@email.com", telefone: "(77) 96666-6666",
+            cep: "", cidade: "", endereco: "", numero: "",
+            funcao: "Gerente", status: "Ativo"
+        }
+    };
+
+    const chaveUsuarios = "hotelPetUsuarios";
+    const parametros = new URLSearchParams(window.location.search);
+    const identificador = (parametros.get("usuario") || "maria").toLowerCase();
+
+    let usuariosSalvos = {};
+
+    try {
+        usuariosSalvos = JSON.parse(localStorage.getItem(chaveUsuarios)) || {};
+    } catch (erro) {
+        usuariosSalvos = {};
+    }
+
+    const usuario = {
+        ...usuariosPadrao[identificador],
+        ...(usuariosSalvos[identificador] || {})
+    };
+
+    const formulario = document.querySelector("form");
+
+    if (!usuariosPadrao[identificador]) {
+        formulario.hidden = true;
+        document.querySelector("main").insertAdjacentHTML(
+            "beforeend",
+            "<p>Usuário não encontrado. Volte para a lista de usuários.</p>"
+        );
+    } else {
+        document.getElementById("id").value = usuario.id;
+        document.getElementById("nome").value = usuario.nome;
+        document.getElementById("sobrenome").value = usuario.sobrenome;
+        document.getElementById("email").value = usuario.email;
+        document.getElementById("telefone").value = usuario.telefone;
+        document.getElementById("cep").value = usuario.cep;
+        document.getElementById("cidade").value = usuario.cidade;
+        document.getElementById("endereco").value = usuario.endereco;
+        document.getElementById("numero").value = usuario.numero;
+
+        document.getElementById("funcao").value = usuario.funcao.toLowerCase();
+        document.getElementById("status").value = usuario.status.toLowerCase();
+
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const usuarioAtualizado = {
+                id: usuario.id,
+                nome: document.getElementById("nome").value.trim(),
+                sobrenome: document.getElementById("sobrenome").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                telefone: document.getElementById("telefone").value.trim(),
+                cep: document.getElementById("cep").value.trim(),
+                cidade: document.getElementById("cidade").value.trim(),
+                endereco: document.getElementById("endereco").value.trim(),
+                numero: document.getElementById("numero").value.trim(),
+                funcao: document.getElementById("funcao").selectedOptions[0].textContent.trim(),
+                status: document.getElementById("status").selectedOptions[0].textContent.trim()
+            };
+
+            if (!usuarioAtualizado.nome ||
+                !usuarioAtualizado.email ||
+                !usuarioAtualizado.telefone) {
+                alert("Preencha o nome, o e-mail e o telefone.");
+                return;
+            }
+
+            usuariosSalvos[identificador] = usuarioAtualizado;
+
+            try {
+                localStorage.setItem(chaveUsuarios, JSON.stringify(usuariosSalvos));
+                alert("Usuário atualizado e salvo com sucesso!");
+            } catch (erro) {
+                alert("Não foi possível salvar as alterações neste navegador.");
+            }
+        });
+    }
+
+    formulario.addEventListener("reset", function () {
+        setTimeout(function () {
+            document.getElementById("id").value = usuario.id;
+        }, 0);
+    });
+</script>
+</body>
+</html>
+
 
 </body>
 

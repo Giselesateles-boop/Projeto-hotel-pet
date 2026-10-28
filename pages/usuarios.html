@@ -180,39 +180,6 @@
 
                             </div>
 
-
-                            <!-- DATA INICIAL -->
-                            <div class="campo-formulario">
-
-                                <label for="criado-inicio">
-                                    Criado em
-                                </label>
-
-                                <input
-                                    type="date"
-                                    id="criado-inicio"
-                                    name="criado-inicio"
-                                >
-
-                            </div>
-
-
-                            <!-- DATA FINAL -->
-                            <div class="campo-formulario">
-
-                                <label for="criado-fim">
-                                    Até
-                                </label>
-
-                                <input
-                                    type="date"
-                                    id="criado-fim"
-                                    name="criado-fim"
-                                >
-
-                            </div>
-
-
                             <!-- EMAIL -->
                             <div class="campo-formulario">
 
@@ -508,7 +475,106 @@
         </div>
 
     </div>
-<script src="../js/script.js"></script>
+<script src="../js/navegacao.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const usuariosSalvos = JSON.parse(
+        localStorage.getItem("hotelPetUsuarios") || "{}"
+    );
+
+    const linhas = document.querySelectorAll("tbody tr");
+
+    linhas.forEach(function (linha) {
+        const link = linha.querySelector('a[href*="usuario="]');
+
+        if (!link) return;
+
+        const url = new URL(link.href);
+        const identificador = url.searchParams.get("usuario");
+        const usuario = usuariosSalvos[identificador];
+
+        if (!usuario) return;
+
+        const nomeCompleto = [usuario.nome, usuario.sobrenome]
+            .filter(Boolean)
+            .join(" ");
+
+        if (nomeCompleto) linha.cells[1].textContent = nomeCompleto;
+        if (usuario.email) linha.cells[2].textContent = usuario.email;
+        if (usuario.telefone) linha.cells[3].textContent = usuario.telefone;
+        if (usuario.funcao) linha.cells[4].textContent = usuario.funcao;
+        if (usuario.status) linha.cells[5].textContent = usuario.status;
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector(".formulario-pesquisa");
+    const tabela = document.querySelector(".tabela tbody");
+
+    if (!formulario || !tabela) return;
+
+    const linhas = Array.from(tabela.querySelectorAll("tr"));
+
+    // Guarda os dados originais de cada linha.
+    linhas.forEach(function (linha) {
+        linha.dataset.pesquisaOriginal = linha.innerText;
+    });
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const id = document.getElementById("id").value.trim().toLowerCase();
+        const email = document.getElementById("email").value.trim().toLowerCase();
+        const nome = document.getElementById("nome").value.trim().toLowerCase();
+
+        let encontrados = 0;
+
+        linhas.forEach(function (linha) {
+            const colunas = linha.cells;
+
+            const correspondeId = colunas[0].textContent.trim().toLowerCase().includes(id);
+            const correspondeEmail = colunas[2].textContent.trim().toLowerCase().includes(email);
+            const correspondeNome = colunas[1].textContent.trim().toLowerCase().includes(nome);
+
+            const mostrar = correspondeId && correspondeEmail && correspondeNome;
+
+            linha.style.display = mostrar ? "" : "none";
+
+            if (mostrar) encontrados++;
+        });
+
+        let mensagem = document.getElementById("mensagem-busca");
+
+        if (!mensagem) {
+            mensagem = document.createElement("p");
+            mensagem.id = "mensagem-busca";
+            mensagem.setAttribute("role", "status");
+            tabela.closest(".tabela-container").appendChild(mensagem);
+        }
+
+        mensagem.textContent = encontrados === 0
+            ? "Nenhum usuário encontrado."
+            : encontrados + (encontrados === 1
+                ? " usuário encontrado."
+                : " usuários encontrados.");
+    });
+
+    // Limpar os filtros e mostrar todos os usuários.
+    formulario.addEventListener("reset", function () {
+        setTimeout(function () {
+            linhas.forEach(function (linha) {
+                linha.style.display = "";
+            });
+
+            const mensagem = document.getElementById("mensagem-busca");
+            if (mensagem) mensagem.textContent = "";
+        }, 0);
+    });
+});
+</script>
+
 </body>
 
 </html>

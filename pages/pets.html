@@ -426,7 +426,80 @@
         </div>
 
     </div>
-<script src="../js/script.js"></script>
+<script src="../js/navegacao.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector(".formulario-pesquisa");
+    const tabela = document.querySelector(".tabela tbody");
+
+    if (!formulario || !tabela) return;
+
+    const linhas = Array.from(tabela.querySelectorAll("tr"));
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const nome = document.getElementById("pesquisa-nome")
+            .value.trim().toLowerCase();
+
+        const proprietario = document.getElementById("pesquisa-proprietario")
+            .value.trim().toLowerCase();
+
+        const tipo = document.getElementById("pesquisa-tipo")
+            .value.trim().toLowerCase();
+
+        let encontrados = 0;
+
+        linhas.forEach(function (linha) {
+            const colunas = linha.cells;
+
+            const nomePet = colunas[1].textContent.trim().toLowerCase();
+            const tipoPet = colunas[2].textContent.trim().toLowerCase();
+            const nomeProprietario = colunas[5].textContent.trim().toLowerCase();
+
+            const correspondeNome = nomePet.includes(nome);
+            const correspondeProprietario = nomeProprietario.includes(proprietario);
+            const correspondeTipo = !tipo || tipoPet === tipo;
+
+            const mostrar =
+                correspondeNome && correspondeProprietario && correspondeTipo;
+
+            linha.style.display = mostrar ? "" : "none";
+
+            if (mostrar) encontrados++;
+        });
+
+        let mensagem = document.getElementById("mensagem-busca-pets");
+
+        if (!mensagem) {
+            mensagem = document.createElement("p");
+            mensagem.id = "mensagem-busca-pets";
+            mensagem.setAttribute("role", "status");
+            tabela.closest(".tabela-container").appendChild(mensagem);
+        }
+
+        mensagem.textContent = encontrados === 0
+            ? "Nenhum pet encontrado."
+            : encontrados + (encontrados === 1
+                ? " pet encontrado."
+                : " pets encontrados.");
+    });
+
+    formulario.addEventListener("reset", function () {
+        setTimeout(function () {
+            linhas.forEach(function (linha) {
+                linha.style.display = "";
+            });
+
+            const mensagem = document.getElementById("mensagem-busca-pets");
+            if (mensagem) mensagem.textContent = "";
+        }, 0);
+    });
+});
+</script>
+
 </body>
 
 </html>

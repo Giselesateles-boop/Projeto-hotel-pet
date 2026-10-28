@@ -1,311 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Visualizar Pet</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
-
 <body>
-
     <div class="layout">
-
-        <!-- MENU LATERAL -->
         <aside class="menu-lateral">
-
             <h1>Hotel Pet</h1>
-
             <nav>
-
-                <a href="pets.html" class="menu-ativo">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html">
-                    Reservas
-                </a>
-
+                <a href="pets.html" class="menu-ativo">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html">Reservas</a>
             </nav>
-
         </aside>
 
-
-        <!-- CONTEÚDO -->
         <div class="conteudo">
-
-            <!-- TOPO -->
             <header class="topo">
-
                 <div></div>
-
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
-
             </header>
 
-
-            <!-- CONTEÚDO PRINCIPAL -->
             <main>
-
-                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    <a href="pets.html">
-                        Pets
-                    </a>
-
-                    / Visualizar Pet
-
+                    <a href="dashboard.html">Home</a> /
+                    <a href="pets.html">Pets</a> /
+                    Visualizar Pet
                 </p>
 
-
-                <!-- CABEÇALHO -->
                 <div class="cabecalho-pagina">
-
-                    <h2>
-                        Visualizar Pet
-                    </h2>
-
+                    <h2>Visualizar Pet</h2>
                 </div>
 
-
-                <!-- CARD -->
                 <section class="card">
-
-                    <h3>
-                        Dados do Pet - Thor
-                    </h3>
-
+                    <h3 id="titulo-pet">Dados do Pet</h3>
 
                     <div class="formulario-duas-colunas">
-
-                        <!-- FOTO -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Foto
-                            </label>
-
+                            <label>Foto</label>
                             <div class="foto-pet">
-
-                                <img
-                                    src="../img/Thor.png"
-                                    alt="Foto de Thor"
-                                    style="
-                                        width: 180px;
-                                        height: 180px;
-                                        object-fit: cover;
-                                        border-radius: 10px;
-                                    "
-                                >
-
+                                <img id="foto-pet" src="../img/Thor.png"
+                                    alt="Foto do pet"
+                                    style="width:180px;height:180px;object-fit:cover;border-radius:10px;">
                             </div>
-
                         </div>
 
-
-                        <!-- NOME -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Nome
-                            </label>
-
-                            <input
-                                type="text"
-                                value="Thor"
-                                readonly
-                            >
-
+                            <label>Nome</label>
+                            <input id="nome-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- TIPO -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Tipo
-                            </label>
-
-                            <input
-                                type="text"
-                                value="Cachorro"
-                                readonly
-                            >
-
+                            <label>Tipo</label>
+                            <input id="tipo-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- RAÇA -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Raça
-                            </label>
-
-                            <input
-                                type="text"
-                                value="Golden Retriever"
-                                readonly
-                            >
-
+                            <label>Raça</label>
+                            <input id="raca-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- PORTE -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Porte
-                            </label>
-
-                            <input
-                                type="text"
-                                value="Grande"
-                                readonly
-                            >
-
+                            <label>Porte</label>
+                            <input id="porte-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- PROPRIETÁRIO -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Proprietário
-                            </label>
-
-                            <input
-                                type="text"
-                                value="Maria Silva"
-                                readonly
-                            >
-
+                            <label>Proprietário</label>
+                            <input id="proprietario-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- IDADE -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Idade
-                            </label>
-
-                            <input
-                                type="text"
-                                value="3 anos"
-                                readonly
-                            >
-
+                            <label>Idade</label>
+                            <input id="idade-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- PESO -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Peso
-                            </label>
-
-                            <input
-                                type="text"
-                                value="30 kg"
-                                readonly
-                            >
-
+                            <label>Peso</label>
+                            <input id="peso-pet" type="text" readonly>
                         </div>
 
-
-                        <!-- ALIMENTAÇÃO -->
                         <div class="campo-formulario campo-completo">
-
-                            <label>
-                                Alimentação
-                            </label>
-
-                            <textarea
-                                rows="3"
-                                readonly
-                            >Ração duas vezes ao dia.</textarea>
-
+                            <label>Alimentação</label>
+                            <textarea id="alimentacao-pet" rows="3" readonly></textarea>
                         </div>
 
-
-                        <!-- OBSERVAÇÕES -->
                         <div class="campo-formulario campo-completo">
-
-                            <label>
-                                Observações
-                            </label>
-
-                            <textarea
-                                rows="4"
-                                readonly
-                            >Gosta de brincar e passear.</textarea>
-
+                            <label>Observações</label>
+                            <textarea id="observacoes-pet" rows="4" readonly></textarea>
                         </div>
-
                     </div>
 
-
-                    <!-- BOTÕES -->
                     <div class="acoes-formulario">
-
-                        <a
-                            href="editar-pet.html"
-                            class="botao botao-salvar"
-                        >
-                            Editar
-                        </a>
-
-
-                        <a
-                            href="pets.html"
-                            class="botao botao-cancelar"
-                        >
-                            Voltar
-                        </a>
-
+                        <a id="botao-editar" href="editar-pet.html"
+                            class="botao botao-salvar">Editar</a>
+                        <a href="pets.html"
+                            class="botao botao-cancelar">Voltar</a>
                     </div>
-
                 </section>
-
             </main>
-
         </div>
-
     </div>
-<script src="../js/script.js"></script>
-</body>
 
+    <script src="../js/navegacao.js"></script>
+    <script>
+        const pets = {
+            thor: {
+                nome: "Thor",
+                tipo: "Cachorro",
+                raca: "Golden Retriever",
+                porte: "Grande",
+                proprietario: "Maria Silva",
+                idade: "3 anos",
+                peso: "30 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "Gosta de brincar e passear.",
+                foto: "../img/Thor.png"
+            },
+            luna: {
+                nome: "Luna",
+                tipo: "Cachorro",
+                raca: "Shih-tzu",
+                porte: "Pequeno",
+                proprietario: "João Santos",
+                idade: "2 anos",
+                peso: "6 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "É tranquila e gosta de colo.",
+                foto: "../img/Luna.png"
+            },
+            mel: {
+                nome: "Mel",
+                tipo: "Gato",
+                raca: "Siamês",
+                porte: "Pequeno",
+                proprietario: "Ana Oliveira",
+                idade: "2 anos",
+                peso: "4 kg",
+                alimentacao: "Ração para gatos duas vezes ao dia.",
+                observacoes: "Gosta de descansar em lugares tranquilos.",
+                foto: "../img/Mel.png"
+            },
+            bob: {
+                nome: "Bob",
+                tipo: "Cachorro",
+                raca: "Beagle",
+                porte: "Médio",
+                proprietario: "Gisele Teles",
+                idade: "4 anos",
+                peso: "12 kg",
+                alimentacao: "Ração duas vezes ao dia.",
+                observacoes: "Gosta de passear e brincar.",
+                foto: "../img/Bob.png"
+            }
+        };
+
+        const parametros = new URLSearchParams(window.location.search);
+        const identificador = (parametros.get("pet") || "thor").toLowerCase();
+        const pet = pets[identificador];
+
+        if (pet) {
+            document.getElementById("titulo-pet").textContent =
+                "Dados do Pet - " + pet.nome;
+
+            document.getElementById("foto-pet").src = pet.foto;
+            document.getElementById("foto-pet").alt = "Foto de " + pet.nome;
+
+            document.getElementById("nome-pet").value = pet.nome;
+            document.getElementById("tipo-pet").value = pet.tipo;
+            document.getElementById("raca-pet").value = pet.raca;
+            document.getElementById("porte-pet").value = pet.porte;
+            document.getElementById("proprietario-pet").value = pet.proprietario;
+            document.getElementById("idade-pet").value = pet.idade;
+            document.getElementById("peso-pet").value = pet.peso;
+            document.getElementById("alimentacao-pet").value = pet.alimentacao;
+            document.getElementById("observacoes-pet").value = pet.observacoes;
+
+            document.getElementById("botao-editar").href =
+                "editar-pet.html?pet=" + encodeURIComponent(identificador);
+        } else {
+            document.getElementById("titulo-pet").textContent =
+                "Pet não encontrado";
+
+            document.getElementById("foto-pet").hidden = true;
+            document.getElementById("botao-editar").hidden = true;
+        }
+    </script>
+</body>
 </html>
