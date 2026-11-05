@@ -183,6 +183,74 @@
 
     </div>
 <script src="../js/navegacao.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const formulario = document.querySelector("form");
+
+    const campoDiaria = document.getElementById("valor-diaria");
+    const campoVagas = document.getElementById("vagas");
+
+    const CHAVE = "hotelPetConfiguracoes";
+
+    // Carregar configurações já salvas
+    function carregarConfiguracoes() {
+
+        const configuracoes = JSON.parse(
+            localStorage.getItem(CHAVE) || "{}"
+        );
+
+        if (configuracoes.valorDiaria !== undefined) {
+            campoDiaria.value = configuracoes.valorDiaria;
+        }
+
+        if (configuracoes.vagas !== undefined) {
+            campoVagas.value = configuracoes.vagas;
+        }
+    }
+
+    carregarConfiguracoes();
+
+    // Salvar configurações
+    formulario.addEventListener("submit", function (evento) {
+
+        evento.preventDefault();
+
+        const valorDiaria = Number(campoDiaria.value);
+        const vagas = Number(campoVagas.value);
+
+        if (
+            campoDiaria.value === "" ||
+            campoVagas.value === "" ||
+            !Number.isFinite(valorDiaria) ||
+            !Number.isInteger(vagas) ||
+            valorDiaria < 0 ||
+            vagas < 0
+        ) {
+            alert("Informe valores válidos para a diária e as vagas.");
+            return;
+        }
+
+        const configuracoes = {
+            valorDiaria: valorDiaria,
+            vagas: vagas
+        };
+
+        localStorage.setItem(
+            CHAVE,
+            JSON.stringify(configuracoes)
+        );
+
+        alert("Configurações salvas com sucesso!");
+
+        window.location.href = "dashboard.html";
+    });
+
+});
+</script>
+
 </body>
 
 </html>

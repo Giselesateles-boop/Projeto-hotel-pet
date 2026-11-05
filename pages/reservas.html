@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Reservas</title>
-
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -14,186 +13,82 @@
 
     <div class="layout">
 
-        <!-- MENU LATERAL -->
         <aside class="menu-lateral">
-
-            <h1>
-                Hotel Pet
-            </h1>
+            <h1>Hotel Pet</h1>
 
             <nav>
-
-                <a href="pets.html">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html" class="menu-ativo">
-                    Reservas
-                </a>
-
+                <a href="pets.html">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html" class="menu-ativo">Reservas</a>
             </nav>
-
         </aside>
 
-
-        <!-- ÁREA PRINCIPAL -->
         <div class="conteudo">
 
-            <!-- TOPO -->
             <header class="topo">
-
                 <div></div>
 
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
-
             </header>
 
-
-            <!-- CONTEÚDO -->
             <main>
 
-                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    Reservas
-
+                    <a href="dashboard.html">Home</a>
+                    / Reservas
                 </p>
 
-
-                <!-- CARD -->
                 <section class="card">
 
-                    <!-- CABEÇALHO -->
                     <div class="cabecalho-pagina">
 
-                        <h2>
-                            Reservas
-                        </h2>
+                        <h2>Reservas</h2>
 
-                        <a
-                            href="cadastrar-reserva.html"
-                            class="botao botao-salvar"
-                        >
+                        <a href="cadastrar-reserva.html"
+                            class="botao botao-salvar">
                             + Nova reserva
                         </a>
 
                     </div>
 
-
-                    <!-- FILTROS -->
+                    <!-- PESQUISA -->
                     <section class="filtros">
 
-                        <h3>
-                            Pesquisar
-                        </h3>
+                        <h3>Pesquisar</h3>
 
+                        <form class="formulario-pesquisa"
+                            id="formulario-pesquisa">
 
-                        <form
-                            action="reservas.html"
-                            method="get"
-                            class="formulario-pesquisa"
-                        >
-
-                            <!-- PET -->
                             <div class="campo-formulario">
-
-                                <label for="pet">
-                                    Pet
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="pet"
-                                    name="pet"
-                                    placeholder="Nome do pet"
-                                >
-
+                                <label for="pet">Pet</label>
+                                <input type="text" id="pet"
+                                    placeholder="Nome do pet">
                             </div>
 
-
-                            <!-- PROPRIETÁRIO -->
                             <div class="campo-formulario">
-
-                                <label for="proprietario">
-                                    Proprietário
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="proprietario"
-                                    name="proprietario"
-                                    placeholder="Nome do proprietário"
-                                >
-
+                                <label for="proprietario">Proprietário</label>
+                                <input type="text" id="proprietario"
+                                    placeholder="Nome do proprietário">
                             </div>
 
-
-                            <!-- STATUS -->
                             <div class="campo-formulario">
+                                <label for="status">Status</label>
 
-                                <label for="status">
-                                    Status
-                                </label>
-
-                                <select
-                                    id="status"
-                                    name="status"
-                                >
-
-                                    <option value="todos">
-                                        Todos
-                                    </option>
-
-                                    <option value="agendada">
-                                        Agendada
-                                    </option>
-
-                                    <option value="confirmada">
-                                        Confirmada
-                                    </option>
-
-                                    <option value="andamento">
-                                        Em andamento
-                                    </option>
-
-                                    <option value="finalizada">
-                                        Finalizada
-                                    </option>
-
+                                <select id="status">
+                                    <option value="todos">Todos</option>
+                                    <option value="agendada">Agendada</option>
+                                    <option value="confirmada">Confirmada</option>
+                                    <option value="andamento">Em andamento</option>
+                                    <option value="finalizada">Finalizada</option>
                                 </select>
-
                             </div>
 
-
-                            <!-- PESQUISAR -->
-                            <button
-                                type="submit"
-                                class="botao botao-pesquisar"
-                            >
+                            <button type="submit"
+                                class="botao botao-pesquisar">
                                 Pesquisar
                             </button>
 
@@ -201,6 +96,38 @@
 
                     </section>
 
+                    <!-- AÇÕES -->
+                    <section class="card">
+
+                        <div class="acoes-usuarios">
+
+                            <button type="button"
+                                class="botao botao-remover"
+                                id="remover-reservas">
+                                Remover
+                            </button>
+
+                            <button type="button"
+                                class="botao botao-status"
+                                id="mudar-status-reservas">
+                                Mudar status
+                            </button>
+
+                            <button type="button"
+                                class="botao botao-visualizacao-ativo"
+                                id="visualizar-reservas">
+                                Reservas
+                            </button>
+
+                            <button type="button"
+                                class="botao"
+                                id="visualizar-status">
+                                Status
+                            </button>
+
+                        </div>
+
+                    </section>
 
                     <!-- TABELA -->
                     <section class="tabela-container">
@@ -208,214 +135,24 @@
                         <table class="tabela">
 
                             <thead>
-
                                 <tr>
-
-                                    <th>
-                                        ID
-                                    </th>
-
-                                    <th>
-                                        Pet
-                                    </th>
-
-                                    <th>
-                                        Proprietário
-                                    </th>
-
-                                    <th>
-                                        Entrada
-                                    </th>
-
-                                    <th>
-                                        Saída
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                    <th>
-                                        Ações
-                                    </th>
-
+                                    <th>Selecionar</th>
+                                    <th>ID</th>
+                                    <th>Pet</th>
+                                    <th>Proprietário</th>
+                                    <th>Entrada</th>
+                                    <th>Saída</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
                                 </tr>
-
                             </thead>
 
-
-                            <tbody>
-
-                                <!-- RESERVA 001 -->
-                                <tr>
-
-                                    <td>
-                                        001
-                                    </td>
-
-                                    <td>
-                                        Thor
-                                    </td>
-
-                                    <td>
-                                        Maria Silva
-                                    </td>
-
-                                    <td>
-                                        20/08/2026
-                                    </td>
-
-                                    <td>
-                                        25/08/2026
-                                    </td>
-
-                                    <td>
-                                        Confirmada
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-reserva.html?reserva=001">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-reserva.html?reserva=001">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- RESERVA 002 -->
-                                <tr>
-
-                                    <td>
-                                        002
-                                    </td>
-
-                                    <td>
-                                        Luna
-                                    </td>
-
-                                    <td>
-                                        João Santos
-                                    </td>
-
-                                    <td>
-                                        21/08/2026
-                                    </td>
-
-                                    <td>
-                                        24/08/2026
-                                    </td>
-
-                                    <td>
-                                        Em andamento
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-reserva.html?reserva=002">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-reserva.html?reserva=002">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- RESERVA 003 -->
-                                <tr>
-
-                                    <td>
-                                        003
-                                    </td>
-
-                                    <td>
-                                        Mel
-                                    </td>
-
-                                    <td>
-                                        Ana Oliveira
-                                    </td>
-
-                                    <td>
-                                        15/08/2026
-                                    </td>
-
-                                    <td>
-                                        18/08/2026
-                                    </td>
-
-                                    <td>
-                                        Finalizada
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-reserva.html?reserva=003">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-reserva.html?reserva=003">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- RESERVA 004 -->
-                                <tr>
-
-                                    <td>
-                                        004
-                                    </td>
-
-                                    <td>
-                                        Bob
-                                    </td>
-
-                                    <td>
-                                        Gisele Teles
-                                    </td>
-
-                                    <td>
-                                        25/08/2026
-                                    </td>
-
-                                    <td>
-                                        30/08/2026
-                                    </td>
-
-                                    <td>
-                                        Agendada
-                                    </td>
-
-                                    <td>
-
-                                        <a href="visualizar-reserva.html?reserva=004">
-                                            Visualizar
-                                        </a>
-
-                                        <a href="editar-reserva.html?reserva=004">
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
+                            <tbody id="tabela-reservas">
                             </tbody>
 
                         </table>
+
+                        <p id="mensagem-reservas" role="status"></p>
 
                     </section>
 
@@ -426,74 +163,385 @@
         </div>
 
     </div>
-<script src="../js/navegacao.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.querySelector(".formulario-pesquisa");
-    const tabela = document.querySelector(".tabela tbody");
+    <script src="../js/navegacao.js"></script>
 
-    if (!formulario || !tabela) return;
+    <script>
 
-    const linhas = Array.from(tabela.querySelectorAll("tr"));
+    document.addEventListener("DOMContentLoaded", function () {
 
-    formulario.addEventListener("submit", function (evento) {
-        evento.preventDefault();
+        const tabela = document.getElementById("tabela-reservas");
 
-        const pet = document.getElementById("pet")
-            .value.trim().toLowerCase();
+        const formulario = document.getElementById("formulario-pesquisa");
 
-        const proprietario = document.getElementById("proprietario")
-            .value.trim().toLowerCase();
+        const mensagem = document.getElementById("mensagem-reservas");
 
-        const status = document.getElementById("status")
-            .value.trim().toLowerCase();
+        const botaoRemover = document.getElementById("remover-reservas");
 
-        let encontrados = 0;
+        const botaoStatus = document.getElementById("mudar-status-reservas");
 
-        linhas.forEach(function (linha) {
-            const colunas = linha.cells;
+        const botaoReservas = document.getElementById("visualizar-reservas");
 
-            const nomePet = colunas[1].textContent.trim().toLowerCase();
-            const nomeProprietario = colunas[2].textContent.trim().toLowerCase();
-            const statusReserva = colunas[5].textContent.trim().toLowerCase();
+        const botaoVisualizarStatus = document.getElementById("visualizar-status");
 
-            const correspondePet = nomePet.includes(pet);
-            const correspondeProprietario =
-                nomeProprietario.includes(proprietario);
+        const chaveReservas = "hotelPetReservas";
+        const chaveRemovidas = "hotelPetReservasRemovidas";
+        const chaveStatus = "hotelPetStatusReservas";
 
-            const correspondeStatus =
-                status === "todos" || statusReserva ===
-                status.replace("andamento", "em andamento");
+        const ordemStatus = [
+            "Agendada",
+            "Confirmada",
+            "Em andamento",
+            "Finalizada"
+        ];
 
-            const mostrar =
-                correspondePet &&
-                correspondeProprietario &&
-                correspondeStatus;
+        // RESERVAS PADRÃO
+        const reservasPadrao = [
 
-            linha.style.display = mostrar ? "" : "none";
+            {
+                id: "001",
+                pet: "Thor",
+                proprietario: "Maria Silva",
+                entrada: "20/08/2026",
+                saida: "25/08/2026",
+                status: "Confirmada"
+            },
 
-            if (mostrar) encontrados++;
-        });
+            {
+                id: "002",
+                pet: "Luna",
+                proprietario: "João Santos",
+                entrada: "21/08/2026",
+                saida: "24/08/2026",
+                status: "Em andamento"
+            },
 
-        let mensagem = document.getElementById("mensagem-busca-reservas");
+            {
+                id: "003",
+                pet: "Mel",
+                proprietario: "Ana Oliveira",
+                entrada: "15/08/2026",
+                saida: "18/08/2026",
+                status: "Finalizada"
+            },
 
-        if (!mensagem) {
-            mensagem = document.createElement("p");
-            mensagem.id = "mensagem-busca-reservas";
-            mensagem.setAttribute("role", "status");
-            tabela.closest(".tabela-container").appendChild(mensagem);
+            {
+                id: "004",
+                pet: "Bob",
+                proprietario: "Gisele Teles",
+                entrada: "25/08/2026",
+                saida: "30/08/2026",
+                status: "Agendada"
+            }
+
+        ];
+
+        // RECUPERAR DADOS DO NAVEGADOR
+        let reservasSalvas = JSON.parse(
+            localStorage.getItem(chaveReservas) || "[]"
+        );
+
+        let reservasRemovidas = JSON.parse(
+            localStorage.getItem(chaveRemovidas) || "[]"
+        );
+
+        let statusSalvos = JSON.parse(
+            localStorage.getItem(chaveStatus) || "{}"
+        );
+
+        // JUNTAR RESERVAS PADRÃO E NOVAS
+        let todasReservas = [
+            ...reservasPadrao,
+            ...reservasSalvas
+        ];
+
+        let visualizarPorStatus = false;
+
+        // NORMALIZAR TEXTO
+        function normalizar(texto) {
+            return String(texto || "").trim().toLowerCase();
         }
 
-        mensagem.textContent = encontrados === 0
-            ? "Nenhuma reserva encontrada."
-            : encontrados + (encontrados === 1
-                ? " reserva encontrada."
-                : " reservas encontradas.");
+        // FORMATAR DATA PARA DD/MM/AAAA
+        function formatarData(data) {
+
+            if (!data) return "";
+
+            const valor = String(data).trim();
+
+            // Verifica se está no formato AAAA-MM-DD
+            const formatoISO = valor.match(
+                /^(\d{4})-(\d{2})-(\d{2})$/
+            );
+
+            if (formatoISO) {
+
+                return formatoISO[3] + "/" +
+                    formatoISO[2] + "/" +
+                    formatoISO[1];
+
+            }
+
+            // Se já estiver no formato DD/MM/AAAA,
+            // mantém a data original.
+            const formatoBR = valor.match(
+                /^(\d{2})\/(\d{2})\/(\d{4})$/
+            );
+
+            if (formatoBR) {
+                return valor;
+            }
+
+            return valor;
+        }
+
+        // RECUPERAR STATUS ATUAL
+        function obterStatus(reserva) {
+
+            return statusSalvos[reserva.id] || reserva.status;
+
+        }
+
+        // FILTRAR E EXIBIR RESERVAS
+        function carregarReservas() {
+
+            const petPesquisa = normalizar(
+                document.getElementById("pet").value
+            );
+
+            const proprietarioPesquisa = normalizar(
+                document.getElementById("proprietario").value
+            );
+
+            const statusPesquisa = document.getElementById("status").value;
+
+            let reservasExibidas = todasReservas.filter(function (reserva) {
+
+                if (reservasRemovidas.includes(reserva.id)) {
+                    return false;
+                }
+
+                const nomePet = normalizar(reserva.pet);
+
+                const nomeProprietario = normalizar(
+                    reserva.proprietario || reserva.tutor
+                );
+
+                const statusAtual = obterStatus(reserva);
+
+                const correspondePet = nomePet.includes(petPesquisa);
+
+                const correspondeProprietario =
+                    nomeProprietario.includes(proprietarioPesquisa);
+
+                let correspondeStatus = true;
+
+                if (statusPesquisa !== "todos") {
+
+                    const statusNormalizado = normalizar(statusAtual);
+
+                    const statusFiltro = statusPesquisa === "andamento"
+                        ? "em andamento"
+                        : statusPesquisa;
+
+                    correspondeStatus =
+                        statusNormalizado === statusFiltro;
+
+                }
+
+                return correspondePet &&
+                    correspondeProprietario &&
+                    correspondeStatus;
+
+            });
+
+            // ORGANIZAR POR STATUS
+            if (visualizarPorStatus) {
+
+                reservasExibidas.sort(function (a, b) {
+
+                    return ordemStatus.indexOf(obterStatus(a)) -
+                        ordemStatus.indexOf(obterStatus(b));
+
+                });
+
+            }
+
+            tabela.innerHTML = "";
+
+            reservasExibidas.forEach(function (reserva) {
+
+                const linha = document.createElement("tr");
+
+                linha.dataset.id = reserva.id;
+
+                linha.innerHTML = `
+                    <td>
+                        <input type="checkbox"
+                            class="selecionar-reserva">
+                    </td>
+
+                    <td>${reserva.id}</td>
+
+                    <td>${reserva.pet}</td>
+
+                    <td>${reserva.proprietario || reserva.tutor || ""}</td>
+
+                    <td>${formatarData(reserva.entrada)}</td>
+
+                    <td>${formatarData(reserva.saida)}</td>
+
+                    <td class="status-reserva">
+                        ${obterStatus(reserva)}
+                    </td>
+
+                    <td>
+                        <a href="visualizar-reserva.html?reserva=${encodeURIComponent(reserva.id)}">
+                            Visualizar
+                        </a>
+
+                        &nbsp;
+
+                        <a href="editar-reserva.html?reserva=${encodeURIComponent(reserva.id)}">
+                            Editar
+                        </a>
+                    </td>
+                `;
+
+                tabela.appendChild(linha);
+
+            });
+
+            mensagem.textContent = reservasExibidas.length === 0
+                ? "Nenhuma reserva encontrada."
+                : reservasExibidas.length +
+                    (reservasExibidas.length === 1
+                        ? " reserva encontrada."
+                        : " reservas encontradas.");
+
+        }
+
+        // PESQUISAR
+        formulario.addEventListener("submit", function (evento) {
+
+            evento.preventDefault();
+
+            carregarReservas();
+
+        });
+
+        // REMOVER RESERVAS
+        botaoRemover.addEventListener("click", function () {
+
+            const selecionadas = Array.from(
+                tabela.querySelectorAll(".selecionar-reserva:checked")
+            );
+
+            if (selecionadas.length === 0) {
+
+                alert("Selecione pelo menos uma reserva para remover.");
+                return;
+
+            }
+
+            if (!confirm("Deseja realmente remover as reservas selecionadas?")) {
+                return;
+            }
+
+            selecionadas.forEach(function (checkbox) {
+
+                const id = checkbox.closest("tr").dataset.id;
+
+                if (!reservasRemovidas.includes(id)) {
+                    reservasRemovidas.push(id);
+                }
+
+            });
+
+            localStorage.setItem(
+                chaveRemovidas,
+                JSON.stringify(reservasRemovidas)
+            );
+
+            carregarReservas();
+
+            mensagem.textContent = "Reserva(s) removida(s) com sucesso.";
+
+        });
+
+        // MUDAR STATUS
+        botaoStatus.addEventListener("click", function () {
+
+            const selecionadas = Array.from(
+                tabela.querySelectorAll(".selecionar-reserva:checked")
+            );
+
+            if (selecionadas.length === 0) {
+
+                alert("Selecione pelo menos uma reserva para mudar o status.");
+                return;
+
+            }
+
+            selecionadas.forEach(function (checkbox) {
+
+                const id = checkbox.closest("tr").dataset.id;
+
+                const reserva = todasReservas.find(function (item) {
+                    return item.id === id;
+                });
+
+                if (!reserva) return;
+
+                const statusAtual = obterStatus(reserva);
+
+                let indice = ordemStatus.indexOf(statusAtual);
+
+                indice = (indice + 1) % ordemStatus.length;
+
+                statusSalvos[id] = ordemStatus[indice];
+
+            });
+
+            localStorage.setItem(
+                chaveStatus,
+                JSON.stringify(statusSalvos)
+            );
+
+            carregarReservas();
+
+            mensagem.textContent = "Status atualizado com sucesso.";
+
+        });
+
+        // VISUALIZAR TODAS AS RESERVAS
+        botaoReservas.addEventListener("click", function () {
+
+            visualizarPorStatus = false;
+
+            carregarReservas();
+
+            mensagem.textContent = "Exibindo todas as reservas.";
+
+        });
+
+        // VISUALIZAR POR STATUS
+        botaoVisualizarStatus.addEventListener("click", function () {
+
+            visualizarPorStatus = true;
+
+            carregarReservas();
+
+            mensagem.textContent = "Reservas organizadas por status.";
+
+        });
+
+        // EXIBIR INICIALMENTE
+        carregarReservas();
+
     });
-});
-</script>
+
+    </script>
 
 </body>
-
 </html>

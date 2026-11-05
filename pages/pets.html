@@ -1,444 +1,339 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Pets</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
-    <div class="layout">
+<div class="layout">
 
-        <!-- MENU LATERAL -->
-        <aside class="menu-lateral">
+    <aside class="menu-lateral">
+        <h1>Hotel Pet</h1>
+        <nav>
+            <a href="pets.html" class="menu-ativo">Pet</a>
+            <a href="usuarios.html">Usuário</a>
+            <a href="configuracoes.html">Configurações</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </aside>
 
-            <h1>Hotel Pet</h1>
+    <div class="conteudo">
 
-            <nav>
+        <header class="topo">
+            <div></div>
+            <a href="perfil.html" class="perfil-topo">
+                <span class="icone-usuario">O</span>
+                <span>Gisele Teles</span>
+            </a>
+        </header>
 
-                <a href="pets.html" class="menu-ativo">
-                    Pet
+        <main>
+
+            <p class="breadcrumb">
+                <a href="dashboard.html">Home</a> / Pets
+            </p>
+
+            <div class="cabecalho-pagina">
+                <h2>Pets</h2>
+                <a href="cadastrar-pet.html" class="botao botao-salvar">
+                    + Novo pet
                 </a>
+            </div>
 
-                <a href="usuarios.html">
-                    Usuário
-                </a>
+            <section class="card">
 
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
+                <h3>Pesquisar</h3>
 
-                <a href="reservas.html">
-                    Reservas
-                </a>
+                <form class="formulario-pesquisa" id="formulario-pesquisa">
 
-            </nav>
+                    <div class="campo-formulario">
+                        <label for="pesquisa-nome">Nome do pet</label>
+                        <input type="text" id="pesquisa-nome"
+                            placeholder="Nome do pet">
+                    </div>
 
-        </aside>
+                    <div class="campo-formulario">
+                        <label for="pesquisa-proprietario">Proprietário</label>
+                        <input type="text" id="pesquisa-proprietario"
+                            placeholder="Nome do proprietário">
+                    </div>
 
+                    <div class="campo-formulario">
+                        <label for="pesquisa-tipo">Tipo</label>
+                        <select id="pesquisa-tipo">
+                            <option value="">Todos</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <div class="conteudo">
+                    <button type="submit" class="botao botao-pesquisar">
+                        Pesquisar
+                    </button>
 
-            <!-- TOPO -->
-            <header class="topo">
+                </form>
 
-                <div></div>
+            </section>
 
-                <a href="perfil.html" class="perfil-topo">
+            <section class="card">
 
-                    <span class="icone-usuario">
-                        O
-                    </span>
+                <div class="acoes-usuarios">
 
-                    <span>
-                        Gisele Teles
-                    </span>
+                    <button type="button" class="botao botao-remover"
+                        id="remover-pets">Remover</button>
 
-                </a>
+                    <button type="button" class="botao botao-status"
+                        id="mudar-status-pets">Mudar status</button>
 
-            </header>
+                    <button type="button" class="botao botao-visualizacao-ativo"
+                        id="visualizar-pets">Pets</button>
 
-
-            <main>
-
-                <!-- BREADCRUMB -->
-                <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    / Pets
-
-                </p>
-
-
-                <!-- CABEÇALHO -->
-                <div class="cabecalho-pagina">
-
-                    <h2>
-                        Pets
-                    </h2>
-
-                    <a href="cadastrar-pet.html" class="botao botao-salvar">
-                        + Novo pet
-                    </a>
+                    <button type="button" class="botao"
+                        id="visualizar-tipo">Tipo</button>
 
                 </div>
 
-
-                <!-- PESQUISA -->
-                <section class="card">
-
-                    <h3>
-                        Pesquisar
-                    </h3>
-
-                    <form class="formulario-pesquisa" action="pets.html" method="get">
-
-                        <div class="campo-formulario">
-
-                            <label for="pesquisa-nome">
-                                Nome do pet
-                            </label>
-
-                            <input
-                                type="text"
-                                id="pesquisa-nome"
-                                name="nome"
-                                placeholder="Nome do pet"
-                            >
-
-                        </div>
-
-
-                        <div class="campo-formulario">
-
-                            <label for="pesquisa-proprietario">
-                                Proprietário
-                            </label>
-
-                            <input
-                                type="text"
-                                id="pesquisa-proprietario"
-                                name="proprietario"
-                                placeholder="Nome do proprietário"
-                            >
-
-                        </div>
-
-
-                        <div class="campo-formulario">
-
-                            <label for="pesquisa-tipo">
-                                Tipo
-                            </label>
-
-                            <select id="pesquisa-tipo" name="tipo">
-
-                                <option value="">
-                                    Todos
-                                </option>
-
-                                <option value="cachorro">
-                                    Cachorro
-                                </option>
-
-                                <option value="gato">
-                                    Gato
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="botao botao-pesquisar"
-                        >
-                            Pesquisar
-                        </button>
-
-                    </form>
-
-                </section>
-
-
-                <!-- TABELA -->
-                <section class="tabela-container">
-
-                    <table class="tabela">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    ID
-                                </th>
-
-                                <th>
-                                    Pet
-                                </th>
-
-                                <th>
-                                    Tipo
-                                </th>
-
-                                <th>
-                                    Raça
-                                </th>
-
-                                <th>
-                                    Porte
-                                </th>
-
-                                <th>
-                                    Proprietário
-                                </th>
-
-                                <th>
-                                    Status
-                                </th>
-
-                                <th>
-                                    Ações
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-
-                            <!-- THOR -->
-                            <tr>
-
-                                <td>
-                                    001
-                                </td>
-
-                                <td>
-                                    Thor
-                                </td>
-
-                                <td>
-                                    Cachorro
-                                </td>
-
-                                <td>
-                                    Golden Retriever
-                                </td>
-
-                                <td>
-                                    Grande
-                                </td>
-
-                                <td>
-                                    Maria Silva
-                                </td>
-
-                                <td>
-                                    Hospedado
-                                </td>
-
-                                <td>
-
-                                    <a href="visualizar-pet.html?pet=thor">
-                                        Visualizar
-                                    </a>
-
-                                    &nbsp;
-
-                                    <a href="editar-pet.html?pet=thor">
-                                        Editar
-                                    </a>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- LUNA -->
-                            <tr>
-
-                                <td>
-                                    002
-                                </td>
-
-                                <td>
-                                    Luna
-                                </td>
-
-                                <td>
-                                    Cachorro
-                                </td>
-
-                                <td>
-                                    Shih-tzu
-                                </td>
-
-                                <td>
-                                    Pequeno
-                                </td>
-
-                                <td>
-                                    João Santos
-                                </td>
-
-                                <td>
-                                    Hospedado
-                                </td>
-
-                                <td>
-
-                                    <a href="visualizar-pet.html?pet=luna">
-                                        Visualizar
-                                    </a>
-
-                                    &nbsp;
-
-                                    <a href="editar-pet.html?pet=luna">
-                                        Editar
-                                    </a>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- MEL -->
-                            <tr>
-
-                                <td>
-                                    003
-                                </td>
-
-                                <td>
-                                    Mel
-                                </td>
-
-                                <td>
-                                    Gato
-                                </td>
-
-                                <td>
-                                    Siamês
-                                </td>
-
-                                <td>
-                                    Pequeno
-                                </td>
-
-                                <td>
-                                    Ana Oliveira
-                                </td>
-
-                                <td>
-                                    Hospedado
-                                </td>
-
-                                <td>
-
-                                    <a href="visualizar-pet.html?pet=mel">
-                                        Visualizar
-                                    </a>
-
-                                    &nbsp;
-
-                                    <a href="editar-pet.html?pet=mel">
-                                        Editar
-                                    </a>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- BOB -->
-                            <tr>
-
-                                <td>
-                                    004
-                                </td>
-
-                                <td>
-                                    Bob
-                                </td>
-
-                                <td>
-                                    Cachorro
-                                </td>
-
-                                <td>
-                                    Beagle
-                                </td>
-
-                                <td>
-                                    Médio
-                                </td>
-
-                                <td>
-                                    Gisele Teles
-                                </td>
-
-                                <td>
-                                    Fora do hotel
-                                </td>
-
-                                <td>
-
-                                    <a href="visualizar-pet.html?pet=bob">
-                                        Visualizar
-                                    </a>
-
-                                    &nbsp;
-
-                                    <a href="editar-pet.html?pet=bob">
-                                        Editar
-                                    </a>
-
-                                </td>
-
-                            </tr>
-
-
-                        </tbody>
-
-                    </table>
-
-                </section>
-
-            </main>
-
-        </div>
+            </section>
+
+            <section class="tabela-container">
+
+                <table class="tabela">
+
+                    <thead>
+                        <tr>
+                            <th>Selecionar</th>
+                            <th>ID</th>
+                            <th>Pet</th>
+                            <th>Tipo</th>
+                            <th>Raça</th>
+                            <th>Porte</th>
+                            <th>Proprietário</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela-pets">
+
+                        <tr data-id="thor">
+                            <td><input type="checkbox" class="selecionar-pet"></td>
+                            <td>001</td>
+                            <td>Thor</td>
+                            <td>Cachorro</td>
+                            <td>Golden Retriever</td>
+                            <td>Grande</td>
+                            <td>Maria Silva</td>
+                            <td class="status-pet">Hospedado</td>
+                            <td>
+                                <a href="visualizar-pet.html?pet=thor">Visualizar</a>
+                                &nbsp;
+                                <a href="editar-pet.html?pet=thor">Editar</a>
+                            </td>
+                        </tr>
+
+                        <tr data-id="luna">
+                            <td><input type="checkbox" class="selecionar-pet"></td>
+                            <td>002</td>
+                            <td>Luna</td>
+                            <td>Cachorro</td>
+                            <td>Shih-tzu</td>
+                            <td>Pequeno</td>
+                            <td>João Santos</td>
+                            <td class="status-pet">Hospedado</td>
+                            <td>
+                                <a href="visualizar-pet.html?pet=luna">Visualizar</a>
+                                &nbsp;
+                                <a href="editar-pet.html?pet=luna">Editar</a>
+                            </td>
+                        </tr>
+
+                        <tr data-id="mel">
+                            <td><input type="checkbox" class="selecionar-pet"></td>
+                            <td>003</td>
+                            <td>Mel</td>
+                            <td>Gato</td>
+                            <td>Siamês</td>
+                            <td>Pequeno</td>
+                            <td>Ana Oliveira</td>
+                            <td class="status-pet">Hospedado</td>
+                            <td>
+                                <a href="visualizar-pet.html?pet=mel">Visualizar</a>
+                                &nbsp;
+                                <a href="editar-pet.html?pet=mel">Editar</a>
+                            </td>
+                        </tr>
+
+                        <tr data-id="bob">
+                            <td><input type="checkbox" class="selecionar-pet"></td>
+                            <td>004</td>
+                            <td>Bob</td>
+                            <td>Cachorro</td>
+                            <td>Beagle</td>
+                            <td>Médio</td>
+                            <td>Gisele Teles</td>
+                            <td class="status-pet">Fora do hotel</td>
+                            <td>
+                                <a href="visualizar-pet.html?pet=bob">Visualizar</a>
+                                &nbsp;
+                                <a href="editar-pet.html?pet=bob">Editar</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p id="mensagem-pets" role="status"></p>
+
+            </section>
+
+        </main>
 
     </div>
+</div>
+
 <script src="../js/navegacao.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.querySelector(".formulario-pesquisa");
-    const tabela = document.querySelector(".tabela tbody");
+document.addEventListener("DOMContentLoaded", function() {
 
-    if (!formulario || !tabela) return;
+    const tabela = document.getElementById("tabela-pets");
+    const formulario = document.getElementById("formulario-pesquisa");
+    const mensagem = document.getElementById("mensagem-pets");
 
-    const linhas = Array.from(tabela.querySelectorAll("tr"));
+    const chavePets = "hotelPetPets";
+    const chaveRemovidos = "hotelPetPetsRemovidos";
+    const chaveStatus = "hotelPetStatusPets";
 
-    formulario.addEventListener("submit", function (evento) {
+    let petsRemovidos = JSON.parse(
+        localStorage.getItem(chaveRemovidos) || "[]"
+    );
+
+    let statusSalvos = JSON.parse(
+        localStorage.getItem(chaveStatus) || "{}"
+    );
+
+    let linhas = [];
+
+    function textoTipo(tipo) {
+        const tipos = {
+            cachorro: "Cachorro",
+            gato: "Gato",
+            outro: "Outro"
+        };
+        return tipos[tipo] || tipo;
+    }
+
+    function textoPorte(porte) {
+        const portes = {
+            pequeno: "Pequeno",
+            medio: "Médio",
+            grande: "Grande"
+        };
+        return portes[porte] || porte;
+    }
+
+    function adicionarPetNaTabela(pet, numero) {
+
+        if (petsRemovidos.includes(pet.id)) return;
+
+        const linha = document.createElement("tr");
+        linha.dataset.id = pet.id;
+
+        const status = statusSalvos[pet.id] || pet.status || "Fora do hotel";
+
+        const dados = [
+            numero,
+            pet.nome,
+            textoTipo(pet.tipo),
+            pet.raca || "-",
+            textoPorte(pet.porte),
+            pet.proprietario || "-"
+        ];
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.className = "selecionar-pet";
+
+        const celulaCheckbox = linha.insertCell();
+        celulaCheckbox.appendChild(checkbox);
+
+        dados.forEach(function(valor) {
+            const celula = linha.insertCell();
+            celula.textContent = valor;
+        });
+
+        const celulaStatus = linha.insertCell();
+        celulaStatus.className = "status-pet";
+        celulaStatus.textContent = status;
+
+        const celulaAcoes = linha.insertCell();
+
+        const linkVisualizar = document.createElement("a");
+        linkVisualizar.href = "visualizar-pet.html?pet=" + encodeURIComponent(pet.id);
+        linkVisualizar.textContent = "Visualizar";
+
+        const linkEditar = document.createElement("a");
+        linkEditar.href = "editar-pet.html?pet=" + encodeURIComponent(pet.id);
+        linkEditar.textContent = "Editar";
+
+        celulaAcoes.appendChild(linkVisualizar);
+        celulaAcoes.appendChild(document.createTextNode("    "));
+        celulaAcoes.appendChild(linkEditar);
+
+        tabela.appendChild(linha);
+    }
+
+    // CARREGAR PETS CADASTRADOS
+    const petsSalvos = JSON.parse(
+        localStorage.getItem(chavePets) || "[]"
+    );
+
+    petsSalvos.forEach(function(pet, indice) {
+        adicionarPetNaTabela(pet, String(indice + 5).padStart(3, "0"));
+    });
+
+    function atualizarLinhas() {
+        linhas = Array.from(tabela.querySelectorAll("tr"));
+    }
+
+    atualizarLinhas();
+
+    // RESTAURAR STATUS DOS PETS INICIAIS
+    linhas.forEach(function(linha) {
+
+        const id = linha.dataset.id;
+
+        if (petsRemovidos.includes(id)) {
+            linha.remove();
+            return;
+        }
+
+        if (statusSalvos[id]) {
+            linha.querySelector(".status-pet").textContent = statusSalvos[id];
+        }
+
+    });
+
+    atualizarLinhas();
+
+    // PESQUISAR
+    formulario.addEventListener("submit", function(evento) {
+
         evento.preventDefault();
+
+        pesquisarPets();
+
+    });
+
+    function pesquisarPets() {
 
         const nome = document.getElementById("pesquisa-nome")
             .value.trim().toLowerCase();
@@ -451,54 +346,153 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let encontrados = 0;
 
-        linhas.forEach(function (linha) {
+        linhas.forEach(function(linha) {
+
             const colunas = linha.cells;
 
-            const nomePet = colunas[1].textContent.trim().toLowerCase();
-            const tipoPet = colunas[2].textContent.trim().toLowerCase();
-            const nomeProprietario = colunas[5].textContent.trim().toLowerCase();
+            const correspondeNome =
+                colunas[2].textContent.toLowerCase().includes(nome);
 
-            const correspondeNome = nomePet.includes(nome);
-            const correspondeProprietario = nomeProprietario.includes(proprietario);
-            const correspondeTipo = !tipo || tipoPet === tipo;
+            const correspondeTipo =
+                !tipo || colunas[3].textContent.toLowerCase() === textoTipo(tipo).toLowerCase();
+
+            const correspondeProprietario =
+                colunas[6].textContent.toLowerCase().includes(proprietario);
 
             const mostrar =
-                correspondeNome && correspondeProprietario && correspondeTipo;
+                correspondeNome && correspondeTipo && correspondeProprietario;
 
             linha.style.display = mostrar ? "" : "none";
 
             if (mostrar) encontrados++;
+
         });
-
-        let mensagem = document.getElementById("mensagem-busca-pets");
-
-        if (!mensagem) {
-            mensagem = document.createElement("p");
-            mensagem.id = "mensagem-busca-pets";
-            mensagem.setAttribute("role", "status");
-            tabela.closest(".tabela-container").appendChild(mensagem);
-        }
 
         mensagem.textContent = encontrados === 0
             ? "Nenhum pet encontrado."
             : encontrados + (encontrados === 1
                 ? " pet encontrado."
                 : " pets encontrados.");
+
+    }
+
+    // REMOVER PETS
+    document.getElementById("remover-pets").addEventListener("click", function() {
+
+        const selecionados = linhas.filter(function(linha) {
+            return linha.querySelector(".selecionar-pet").checked;
+        });
+
+        if (selecionados.length === 0) {
+            alert("Selecione pelo menos um pet para remover.");
+            return;
+        }
+
+        if (!confirm("Deseja realmente remover os pets selecionados?")) {
+            return;
+        }
+
+        selecionados.forEach(function(linha) {
+
+            const id = linha.dataset.id;
+
+            if (!petsRemovidos.includes(id)) {
+                petsRemovidos.push(id);
+            }
+
+            linha.remove();
+
+        });
+
+        localStorage.setItem(chaveRemovidos, JSON.stringify(petsRemovidos));
+
+        // Retira os novos pets removidos também da lista salva
+        const petsAtualizados = JSON.parse(
+            localStorage.getItem(chavePets) || "[]"
+        ).filter(function(pet) {
+            return !petsRemovidos.includes(pet.id);
+        });
+
+        localStorage.setItem(chavePets, JSON.stringify(petsAtualizados));
+
+        atualizarLinhas();
+
+        mensagem.textContent = "Pet(s) removido(s) com sucesso.";
+
     });
 
-    formulario.addEventListener("reset", function () {
-        setTimeout(function () {
-            linhas.forEach(function (linha) {
-                linha.style.display = "";
-            });
+    // MUDAR STATUS
+    document.getElementById("mudar-status-pets").addEventListener("click", function() {
 
-            const mensagem = document.getElementById("mensagem-busca-pets");
-            if (mensagem) mensagem.textContent = "";
-        }, 0);
+        const selecionados = linhas.filter(function(linha) {
+            return linha.querySelector(".selecionar-pet").checked;
+        });
+
+        if (selecionados.length === 0) {
+            alert("Selecione pelo menos um pet para mudar o status.");
+            return;
+        }
+
+        selecionados.forEach(function(linha) {
+
+            const id = linha.dataset.id;
+            const celulaStatus = linha.querySelector(".status-pet");
+
+            const novoStatus = celulaStatus.textContent.trim() === "Hospedado"
+                ? "Fora do hotel"
+                : "Hospedado";
+
+            celulaStatus.textContent = novoStatus;
+            statusSalvos[id] = novoStatus;
+
+            linha.querySelector(".selecionar-pet").checked = false;
+
+        });
+
+        localStorage.setItem(chaveStatus, JSON.stringify(statusSalvos));
+
+        mensagem.textContent = "Status atualizado com sucesso.";
+
     });
+
+    // VISUALIZAR TODOS
+    document.getElementById("visualizar-pets").addEventListener("click", function() {
+
+        linhas.forEach(function(linha) {
+            tabela.appendChild(linha);
+            linha.style.display = "";
+        });
+
+        atualizarLinhas();
+
+        mensagem.textContent = "Exibindo todos os pets.";
+
+    });
+
+    // ORGANIZAR POR TIPO
+    document.getElementById("visualizar-tipo").addEventListener("click", function() {
+
+        const ordem = ["Cachorro", "Gato", "Outro"];
+
+        linhas.sort(function(a, b) {
+
+            const tipoA = a.cells[3].textContent;
+            const tipoB = b.cells[3].textContent;
+
+            return ordem.indexOf(tipoA) - ordem.indexOf(tipoB);
+
+        });
+
+        linhas.forEach(function(linha) {
+            tabela.appendChild(linha);
+        });
+
+        mensagem.textContent = "Pets organizados por tipo.";
+
+    });
+
 });
 </script>
 
 </body>
-
 </html>

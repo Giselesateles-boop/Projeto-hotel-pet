@@ -288,6 +288,255 @@
 
     </div>
    <script src="../js/navegacao.js"></script>
+   
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const formulario = document.querySelector("form");
+    const campoEmail = document.getElementById("email");
+    const campoNome = document.getElementById("nome");
+    const campoSobrenome = document.getElementById("sobrenome");
+    const campoTelefone = document.getElementById("telefone");
+    const campoFuncao = document.getElementById("funcao");
+    const campoFoto = document.getElementById("foto");
+    const imagemPerfil = document.querySelector(".foto-perfil img");
+
+    const CHAVE_PERFIL = "hotelPetPerfil";
+
+    // Carregar perfil salvo
+    function carregarPerfil() {
+
+        const perfil = JSON.parse(
+            localStorage.getItem(CHAVE_PERFIL) || "null"
+        );
+
+        if (!perfil) return;
+
+        campoEmail.value = perfil.email || campoEmail.value;
+        campoNome.value = perfil.nome || campoNome.value;
+        campoSobrenome.value = perfil.sobrenome || campoSobrenome.value;
+        campoTelefone.value = perfil.telefone || campoTelefone.value;
+        campoFuncao.value = perfil.funcao || campoFuncao.value;
+
+        if (perfil.foto && imagemPerfil) {
+            imagemPerfil.src = perfil.foto;
+        }
+
+        const nomeExibido = document.querySelector(
+            ".perfil-topo span:last-child"
+        );
+
+        if (nomeExibido) {
+            nomeExibido.textContent =
+                [perfil.nome, perfil.sobrenome].filter(Boolean).join(" ");
+        }
+    }
+
+    carregarPerfil();
+
+    // Compactar foto para evitar excesso de armazenamento
+    function compactarFoto(arquivo) {
+
+        return new Promise(function(resolve, reject) {
+
+            const leitor = new FileReader();
+
+            leitor.onload = function() {
+
+                const imagem = new Image();
+
+                imagem.onload = function() {
+
+                    const limite = 800;
+
+                    let largura = imagem.width;
+                    let altura = imagem.height;
+
+                    if (largura > limite || altura > limite) {
+
+                        const proporcao = Math.min(
+                            limite / largura,
+                            limite / altura
+                        );
+
+                        largura = Math.round(largura * proporcao);
+                        altura = Math.round(altura * proporcao);
+                    }
+
+                    const canvas = document.createElement("canvas");
+
+                    canvas.width = largura;
+                    canvas.height = altura;
+
+                    const contexto = canvas.getContext("2d");
+
+                    contexto.drawImage(
+                        imagem,
+                        0,
+                        0,
+                        largura,
+                        altura
+                    );
+
+                    resolve(canvas.toDataURL("image/jpeg", 0.75));
+                };
+
+                imagem.onerror = reject;
+                imagem.src = leitor.result;
+            };
+
+            leitor.onerror = reject;
+            leitor.readAsDataURL(arquivo);
+        });
+    }
+
+    // Pré-visualizar foto escolhida
+    campoFoto.addEventListener("change", async function() {
+
+        const arquivo = campoFoto.files[0];
+
+        if (!arquivo) return;
+
+        if (!arquivo.type.startsWith("image/")) {
+            alert("Selecione uma imagem válida.");
+            campoFoto.value = "";
+            return;
+        }
+
+        try {
+
+            const foto = await compactarFoto(arquivo);
+
+            imagemPerfil.src = foto;
+
+        } catch (erro) {
+
+            alert("Não foi possível carregar a foto.");
+        }
+    });
+
+    // Salvar perfil
+    formulario.addEventListener("submit", async function(evento) {
+
+        evento.preventDefault();
+
+        try {
+
+            const perfilAnterior = JSON.parse(
+                localStorage.getItem(CHAVE_PERFIL) || "{}"
+            );
+
+            let foto = perfilAnterior.foto || imagemPerfil.src;
+
+            const arquivo = campoFoto.files[0];
+
+            if (arquivo) {
+                foto = await compactarFoto(arquivo);
+            }
+
+            const perfil = {
+
+                id: "004",
+
+                nome: campoNome.value.trim(),
+
+                sobrenome: campoSobrenome.value.trim(),
+
+                email: campoEmail.value.trim(),
+
+                telefone: campoTelefone.value.trim(),
+
+                funcao: campoFuncao.value,
+
+                foto: foto
+
+            };
+
+            if (!perfil.nome || !perfil.email) {
+                alert("Preencha o nome e o e-mail.");
+                return;
+            }
+
+            // Salvar perfil
+            localStorage.setItem(
+                CHAVE_PERFIL,
+                JSON.stringify(perfil)
+            );
+
+            // Atualizar usuário correspondente, caso esteja salvo
+            const dadosUsuarios = JSON.parse(
+                localStorage.getItem("hotelPetUsuarios") || "[]"
+            );
+
+            const usuarios = Array.isArray(dadosUsuarios)
+                ? dadosUsuarios
+                : Object.values(dadosUsuarios);
+
+            const usuarioEncontrado = usuarios.find(function(usuario) {
+
+                return (
+                    usuario.id === "004" ||
+                    usuario.email === "gisele@email.com" ||
+                    (
+                        (usuario.nome || "").toLowerCase() === "gisele" &&
+                        (usuario.sobrenome || "").toLowerCase() === "teles"
+                    )
+                );
+
+            });
+
+            if (usuarioEncontrado) {
+
+                usuarioEncontrado.nome = perfil.nome;
+                usuarioEncontrado.sobrenome = perfil.sobrenome;
+                usuarioEncontrado.nomeCompleto =
+                    perfil.nome + " " + perfil.sobrenome;
+                usuarioEncontrado.email = perfil.email;
+                usuarioEncontrado.telefone = perfil.telefone;
+                usuarioEncontrado.funcao = perfil.funcao;
+                usuarioEncontrado.foto = perfil.foto;
+
+                if (Array.isArray(dadosUsuarios)) {
+
+                    localStorage.setItem(
+                        "hotelPetUsuarios",
+                        JSON.stringify(usuarios)
+                    );
+
+                } else {
+
+                    const usuariosAtualizados = { ...dadosUsuarios };
+
+                    const chave = Object.keys(usuariosAtualizados).find(
+                        key => usuariosAtualizados[key].id === usuarioEncontrado.id
+                    );
+
+                    if (chave) {
+                        usuariosAtualizados[chave] = usuarioEncontrado;
+                    }
+
+                    localStorage.setItem(
+                        "hotelPetUsuarios",
+                        JSON.stringify(usuariosAtualizados)
+                    );
+                }
+            }
+
+            alert("Perfil atualizado com sucesso!");
+
+            window.location.href = "dashboard.html";
+
+        } catch (erro) {
+
+            console.error("Erro ao salvar perfil:", erro);
+
+            alert("Não foi possível salvar o perfil. Tente uma foto menor.");
+        }
+
+    });
+
+});
+</script>
 
 </body>
 

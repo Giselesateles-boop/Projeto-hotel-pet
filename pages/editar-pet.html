@@ -1,370 +1,146 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Editar Pet</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
     <div class="layout">
 
-        <!-- MENU LATERAL -->
         <aside class="menu-lateral">
-
             <h1>Hotel Pet</h1>
 
             <nav>
-
-                <a href="pets.html" class="menu-ativo">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html">
-                    Reservas
-                </a>
-
+                <a href="pets.html" class="menu-ativo">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html">Reservas</a>
             </nav>
-
         </aside>
 
-
-        <!-- CONTEÚDO -->
         <div class="conteudo">
 
-            <!-- TOPO -->
             <header class="topo">
-
                 <div></div>
 
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
-
             </header>
 
-
-            <!-- CONTEÚDO PRINCIPAL -->
             <main>
 
-                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    <a href="pets.html">
-                        Pets
-                    </a>
-
-                    / Editar Pet
-
+                    <a href="dashboard.html">Home</a> /
+                    <a href="pets.html">Pets</a> /
+                    Editar Pet
                 </p>
 
-
-                <!-- CABEÇALHO -->
                 <div class="cabecalho-pagina">
-
-                    <h2>
-                        Editar Pet
-                    </h2>
-
+                    <h2>Editar Pet</h2>
                 </div>
 
-
-                <!-- FORMULÁRIO -->
                 <section class="card">
 
-                    <form
-                        class="formulario-duas-colunas"
-                        action="pets.html"
-                        method="get"
-                    >
+                    <form id="formulario-editar-pet"
+                        class="formulario-duas-colunas">
 
-                        <!-- FOTO ATUAL -->
                         <div class="campo-formulario">
-
-                            <label>
-                                Foto atual
-                            </label>
+                            <label>Foto atual</label>
 
                             <div class="foto-pet">
-
-                                <img
+                                <img id="foto-atual"
                                     src="../img/Thor.png"
-                                    alt="Foto de Thor"
-                                    style="
-                                        width: 180px;
-                                        height: 180px;
-                                        object-fit: cover;
-                                        border-radius: 10px;
-                                    "
-                                >
-
+                                    alt="Foto do pet"
+                                    style="width:180px;height:180px;object-fit:cover;border-radius:10px;">
                             </div>
-
                         </div>
 
-
-                        <!-- NOME -->
                         <div class="campo-formulario">
-
-                            <label for="nome">
-                                Nome *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                value="Thor"
-                                required
-                            >
-
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" required>
                         </div>
 
-
-                        <!-- TIPO -->
                         <div class="campo-formulario">
-
-                            <label for="tipo">
-                                Tipo *
-                            </label>
-
-                            <select
-                                id="tipo"
-                                name="tipo"
-                                required
-                            >
-
-                                <option value="Cachorro" selected>
-                                    Cachorro
-                                </option>
-
-                                <option value="Gato">
-                                    Gato
-                                </option>
-
+                            <label for="tipo">Tipo *</label>
+                            <select id="tipo" required>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Outro">Outro</option>
                             </select>
-
                         </div>
 
-
-                        <!-- RAÇA -->
                         <div class="campo-formulario">
-
-                            <label for="raca">
-                                Raça *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="raca"
-                                name="raca"
-                                value="Golden Retriever"
-                                required
-                            >
-
+                            <label for="raca">Raça *</label>
+                            <input type="text" id="raca" required>
                         </div>
 
-
-                        <!-- PORTE -->
                         <div class="campo-formulario">
-
-                            <label for="porte">
-                                Porte *
-                            </label>
-
-                            <select
-                                id="porte"
-                                name="porte"
-                                required
-                            >
-
-                                <option value="Pequeno">
-                                    Pequeno
-                                </option>
-
-                                <option value="Médio">
-                                    Médio
-                                </option>
-
-                                <option value="Grande" selected>
-                                    Grande
-                                </option>
-
+                            <label for="porte">Porte *</label>
+                            <select id="porte" required>
+                                <option value="Pequeno">Pequeno</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Grande">Grande</option>
                             </select>
-
                         </div>
 
-
-                        <!-- PROPRIETÁRIO -->
                         <div class="campo-formulario">
-
-                            <label for="proprietario">
-                                Proprietário *
-                            </label>
-
-                            <select
-                                id="proprietario"
-                                name="proprietario"
-                                required
-                            >
-
-                                <option value="Maria Silva" selected>
-                                    Maria Silva
-                                </option>
-
-                                <option value="João Santos">
-                                    João Santos
-                                </option>
-
-                                <option value="Ana Oliveira">
-                                    Ana Oliveira
-                                </option>
-
-                                <option value="Gisele Teles">
-                                    Gisele Teles
-                                </option>
-
+                            <label for="proprietario">Proprietário *</label>
+                            <select id="proprietario" required>
+                                <option value="Maria Silva">Maria Silva</option>
+                                <option value="João Santos">João Santos</option>
+                                <option value="Ana Oliveira">Ana Oliveira</option>
+                                <option value="Gisele Teles">Gisele Teles</option>
                             </select>
-
                         </div>
 
-
-                        <!-- IDADE -->
                         <div class="campo-formulario">
-
-                            <label for="idade">
-                                Idade
-                            </label>
-
-                            <input
-                                type="text"
-                                id="idade"
-                                name="idade"
-                                value="3 anos"
-                            >
-
+                            <label for="idade">Idade</label>
+                            <input type="text" id="idade">
                         </div>
 
-
-                        <!-- PESO -->
                         <div class="campo-formulario">
-
-                            <label for="peso">
-                                Peso
-                            </label>
-
-                            <input
-                                type="text"
-                                id="peso"
-                                name="peso"
-                                value="30 kg"
-                            >
-
+                            <label for="peso">Peso</label>
+                            <input type="text" id="peso">
                         </div>
 
-
-                        <!-- ALTERAR FOTO -->
                         <div class="campo-formulario campo-completo">
-
-                            <label for="foto">
-                                Alterar foto
-                            </label>
-
-                            <input
-                                type="file"
-                                id="foto"
-                                name="foto"
-                                accept="image/*"
-                            >
-
+                            <label for="foto">Alterar foto</label>
+                            <input type="file" id="foto" accept="image/*">
                         </div>
 
-
-                        <!-- ALIMENTAÇÃO -->
                         <div class="campo-formulario campo-completo">
-
-                            <label for="alimentacao">
-                                Alimentação
-                            </label>
-
-                            <textarea
-                                id="alimentacao"
-                                name="alimentacao"
-                                rows="4"
-                            >Ração duas vezes ao dia.</textarea>
-
+                            <label for="alimentacao">Alimentação</label>
+                            <textarea id="alimentacao" rows="4"></textarea>
                         </div>
 
-
-                        <!-- OBSERVAÇÕES -->
                         <div class="campo-formulario campo-completo">
-
-                            <label for="observacoes">
-                                Observações
-                            </label>
-
-                            <textarea
-                                id="observacoes"
-                                name="observacoes"
-                                rows="4"
-                            >Gosta de brincar e passear.</textarea>
-
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" rows="4"></textarea>
                         </div>
 
-
-                        <!-- BOTÕES -->
                         <div class="acoes-formulario campo-completo">
 
-                            <button
-                                type="submit"
-                                class="botao botao-salvar"
-                            >
+                            <button type="submit"
+                                class="botao botao-salvar">
                                 Salvar
                             </button>
 
-
-                            <button
-                                type="reset"
-                                class="botao botao-limpar"
-                            >
+                            <button type="reset"
+                                class="botao botao-limpar">
                                 Limpar
                             </button>
 
-
-                            <a
-                                href="visualizar-pet.html?pet=thor"
-                                class="botao botao-cancelar"
-                            >
+                            <a id="botao-cancelar"
+                                href="pets.html"
+                                class="botao botao-cancelar">
                                 Cancelar
                             </a>
 
@@ -372,14 +148,395 @@
 
                     </form>
 
+                    <p id="mensagem-edicao"></p>
+
                 </section>
 
             </main>
-
         </div>
-
     </div>
-<script src="../js/navegacao.js"></script>
-</body>
 
+    <script src="../js/navegacao.js"></script>
+
+    <script>
+
+    
+document.addEventListener("DOMContentLoaded", function() {
+
+    const parametros = new URLSearchParams(window.location.search);
+    const identificador = parametros.get("pet");
+
+    const formulario = document.getElementById("formulario-editar-pet");
+    const mensagem = document.getElementById("mensagem-edicao");
+
+    const petsAntigos = {
+
+        thor: {
+            nome: "Thor",
+            tipo: "Cachorro",
+            raca: "Golden Retriever",
+            porte: "Grande",
+            proprietario: "Maria Silva",
+            idade: "3 anos",
+            peso: "30 kg",
+            alimentacao: "Ração duas vezes ao dia.",
+            observacoes: "Gosta de brincar e passear.",
+            foto: "../img/Thor.png"
+        },
+
+        luna: {
+            nome: "Luna",
+            tipo: "Cachorro",
+            raca: "Shih-tzu",
+            porte: "Pequeno",
+            proprietario: "João Santos",
+            idade: "2 anos",
+            peso: "6 kg",
+            alimentacao: "Ração duas vezes ao dia.",
+            observacoes: "É tranquila e gosta de colo.",
+            foto: "../img/Luna.png"
+        },
+
+        mel: {
+            nome: "Mel",
+            tipo: "Gato",
+            raca: "Siamês",
+            porte: "Pequeno",
+            proprietario: "Ana Oliveira",
+            idade: "2 anos",
+            peso: "4 kg",
+            alimentacao: "Ração para gatos duas vezes ao dia.",
+            observacoes: "Gosta de descansar em lugares tranquilos.",
+            foto: "../img/Mel.png"
+        },
+
+        bob: {
+            nome: "Bob",
+            tipo: "Cachorro",
+            raca: "Beagle",
+            porte: "Médio",
+            proprietario: "Gisele Teles",
+            idade: "4 anos",
+            peso: "12 kg",
+            alimentacao: "Ração duas vezes ao dia.",
+            observacoes: "Gosta de passear e brincar.",
+            foto: "../img/Bob.png"
+        }
+
+    };
+
+    const petsSalvos = JSON.parse(
+        localStorage.getItem("hotelPetPets") || "[]"
+    );
+
+// CARREGAR USUÁRIOS CADASTRADOS COMO PROPRIETÁRIOS
+
+const proprietarioSelect = document.getElementById("proprietario");
+
+const usuariosSalvos = JSON.parse(
+    localStorage.getItem("hotelPetUsuarios") || "{}"
+);
+
+const listaUsuarios = Array.isArray(usuariosSalvos)
+    ? usuariosSalvos
+    : Object.values(usuariosSalvos);
+
+listaUsuarios.forEach(function(usuario) {
+
+    const nomeCompleto = (
+        usuario.nomeCompleto ||
+        [usuario.nome, usuario.sobrenome].filter(Boolean).join(" ")
+    ).trim();
+
+    if (!nomeCompleto) return;
+
+    // Evitar nomes repetidos
+    const jaExiste = Array.from(proprietarioSelect.options).some(
+        option => option.value.toLowerCase() === nomeCompleto.toLowerCase()
+    );
+
+    if (!jaExiste) {
+
+        const opcao = document.createElement("option");
+
+        opcao.value = nomeCompleto;
+        opcao.textContent = nomeCompleto;
+
+        proprietarioSelect.appendChild(opcao);
+    }
+
+});
+
+    const petNovo = petsSalvos.find(function(pet) {
+        return String(pet.id) === String(identificador);
+    });
+
+    const petAntigo = petsAntigos[identificador];
+
+    let petAtual = petNovo || petAntigo;
+
+    // Recuperar dados de pets antigos que já foram editados
+    if (!petNovo && petAntigo) {
+
+        const dadosAntigos = JSON.parse(
+            localStorage.getItem("hotelPetDadosAntigos_" + identificador) || "null"
+        );
+
+        if (dadosAntigos) {
+            petAtual = {
+                ...petAntigo,
+                ...dadosAntigos
+            };
+        }
+    }
+
+    if (!petAtual) {
+        mensagem.textContent = "Pet não encontrado.";
+        formulario.hidden = true;
+        return;
+    }
+
+    function primeiraLetraMaiuscula(valor) {
+        if (!valor) return "";
+        return valor.charAt(0).toUpperCase() + valor.slice(1);
+    }
+
+    // CARREGAR DADOS NO FORMULÁRIO
+
+    document.getElementById("nome").value =
+        petAtual.nome || "";
+
+    document.getElementById("tipo").value =
+        primeiraLetraMaiuscula(petAtual.tipo);
+
+    document.getElementById("raca").value =
+        petAtual.raca || "";
+
+    document.getElementById("porte").value =
+        primeiraLetraMaiuscula(petAtual.porte);
+
+    document.getElementById("proprietario").value =
+        petAtual.proprietario || "";
+
+    document.getElementById("idade").value =
+        petAtual.idade || "";
+
+    document.getElementById("peso").value =
+        petAtual.peso || "";
+
+    document.getElementById("alimentacao").value =
+        petAtual.alimentacao || "";
+
+    document.getElementById("observacoes").value =
+        petAtual.observacoes || "";
+
+    const fotoAtual = document.getElementById("foto-atual");
+
+    if (petAtual.foto) {
+        fotoAtual.src = petAtual.foto;
+    }
+
+    document.getElementById("botao-cancelar").href = "pets.html";
+
+    // COMPACTAR A NOVA FOTO
+
+    function compactarImagem(arquivo) {
+
+        return new Promise(function(resolve, reject) {
+
+            const leitor = new FileReader();
+
+            leitor.onload = function() {
+
+                const imagem = new Image();
+
+                imagem.onload = function() {
+
+                    const tamanhoMaximo = 1200;
+
+                    let largura = imagem.width;
+                    let altura = imagem.height;
+
+                    if (largura > tamanhoMaximo || altura > tamanhoMaximo) {
+
+                        const proporcao = Math.min(
+                            tamanhoMaximo / largura,
+                            tamanhoMaximo / altura
+                        );
+
+                        largura = Math.round(largura * proporcao);
+                        altura = Math.round(altura * proporcao);
+                    }
+
+                    const canvas = document.createElement("canvas");
+
+                    canvas.width = largura;
+                    canvas.height = altura;
+
+                    const contexto = canvas.getContext("2d");
+
+                    contexto.fillStyle = "#ffffff";
+                    contexto.fillRect(0, 0, largura, altura);
+
+                    contexto.drawImage(
+                        imagem,
+                        0,
+                        0,
+                        largura,
+                        altura
+                    );
+
+                    resolve(
+                        canvas.toDataURL("image/jpeg", 0.75)
+                    );
+                };
+
+                imagem.onerror = function() {
+                    reject(new Error("Não foi possível carregar a imagem."));
+                };
+
+                imagem.src = leitor.result;
+            };
+
+            leitor.onerror = function() {
+                reject(new Error("Erro ao ler a imagem."));
+            };
+
+            leitor.readAsDataURL(arquivo);
+        });
+    }
+
+    // ATUALIZAR FOTO NA TELA AO SELECIONAR
+
+    document.getElementById("foto").addEventListener("change", async function() {
+
+        const arquivo = this.files[0];
+
+        if (!arquivo) return;
+
+        if (!arquivo.type.startsWith("image/")) {
+            alert("Selecione um arquivo de imagem válido.");
+            this.value = "";
+            return;
+        }
+
+        try {
+            const fotoCompactada = await compactarImagem(arquivo);
+            fotoAtual.src = fotoCompactada;
+        } catch (erro) {
+            alert("Não foi possível carregar a foto selecionada.");
+            console.error(erro);
+        }
+
+    });
+
+    // SALVAR ALTERAÇÕES
+
+    formulario.addEventListener("submit", async function(evento) {
+
+        evento.preventDefault();
+
+        const botaoSalvar = formulario.querySelector(
+            'button[type="submit"]'
+        );
+
+        botaoSalvar.disabled = true;
+        botaoSalvar.textContent = "Salvando...";
+
+        try {
+
+            const arquivoFoto = document.getElementById("foto").files[0];
+
+            let foto = petAtual.foto || "";
+
+            // Se selecionou outra foto, compactar antes de salvar
+            if (arquivoFoto) {
+
+                if (!arquivoFoto.type.startsWith("image/")) {
+                    throw new Error("Selecione uma imagem válida.");
+                }
+
+                foto = await compactarImagem(arquivoFoto);
+            }
+
+            const dadosAtualizados = {
+
+                nome: document.getElementById("nome").value.trim(),
+
+                tipo: document.getElementById("tipo").value,
+
+                raca: document.getElementById("raca").value.trim(),
+
+                porte: document.getElementById("porte").value,
+
+                proprietario: document.getElementById("proprietario").value,
+
+                idade: document.getElementById("idade").value.trim(),
+
+                peso: document.getElementById("peso").value.trim(),
+
+                alimentacao: document.getElementById("alimentacao").value.trim(),
+
+                observacoes: document.getElementById("observacoes").value.trim(),
+
+                foto: foto
+
+            };
+
+            if (petNovo) {
+
+                const indice = petsSalvos.findIndex(function(pet) {
+                    return String(pet.id) === String(identificador);
+                });
+
+                if (indice === -1) {
+                    throw new Error("Pet não encontrado na lista de cadastros.");
+                }
+
+                petsSalvos[indice] = {
+                    ...petsSalvos[indice],
+                    ...dadosAtualizados
+                };
+
+                localStorage.setItem(
+                    "hotelPetPets",
+                    JSON.stringify(petsSalvos)
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "hotelPetDadosAntigos_" + identificador,
+                    JSON.stringify(dadosAtualizados)
+                );
+
+            }
+
+            alert("Dados do pet atualizados com sucesso!");
+
+            window.location.href =
+                "visualizar-pet.html?pet=" +
+                encodeURIComponent(identificador);
+
+        } catch (erro) {
+
+            console.error("Erro ao atualizar pet:", erro);
+
+            alert(
+                "Não foi possível salvar as alterações. " +
+                "Tente uma foto menor ou verifique o armazenamento do navegador."
+            );
+
+            botaoSalvar.disabled = false;
+            botaoSalvar.textContent = "Salvar";
+
+        }
+
+    });
+
+});
+
+    </script>
+
+</body>
 </html>

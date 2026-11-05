@@ -1,16 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Dashboard</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
@@ -23,27 +19,13 @@
             <h1>Hotel Pet</h1>
 
             <nav>
-
-                <a href="pets.html">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html">
-                    Reservas
-                </a>
-
+                <a href="pets.html">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html">Reservas</a>
             </nav>
 
         </aside>
-
 
         <!-- CONTEÚDO PRINCIPAL -->
         <div class="conteudo">
@@ -54,47 +36,27 @@
                 <div></div>
 
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
 
             </header>
 
-
-            <!-- CONTEÚDO -->
             <main>
 
-                <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
+                    <a href="dashboard.html">Home</a>
                 </p>
 
-
-                <!-- CARD PRINCIPAL -->
+                <!-- DASHBOARD -->
                 <section class="card">
 
-                    <h2>
-                        Dashboard
-                    </h2>
-
+                    <h2>Dashboard</h2>
 
                     <!-- BOAS-VINDAS -->
                     <section class="boas-vindas">
 
-                        <h3>
-                            Olá, Gisele Teles!
-                        </h3>
+                        <h3>Olá, Gisele Teles!</h3>
 
                         <p>
                             Bem-vinda ao sistema de gerenciamento do Hotel Pet.
@@ -102,218 +64,64 @@
 
                     </section>
 
-
                     <!-- RESUMO -->
                     <section class="resumo">
 
-                        <h3>
-                            Resumo
-                        </h3>
-
+                        <h3>Resumo</h3>
 
                         <div class="cards-resumo">
 
-
-                            <!-- RESERVAS -->
                             <article class="card-resumo">
-
-                                <h4>
-                                    Reservas
-                                </h4>
-
-                                <p>
-                                    4 reservas cadastradas.
-                                </p>
-
-                                <a href="reservas.html">
-                                    Ver reservas
-                                </a>
-
+                                <h4>Reservas</h4>
+                                <p id="total-reservas">Carregando...</p>
+                                <a href="reservas.html">Ver reservas</a>
                             </article>
 
-
-                            <!-- PETS -->
                             <article class="card-resumo">
-
-                                <h4>
-                                    Pets hospedados
-                                </h4>
-
-                                <p>
-                                    2 pets hospedados atualmente.
-                                </p>
-
-                                <a href="pets.html">
-                                    Ver pets
-                                </a>
-
+                                <h4>Pets hospedados</h4>
+                                <p id="total-pets-hospedados">Carregando...</p>
+                                <a href="pets.html">Ver pets</a>
                             </article>
 
-
-                            <!-- USUÁRIOS -->
                             <article class="card-resumo">
-
-                                <h4>
-                                    Usuários
-                                </h4>
-
-                                <p>
-                                    4 usuários cadastrados.
-                                </p>
-
-                                <a href="usuarios.html">
-                                    Ver usuários
-                                </a>
-
+                                <h4>Usuários</h4>
+                                <p id="total-usuarios">Carregando...</p>
+                                <a href="usuarios.html">Ver usuários</a>
                             </article>
 
-
-                            <!-- VAGAS -->
                             <article class="card-resumo">
-
-                                <h4>
-                                    Vagas disponíveis
-                                </h4>
-
-                                <p>
-                                    3 vagas disponíveis.
-                                </p>
-
-                                <a href="configuracoes.html">
-                                    Configurações
-                                </a>
-
+                                <h4>Vagas disponíveis</h4>
+                                <p id="total-vagas">Carregando...</p>
+                                <a href="configuracoes.html">Configurações</a>
                             </article>
-
 
                         </div>
 
                     </section>
 
-
                     <!-- PRÓXIMAS RESERVAS -->
                     <section class="proximas-reservas">
 
-                        <h3>
-                            Próximas reservas
-                        </h3>
-
+                        <h3>Próximas reservas</h3>
 
                         <table class="tabela">
 
                             <thead>
-
                                 <tr>
-
-                                    <th>
-                                        Pet
-                                    </th>
-
-                                    <th>
-                                        Proprietário
-                                    </th>
-
-                                    <th>
-                                        Entrada
-                                    </th>
-
-                                    <th>
-                                        Saída
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
+                                    <th>Pet</th>
+                                    <th>Proprietário</th>
+                                    <th>Entrada</th>
+                                    <th>Saída</th>
+                                    <th>Status</th>
                                 </tr>
-
                             </thead>
 
-
-                            <tbody>
-
-
-                                <!-- THOR -->
-                                <tr>
-
-                                    <td>
-                                        Thor
-                                    </td>
-
-                                    <td>
-                                        Maria Silva
-                                    </td>
-
-                                    <td>
-                                        20/08/2026
-                                    </td>
-
-                                    <td>
-                                        25/08/2026
-                                    </td>
-
-                                    <td>
-                                        Confirmada
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- LUNA -->
-                                <tr>
-
-                                    <td>
-                                        Luna
-                                    </td>
-
-                                    <td>
-                                        João Santos
-                                    </td>
-
-                                    <td>
-                                        21/08/2026
-                                    </td>
-
-                                    <td>
-                                        24/08/2026
-                                    </td>
-
-                                    <td>
-                                        Em andamento
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- BOB -->
-                                <tr>
-
-                                    <td>
-                                        Bob
-                                    </td>
-
-                                    <td>
-                                        Gisele Teles
-                                    </td>
-
-                                    <td>
-                                        25/08/2026
-                                    </td>
-
-                                    <td>
-                                        30/08/2026
-                                    </td>
-
-                                    <td>
-                                        Agendada
-                                    </td>
-
-                                </tr>
-
-
+                            <tbody id="tabela-proximas-reservas">
                             </tbody>
 
                         </table>
+
+                        <p id="mensagem-dashboard"></p>
 
                     </section>
 
@@ -324,7 +132,421 @@
         </div>
 
     </div>
-<script src="../js/navegacao.js"></script>
-</body>
 
+    <script src="../js/navegacao.js"></script>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // =========================================
+        // FUNÇÃO PARA LER DADOS DO LOCALSTORAGE
+        // =========================================
+
+        function lerDados(chave, valorPadrao) {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem(chave) || JSON.stringify(valorPadrao)
+                );
+
+            } catch (erro) {
+
+                return valorPadrao;
+
+            }
+
+        }
+
+
+        // =========================================
+        // RESERVAS CADASTRADAS
+        // =========================================
+
+        const reservasPadrao = [
+
+            {
+                id: "001",
+                pet: "Thor",
+                proprietario: "Maria Silva",
+                entrada: "20/08/2026",
+                saida: "25/08/2026",
+                status: "Confirmada"
+            },
+
+            {
+                id: "002",
+                pet: "Luna",
+                proprietario: "João Santos",
+                entrada: "21/08/2026",
+                saida: "24/08/2026",
+                status: "Em andamento"
+            },
+
+            {
+                id: "003",
+                pet: "Mel",
+                proprietario: "Ana Oliveira",
+                entrada: "15/08/2026",
+                saida: "18/08/2026",
+                status: "Finalizada"
+            },
+
+            {
+                id: "004",
+                pet: "Bob",
+                proprietario: "Gisele Teles",
+                entrada: "25/08/2026",
+                saida: "30/08/2026",
+                status: "Agendada"
+            }
+
+        ];
+
+        const reservasSalvas = lerDados(
+            "hotelPetReservas", []
+        );
+
+        const reservasRemovidas = lerDados(
+            "hotelPetReservasRemovidas", []
+        );
+
+        const statusReservas = lerDados(
+            "hotelPetStatusReservas", {}
+        );
+
+        // Juntar reservas padrão e novas
+        const todasReservas = [
+
+            ...reservasPadrao,
+
+            ...reservasSalvas.filter(function (nova) {
+
+                return !reservasPadrao.some(function (padrao) {
+
+                    return padrao.id === nova.id;
+
+                });
+
+            })
+
+        ];
+
+        // Remover reservas excluídas
+        const reservasAtivas = todasReservas.filter(function (reserva) {
+
+            return !reservasRemovidas.includes(reserva.id);
+
+        });
+
+        // Atualizar status
+        reservasAtivas.forEach(function (reserva) {
+
+            if (statusReservas[reserva.id]) {
+
+                reserva.status = statusReservas[reserva.id];
+
+            }
+
+        });
+
+        // Mostrar total
+        document.getElementById("total-reservas").textContent =
+
+            reservasAtivas.length +
+
+            (reservasAtivas.length === 1
+                ? " reserva cadastrada."
+                : " reservas cadastradas.");
+
+
+        // =========================================
+        // PETS HOSPEDADOS
+        // =========================================
+
+        const petsPadrao = [
+
+            {
+                id: "thor",
+                nome: "Thor",
+                status: "Hospedado"
+            },
+
+            {
+                id: "luna",
+                nome: "Luna",
+                status: "Fora do hotel"
+            },
+
+            {
+                id: "mel",
+                nome: "Mel",
+                status: "Hospedado"
+            },
+
+            {
+                id: "bob",
+                nome: "Bob",
+                status: "Hospedado"
+            }
+
+        ];
+
+        const petsSalvos = lerDados(
+            "hotelPetPets", []
+        );
+
+        const petsRemovidos = lerDados(
+            "hotelPetPetsRemovidos", []
+        );
+
+        const statusPets = lerDados(
+            "hotelPetStatusPets", {}
+        );
+
+        const todosPets = [
+
+            ...petsPadrao,
+
+            ...petsSalvos.filter(function (novo) {
+
+                return !petsPadrao.some(function (padrao) {
+
+                    return padrao.id === novo.id;
+
+                });
+
+            })
+
+        ];
+
+        const petsHospedados = todosPets.filter(function (pet) {
+
+            if (petsRemovidos.includes(pet.id)) {
+                return false;
+            }
+
+            const statusAtual =
+                statusPets[pet.id] || pet.status || "Fora do hotel";
+
+            return statusAtual === "Hospedado";
+
+        });
+
+        document.getElementById("total-pets-hospedados").textContent =
+
+            petsHospedados.length +
+
+            (petsHospedados.length === 1
+                ? " pet hospedado atualmente."
+                : " pets hospedados atualmente.");
+
+
+        // =========================================
+        // USUÁRIOS CADASTRADOS
+        // =========================================
+
+        const usuariosPadrao = [
+
+            "maria",
+            "joao",
+            "ana",
+            "gisele"
+
+        ];
+
+        const usuariosSalvos = lerDados(
+            "hotelPetUsuarios", {}
+        );
+
+        const usuariosRemovidos = lerDados(
+            "hotelPetUsuariosRemovidos", []
+        );
+
+        const usuariosPadraoAtivos = usuariosPadrao.filter(
+            function (usuario) {
+
+                return !usuariosRemovidos.includes(usuario);
+
+            }
+        );
+
+        const usuariosNovos = Object.keys(usuariosSalvos).filter(
+            function (usuario) {
+
+                return !usuariosPadrao.includes(usuario)
+                    && !usuariosRemovidos.includes(usuario);
+
+            }
+        );
+
+        const totalUsuarios =
+            usuariosPadraoAtivos.length + usuariosNovos.length;
+
+        document.getElementById("total-usuarios").textContent =
+
+            totalUsuarios +
+
+            (totalUsuarios === 1
+                ? " usuário cadastrado."
+                : " usuários cadastrados.");
+
+
+        // =========================================
+        // VAGAS DISPONÍVEIS
+        // =========================================
+
+        const configuracoes = lerDados(
+            "hotelPetConfiguracoes", {}
+        );
+
+        const vagas = Number(configuracoes.vagas ?? 0);
+
+        document.getElementById("total-vagas").textContent =
+
+            vagas +
+
+            (vagas === 1
+                ? " vaga disponível."
+                : " vagas disponíveis.");
+
+
+        // =========================================
+        // FORMATAR DATAS
+        // =========================================
+
+        function formatarData(data) {
+
+            if (!data) return "";
+
+            if (data.includes("-")) {
+
+                const partes = data.split("-");
+
+                if (partes[0].length === 4) {
+
+                    return partes[2] + "/" +
+                           partes[1] + "/" +
+                           partes[0];
+
+                }
+
+            }
+
+            return data;
+
+        }
+
+
+        // =========================================
+        // PRÓXIMAS RESERVAS
+        // =========================================
+
+        const tabela = document.getElementById(
+            "tabela-proximas-reservas"
+        );
+
+        const mensagem = document.getElementById(
+            "mensagem-dashboard"
+        );
+
+        // Converter data para ordenar corretamente
+        function converterData(data) {
+
+            if (!data) return new Date(0);
+
+            let partes;
+
+            if (data.includes("/")) {
+
+                partes = data.split("/");
+
+                return new Date(
+                    Number(partes[2]),
+                    Number(partes[1]) - 1,
+                    Number(partes[0])
+                );
+
+            }
+
+            if (data.includes("-")) {
+
+                partes = data.split("-");
+
+                return new Date(
+                    Number(partes[0]),
+                    Number(partes[1]) - 1,
+                    Number(partes[2])
+                );
+
+            }
+
+            return new Date(0);
+
+        }
+
+        // Ordenar reservas pela entrada
+        reservasAtivas.sort(function (a, b) {
+
+            return converterData(a.entrada) -
+                   converterData(b.entrada);
+
+        });
+
+        tabela.innerHTML = "";
+
+        if (reservasAtivas.length === 0) {
+
+            mensagem.textContent =
+                "Nenhuma reserva cadastrada.";
+
+        } else {
+
+            mensagem.textContent = "";
+
+            reservasAtivas.forEach(function (reserva) {
+
+                const linha = document.createElement("tr");
+
+                const colunaPet = document.createElement("td");
+                colunaPet.textContent = reserva.pet || "";
+
+                const colunaProprietario = document.createElement("td");
+
+                colunaProprietario.textContent =
+                    reserva.proprietario || reserva.tutor || "";
+
+                const colunaEntrada = document.createElement("td");
+
+                colunaEntrada.textContent =
+                    formatarData(reserva.entrada);
+
+                const colunaSaida = document.createElement("td");
+
+                colunaSaida.textContent =
+                    formatarData(reserva.saida);
+
+                const colunaStatus = document.createElement("td");
+
+                colunaStatus.textContent = reserva.status || "";
+
+                linha.appendChild(colunaPet);
+                linha.appendChild(colunaProprietario);
+                linha.appendChild(colunaEntrada);
+                linha.appendChild(colunaSaida);
+                linha.appendChild(colunaStatus);
+
+                tabela.appendChild(linha);
+
+            });
+
+        }
+
+    });
+
+    </script>
+
+</body>
 </html>
+

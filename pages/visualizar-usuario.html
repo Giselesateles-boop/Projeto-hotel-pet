@@ -131,139 +131,180 @@
     </div>
 
     <script src="../js/navegacao.js"></script>
-    <script>
-        const usuarios = {
-            maria: {
-                id: "001",
-                nome: "Maria",
-                sobrenome: "Silva",
-                email: "maria@email.com",
-                telefone: "(77) 99999-9999",
-                funcao: "Cliente",
-                status: "Ativo",
-                cep: "47500-000",
-                cidade: "Paratinga",
-                endereco: "Rua Principal",
-                numero: "100",
-                foto: "../img/Maria.png",
-                reservas: [
-                    ["001", "Thor", "20/08/2026", "25/08/2026", "Confirmada"],
-                    ["005", "Thor", "10/07/2026", "15/07/2026", "Finalizada"]
-                ]
-            },
-            joao: {
-                id: "002",
-                nome: "João",
-                sobrenome: "Santos",
-                email: "joao@email.com",
-                telefone: "(77) 98888-8888",
-                funcao: "Cliente",
-                status: "Ativo",
-                cep: "Não informado",
-                cidade: "Não informada",
-                endereco: "Não informado",
-                numero: "Não informado",
-                foto: "../img/Joao.png",
-                reservas: []
-            },
-            ana: {
-                id: "003",
-                nome: "Ana",
-                sobrenome: "Oliveira",
-                email: "ana@email.com",
-                telefone: "(77) 97777-7777",
-                funcao: "Funcionário",
-                status: "Ativo",
-                cep: "Não informado",
-                cidade: "Não informada",
-                endereco: "Não informado",
-                numero: "Não informado",
-                foto: "../img/Ana.png",
-                reservas: []  
-            },
-gisele: {
-    id: "004",
-    nome: "Gisele",
-    sobrenome: "Teles",
-    email: "gisele@email.com",
-    telefone: "(77) 96666-6666",
-    funcao: "Gerente",
-    status: "Ativo",
-    cep: "Não informado",
-    cidade: "Não informada",
-    endereco: "Não informado",
-    numero: "Não informado",
-    foto: "../img/Gisele.png",
-    reservas: []
-},
-        };
+    
+<script>
+const usuariosPadrao = {
+    maria: {
+        id: "001",
+        nome: "Maria",
+        sobrenome: "Silva",
+        email: "maria@email.com",
+        telefone: "(77) 99999-9999",
+        funcao: "Cliente",
+        status: "Ativo",
+        cep: "47500-000",
+        cidade: "Paratinga",
+        endereco: "Rua Principal",
+        numero: "100",
+        foto: "../img/Maria.png",
+        reservas: [
+            ["001", "Thor", "20/08/2026", "25/08/2026", "Confirmada"],
+            ["005", "Thor", "10/07/2026", "15/07/2026", "Finalizada"]
+        ]
+    },
+    joao: {
+        id: "002",
+        nome: "João",
+        sobrenome: "Santos",
+        email: "joao@email.com",
+        telefone: "(77) 98888-8888",
+        funcao: "Cliente",
+        status: "Ativo",
+        cep: "Não informado",
+        cidade: "Não informada",
+        endereco: "Não informado",
+        numero: "Não informado",
+        foto: "../img/Joao.png",
+        reservas: []
+    },
+    ana: {
+        id: "003",
+        nome: "Ana",
+        sobrenome: "Oliveira",
+        email: "ana@email.com",
+        telefone: "(77) 97777-7777",
+        funcao: "Funcionário",
+        status: "Ativo",
+        cep: "Não informado",
+        cidade: "Não informada",
+        endereco: "Não informado",
+        numero: "Não informado",
+        foto: "../img/Ana.png",
+        reservas: []
+    },
+    gisele: {
+        id: "004",
+        nome: "Gisele",
+        sobrenome: "Teles",
+        email: "gisele@email.com",
+        telefone: "(77) 96666-6666",
+        funcao: "Gerente",
+        status: "Ativo",
+        cep: "Não informado",
+        cidade: "Não informada",
+        endereco: "Não informado",
+        numero: "Não informado",
+        foto: "../img/Gisele.png",
+        reservas: []
+    }
+};
 
-        const parametros = new URLSearchParams(window.location.search);
-       const identificador = (parametros.get("usuario") || "maria").toLowerCase();
+const parametros = new URLSearchParams(window.location.search);
+const identificador = parametros.get("usuario") || "maria";
 
-const usuariosSalvos = JSON.parse(
+let usuariosSalvos = JSON.parse(
     localStorage.getItem("hotelPetUsuarios") || "{}"
 );
 
-const usuario = usuarios[identificador]
-    ? { ...usuarios[identificador], ...(usuariosSalvos[identificador] || {}) }
-    : null;
-        if (usuario) {
-            document.getElementById("titulo-usuario").textContent =
-                "Dados do Usuário";
+if (Array.isArray(usuariosSalvos)) {
+    usuariosSalvos = Object.fromEntries(
+        usuariosSalvos.map(usuario => [String(usuario.id), usuario])
+    );
+}
 
-            document.getElementById("id-usuario").value = usuario.id;
-            document.getElementById("nome-usuario").value = usuario.nome;
-            document.getElementById("sobrenome-usuario").value = usuario.sobrenome;
-            document.getElementById("email-usuario").value = usuario.email;
-            document.getElementById("telefone-usuario").value = usuario.telefone;
-            document.getElementById("funcao-usuario").value = usuario.funcao;
-            document.getElementById("status-usuario").value = usuario.status;
-            document.getElementById("cep-usuario").value = usuario.cep;
-            document.getElementById("cidade-usuario").value = usuario.cidade;
-            document.getElementById("endereco-usuario").value = usuario.endereco;
-            document.getElementById("numero-usuario").value = usuario.numero;
+// Localizar pela chave interna ou pelo ID numérico
+let chaveUsuario = identificador;
 
-            document.getElementById("foto-usuario").src = usuario.foto;
-            document.getElementById("foto-usuario").alt =
-                "Foto de " + usuario.nome + " " + usuario.sobrenome;
+if (!usuariosSalvos[chaveUsuario]) {
+    const encontrado = Object.entries(usuariosSalvos).find(
+        ([chave, usuario]) =>
+            String(usuario.id) === String(identificador)
+    );
 
-            const historico = document.getElementById("historico-reservas");
+    if (encontrado) {
+        chaveUsuario = encontrado[0];
+    }
+}
 
-            usuario.reservas.forEach(reserva => {
-                const linha = document.createElement("tr");
+let usuario = null;
 
-                reserva.forEach(informacao => {
-                    const celula = document.createElement("td");
-                    celula.textContent = informacao;
-                    linha.appendChild(celula);
-                });
+if (usuariosSalvos[chaveUsuario]) {
+    usuario = {
+        ...(usuariosPadrao[chaveUsuario] || {}),
+        ...usuariosSalvos[chaveUsuario]
+    };
+} else if (usuariosPadrao[identificador]) {
+    usuario = usuariosPadrao[identificador];
+}
 
-                historico.appendChild(linha);
-            });
+if (usuario) {
 
-            if (usuario.reservas.length === 0) {
-                const linha = document.createElement("tr");
-                const celula = document.createElement("td");
-                celula.colSpan = 5;
-                celula.textContent = "Nenhuma reserva cadastrada.";
-                linha.appendChild(celula);
-                historico.appendChild(linha);
-            }
+    document.getElementById("titulo-usuario").textContent =
+        "Dados do Usuário";
 
-            document.getElementById("botao-editar").href =
-                "editar-usuario.html?usuario=" +
-                encodeURIComponent(identificador);
-        } else {
-            document.getElementById("titulo-usuario").textContent =
-                "Usuário não encontrado";
+    document.getElementById("id-usuario").value = usuario.id || "";
+    document.getElementById("nome-usuario").value = usuario.nome || "";
+    document.getElementById("sobrenome-usuario").value = usuario.sobrenome || "";
+    document.getElementById("email-usuario").value = usuario.email || "";
+    document.getElementById("telefone-usuario").value = usuario.telefone || "";
+    document.getElementById("funcao-usuario").value = usuario.funcao || "";
+    document.getElementById("status-usuario").value = usuario.status || "";
+    document.getElementById("cep-usuario").value = usuario.cep || "";
+    document.getElementById("cidade-usuario").value = usuario.cidade || "";
+    document.getElementById("endereco-usuario").value = usuario.endereco || "";
+    document.getElementById("numero-usuario").value = usuario.numero || "";
 
-            document.querySelectorAll(".secao-formulario").forEach(secao => {
-                secao.hidden = true;
-            });
+    const foto = document.getElementById("foto-usuario");
 
-            document.getElementById("botao-editar").hidden = true;
-        }
-    </script>
+    if (usuario.foto) {
+        foto.src = usuario.foto;
+        foto.alt = "Foto de " + usuario.nome + " " + usuario.sobrenome;
+    }
+
+    const historico = document.getElementById("historico-reservas");
+    historico.innerHTML = "";
+
+    const reservas = usuario.reservas || [];
+
+    reservas.forEach(reserva => {
+        const linha = document.createElement("tr");
+
+        reserva.forEach(informacao => {
+            const celula = document.createElement("td");
+            celula.textContent = informacao;
+            linha.appendChild(celula);
+        });
+
+        historico.appendChild(linha);
+    });
+
+    if (reservas.length === 0) {
+        const linha = document.createElement("tr");
+        const celula = document.createElement("td");
+
+        celula.colSpan = 5;
+        celula.textContent = "Nenhuma reserva cadastrada.";
+
+        linha.appendChild(celula);
+        historico.appendChild(linha);
+    }
+
+    document.getElementById("botao-editar").href =
+        "editar-usuario.html?usuario=" +
+        encodeURIComponent(chaveUsuario);
+
+} else {
+
+    document.getElementById("titulo-usuario").textContent =
+        "Usuário não encontrado";
+
+    document.querySelectorAll(".secao-formulario").forEach(secao => {
+        secao.hidden = true;
+    });
+
+    document.getElementById("botao-editar").hidden = true;
+}
+</script>
+
 </body>
 </html>

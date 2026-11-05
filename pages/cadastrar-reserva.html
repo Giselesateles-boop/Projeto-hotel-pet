@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Cadastrar Reserva</title>
-
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -15,351 +14,129 @@
     <div class="layout">
 
         <aside class="menu-lateral">
-
             <h1>Hotel Pet</h1>
 
             <nav>
-
-                <a href="pets.html">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html" class="menu-ativo">
-                    Reservas
-                </a>
-
+                <a href="pets.html">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html" class="menu-ativo">Reservas</a>
             </nav>
-
         </aside>
-
 
         <div class="conteudo">
 
             <header class="topo">
-
                 <div></div>
 
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
-
             </header>
-
 
             <main>
 
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    <a href="reservas.html">
-                        Reservas
-                    </a>
-
-                    /
-
+                    <a href="dashboard.html">Home</a> /
+                    <a href="reservas.html">Reservas</a> /
                     Cadastrar Reserva
-
                 </p>
 
-
                 <div class="cabecalho-pagina">
-
-                    <h2>
-                        Cadastrar Reserva
-                    </h2>
-
+                    <h2>Cadastrar Reserva</h2>
                 </div>
-
 
                 <section class="card">
 
-                    <form
-                        action="reservas.html"
-                        method="get"
-                        class="formulario-duas-colunas"
-                    >
+                    <form id="formulario-reserva"
+                        class="formulario-duas-colunas">
 
                         <div class="campo-formulario">
+                            <label for="pet">Pet *</label>
 
-                            <label for="pet">
-                                Pet *
-                            </label>
-
-                            <select
-                                id="pet"
-                                name="pet"
-                                required
-                            >
-
-                                <option value="">
-                                    Selecione o pet
-                                </option>
-
-                                <option value="thor">
-                                    Thor
-                                </option>
-
-                                <option value="luna">
-                                    Luna
-                                </option>
-
-                                <option value="mel">
-                                    Mel
-                                </option>
-
-                                <option value="bob">
-                                    Bob
-                                </option>
-
+                            <select id="pet" required>
+                                <option value="">Selecione o pet</option>
                             </select>
-
                         </div>
 
-
                         <div class="campo-formulario">
+                            <label for="tutor">Tutor *</label>
 
-                            <label for="tutor">
-                                Tutor *
-                            </label>
-
-                            <select
-                                id="tutor"
-                                name="tutor"
-                                required
-                            >
-
-                                <option value="">
-                                    Selecione o tutor
-                                </option>
-
-                                <option value="maria">
-                                    Maria Silva
-                                </option>
-
-                                <option value="joao">
-                                    João Santos
-                                </option>
-
-                                <option value="ana">
-                                    Ana Oliveira
-                                </option>
-
-                                <option value="gisele">
-                                    Gisele Teles
-                                </option>
-
+                            <select id="tutor" required>
+                                <option value="">Selecione o tutor</option>
+                                <option value="Maria Silva">Maria Silva</option>
+                                <option value="João Santos">João Santos</option>
+                                <option value="Ana Oliveira">Ana Oliveira</option>
+                                <option value="Gisele Teles">Gisele Teles</option>
                             </select>
-
                         </div>
 
-
                         <div class="campo-formulario">
-
-                            <label for="entrada">
-                                Data de entrada *
-                            </label>
-
-                            <input
-                                type="date"
-                                id="entrada"
-                                name="entrada"
-                                required
-                            >
-
+                            <label for="entrada">Data de entrada *</label>
+                            <input type="date" id="entrada" required>
                         </div>
 
-
                         <div class="campo-formulario">
-
-                            <label for="saida">
-                                Data de saída *
-                            </label>
-
-                            <input
-                                type="date"
-                                id="saida"
-                                name="saida"
-                                required
-                            >
-
+                            <label for="saida">Data de saída *</label>
+                            <input type="date" id="saida" required>
                         </div>
 
-
                         <div class="campo-formulario">
+                            <label for="status">Status *</label>
 
-                            <label for="status">
-                                Status *
-                            </label>
-
-                            <select
-                                id="status"
-                                name="status"
-                                required
-                            >
-
-                                <option value="">
-                                    Selecione o status
-                                </option>
-
-                                <option value="agendada">
-                                    Agendada
-                                </option>
-
-                                <option value="confirmada">
-                                    Confirmada
-                                </option>
-
-                                <option value="andamento">
-                                    Em andamento
-                                </option>
-
+                            <select id="status" required>
+                                <option value="">Selecione o status</option>
+                                <option value="Agendada">Agendada</option>
+                                <option value="Confirmada">Confirmada</option>
+                                <option value="Em andamento">Em andamento</option>
                             </select>
-
                         </div>
-
 
                         <div class="campo-formulario">
-
-                            <label for="diarias">
-                                Quantidade de diárias
-                            </label>
-
-                            <input
-                                type="number"
-                                id="diarias"
-                                name="diarias"
-                                min="1"
-                                placeholder="Informe a quantidade"
-                            >
-
+                            <label for="diarias">Quantidade de diárias</label>
+                            <input type="number" id="diarias" readonly>
                         </div>
-
 
                         <div class="campo-formulario">
-
-                            <label for="diaria">
-                                Valor da diária
-                            </label>
-
-                            <input
-                                type="text"
-                                id="diaria"
-                                name="diaria"
-                                value="R$ 80,00"
-                                readonly
-                            >
-
+                            <label for="diaria">Valor da diária</label>
+                            <input type="text" id="diaria" readonly>
                         </div>
-
 
                         <div class="campo-formulario">
-
-                            <label for="total">
-                                Valor total
-                            </label>
-
-                            <input
-                                type="text"
-                                id="total"
-                                name="total"
-                                value="R$ 0,00"
-                                readonly
-                            >
-
+                            <label for="total">Valor total</label>
+                            <input type="text" id="total" value="R$ 0,00" readonly>
                         </div>
-
 
                         <div class="campo-formulario campo-completo">
+                            <label for="observacoes">Observações</label>
 
-                            <label for="observacoes">
-                                Observações
-                            </label>
-
-                            <textarea
-                                id="observacoes"
-                                name="observacoes"
-                                rows="5"
-                                placeholder="Digite alguma observação sobre a reserva..."
-                            ></textarea>
-
+                            <textarea id="observacoes" rows="5"
+                                placeholder="Digite alguma observação sobre a reserva..."></textarea>
                         </div>
-
 
                         <div class="campo-formulario campo-completo">
-
-                            <label for="foto">
-                                Foto do Pet
-                            </label>
-
-                            <input
-                                type="file"
-                                id="foto"
-                                name="foto"
-                                accept="image/*"
-                            >
-
+                            <label for="foto">Foto do Pet</label>
+                            <input type="file" id="foto" accept="image/*">
                         </div>
-
 
                         <div class="campo-formulario campo-completo">
-
-                            <label for="comprovante">
-                                Comprovante
-                            </label>
-
-                            <input
-                                type="file"
-                                id="comprovante"
-                                name="comprovante"
-                                accept=".pdf,.jpg,.jpeg,.png"
-                            >
-
+                            <label for="comprovante">Comprovante</label>
+                            <input type="file" id="comprovante"
+                                accept=".pdf,.jpg,.jpeg,.png">
                         </div>
-
 
                         <div class="acoes-formulario campo-completo">
 
-                            <button
-                                type="submit"
-                                class="botao botao-salvar"
-                            >
+                            <button type="submit" class="botao botao-salvar">
                                 Salvar
                             </button>
 
-
-                            <button
-                                type="reset"
-                                class="botao botao-limpar"
-                            >
+                            <button type="reset" class="botao botao-limpar">
                                 Limpar
                             </button>
 
-
-                            <a
-                                href="reservas.html"
-                                class="botao botao-cancelar"
-                            >
+                            <a href="reservas.html" class="botao botao-cancelar">
                                 Cancelar
                             </a>
 
@@ -372,9 +149,369 @@
             </main>
 
         </div>
-
     </div>
-<script src="../js/navegacao.js"></script>
-</body>
 
+    <script src="../js/navegacao.js"></script>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const formulario = document.getElementById("formulario-reserva");
+
+        const campoPet = document.getElementById("pet");
+        const campoTutor = document.getElementById("tutor");
+        const campoEntrada = document.getElementById("entrada");
+        const campoSaida = document.getElementById("saida");
+        const campoStatus = document.getElementById("status");
+        const campoDiarias = document.getElementById("diarias");
+        const campoDiaria = document.getElementById("diaria");
+        const campoTotal = document.getElementById("total");
+
+        // =================================
+        // CONVERTER VALOR PARA NÚMERO
+        // =================================
+
+        function converterParaNumero(valor) {
+
+            if (typeof valor === "number") {
+                return valor;
+            }
+
+            if (valor === undefined || valor === null || valor === "") {
+                return 80;
+            }
+
+            let numero = String(valor)
+                .replace("R$", "")
+                .replace(/\s/g, "")
+                .trim();
+
+            if (numero.includes(",")) {
+                numero = numero
+                    .replace(/\./g, "")
+                    .replace(",", ".");
+            }
+
+            return Number(numero);
+        }
+
+        // =================================
+        // CONFIGURAÇÕES DO HOTEL
+        // =================================
+
+        let configuracoes = {};
+
+        try {
+            configuracoes = JSON.parse(
+                localStorage.getItem("hotelPetConfiguracoes") || "{}"
+            );
+        } catch (erro) {
+            configuracoes = {};
+        }
+
+        const valorDiaria = converterParaNumero(
+            configuracoes.valorDiaria ?? 80
+        );
+
+        campoDiaria.value = valorDiaria.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+
+        // =================================
+        // PETS CADASTRADOS
+        // =================================
+
+        const petsPadrao = [
+            { id: "thor", nome: "Thor", proprietario: "Maria Silva" },
+            { id: "luna", nome: "Luna", proprietario: "João Santos" },
+            { id: "mel", nome: "Mel", proprietario: "Ana Oliveira" },
+            { id: "bob", nome: "Bob", proprietario: "Gisele Teles" }
+        ];
+
+        let petsNovos = [];
+        let petsRemovidos = [];
+
+        try {
+            petsNovos = JSON.parse(
+                localStorage.getItem("hotelPetPets") || "[]"
+            );
+
+            petsRemovidos = JSON.parse(
+                localStorage.getItem("hotelPetPetsRemovidos") || "[]"
+            );
+        } catch (erro) {
+            console.error("Erro ao carregar pets:", erro);
+        }
+
+        const todosPets = [...petsPadrao, ...petsNovos];
+
+        // Evitar pets duplicados
+        const petsUnicos = todosPets.filter(function (pet, indice, lista) {
+
+            return lista.findIndex(function (item) {
+                return String(item.id) === String(pet.id);
+            }) === indice;
+
+        });
+
+        petsUnicos.forEach(function (pet) {
+
+            if (petsRemovidos.includes(pet.id)) {
+                return;
+            }
+
+            const opcao = document.createElement("option");
+
+            opcao.value = pet.id;
+            opcao.textContent = pet.nome;
+
+            opcao.dataset.proprietario =
+                pet.proprietario || pet.tutor || "";
+
+            campoPet.appendChild(opcao);
+
+        });
+
+        // Preencher tutor conforme o pet escolhido
+        campoPet.addEventListener("change", function () {
+
+            const opcaoSelecionada =
+                campoPet.options[campoPet.selectedIndex];
+
+            if (opcaoSelecionada.dataset.proprietario) {
+
+                campoTutor.value =
+                    opcaoSelecionada.dataset.proprietario;
+
+            }
+
+        });
+
+        // =================================
+        // CALCULAR DIÁRIAS E VALOR TOTAL
+        // =================================
+
+        function calcularValores() {
+
+            if (!campoEntrada.value || !campoSaida.value) {
+                campoDiarias.value = "";
+                campoTotal.value = "R$ 0,00";
+                return;
+            }
+
+            const entrada = new Date(campoEntrada.value + "T00:00:00");
+            const saida = new Date(campoSaida.value + "T00:00:00");
+
+            const diferenca = saida - entrada;
+
+            const quantidade = diferenca / (1000 * 60 * 60 * 24);
+
+            if (quantidade <= 0) {
+
+                campoDiarias.value = "";
+                campoTotal.value = "R$ 0,00";
+
+                return;
+
+            }
+
+            campoDiarias.value = quantidade;
+
+            const total = quantidade * valorDiaria;
+
+            campoTotal.value = total.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+        }
+
+        campoEntrada.addEventListener("change", calcularValores);
+        campoSaida.addEventListener("change", calcularValores);
+
+        campoSaida.addEventListener("change", function () {
+
+            if (campoEntrada.value && campoSaida.value &&
+                campoSaida.value <= campoEntrada.value) {
+
+                alert("A data de saída deve ser posterior à data de entrada.");
+
+                campoSaida.value = "";
+
+                calcularValores();
+
+            }
+
+        });
+
+        // =================================
+        // GERAR ID DA RESERVA
+        // =================================
+
+        function gerarId() {
+
+            const reservasPadrao = ["001", "002", "003", "004"];
+
+            const reservas = JSON.parse(
+                localStorage.getItem("hotelPetReservas") || "[]"
+            );
+
+            const ids = [
+                ...reservasPadrao.map(Number),
+                ...reservas.map(function (reserva) {
+                    return Number(reserva.id);
+                })
+            ];
+
+            const maiorId = Math.max(4, ...ids);
+
+            return String(maiorId + 1).padStart(3, "0");
+
+        }
+
+        // =================================
+        // LER ARQUIVOS
+        // =================================
+
+        function lerArquivo(arquivo) {
+
+            return new Promise(function (resolve, reject) {
+
+                if (!arquivo) {
+                    resolve("");
+                    return;
+                }
+
+                const leitor = new FileReader();
+
+                leitor.onload = function () {
+                    resolve(leitor.result);
+                };
+
+                leitor.onerror = function () {
+                    reject(new Error("Não foi possível ler o arquivo."));
+                };
+
+                leitor.readAsDataURL(arquivo);
+
+            });
+
+        }
+
+        // =================================
+        // SALVAR RESERVA
+        // =================================
+
+        formulario.addEventListener("submit", async function (evento) {
+
+            evento.preventDefault();
+
+            calcularValores();
+
+            if (!campoPet.value || !campoTutor.value || !campoStatus.value) {
+
+                alert("Preencha todos os campos obrigatórios.");
+                return;
+
+            }
+
+            if (!campoDiarias.value || Number(campoDiarias.value) <= 0) {
+
+                alert("Informe datas válidas para a reserva.");
+                return;
+
+            }
+
+            const reservas = JSON.parse(
+                localStorage.getItem("hotelPetReservas") || "[]"
+            );
+
+            const opcaoPet =
+                campoPet.options[campoPet.selectedIndex];
+
+            const arquivoFoto = document.getElementById("foto").files[0];
+
+            const arquivoComprovante =
+                document.getElementById("comprovante").files[0];
+
+            let foto = "";
+            let comprovante = "";
+
+            try {
+
+                foto = await lerArquivo(arquivoFoto);
+                comprovante = await lerArquivo(arquivoComprovante);
+
+            } catch (erro) {
+
+                alert("Erro ao carregar os arquivos selecionados.");
+                return;
+
+            }
+
+            const total = Number(campoDiarias.value) * valorDiaria;
+
+            const novaReserva = {
+
+                id: gerarId(),
+
+                petId: campoPet.value,
+
+                pet: opcaoPet.textContent,
+
+                proprietario: campoTutor.value,
+
+                tutor: campoTutor.value,
+
+                entrada: campoEntrada.value,
+
+                saida: campoSaida.value,
+
+                status: campoStatus.value,
+
+                diarias: Number(campoDiarias.value),
+
+                valorDiaria: valorDiaria,
+
+                valorTotal: total,
+
+                total: total,
+
+                observacoes: document.getElementById("observacoes").value,
+
+                foto: foto,
+
+                comprovante: comprovante
+
+            };
+
+            reservas.push(novaReserva);
+
+            try {
+
+                localStorage.setItem(
+                    "hotelPetReservas",
+                    JSON.stringify(reservas)
+                );
+
+            } catch (erro) {
+
+                alert("Não foi possível salvar a reserva. O armazenamento do navegador pode estar cheio.");
+                return;
+
+            }
+
+            alert("Reserva cadastrada com sucesso!");
+
+            window.location.href = "reservas.html";
+
+        });
+
+    });
+
+    </script>
+
+</body>
 </html>

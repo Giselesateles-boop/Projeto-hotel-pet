@@ -2,579 +2,576 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Usuários</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
     <div class="layout">
 
-        <!-- MENU LATERAL -->
         <aside class="menu-lateral">
-
             <h1>Hotel Pet</h1>
-
             <nav>
-
-                <a href="pets.html">
-                    Pet
-                </a>
-
-                <a href="usuarios.html" class="menu-ativo">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html">
-                    Reservas
-                </a>
-
+                <a href="pets.html">Pet</a>
+                <a href="usuarios.html" class="menu-ativo">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html">Reservas</a>
             </nav>
-
         </aside>
 
-
-        <!-- ÁREA PRINCIPAL -->
         <div class="conteudo">
 
-            <!-- TOPO -->
             <header class="topo">
-
                 <div></div>
-
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
-
             </header>
 
-
-            <!-- CONTEÚDO -->
             <main>
 
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    Usuários
-
+                    <a href="dashboard.html">Home</a>
+                    / Usuários
                 </p>
 
+                <div class="cabecalho-pagina">
+                    <h2>Usuários</h2>
+                    <a href="cadastrar-usuario.html" class="botao botao-salvar">
+                        + Novo usuário
+                    </a>
+                </div>
+
+                <section class="acoes-usuarios">
+                    <button type="button" class="botao botao-remover" id="remover-usuario">
+                        Remover
+                    </button>
+
+                    <button type="button" class="botao botao-status" id="mudar-status">
+                        Mudar status
+                    </button>
+                </section>
+
+                <section class="visualizacao-usuarios">
+                    <h3>Visualizar por:</h3>
+
+                    <div class="botoes-visualizacao">
+                        <button type="button" class="botao botao-visualizacao-ativo" id="visualizar-usuarios">
+                            Usuários
+                        </button>
+
+                        <button type="button" class="botao" id="visualizar-funcao">
+                            Função
+                        </button>
+                    </div>
+                </section>
 
                 <section class="card">
 
-                    <!-- CABEÇALHO -->
-                    <div class="cabecalho-pagina">
+                    <h3>Pesquisar</h3>
 
-                        <h2>
-                            Usuários
-                        </h2>
+                    <form class="formulario-pesquisa" id="formulario-pesquisa-usuarios">
 
-                        <a
-                            href="cadastrar-usuario.html"
-                            class="botao botao-salvar"
-                        >
-                            + Novo usuário
-                        </a>
-
-                    </div>
-
-
-                    <!-- AÇÕES -->
-                    <section class="acoes-usuarios">
-
-                        <button
-                            type="button"
-                            class="botao botao-remover"
-                        >
-                            Remover
-                        </button>
-
-                        <button
-                            type="button"
-                            class="botao botao-status"
-                        >
-                            Mudar status
-                        </button>
-
-                    </section>
-
-
-                    <!-- VISUALIZAÇÃO -->
-                    <section class="visualizacao-usuarios">
-
-                        <h3>
-                            Visualizar por:
-                        </h3>
-
-                        <div class="botoes-visualizacao">
-
-                            <button
-                                type="button"
-                                class="botao botao-visualizacao-ativo"
-                            >
-                                Usuários
-                            </button>
-
-                            <button
-                                type="button"
-                                class="botao"
-                            >
-                                Função
-                            </button>
-
+                        <div class="campo-formulario">
+                            <label for="id">ID</label>
+                            <input type="text" id="id" name="id" placeholder="ID">
                         </div>
 
-                    </section>
+                        <div class="campo-formulario">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="E-mail">
+                        </div>
 
+                        <div class="campo-formulario">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome">
+                        </div>
 
-                    <!-- FILTROS -->
-                    <section class="filtros">
-
-                        <h3>
+                        <button type="submit" class="botao botao-pesquisar">
                             Pesquisar
-                        </h3>
-
-                        <form
-                            class="formulario-pesquisa"
-                            action="usuarios.html"
-                            method="get"
-                        >
-
-                            <!-- ID -->
-                            <div class="campo-formulario">
-
-                                <label for="id">
-                                    ID
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="id"
-                                    name="id"
-                                    placeholder="ID"
-                                >
-
-                            </div>
-
-                            <!-- EMAIL -->
-                            <div class="campo-formulario">
-
-                                <label for="email">
-                                    E-mail
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="E-mail"
-                                >
-
-                            </div>
-
-
-                            <!-- NOME -->
-                            <div class="campo-formulario">
-
-                                <label for="nome">
-                                    Nome
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="nome"
-                                    name="nome"
-                                    placeholder="Nome"
-                                >
-
-                            </div>
-
-
-                            <!-- PESQUISAR -->
-                            <button
-                                type="submit"
-                                class="botao botao-pesquisar"
-                            >
-                                Pesquisar
-                            </button>
-
-                        </form>
-
-                    </section>
-
-
-                    <!-- TABELA -->
-                    <section class="tabela-container">
-
-                        <table class="tabela">
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        ID
-                                    </th>
-
-                                    <th>
-                                        Nome
-                                    </th>
-
-                                    <th>
-                                        E-mail
-                                    </th>
-
-                                    <th>
-                                        Telefone
-                                    </th>
-
-                                    <th>
-                                        Função
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                    <th>
-                                        Ações
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody>
-
-                                <!-- MARIA -->
-                                <tr>
-
-                                    <td>
-                                        001
-                                    </td>
-
-                                    <td>
-                                        Maria Silva
-                                    </td>
-
-                                    <td>
-                                        maria@email.com
-                                    </td>
-
-                                    <td>
-                                        (77) 99999-9999
-                                    </td>
-
-                                    <td>
-                                        Cliente
-                                    </td>
-
-                                    <td>
-                                        Ativo
-                                    </td>
-
-                                    <td>
-
-                                        <a
-                                            href="visualizar-usuario.html?usuario=maria"
-                                        >
-                                            Visualizar
-                                        </a>
-
-                                        &nbsp;
-
-                                        <a
-                                            href="editar-usuario.html?usuario=maria"
-                                        >
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- JOÃO -->
-                                <tr>
-
-                                    <td>
-                                        002
-                                    </td>
-
-                                    <td>
-                                        João Santos
-                                    </td>
-
-                                    <td>
-                                        joao@email.com
-                                    </td>
-
-                                    <td>
-                                        (77) 98888-8888
-                                    </td>
-
-                                    <td>
-                                        Cliente
-                                    </td>
-
-                                    <td>
-                                        Ativo
-                                    </td>
-
-                                    <td>
-
-                                        <a
-                                            href="visualizar-usuario.html?usuario=joao"
-                                        >
-                                            Visualizar
-                                        </a>
-
-                                        &nbsp;
-
-                                        <a
-                                            href="editar-usuario.html?usuario=joao"
-                                        >
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- ANA -->
-                                <tr>
-
-                                    <td>
-                                        003
-                                    </td>
-
-                                    <td>
-                                        Ana Oliveira
-                                    </td>
-
-                                    <td>
-                                        ana@email.com
-                                    </td>
-
-                                    <td>
-                                        (77) 97777-7777
-                                    </td>
-
-                                    <td>
-                                        Funcionário
-                                    </td>
-
-                                    <td>
-                                        Ativo
-                                    </td>
-
-                                    <td>
-
-                                        <a
-                                            href="visualizar-usuario.html?usuario=ana"
-                                        >
-                                            Visualizar
-                                        </a>
-
-                                        &nbsp;
-
-                                        <a
-                                            href="editar-usuario.html?usuario=ana"
-                                        >
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- GISELE -->
-                                <tr>
-
-                                    <td>
-                                        004
-                                    </td>
-
-                                    <td>
-                                        Gisele Teles
-                                    </td>
-
-                                    <td>
-                                        gisele@email.com
-                                    </td>
-
-                                    <td>
-                                        (77) 96666-6666
-                                    </td>
-
-                                    <td>
-                                        Gerente
-                                    </td>
-
-                                    <td>
-                                        Ativo
-                                    </td>
-
-                                    <td>
-
-                                        <a
-                                            href="visualizar-usuario.html?usuario=gisele"
-                                        >
-                                            Visualizar
-                                        </a>
-
-                                        &nbsp;
-
-                                        <a
-                                            href="editar-usuario.html?usuario=gisele"
-                                        >
-                                            Editar
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </section>
+                        </button>
+
+                    </form>
+
+                </section>
+
+                <section class="tabela-container">
+
+                    <table class="tabela">
+
+                        <thead>
+                            <tr>
+                                <th>Selecionar</th>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                                <th>Função</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr data-user-row data-chave="maria">
+                                <td><input type="checkbox" class="selecionar-usuario" value="maria"></td>
+                                <td>001</td>
+                                <td>Maria Silva</td>
+                                <td>maria@email.com</td>
+                                <td>(77) 99999-9999</td>
+                                <td>Cliente</td>
+                                <td>Ativo</td>
+                                <td>
+                                    <a href="visualizar-usuario.html?usuario=maria">Visualizar</a>
+                                    &nbsp;
+                                    <a href="editar-usuario.html?usuario=maria">Editar</a>
+                                </td>
+                            </tr>
+
+                            <tr data-user-row data-chave="joao">
+                                <td><input type="checkbox" class="selecionar-usuario" value="joao"></td>
+                                <td>002</td>
+                                <td>João Santos</td>
+                                <td>joao@email.com</td>
+                                <td>(77) 98888-8888</td>
+                                <td>Cliente</td>
+                                <td>Ativo</td>
+                                <td>
+                                    <a href="visualizar-usuario.html?usuario=joao">Visualizar</a>
+                                    &nbsp;
+                                    <a href="editar-usuario.html?usuario=joao">Editar</a>
+                                </td>
+                            </tr>
+
+                            <tr data-user-row data-chave="ana">
+                                <td><input type="checkbox" class="selecionar-usuario" value="ana"></td>
+                                <td>003</td>
+                                <td>Ana Oliveira</td>
+                                <td>ana@email.com</td>
+                                <td>(77) 97777-7777</td>
+                                <td>Funcionário</td>
+                                <td>Ativo</td>
+                                <td>
+                                    <a href="visualizar-usuario.html?usuario=ana">Visualizar</a>
+                                    &nbsp;
+                                    <a href="editar-usuario.html?usuario=ana">Editar</a>
+                                </td>
+                            </tr>
+
+                            <tr data-user-row data-chave="gisele">
+                                <td><input type="checkbox" class="selecionar-usuario" value="gisele"></td>
+                                <td>004</td>
+                                <td>Gisele Teles</td>
+                                <td>gisele@email.com</td>
+                                <td>(77) 96666-6666</td>
+                                <td>Gerente</td>
+                                <td>Ativo</td>
+                                <td>
+                                    <a href="visualizar-usuario.html?usuario=gisele">Visualizar</a>
+                                    &nbsp;
+                                    <a href="editar-usuario.html?usuario=gisele">Editar</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
 
                 </section>
 
             </main>
-
         </div>
-
     </div>
-<script src="../js/navegacao.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const usuariosSalvos = JSON.parse(
-        localStorage.getItem("hotelPetUsuarios") || "{}"
-    );
+    <script src="../js/navegacao.js"></script>
 
-    const linhas = document.querySelectorAll("tbody tr");
+    <script>
 
-    linhas.forEach(function (linha) {
-        const link = linha.querySelector('a[href*="usuario="]');
+    document.addEventListener("DOMContentLoaded", function () {
 
-        if (!link) return;
+        const tabela = document.querySelector(".tabela");
+        const corpoTabela = tabela.querySelector("tbody");
+        const formulario = document.getElementById("formulario-pesquisa-usuarios");
 
-        const url = new URL(link.href);
-        const identificador = url.searchParams.get("usuario");
-        const usuario = usuariosSalvos[identificador];
+        const botaoRemover = document.getElementById("remover-usuario");
+        const botaoStatus = document.getElementById("mudar-status");
 
-        if (!usuario) return;
+        const botaoUsuarios = document.getElementById("visualizar-usuarios");
+        const botaoFuncao = document.getElementById("visualizar-funcao");
 
-        const nomeCompleto = [usuario.nome, usuario.sobrenome]
-            .filter(Boolean)
-            .join(" ");
+        const CHAVE_USUARIOS = "hotelPetUsuarios";
+        const CHAVE_REMOVIDOS = "hotelPetUsuariosRemovidos";
+        const CHAVE_STATUS = "hotelPetStatusUsuarios";
 
-        if (nomeCompleto) linha.cells[1].textContent = nomeCompleto;
-        if (usuario.email) linha.cells[2].textContent = usuario.email;
-        if (usuario.telefone) linha.cells[3].textContent = usuario.telefone;
-        if (usuario.funcao) linha.cells[4].textContent = usuario.funcao;
-        if (usuario.status) linha.cells[5].textContent = usuario.status;
-    });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.querySelector(".formulario-pesquisa");
-    const tabela = document.querySelector(".tabela tbody");
-
-    if (!formulario || !tabela) return;
-
-    const linhas = Array.from(tabela.querySelectorAll("tr"));
-
-    // Guarda os dados originais de cada linha.
-    linhas.forEach(function (linha) {
-        linha.dataset.pesquisaOriginal = linha.innerText;
-    });
-
-    formulario.addEventListener("submit", function (evento) {
-        evento.preventDefault();
-
-        const id = document.getElementById("id").value.trim().toLowerCase();
-        const email = document.getElementById("email").value.trim().toLowerCase();
-        const nome = document.getElementById("nome").value.trim().toLowerCase();
-
-        let encontrados = 0;
-
-        linhas.forEach(function (linha) {
-            const colunas = linha.cells;
-
-            const correspondeId = colunas[0].textContent.trim().toLowerCase().includes(id);
-            const correspondeEmail = colunas[2].textContent.trim().toLowerCase().includes(email);
-            const correspondeNome = colunas[1].textContent.trim().toLowerCase().includes(nome);
-
-            const mostrar = correspondeId && correspondeEmail && correspondeNome;
-
-            linha.style.display = mostrar ? "" : "none";
-
-            if (mostrar) encontrados++;
-        });
-
-        let mensagem = document.getElementById("mensagem-busca");
-
-        if (!mensagem) {
-            mensagem = document.createElement("p");
-            mensagem.id = "mensagem-busca";
-            mensagem.setAttribute("role", "status");
-            tabela.closest(".tabela-container").appendChild(mensagem);
+        function lerObjeto(chave) {
+            try {
+                return JSON.parse(localStorage.getItem(chave) || "{}");
+            } catch (erro) {
+                return {};
+            }
         }
 
-        mensagem.textContent = encontrados === 0
-            ? "Nenhum usuário encontrado."
-            : encontrados + (encontrados === 1
-                ? " usuário encontrado."
-                : " usuários encontrados.");
-    });
+        function lerLista(chave) {
+            try {
+                const valor = JSON.parse(localStorage.getItem(chave) || "[]");
+                return Array.isArray(valor) ? valor : [];
+            } catch (erro) {
+                return [];
+            }
+        }
 
-    // Limpar os filtros e mostrar todos os usuários.
-    formulario.addEventListener("reset", function () {
-        setTimeout(function () {
-            linhas.forEach(function (linha) {
-                linha.style.display = "";
+        let usuariosSalvos = lerObjeto(CHAVE_USUARIOS);
+        let removidos = lerLista(CHAVE_REMOVIDOS);
+        let statusSalvos = lerObjeto(CHAVE_STATUS);
+
+        let modoFuncao = false;
+// Corrigir IDs antigos sem alterar as chaves internas dos usuários
+let maiorId = 4;
+
+Object.values(usuariosSalvos).forEach(function(usuario) {
+    const numero = Number(usuario.id);
+
+    if (Number.isInteger(numero) && numero > maiorId) {
+        maiorId = numero;
+    }
+});
+
+Object.entries(usuariosSalvos).forEach(function([chave, usuario]) {
+
+    if (!/^\d{3}$/.test(String(usuario.id || ""))) {
+
+        maiorId++;
+
+        usuario.id = String(maiorId).padStart(3, "0");
+
+    }
+
+});
+
+localStorage.setItem(
+    CHAVE_USUARIOS,
+    JSON.stringify(usuariosSalvos)
+);
+        function linhasUsuarios() {
+            return Array.from(
+                corpoTabela.querySelectorAll("tr[data-user-row]")
+            );
+        }
+
+        // Atualiza os usuários cadastrados.
+        Object.entries(usuariosSalvos).forEach(function ([chave, usuario]) {
+
+            if (!usuario || removidos.includes(String(chave))) return;
+
+            const identificador = String(chave);
+
+            let linha = linhasUsuarios().find(function (item) {
+                return item.dataset.chave === identificador;
             });
 
-            const mensagem = document.getElementById("mensagem-busca");
-            if (mensagem) mensagem.textContent = "";
-        }, 0);
+            if (!linha) {
+
+                linha = document.createElement("tr");
+                linha.dataset.userRow = "";
+                linha.dataset.chave = identificador;
+
+                linha.innerHTML = `
+                    <td><input type="checkbox" class="selecionar-usuario" value="${identificador}"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                `;
+
+                const acoes = linha.cells[7];
+
+                const visualizar = document.createElement("a");
+                visualizar.href = "visualizar-usuario.html?usuario=" +
+                    encodeURIComponent(identificador);
+                visualizar.textContent = "Visualizar";
+
+                const editar = document.createElement("a");
+                editar.href = "editar-usuario.html?usuario=" +
+                    encodeURIComponent(identificador);
+                editar.textContent = "Editar";
+
+                acoes.append(
+                    visualizar,
+                    document.createTextNode("    "),
+                    editar
+                );
+
+                corpoTabela.appendChild(linha);
+            }
+
+            const nomeCompleto = [
+                usuario.nome,
+                usuario.sobrenome
+            ].filter(Boolean).join(" ");
+
+            linha.cells[1].textContent = usuario.id || linha.cells[1].textContent;
+            linha.cells[2].textContent = nomeCompleto || usuario.nome || linha.cells[2].textContent;
+            linha.cells[3].textContent = usuario.email || linha.cells[3].textContent;
+            linha.cells[4].textContent = usuario.telefone || linha.cells[4].textContent;
+            linha.cells[5].textContent = usuario.funcao || linha.cells[5].textContent || "Cliente";
+            linha.cells[6].textContent = statusSalvos[identificador] || usuario.status || linha.cells[6].textContent || "Ativo";
+
+        });
+
+        // Aplica exclusões e status salvos.
+        linhasUsuarios().forEach(function (linha) {
+
+            const chave = linha.dataset.chave;
+
+            if (removidos.includes(chave)) {
+                linha.remove();
+                return;
+            }
+
+            if (statusSalvos[chave]) {
+                linha.cells[6].textContent = statusSalvos[chave];
+            }
+
+        });
+
+        // VISUALIZAR POR FUNÇÃO.
+        function atualizarModoVisualizacao() {
+
+            const linhas = linhasUsuarios();
+
+            corpoTabela.querySelectorAll(".linha-grupo-funcao").forEach(function (linha) {
+                linha.remove();
+            });
+
+            if (modoFuncao) {
+
+                const ordem = ["Gerente", "Funcionário", "Cliente"];
+
+                linhas.sort(function (a, b) {
+
+                    const funcaoA = a.cells[5].textContent.trim();
+                    const funcaoB = b.cells[5].textContent.trim();
+
+                    const posA = ordem.indexOf(funcaoA);
+                    const posB = ordem.indexOf(funcaoB);
+
+                    return (posA === -1 ? 99 : posA) -
+                           (posB === -1 ? 99 : posB);
+
+                });
+
+                let funcaoAtual = "";
+
+                linhas.forEach(function (linha) {
+
+                    const funcao = linha.cells[5].textContent.trim() || "Sem função";
+
+                    if (funcao !== funcaoAtual) {
+
+                        funcaoAtual = funcao;
+
+                        const grupo = document.createElement("tr");
+                        grupo.className = "linha-grupo-funcao";
+
+                        const celula = document.createElement("td");
+                        celula.colSpan = 8;
+                        celula.textContent = funcao;
+                        celula.style.fontWeight = "bold";
+                        celula.style.backgroundColor = "#eaf0ff";
+
+                        grupo.appendChild(celula);
+                        corpoTabela.appendChild(grupo);
+
+                    }
+
+                    corpoTabela.appendChild(linha);
+
+                });
+
+            }
+
+            botaoUsuarios.classList.toggle(
+                "botao-visualizacao-ativo",
+                !modoFuncao
+            );
+
+            botaoFuncao.classList.toggle(
+                "botao-visualizacao-ativo",
+                modoFuncao
+            );
+
+        }
+
+        // PESQUISA.
+        formulario.addEventListener("submit", function (evento) {
+
+            evento.preventDefault();
+
+            const id = document.getElementById("id").value.trim().toLowerCase();
+            const email = document.getElementById("email").value.trim().toLowerCase();
+            const nome = document.getElementById("nome").value.trim().toLowerCase();
+
+            let encontrados = 0;
+
+            linhasUsuarios().forEach(function (linha) {
+
+                const correspondeId =
+                    linha.cells[1].textContent.toLowerCase().includes(id);
+
+                const correspondeEmail =
+                    linha.cells[3].textContent.toLowerCase().includes(email);
+
+                const correspondeNome =
+                    linha.cells[2].textContent.toLowerCase().includes(nome);
+
+                const mostrar =
+                    correspondeId && correspondeEmail && correspondeNome;
+
+                linha.style.display = mostrar ? "" : "none";
+
+                if (mostrar) encontrados++;
+
+            });
+
+            let mensagem = document.getElementById("mensagem-busca");
+
+            if (!mensagem) {
+                mensagem = document.createElement("p");
+                mensagem.id = "mensagem-busca";
+                tabela.parentElement.appendChild(mensagem);
+            }
+
+            mensagem.textContent = encontrados === 0
+                ? "Nenhum usuário encontrado."
+                : encontrados + (encontrados === 1
+                    ? " usuário encontrado."
+                    : " usuários encontrados.");
+
+        });
+
+        // REMOVER USUÁRIOS SELECIONADOS.
+        botaoRemover.addEventListener("click", function () {
+
+            const selecionados = linhasUsuarios().filter(function (linha) {
+                const caixa = linha.querySelector(".selecionar-usuario");
+                return caixa && caixa.checked;
+            });
+
+            if (selecionados.length === 0) {
+                alert("Selecione pelo menos um usuário para remover.");
+                return;
+            }
+
+            if (!confirm("Deseja realmente remover os usuários selecionados?")) {
+                return;
+            }
+
+            selecionados.forEach(function (linha) {
+
+                const chave = linha.dataset.chave;
+
+                removidos.push(chave);
+
+                delete usuariosSalvos[chave];
+                delete statusSalvos[chave];
+
+                linha.remove();
+
+            });
+
+            localStorage.setItem(
+                CHAVE_USUARIOS,
+                JSON.stringify(usuariosSalvos)
+            );
+
+            localStorage.setItem(
+                CHAVE_REMOVIDOS,
+                JSON.stringify([...new Set(removidos)])
+            );
+
+            localStorage.setItem(
+                CHAVE_STATUS,
+                JSON.stringify(statusSalvos)
+            );
+
+            atualizarModoVisualizacao();
+
+            alert("Usuário(s) removido(s) com sucesso!");
+
+        });
+
+        // MUDAR STATUS.
+        botaoStatus.addEventListener("click", function () {
+
+            const selecionados = linhasUsuarios().filter(function (linha) {
+                const caixa = linha.querySelector(".selecionar-usuario");
+                return caixa && caixa.checked;
+            });
+
+            if (selecionados.length === 0) {
+                alert("Selecione pelo menos um usuário para mudar o status.");
+                return;
+            }
+
+            selecionados.forEach(function (linha) {
+
+                const chave = linha.dataset.chave;
+
+                const statusAtual = linha.cells[6].textContent.trim();
+
+                const novoStatus = statusAtual === "Ativo"
+                    ? "Inativo"
+                    : "Ativo";
+
+                linha.cells[6].textContent = novoStatus;
+
+                statusSalvos[chave] = novoStatus;
+
+                if (usuariosSalvos[chave]) {
+                    usuariosSalvos[chave].status = novoStatus;
+                }
+
+                linha.querySelector(".selecionar-usuario").checked = false;
+
+            });
+
+            localStorage.setItem(
+                CHAVE_STATUS,
+                JSON.stringify(statusSalvos)
+            );
+
+            localStorage.setItem(
+                CHAVE_USUARIOS,
+                JSON.stringify(usuariosSalvos)
+            );
+
+        });
+
+        // BOTÃO USUÁRIOS.
+        botaoUsuarios.addEventListener("click", function () {
+            modoFuncao = false;
+            atualizarModoVisualizacao();
+        });
+
+        // BOTÃO FUNÇÃO.
+        botaoFuncao.addEventListener("click", function () {
+            modoFuncao = true;
+            atualizarModoVisualizacao();
+        });
+
+        atualizarModoVisualizacao();
+
     });
-});
-</script>
+
+    </script>
 
 </body>
-
 </html>

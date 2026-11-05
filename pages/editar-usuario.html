@@ -411,116 +411,307 @@
     </div>
     
   <script src="../js/navegacao.js"></script>
-  
+
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
     const usuariosPadrao = {
         maria: {
-            id: "001", nome: "Maria", sobrenome: "Silva",
-            email: "maria@email.com", telefone: "(77) 99999-9999",
-            cep: "47500-000", cidade: "Paratinga",
-            endereco: "Rua Principal", numero: "100",
-            funcao: "Cliente", status: "Ativo"
+            id: "001",
+            nome: "Maria",
+            sobrenome: "Silva",
+            email: "maria@email.com",
+            telefone: "(77) 99999-9999",
+            cep: "47500-000",
+            cidade: "Paratinga",
+            endereco: "Rua Principal",
+            numero: "100",
+            funcao: "Cliente",
+            status: "Ativo",
+            foto: "../img/Maria.png",
+            reservas: []
         },
         joao: {
-            id: "002", nome: "João", sobrenome: "Santos",
-            email: "joao@email.com", telefone: "(77) 98888-8888",
-            cep: "", cidade: "", endereco: "", numero: "",
-            funcao: "Cliente", status: "Ativo"
+            id: "002",
+            nome: "João",
+            sobrenome: "Santos",
+            email: "joao@email.com",
+            telefone: "(77) 98888-8888",
+            cep: "",
+            cidade: "",
+            endereco: "",
+            numero: "",
+            funcao: "Cliente",
+            status: "Ativo",
+            foto: "../img/Joao.png",
+            reservas: []
         },
         ana: {
-            id: "003", nome: "Ana", sobrenome: "Oliveira",
-            email: "ana@email.com", telefone: "(77) 97777-7777",
-            cep: "", cidade: "", endereco: "", numero: "",
-            funcao: "Funcionário", status: "Ativo"
+            id: "003",
+            nome: "Ana",
+            sobrenome: "Oliveira",
+            email: "ana@email.com",
+            telefone: "(77) 97777-7777",
+            cep: "",
+            cidade: "",
+            endereco: "",
+            numero: "",
+            funcao: "Funcionário",
+            status: "Ativo",
+            foto: "../img/Ana.png",
+            reservas: []
         },
         gisele: {
-            id: "004", nome: "Gisele", sobrenome: "Teles",
-            email: "gisele@email.com", telefone: "(77) 96666-6666",
-            cep: "", cidade: "", endereco: "", numero: "",
-            funcao: "Gerente", status: "Ativo"
+            id: "004",
+            nome: "Gisele",
+            sobrenome: "Teles",
+            email: "gisele@email.com",
+            telefone: "(77) 96666-6666",
+            cep: "",
+            cidade: "",
+            endereco: "",
+            numero: "",
+            funcao: "Gerente",
+            status: "Ativo",
+            foto: "../img/Gisele.png",
+            reservas: []
         }
     };
 
     const chaveUsuarios = "hotelPetUsuarios";
     const parametros = new URLSearchParams(window.location.search);
-    const identificador = (parametros.get("usuario") || "maria").toLowerCase();
+    const identificador = parametros.get("usuario") || "maria";
 
-    let usuariosSalvos = {};
+    let usuariosSalvos = JSON.parse(
+        localStorage.getItem(chaveUsuarios) || "{}"
+    );
 
-    try {
-        usuariosSalvos = JSON.parse(localStorage.getItem(chaveUsuarios)) || {};
-    } catch (erro) {
-        usuariosSalvos = {};
+    if (Array.isArray(usuariosSalvos)) {
+        usuariosSalvos = Object.fromEntries(
+            usuariosSalvos.map(usuario => [String(usuario.id), usuario])
+        );
     }
 
-    const usuario = {
-        ...usuariosPadrao[identificador],
-        ...(usuariosSalvos[identificador] || {})
-    };
+    // Localizar pela chave interna ou pelo ID numérico
+    let chaveUsuario = identificador;
+
+    if (!usuariosSalvos[chaveUsuario]) {
+        const encontrado = Object.entries(usuariosSalvos).find(
+            ([chave, usuario]) =>
+                String(usuario.id) === String(identificador)
+        );
+
+        if (encontrado) {
+            chaveUsuario = encontrado[0];
+        }
+    }
+
+    let usuarioOriginal = null;
+
+    if (usuariosSalvos[chaveUsuario]) {
+        usuarioOriginal = {
+            ...(usuariosPadrao[chaveUsuario] || {}),
+            ...usuariosSalvos[chaveUsuario]
+        };
+    } else if (usuariosPadrao[identificador]) {
+        chaveUsuario = identificador;
+        usuarioOriginal = usuariosPadrao[identificador];
+    }
 
     const formulario = document.querySelector("form");
 
-    if (!usuariosPadrao[identificador]) {
+    if (!usuarioOriginal) {
+
         formulario.hidden = true;
+
         document.querySelector("main").insertAdjacentHTML(
             "beforeend",
             "<p>Usuário não encontrado. Volte para a lista de usuários.</p>"
         );
-    } else {
-        document.getElementById("id").value = usuario.id;
-        document.getElementById("nome").value = usuario.nome;
-        document.getElementById("sobrenome").value = usuario.sobrenome;
-        document.getElementById("email").value = usuario.email;
-        document.getElementById("telefone").value = usuario.telefone;
-        document.getElementById("cep").value = usuario.cep;
-        document.getElementById("cidade").value = usuario.cidade;
-        document.getElementById("endereco").value = usuario.endereco;
-        document.getElementById("numero").value = usuario.numero;
 
-        document.getElementById("funcao").value = usuario.funcao.toLowerCase();
-        document.getElementById("status").value = usuario.status.toLowerCase();
+        return;
+    }
 
-        formulario.addEventListener("submit", function (evento) {
-            evento.preventDefault();
+    // Preencher formulário
+    document.getElementById("id").value = usuarioOriginal.id || "";
+    document.getElementById("nome").value = usuarioOriginal.nome || "";
+    document.getElementById("sobrenome").value = usuarioOriginal.sobrenome || "";
+    document.getElementById("email").value = usuarioOriginal.email || "";
+    document.getElementById("telefone").value = usuarioOriginal.telefone || "";
+    document.getElementById("cep").value = usuarioOriginal.cep || "";
+    document.getElementById("cidade").value = usuarioOriginal.cidade || "";
+    document.getElementById("endereco").value = usuarioOriginal.endereco || "";
+    document.getElementById("numero").value = usuarioOriginal.numero || "";
 
-            const usuarioAtualizado = {
-                id: usuario.id,
-                nome: document.getElementById("nome").value.trim(),
-                sobrenome: document.getElementById("sobrenome").value.trim(),
-                email: document.getElementById("email").value.trim(),
-                telefone: document.getElementById("telefone").value.trim(),
-                cep: document.getElementById("cep").value.trim(),
-                cidade: document.getElementById("cidade").value.trim(),
-                endereco: document.getElementById("endereco").value.trim(),
-                numero: document.getElementById("numero").value.trim(),
-                funcao: document.getElementById("funcao").selectedOptions[0].textContent.trim(),
-                status: document.getElementById("status").selectedOptions[0].textContent.trim()
+    document.getElementById("funcao").value =
+        String(usuarioOriginal.funcao || "Cliente").toLowerCase();
+
+    document.getElementById("status").value =
+        String(usuarioOriginal.status || "Ativo").toLowerCase();
+
+    // Compactar nova foto
+    function compactarImagem(arquivo) {
+
+        return new Promise(function (resolve, reject) {
+
+            const leitor = new FileReader();
+
+            leitor.onload = function () {
+
+                const imagem = new Image();
+
+                imagem.onload = function () {
+
+                    const limite = 1200;
+
+                    let largura = imagem.width;
+                    let altura = imagem.height;
+
+                    if (largura > limite || altura > limite) {
+
+                        const proporcao = Math.min(
+                            limite / largura,
+                            limite / altura
+                        );
+
+                        largura = Math.round(largura * proporcao);
+                        altura = Math.round(altura * proporcao);
+                    }
+
+                    const canvas = document.createElement("canvas");
+
+                    canvas.width = largura;
+                    canvas.height = altura;
+
+                    const contexto = canvas.getContext("2d");
+
+                    contexto.drawImage(
+                        imagem,
+                        0,
+                        0,
+                        largura,
+                        altura
+                    );
+
+                    resolve(canvas.toDataURL("image/jpeg", 0.75));
+                };
+
+                imagem.onerror = function () {
+                    reject(new Error("Não foi possível carregar a imagem."));
+                };
+
+                imagem.src = leitor.result;
             };
 
-            if (!usuarioAtualizado.nome ||
+            leitor.onerror = function () {
+                reject(new Error("Erro ao ler a imagem."));
+            };
+
+            leitor.readAsDataURL(arquivo);
+        });
+    }
+
+    // Salvar alterações
+    formulario.addEventListener("submit", async function (evento) {
+
+        evento.preventDefault();
+
+        const botaoSalvar = formulario.querySelector(
+            'button[type="submit"]'
+        );
+
+        try {
+
+            botaoSalvar.disabled = true;
+            botaoSalvar.textContent = "Salvando...";
+
+            const arquivoFoto = document.getElementById("foto").files[0];
+
+            // Manter foto antiga se nenhuma nova for escolhida
+            let foto = usuarioOriginal.foto || "";
+
+            if (arquivoFoto) {
+
+                if (!arquivoFoto.type.startsWith("image/")) {
+                    throw new Error("Selecione uma imagem válida.");
+                }
+
+                foto = await compactarImagem(arquivoFoto);
+            }
+
+            const usuarioAtualizado = {
+
+                ...usuarioOriginal,
+
+                id: usuarioOriginal.id,
+
+                nome: document.getElementById("nome").value.trim(),
+
+                sobrenome: document.getElementById("sobrenome").value.trim(),
+
+                email: document.getElementById("email").value.trim(),
+
+                telefone: document.getElementById("telefone").value.trim(),
+
+                cep: document.getElementById("cep").value.trim(),
+
+                cidade: document.getElementById("cidade").value.trim(),
+
+                endereco: document.getElementById("endereco").value.trim(),
+
+                numero: document.getElementById("numero").value.trim(),
+
+                funcao: document.getElementById("funcao").selectedOptions[0].textContent.trim(),
+
+                status: document.getElementById("status").selectedOptions[0].textContent.trim(),
+
+                foto: foto
+            };
+
+            if (
+                !usuarioAtualizado.nome ||
                 !usuarioAtualizado.email ||
-                !usuarioAtualizado.telefone) {
+                !usuarioAtualizado.telefone
+            ) {
                 alert("Preencha o nome, o e-mail e o telefone.");
                 return;
             }
 
-            usuariosSalvos[identificador] = usuarioAtualizado;
+            // Atualizar mantendo a chave interna original
+            usuariosSalvos[chaveUsuario] = usuarioAtualizado;
 
-            try {
-                localStorage.setItem(chaveUsuarios, JSON.stringify(usuariosSalvos));
-                alert("Usuário atualizado e salvo com sucesso!");
-            } catch (erro) {
-                alert("Não foi possível salvar as alterações neste navegador.");
-            }
-        });
-    }
+            localStorage.setItem(
+                chaveUsuarios,
+                JSON.stringify(usuariosSalvos)
+            );
 
-    formulario.addEventListener("reset", function () {
-        setTimeout(function () {
-            document.getElementById("id").value = usuario.id;
-        }, 0);
+            alert("Usuário atualizado com sucesso!");
+
+            window.location.href =
+                "visualizar-usuario.html?usuario=" +
+                encodeURIComponent(chaveUsuario);
+
+        } catch (erro) {
+
+            console.error("Erro ao editar usuário:", erro);
+
+            alert(
+                "Não foi possível salvar as alterações. " +
+                "Verifique os dados e tente novamente."
+            );
+
+        } finally {
+
+            botaoSalvar.disabled = false;
+            botaoSalvar.textContent = "Salvar";
+
+        }
+
     });
+
+});
 </script>
+
 </body>
 </html>
 

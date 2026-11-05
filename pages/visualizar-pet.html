@@ -1,16 +1,21 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Pet - Visualizar Pet</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
     <div class="layout">
+
         <aside class="menu-lateral">
             <h1>Hotel Pet</h1>
+
             <nav>
                 <a href="pets.html" class="menu-ativo">Pet</a>
                 <a href="usuarios.html">Usuário</a>
@@ -20,8 +25,10 @@
         </aside>
 
         <div class="conteudo">
+
             <header class="topo">
                 <div></div>
+
                 <a href="perfil.html" class="perfil-topo">
                     <span class="icone-usuario">O</span>
                     <span>Gisele Teles</span>
@@ -29,6 +36,7 @@
             </header>
 
             <main>
+
                 <p class="breadcrumb">
                     <a href="dashboard.html">Home</a> /
                     <a href="pets.html">Pets</a> /
@@ -40,13 +48,17 @@
                 </div>
 
                 <section class="card">
+
                     <h3 id="titulo-pet">Dados do Pet</h3>
 
                     <div class="formulario-duas-colunas">
+
                         <div class="campo-formulario">
                             <label>Foto</label>
+
                             <div class="foto-pet">
-                                <img id="foto-pet" src="../img/Thor.png"
+                                <img id="foto-pet"
+                                    src="../img/Thor.png"
                                     alt="Foto do pet"
                                     style="width:180px;height:180px;object-fit:cover;border-radius:10px;">
                             </div>
@@ -96,22 +108,42 @@
                             <label>Observações</label>
                             <textarea id="observacoes-pet" rows="4" readonly></textarea>
                         </div>
+
                     </div>
 
                     <div class="acoes-formulario">
-                        <a id="botao-editar" href="editar-pet.html"
-                            class="botao botao-salvar">Editar</a>
+
+                        <a id="botao-editar"
+                            href="editar-pet.html"
+                            class="botao botao-salvar">
+                            Editar
+                        </a>
+
                         <a href="pets.html"
-                            class="botao botao-cancelar">Voltar</a>
+                            class="botao botao-cancelar">
+                            Voltar
+                        </a>
+
                     </div>
+
                 </section>
+
             </main>
+
         </div>
     </div>
 
     <script src="../js/navegacao.js"></script>
+
     <script>
-        const pets = {
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        const parametros = new URLSearchParams(window.location.search);
+        const identificador = parametros.get("pet");
+
+        const petsAntigos = {
+
             thor: {
                 nome: "Thor",
                 tipo: "Cachorro",
@@ -124,6 +156,7 @@
                 observacoes: "Gosta de brincar e passear.",
                 foto: "../img/Thor.png"
             },
+
             luna: {
                 nome: "Luna",
                 tipo: "Cachorro",
@@ -136,6 +169,7 @@
                 observacoes: "É tranquila e gosta de colo.",
                 foto: "../img/Luna.png"
             },
+
             mel: {
                 nome: "Mel",
                 tipo: "Gato",
@@ -148,6 +182,7 @@
                 observacoes: "Gosta de descansar em lugares tranquilos.",
                 foto: "../img/Mel.png"
             },
+
             bob: {
                 nome: "Bob",
                 tipo: "Cachorro",
@@ -160,38 +195,84 @@
                 observacoes: "Gosta de passear e brincar.",
                 foto: "../img/Bob.png"
             }
+
         };
 
-        const parametros = new URLSearchParams(window.location.search);
-        const identificador = (parametros.get("pet") || "thor").toLowerCase();
-        const pet = pets[identificador];
+        // BUSCAR PETS NOVOS NO LOCALSTORAGE
+        const petsSalvos = JSON.parse(
+            localStorage.getItem("hotelPetPets") || "[]"
+        );
 
-        if (pet) {
-            document.getElementById("titulo-pet").textContent =
-                "Dados do Pet - " + pet.nome;
+        const petNovo = petsSalvos.find(function(pet) {
+            return pet.id === identificador;
+        });
 
-            document.getElementById("foto-pet").src = pet.foto;
-            document.getElementById("foto-pet").alt = "Foto de " + pet.nome;
+        // BUSCAR PET ANTIGO OU NOVO
+        const pet = petNovo || petsAntigos[identificador];
 
-            document.getElementById("nome-pet").value = pet.nome;
-            document.getElementById("tipo-pet").value = pet.tipo;
-            document.getElementById("raca-pet").value = pet.raca;
-            document.getElementById("porte-pet").value = pet.porte;
-            document.getElementById("proprietario-pet").value = pet.proprietario;
-            document.getElementById("idade-pet").value = pet.idade;
-            document.getElementById("peso-pet").value = pet.peso;
-            document.getElementById("alimentacao-pet").value = pet.alimentacao;
-            document.getElementById("observacoes-pet").value = pet.observacoes;
+        if (!pet) {
 
-            document.getElementById("botao-editar").href =
-                "editar-pet.html?pet=" + encodeURIComponent(identificador);
-        } else {
             document.getElementById("titulo-pet").textContent =
                 "Pet não encontrado";
 
             document.getElementById("foto-pet").hidden = true;
             document.getElementById("botao-editar").hidden = true;
+
+            return;
         }
+
+        // PREENCHER OS DADOS
+        document.getElementById("titulo-pet").textContent =
+            "Dados do Pet - " + pet.nome;
+
+        const foto = document.getElementById("foto-pet");
+
+        if (pet.foto) {
+            foto.src = pet.foto;
+        } else {
+            foto.hidden = true;
+        }
+
+        foto.alt = "Foto de " + pet.nome;
+
+        document.getElementById("nome-pet").value =
+            pet.nome || "";
+
+        document.getElementById("tipo-pet").value =
+            pet.tipo || "";
+
+        document.getElementById("raca-pet").value =
+            pet.raca || "";
+
+        document.getElementById("porte-pet").value =
+            pet.porte || "";
+
+        document.getElementById("proprietario-pet").value =
+            pet.proprietario || "";
+
+        document.getElementById("idade-pet").value =
+            pet.idade ? (
+                String(pet.idade).includes("ano")
+                    ? pet.idade
+                    : pet.idade + " anos"
+            ) : "";
+
+        document.getElementById("peso-pet").value =
+            pet.peso || "";
+
+        document.getElementById("alimentacao-pet").value =
+            pet.alimentacao || "";
+
+        document.getElementById("observacoes-pet").value =
+            pet.observacoes || "";
+
+        // LINK PARA EDITAR O PET CORRETO
+        document.getElementById("botao-editar").href =
+            "editar-pet.html?pet=" + encodeURIComponent(identificador);
+
+    });
+
     </script>
+
 </body>
 </html>

@@ -1,423 +1,385 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hotel Pet - Cadastrar Pet</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
-    <div class="layout">
+<div class="layout">
 
-        <!-- MENU LATERAL -->
-        <aside class="menu-lateral">
+    <aside class="menu-lateral">
+        <h1>Hotel Pet</h1>
+        <nav>
+            <a href="pets.html" class="menu-ativo">Pet</a>
+            <a href="usuarios.html">Usuário</a>
+            <a href="configuracoes.html">Configurações</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </aside>
 
-            <h1>Hotel Pet</h1>
+    <div class="conteudo">
 
-            <nav>
+        <header class="topo">
+            <div></div>
+            <a href="perfil.html" class="perfil-topo">
+                <span class="icone-usuario">O</span>
+                <span>Gisele Teles</span>
+            </a>
+        </header>
 
-                <a href="pets.html" class="menu-ativo">
-                    Pet
-                </a>
+        <main>
 
-                <a href="usuarios.html">
-                    Usuário
-                </a>
+            <p class="breadcrumb">
+                <a href="dashboard.html">Home</a>
+                /
+                <a href="pets.html">Pets</a>
+                / Cadastrar Pet
+            </p>
 
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
+            <section class="card">
 
-                <a href="reservas.html">
-                    Reservas
-                </a>
+                <h2>Cadastrar Pet</h2>
 
-            </nav>
+                <form id="formulario-pet">
 
-        </aside>
+                    <section class="secao-formulario">
 
+                        <h3>Dados do Pet</h3>
 
-        <!-- ÁREA PRINCIPAL -->
-        <div class="conteudo">
-
-            <!-- TOPO -->
-            <header class="topo">
-
-                <div></div>
-
-                <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
-                </a>
-
-            </header>
-
-
-            <!-- CONTEÚDO -->
-            <main>
-
-                <!-- BREADCRUMB -->
-                <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
-                    /
-
-                    <a href="pets.html">
-                        Pets
-                    </a>
-
-                    / Cadastrar Pet
-
-                </p>
-
-
-                <!-- CARD -->
-                <section class="card">
-
-                    <h2>
-                        Cadastrar Pet
-                    </h2>
-
-
-                    <form
-                        action="pets.html"
-                        method="get"
-                    >
-
-                        <!-- DADOS DO PET -->
-                        <section class="secao-formulario">
-
-                            <h3>
-                                Dados do Pet
-                            </h3>
-
-
-                            <div class="formulario-duas-colunas">
-
-                                <!-- NOME -->
-                                <div class="campo-formulario">
-
-                                    <label for="nome-pet">
-                                        Nome do pet *
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="nome-pet"
-                                        name="nome-pet"
-                                        placeholder="Digite o nome do pet"
-                                        required
-                                    >
-
-                                </div>
-
-
-                                <!-- TIPO -->
-                                <div class="campo-formulario">
-
-                                    <label for="tipo">
-                                        Tipo *
-                                    </label>
-
-                                    <select
-                                        id="tipo"
-                                        name="tipo"
-                                        required
-                                    >
-
-                                        <option value="">
-                                            Selecione
-                                        </option>
-
-                                        <option value="cachorro">
-                                            Cachorro
-                                        </option>
-
-                                        <option value="gato">
-                                            Gato
-                                        </option>
-
-                                        <option value="outro">
-                                            Outro
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <!-- RAÇA -->
-                                <div class="campo-formulario">
-
-                                    <label for="raca">
-                                        Raça
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="raca"
-                                        name="raca"
-                                        placeholder="Digite a raça"
-                                    >
-
-                                </div>
-
-
-                                <!-- PORTE -->
-                                <div class="campo-formulario">
-
-                                    <label for="porte">
-                                        Porte *
-                                    </label>
-
-                                    <select
-                                        id="porte"
-                                        name="porte"
-                                        required
-                                    >
-
-                                        <option value="">
-                                            Selecione
-                                        </option>
-
-                                        <option value="pequeno">
-                                            Pequeno
-                                        </option>
-
-                                        <option value="medio">
-                                            Médio
-                                        </option>
-
-                                        <option value="grande">
-                                            Grande
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <!-- IDADE -->
-                                <div class="campo-formulario">
-
-                                    <label for="idade">
-                                        Idade
-                                    </label>
-
-                                    <input
-                                        type="number"
-                                        id="idade"
-                                        name="idade"
-                                        placeholder="Idade em anos"
-                                        min="0"
-                                    >
-
-                                </div>
-
-
-                                <!-- PESO -->
-                                <div class="campo-formulario">
-
-                                    <label for="peso">
-                                        Peso
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="peso"
-                                        name="peso"
-                                        placeholder="Ex.: 12 kg"
-                                    >
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-                        <!-- PROPRIETÁRIO -->
-                        <section class="secao-formulario">
-
-                            <h3>
-                                Proprietário
-                            </h3>
-
-
-                            <div class="formulario-duas-colunas">
-
-                                <div class="campo-formulario">
-
-                                    <label for="proprietario">
-                                        Proprietário *
-                                    </label>
-
-                                    <select
-                                        id="proprietario"
-                                        name="proprietario"
-                                        required
-                                    >
-
-                                        <option value="">
-                                            Selecione
-                                        </option>
-
-                                        <option value="maria">
-                                            Maria Silva
-                                        </option>
-
-                                        <option value="joao">
-                                            João Santos
-                                        </option>
-
-                                        <option value="ana">
-                                            Ana Oliveira
-                                        </option>
-
-                                        <option value="gisele">
-                                            Gisele Teles
-                                        </option>
-
-                                    </select>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-                        <!-- CUIDADOS -->
-                        <section class="secao-formulario">
-
-                            <h3>
-                                Cuidados
-                            </h3>
-
-
-                            <div class="formulario-duas-colunas">
-
-                                <!-- ALIMENTAÇÃO -->
-                                <div class="campo-formulario campo-completo">
-
-                                    <label for="alimentacao">
-                                        Alimentação
-                                    </label>
-
-                                    <textarea
-                                        id="alimentacao"
-                                        name="alimentacao"
-                                        rows="4"
-                                        placeholder="Informe os cuidados com a alimentação"
-                                    ></textarea>
-
-                                </div>
-
-
-                                <!-- OBSERVAÇÕES -->
-                                <div class="campo-formulario campo-completo">
-
-                                    <label for="observacoes">
-                                        Observações
-                                    </label>
-
-                                    <textarea
-                                        id="observacoes"
-                                        name="observacoes"
-                                        rows="4"
-                                        placeholder="Informe outras observações importantes"
-                                    ></textarea>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-                        <!-- FOTO -->
-                        <section class="secao-formulario">
-
-                            <h3>
-                                Foto do Pet
-                            </h3>
-
+                        <div class="formulario-duas-colunas">
 
                             <div class="campo-formulario">
-
-                                <label for="foto">
-                                    Foto
-                                </label>
-
-                                <input
-                                    type="file"
-                                    id="foto"
-                                    name="foto"
-                                    accept="image/*"
-                                >
-
+                                <label for="nome-pet">Nome do pet *</label>
+                                <input type="text" id="nome-pet" required
+                                    placeholder="Digite o nome do pet">
                             </div>
 
-                        </section>
+                            <div class="campo-formulario">
+                                <label for="tipo">Tipo *</label>
+                                <select id="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="cachorro">Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
 
+                            <div class="campo-formulario">
+                                <label for="raca">Raça</label>
+                                <input type="text" id="raca"
+                                    placeholder="Digite a raça">
+                            </div>
 
-                        <!-- BOTÕES -->
-                        <div class="botoes-formulario">
+                            <div class="campo-formulario">
+                                <label for="porte">Porte *</label>
+                                <select id="porte" required>
+                                    <option value="">Selecione</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
 
-                            <button
-                                type="submit"
-                                class="botao botao-salvar"
-                            >
-                                Salvar
-                            </button>
+                            <div class="campo-formulario">
+                                <label for="idade">Idade</label>
+                                <input type="number" id="idade"
+                                    placeholder="Idade em anos" min="0">
+                            </div>
 
-
-                            <button
-                                type="reset"
-                                class="botao botao-limpar"
-                            >
-                                Limpar
-                            </button>
-
-
-                            <a
-                                href="pets.html"
-                                class="botao botao-cancelar"
-                            >
-                                Cancelar
-                            </a>
+                            <div class="campo-formulario">
+                                <label for="peso">Peso</label>
+                                <input type="text" id="peso"
+                                    placeholder="Ex.: 12 kg">
+                            </div>
 
                         </div>
 
-                    </form>
+                    </section>
 
-                </section>
+                    <section class="secao-formulario">
 
-            </main>
+                        <h3>Proprietário</h3>
 
-        </div>
+                        <div class="formulario-duas-colunas">
+
+                            <div class="campo-formulario">
+                                <label for="proprietario">Proprietário *</label>
+                                <select id="proprietario" required>
+                                    <option value="">Selecione</option>
+                                    <option value="maria">Maria Silva</option>
+                                    <option value="joao">João Santos</option>
+                                    <option value="ana">Ana Oliveira</option>
+                                    <option value="gisele">Gisele Teles</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <section class="secao-formulario">
+
+                        <h3>Cuidados</h3>
+
+                        <div class="formulario-duas-colunas">
+
+                            <div class="campo-formulario campo-completo">
+                                <label for="alimentacao">Alimentação</label>
+                                <textarea id="alimentacao" rows="4"
+                                    placeholder="Informe os cuidados com a alimentação"></textarea>
+                            </div>
+
+                            <div class="campo-formulario campo-completo">
+                                <label for="observacoes">Observações</label>
+                                <textarea id="observacoes" rows="4"
+                                    placeholder="Informe outras observações importantes"></textarea>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <section class="secao-formulario">
+
+                        <h3>Foto do Pet</h3>
+
+                        <div class="campo-formulario">
+                            <label for="foto">Foto</label>
+                            <input type="file" id="foto" accept="image/*">
+                        </div>
+
+                    </section>
+
+                    <div class="botoes-formulario">
+
+                        <button type="submit" class="botao botao-salvar">
+                            Salvar
+                        </button>
+
+                        <button type="reset" class="botao botao-limpar">
+                            Limpar
+                        </button>
+
+                        <a href="pets.html" class="botao botao-cancelar">
+                            Cancelar
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
 
     </div>
+</div>
 
-  <script src="../js/navegacao.js"></script>
+<script src="../js/navegacao.js"></script>
+
+<script>
+
+// CARREGAR PROPRIETÁRIOS CADASTRADOS
+const proprietarioSelect = document.getElementById("proprietario");
+
+const dadosUsuarios = JSON.parse(
+    localStorage.getItem("hotelPetUsuarios") || "{}"
+);
+
+const listaUsuarios = Array.isArray(dadosUsuarios)
+    ? dadosUsuarios
+    : Object.values(dadosUsuarios);
+
+listaUsuarios.forEach(function(usuario) {
+
+    const nomeCompleto = (
+        usuario.nomeCompleto ||
+        [usuario.nome, usuario.sobrenome].filter(Boolean).join(" ")
+    ).trim();
+
+    if (!nomeCompleto) return;
+
+    const jaExiste = Array.from(proprietarioSelect.options).some(
+        option =>
+            option.textContent.trim().toLowerCase() ===
+            nomeCompleto.toLowerCase()
+    );
+
+    if (!jaExiste) {
+
+        const opcao = document.createElement("option");
+
+        opcao.value = nomeCompleto;
+        opcao.textContent = nomeCompleto;
+
+        proprietarioSelect.appendChild(opcao);
+    }
+
+});
+
+
+// CADASTRAR PET
+document.getElementById("formulario-pet").addEventListener("submit", async function(evento) {
+
+    evento.preventDefault();
+
+    const arquivoFoto = document.getElementById("foto").files[0];
+
+    // Compactar a imagem antes de salvar
+    function compactarImagem(arquivo) {
+
+        return new Promise(function(resolve, reject) {
+
+            const leitor = new FileReader();
+
+            leitor.onload = function() {
+
+                const imagem = new Image();
+
+                imagem.onload = function() {
+
+                    const tamanhoMaximo = 1200;
+
+                    let largura = imagem.width;
+                    let altura = imagem.height;
+
+                    if (largura > tamanhoMaximo || altura > tamanhoMaximo) {
+
+                        const proporcao = Math.min(
+                            tamanhoMaximo / largura,
+                            tamanhoMaximo / altura
+                        );
+
+                        largura = Math.round(largura * proporcao);
+                        altura = Math.round(altura * proporcao);
+                    }
+
+                    const canvas = document.createElement("canvas");
+
+                    canvas.width = largura;
+                    canvas.height = altura;
+
+                    const contexto = canvas.getContext("2d");
+
+                    contexto.fillStyle = "#ffffff";
+                    contexto.fillRect(0, 0, largura, altura);
+
+                    contexto.drawImage(
+                        imagem,
+                        0,
+                        0,
+                        largura,
+                        altura
+                    );
+
+                    const imagemCompactada = canvas.toDataURL(
+                        "image/jpeg",
+                        0.75
+                    );
+
+                    resolve(imagemCompactada);
+                };
+
+                imagem.onerror = function() {
+                    reject(new Error("Não foi possível carregar a imagem."));
+                };
+
+                imagem.src = leitor.result;
+            };
+
+            leitor.onerror = function() {
+                reject(new Error("Erro ao ler o arquivo de imagem."));
+            };
+
+            leitor.readAsDataURL(arquivo);
+        });
+    }
+
+    try {
+
+        let foto = "";
+
+        if (arquivoFoto) {
+
+            if (!arquivoFoto.type.startsWith("image/")) {
+                alert("Selecione um arquivo de imagem válido.");
+                return;
+            }
+
+            foto = await compactarImagem(arquivoFoto);
+        }
+
+        const pets = JSON.parse(
+            localStorage.getItem("hotelPetPets") || "[]"
+        );
+
+        const proprietarioId = proprietarioSelect.value;
+
+        const proprietarioNome =
+            proprietarioSelect.options[
+                proprietarioSelect.selectedIndex
+            ].textContent;
+
+        const novoPet = {
+
+            id: "pet-" + Date.now(),
+
+            nome: document.getElementById("nome-pet").value.trim(),
+
+            tipo: document.getElementById("tipo").value,
+
+            raca: document.getElementById("raca").value.trim(),
+
+            porte: document.getElementById("porte").value,
+
+            idade: document.getElementById("idade").value,
+
+            peso: document.getElementById("peso").value.trim(),
+
+            proprietarioId: proprietarioId,
+
+            proprietario: proprietarioNome,
+
+            alimentacao: document.getElementById("alimentacao").value.trim(),
+
+            observacoes: document.getElementById("observacoes").value.trim(),
+
+            foto: foto,
+
+            status: "Fora do hotel"
+        };
+
+        pets.push(novoPet);
+
+        localStorage.setItem(
+            "hotelPetPets",
+            JSON.stringify(pets)
+        );
+
+        alert("Pet cadastrado com sucesso!");
+
+        window.location.href = "pets.html";
+
+    } catch (erro) {
+
+        console.error("Erro ao cadastrar pet:", erro);
+
+        alert(
+            "Não foi possível salvar o cadastro. " +
+            "Tente utilizar uma foto menor ou verifique o armazenamento do navegador."
+        );
+
+    }
+
+});
+
+</script>
+
+
 </body>
-
 </html>

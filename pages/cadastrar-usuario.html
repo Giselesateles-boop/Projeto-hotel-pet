@@ -434,6 +434,245 @@
 
     </div>
 <script src="../js/navegacao.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const formulario = document.querySelector("form");
+
+    formulario.addEventListener("submit", async function (evento) {
+
+        evento.preventDefault();
+
+        const botaoSalvar = formulario.querySelector(
+            'button[type="submit"]'
+        );
+
+        const senha = document.getElementById("senha").value;
+        const confirmarSenha = document.getElementById("confirmar-senha").value;
+
+        if (senha !== confirmarSenha) {
+            alert("As senhas não coincidem!");
+            return;
+        }
+
+        try {
+
+            botaoSalvar.disabled = true;
+            botaoSalvar.textContent = "Salvando...";
+
+            const email = document.getElementById("email").value
+                .trim()
+                .toLowerCase();
+
+            // Recuperar usuários cadastrados
+            const dadosSalvos = JSON.parse(
+                localStorage.getItem("hotelPetUsuarios") || "{}"
+            );
+
+            // Manter o formato de objeto utilizado pela listagem
+            const usuarios = Array.isArray(dadosSalvos)
+                ? Object.fromEntries(
+                    dadosSalvos.map(usuario => [
+                        String(usuario.id),
+                        usuario
+                    ])
+                )
+                : dadosSalvos;
+
+            // Verificar e-mail duplicado
+            const emailExiste = Object.values(usuarios).some(function (usuario) {
+                return String(usuario.email || "").toLowerCase() === email;
+            });
+
+            if (emailExiste) {
+                alert("Já existe um usuário cadastrado com esse e-mail.");
+                return;
+            }
+
+            // CORRIGIR E ORGANIZAR OS IDs
+            let maiorId = 0;
+
+            // Encontrar o maior ID numérico existente
+            Object.entries(usuarios).forEach(function ([chave, usuario]) {
+
+                const idAtual = String(usuario.id || chave);
+
+                if (/^\d+$/.test(idAtual)) {
+
+                    const numero = Number(idAtual);
+
+                    if (numero > maiorId) {
+                        maiorId = numero;
+                    }
+                }
+
+            });
+
+            // Corrigir IDs que não seguem o padrão 001, 002, 003...
+            Object.entries(usuarios).forEach(function ([chave, usuario]) {
+
+                const idAtual = String(usuario.id || chave);
+
+                if (!/^\d{3}$/.test(idAtual)) {
+
+                    maiorId++;
+
+                    const novoId = String(maiorId).padStart(3, "0");
+
+                    delete usuarios[chave];
+
+                    usuario.id = novoId;
+
+                    usuarios[novoId] = usuario;
+                }
+
+            });
+
+            // Compactar foto
+            async function compactarImagem(arquivo) {
+
+                return new Promise(function (resolve, reject) {
+
+                    const leitor = new FileReader();
+
+                    leitor.onload = function () {
+
+                        const imagem = new Image();
+
+                        imagem.onload = function () {
+
+                            const limite = 1200;
+
+                            let largura = imagem.width;
+                            let altura = imagem.height;
+
+                            if (largura > limite || altura > limite) {
+
+                                const proporcao = Math.min(
+                                    limite / largura,
+                                    limite / altura
+                                );
+
+                                largura = Math.round(largura * proporcao);
+                                altura = Math.round(altura * proporcao);
+                            }
+
+                            const canvas = document.createElement("canvas");
+
+                            canvas.width = largura;
+                            canvas.height = altura;
+
+                            const contexto = canvas.getContext("2d");
+
+                            contexto.drawImage(
+                                imagem,
+                                0,
+                                0,
+                                largura,
+                                altura
+                            );
+
+                            resolve(
+                                canvas.toDataURL("image/jpeg", 0.75)
+                            );
+                        };
+
+                        imagem.onerror = function () {
+                            reject(new Error("Erro ao carregar a foto."));
+                        };
+
+                        imagem.src = leitor.result;
+                    };
+
+                    leitor.onerror = function () {
+                        reject(new Error("Erro ao ler a foto."));
+                    };
+
+                    leitor.readAsDataURL(arquivo);
+                });
+            }
+
+            const arquivoFoto = document.getElementById("foto").files[0];
+
+            let foto = "";
+
+            if (arquivoFoto) {
+
+                if (!arquivoFoto.type.startsWith("image/")) {
+                    throw new Error("Selecione uma imagem válida.");
+                }
+
+                foto = await compactarImagem(arquivoFoto);
+            }
+
+            // GERAR PRÓXIMO ID NUMÉRICO
+            maiorId++;
+
+            const id = String(maiorId).padStart(3, "0");
+
+            const novoUsuario = {
+
+                id: id,
+
+                nome: document.getElementById("nome").value.trim(),
+
+                sobrenome: document.getElementById("sobrenome").value.trim(),
+
+                email: email,
+
+                telefone: document.getElementById("telefone").value.trim(),
+
+                cep: document.getElementById("cep").value.trim(),
+
+                cidade: document.getElementById("cidade").value.trim(),
+
+                endereco: document.getElementById("endereco").value.trim(),
+
+                numero: document.getElementById("numero").value.trim(),
+
+                senha: senha,
+
+                funcao: document.getElementById("funcao").value,
+
+                status: document.getElementById("status").value,
+
+                foto: foto
+            };
+
+            // Salvar o novo usuário
+            usuarios[id] = novoUsuario;
+
+            localStorage.setItem(
+                "hotelPetUsuarios",
+                JSON.stringify(usuarios)
+            );
+
+            alert("Usuário cadastrado com sucesso! ID: " + id);
+
+            window.location.href = "usuarios.html";
+
+        } catch (erro) {
+
+            console.error("Erro ao cadastrar usuário:", erro);
+
+            alert(
+                "Não foi possível salvar o usuário. " +
+                "Verifique os dados ou tente utilizar uma foto menor."
+            );
+
+        } finally {
+
+            botaoSalvar.disabled = false;
+            botaoSalvar.textContent = "Salvar";
+
+        }
+
+    });
+
+});
+</script>
+
 </body>
 
 </html>

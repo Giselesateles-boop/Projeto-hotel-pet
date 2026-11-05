@@ -1,16 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hotel Pet - Visualizar Reserva</title>
 
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
@@ -20,32 +18,16 @@
         <!-- MENU LATERAL -->
         <aside class="menu-lateral">
 
-            <h1>
-                Hotel Pet
-            </h1>
+            <h1>Hotel Pet</h1>
 
             <nav>
-
-                <a href="pets.html">
-                    Pet
-                </a>
-
-                <a href="usuarios.html">
-                    Usuário
-                </a>
-
-                <a href="configuracoes.html">
-                    Configurações
-                </a>
-
-                <a href="reservas.html" class="menu-ativo">
-                    Reservas
-                </a>
-
+                <a href="pets.html">Pet</a>
+                <a href="usuarios.html">Usuário</a>
+                <a href="configuracoes.html">Configurações</a>
+                <a href="reservas.html" class="menu-ativo">Reservas</a>
             </nav>
 
         </aside>
-
 
         <!-- ÁREA PRINCIPAL -->
         <div class="conteudo">
@@ -56,383 +38,193 @@
                 <div></div>
 
                 <a href="perfil.html" class="perfil-topo">
-
-                    <span class="icone-usuario">
-                        O
-                    </span>
-
-                    <span>
-                        Gisele Teles
-                    </span>
-
+                    <span class="icone-usuario">O</span>
+                    <span>Gisele Teles</span>
                 </a>
 
             </header>
-
 
             <!-- CONTEÚDO -->
             <main>
 
                 <!-- BREADCRUMB -->
                 <p class="breadcrumb">
-
-                    <a href="dashboard.html">
-                        Home
-                    </a>
-
+                    <a href="dashboard.html">Home</a>
                     /
-
-                    <a href="reservas.html">
-                        Reservas
-                    </a>
-
+                    <a href="reservas.html">Reservas</a>
                     /
-
                     Visualizar Reserva
-
                 </p>
-
 
                 <!-- CARD -->
                 <section class="card">
 
-                    <h2>
-                        Visualizar Reserva
-                    </h2>
-
+                    <h2>Visualizar Reserva</h2>
 
                     <!-- DADOS DA RESERVA -->
                     <section class="secao-formulario">
 
-                        <h3>
-                            Dados da Reserva
-                        </h3>
-
+                        <h3>Dados da Reserva</h3>
 
                         <div class="formulario-duas-colunas">
 
                             <div class="campo-formulario">
-
-                                <label for="id-reserva">
-                                    ID da reserva
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="id-reserva"
-                                    value="001"
-                                    readonly
-                                >
-
+                                <label for="id-reserva">ID da reserva</label>
+                                <input type="text" id="id-reserva" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="status-reserva">
-                                    Status
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="status-reserva"
-                                    value="Confirmada"
-                                    readonly
-                                >
-
+                                <label for="status-reserva">Status</label>
+                                <input type="text" id="status-reserva" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="entrada-reserva">
-                                    Data de entrada
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="entrada-reserva"
-                                    value="20/08/2026"
-                                    readonly
-                                >
-
+                                <label for="entrada-reserva">Data de entrada</label>
+                                <input type="text" id="entrada-reserva" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="saida-reserva">
-                                    Data de saída
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="saida-reserva"
-                                    value="25/08/2026"
-                                    readonly
-                                >
-
+                                <label for="saida-reserva">Data de saída</label>
+                                <input type="text" id="saida-reserva" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="diarias-reserva">
-                                    Quantidade de diárias
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="diarias-reserva"
-                                    value="5 diárias"
-                                    readonly
-                                >
-
+                                <label for="diarias-reserva">Quantidade de diárias</label>
+                                <input type="text" id="diarias-reserva" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="valor-diaria">
-                                    Valor da diária
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="valor-diaria"
-                                    value="R$ 80,00"
-                                    readonly
-                                >
-
+                                <label for="valor-diaria">Valor da diária</label>
+                                <input type="text" id="valor-diaria" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="valor-total">
-                                    Valor total
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="valor-total"
-                                    value="R$ 400,00"
-                                    readonly
-                                >
-
+                                <label for="valor-total">Valor total</label>
+                                <input type="text" id="valor-total" readonly>
                             </div>
 
                         </div>
 
                     </section>
-
 
                     <!-- DADOS DO PET -->
                     <section class="secao-formulario">
 
-                        <h3>
-                            Dados do Pet
-                        </h3>
-
+                        <h3>Dados do Pet</h3>
 
                         <div class="formulario-duas-colunas">
 
                             <div class="campo-formulario">
-
-                                <label for="nome-pet">
-                                    Nome do pet
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="nome-pet"
-                                    value="Thor"
-                                    readonly
-                                >
-
+                                <label for="nome-pet">Nome do pet</label>
+                                <input type="text" id="nome-pet" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="tipo-pet">
-                                    Tipo
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="tipo-pet"
-                                    value="Cachorro"
-                                    readonly
-                                >
-
+                                <label for="tipo-pet">Tipo</label>
+                                <input type="text" id="tipo-pet" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="raca-pet">
-                                    Raça
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="raca-pet"
-                                    value="Golden Retriever"
-                                    readonly
-                                >
-
+                                <label for="raca-pet">Raça</label>
+                                <input type="text" id="raca-pet" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="porte-pet">
-                                    Porte
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="porte-pet"
-                                    value="Grande"
-                                    readonly
-                                >
-
+                                <label for="porte-pet">Porte</label>
+                                <input type="text" id="porte-pet" readonly>
                             </div>
 
                         </div>
 
                     </section>
-
 
                     <!-- PROPRIETÁRIO -->
                     <section class="secao-formulario">
 
-                        <h3>
-                            Proprietário
-                        </h3>
-
+                        <h3>Proprietário</h3>
 
                         <div class="formulario-duas-colunas">
 
                             <div class="campo-formulario">
-
-                                <label for="nome-proprietario">
-                                    Nome do proprietário
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="nome-proprietario"
-                                    value="Maria Silva"
-                                    readonly
-                                >
-
+                                <label for="nome-proprietario">Nome do proprietário</label>
+                                <input type="text" id="nome-proprietario" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="email-proprietario">
-                                    E-mail
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email-proprietario"
-                                    value="maria@email.com"
-                                    readonly
-                                >
-
+                                <label for="email-proprietario">E-mail</label>
+                                <input type="email" id="email-proprietario" readonly>
                             </div>
 
-
                             <div class="campo-formulario">
-
-                                <label for="telefone-proprietario">
-                                    Telefone
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="telefone-proprietario"
-                                    value="(77) 99999-9999"
-                                    readonly
-                                >
-
+                                <label for="telefone-proprietario">Telefone</label>
+                                <input type="text" id="telefone-proprietario" readonly>
                             </div>
 
                         </div>
 
                     </section>
-
 
                     <!-- OBSERVAÇÕES -->
                     <section class="secao-formulario">
 
-                        <h3>
-                            Observações
-                        </h3>
-
+                        <h3>Observações</h3>
 
                         <div class="campo-formulario campo-completo">
 
-                            <label for="observacoes">
-                                Observações da reserva
-                            </label>
+                            <label for="observacoes">Observações da reserva</label>
 
                             <textarea
                                 id="observacoes"
                                 rows="4"
-                                readonly>Pet precisa receber alimentação duas vezes ao dia e realizar passeios durante a hospedagem.</textarea>
+                                readonly
+                            ></textarea>
 
                         </div>
 
                     </section>
 
-
                     <!-- FOTO DO PET -->
                     <section class="secao-formulario">
 
-                        <h3>
-                            Foto do Pet
-                        </h3>
-
+                        <h3>Foto do Pet</h3>
 
                         <div class="foto-pet">
 
                             <img
-                                src="../img/Thor.png"
-                                alt="Foto de Thor"
+                                id="foto-pet"
+                                alt="Foto do Pet"
                                 style="
                                     width: 180px;
                                     height: 180px;
                                     object-fit: cover;
                                     border-radius: 12px;
-                                    display: block;
+                                    display: none;
                                 "
                             >
+
+                            <p id="sem-foto">Foto não cadastrada.</p>
 
                         </div>
 
                     </section>
 
-
                     <!-- COMPROVANTE -->
-                    <section class="secao-formulario">
+                    <section class="secao-formulario" id="secao-comprovante">
 
-                        <h3>
-                            Comprovante
-                        </h3>
-
+                        <h3>Comprovante</h3>
 
                         <div class="arquivo-comprovante">
 
-                            <p>
-                                comprovante-reserva-001.pdf
+                            <p id="nome-comprovante">
+                                Nenhum comprovante cadastrado.
                             </p>
 
-                            <a href="#">
+                            <a
+                                id="link-comprovante"
+                                href="#"
+                                target="_blank"
+                                hidden
+                            >
                                 Visualizar comprovante
                             </a>
 
@@ -440,17 +232,16 @@
 
                     </section>
 
-
                     <!-- BOTÕES -->
                     <div class="botoes-formulario">
 
                         <a
+                            id="botao-editar"
                             href="editar-reserva.html"
                             class="botao botao-salvar"
                         >
                             Editar
                         </a>
-
 
                         <a
                             href="reservas.html"
@@ -468,7 +259,259 @@
         </div>
 
     </div>
-<script src="../js/navegacao.js"></script>
-</body>
 
+    <script src="../js/navegacao.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // IDENTIFICAR A RESERVA PELA URL
+
+        const parametros = new URLSearchParams(window.location.search);
+
+        const idReserva = parametros.get("reserva");
+
+        const reservas = JSON.parse(
+            localStorage.getItem("hotelPetReservas") || "[]"
+        );
+
+        const reserva = reservas.find(function (item) {
+            return String(item.id) === String(idReserva);
+        });
+
+        // VERIFICAR SE A RESERVA EXISTE
+
+        if (!reserva) {
+
+            document.querySelector("main").innerHTML = `
+                <section class="card">
+                    <h2>Reserva não encontrada</h2>
+                    <p>Não foi possível localizar os dados desta reserva.</p>
+                    <a href="reservas.html" class="botao botao-cancelar">
+                        Voltar
+                    </a>
+                </section>
+            `;
+
+            return;
+        }
+
+        // FUNÇÃO PARA PREENCHER OS CAMPOS
+
+        function preencher(id, valor) {
+
+            const campo = document.getElementById(id);
+
+            if (campo) {
+                campo.value = valor ?? "";
+            }
+
+        }
+
+        // FORMATAR DATAS
+
+        function formatarData(data) {
+
+            if (!data) return "";
+
+            if (/^\d{4}-\d{2}-\d{2}$/.test(data)) {
+
+                const partes = data.split("-");
+
+                return partes[2] + "/" + partes[1] + "/" + partes[0];
+
+            }
+
+            return data;
+
+        }
+
+        // FORMATAR VALORES
+
+        function formatarMoeda(valor) {
+
+            if (valor === undefined || valor === null || valor === "") {
+                return "";
+            }
+
+            if (typeof valor === "string" && valor.includes("R$")) {
+                return valor;
+            }
+
+            const numero = Number(
+                String(valor).replace(",", ".")
+            );
+
+            if (isNaN(numero)) return valor;
+
+            return numero.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+        }
+
+        // STATUS DA RESERVA
+
+        const statusSalvos = JSON.parse(
+            localStorage.getItem("hotelPetStatusReservas") || "{}"
+        );
+
+        const status = statusSalvos[reserva.id] || reserva.status || "";
+
+        // DADOS DA RESERVA
+
+        preencher("id-reserva", reserva.id);
+
+        preencher("status-reserva", status);
+
+        preencher(
+            "entrada-reserva",
+            formatarData(reserva.entrada)
+        );
+
+        preencher(
+            "saida-reserva",
+            formatarData(reserva.saida)
+        );
+
+        preencher(
+            "diarias-reserva",
+            reserva.diarias
+                ? reserva.diarias + " diárias"
+                : ""
+        );
+
+        preencher(
+            "valor-diaria",
+            formatarMoeda(reserva.valorDiaria)
+        );
+
+        const diaria = Number(reserva.valorDiaria) || 0;
+const quantidade = Number(reserva.diarias) || 0;
+
+const total = reserva.valorTotal !== undefined &&
+              reserva.valorTotal !== null
+    ? Number(reserva.valorTotal)
+    : diaria * quantidade;
+
+preencher("valor-total", formatarMoeda(total));
+
+        // LOCALIZAR O PET CADASTRADO
+
+        const petsSalvos = JSON.parse(
+            localStorage.getItem("hotelPetPets") || "[]"
+        );
+
+        const nomePet = reserva.petNome || reserva.pet || "";
+
+        const pet = Array.isArray(petsSalvos)
+            ? petsSalvos.find(function (item) {
+                return String(item.id) === String(reserva.pet) ||
+                    String(item.nome).toLowerCase() ===
+                    String(nomePet).toLowerCase();
+            })
+            : null;
+
+        // DADOS DO PET
+
+        preencher(
+            "nome-pet",
+            pet?.nome || reserva.petNome || reserva.pet
+        );
+
+        preencher(
+            "tipo-pet",
+            pet?.tipo || reserva.tipoPet || ""
+        );
+
+        preencher(
+            "raca-pet",
+            pet?.raca || reserva.racaPet || ""
+        );
+
+        preencher(
+            "porte-pet",
+            pet?.porte || reserva.portePet || ""
+        );
+
+        // FOTO DO PET
+
+        const foto = document.getElementById("foto-pet");
+        const semFoto = document.getElementById("sem-foto");
+
+        const caminhoFoto = pet?.foto || reserva.fotoPet || "";
+
+        if (caminhoFoto) {
+
+            foto.src = caminhoFoto;
+            foto.style.display = "block";
+            semFoto.hidden = true;
+
+        } else {
+
+            foto.style.display = "none";
+            semFoto.hidden = false;
+
+        }
+
+        // DADOS DO PROPRIETÁRIO
+
+        preencher(
+            "nome-proprietario",
+            reserva.proprietario || reserva.tutorNome || reserva.tutor
+        );
+
+        preencher(
+            "email-proprietario",
+            reserva.email || reserva.emailProprietario || ""
+        );
+
+        preencher(
+            "telefone-proprietario",
+            reserva.telefone || reserva.telefoneProprietario || ""
+        );
+
+        // OBSERVAÇÕES
+
+        preencher(
+            "observacoes",
+            reserva.observacoes || ""
+        );
+
+        // COMPROVANTE
+
+        const nomeComprovante = document.getElementById("nome-comprovante");
+        const linkComprovante = document.getElementById("link-comprovante");
+
+        if (reserva.comprovante) {
+
+            nomeComprovante.textContent =
+                reserva.comprovanteNome || "Comprovante da reserva";
+
+            linkComprovante.href = reserva.comprovante;
+            linkComprovante.hidden = false;
+
+        } else {
+
+            nomeComprovante.textContent =
+                "Nenhum comprovante cadastrado.";
+
+            linkComprovante.hidden = true;
+
+        }
+
+        // BOTÃO EDITAR COM O ID CORRETO
+
+        document.getElementById("botao-editar").href =
+            "editar-reserva.html?reserva=" +
+            encodeURIComponent(reserva.id);
+
+    });
+
+    </script>
+
+</body>
 </html>
